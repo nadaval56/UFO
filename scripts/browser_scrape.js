@@ -141,9 +141,10 @@
     if (media) {
       url = media.getAttribute("src") || media.getAttribute("data") || null;
       if (url && url.startsWith("/")) url = new URL(url, location.origin).href;
-      // Skip preview thumbnails / data URIs
+      // Skip preview thumbnails / data URIs / placeholder strings
       if (url && (url.startsWith("data:") || /thumb/i.test(url))) url = null;
     }
+    if (url && !/^https?:\/\//i.test(url)) url = null;
 
     // Strategy 2: click the Download button and let our window.open /
     // location-assign / location-href hooks capture the URL.
@@ -155,6 +156,7 @@
         // Give the site's handler a moment to run
         await SLEEP(700);
         url = _captured_url;
+        if (url && !/^https?:\/\//i.test(url)) url = null;
       }
     }
 
@@ -166,6 +168,7 @@
         url = dlBtn.getAttribute("data-record-modal-download") ||
               dlBtn.getAttribute("data-url") ||
               dlBtn.getAttribute("href") || null;
+        if (url && !/^https?:\/\//i.test(url)) url = null;
       }
     }
 

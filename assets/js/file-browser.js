@@ -372,7 +372,9 @@
             <span class="file-card-field-label">סוג</span>
             <span class="file-card-field-value">.${safeType}</span>
           </div>
-          <a class="file-card-download" href="${escapeHtml(f.source_url || "#")}" target="_blank" rel="noopener" data-stop-card>הורדה ↓</a>
+          ${f.source_url
+            ? `<a class="file-card-download" href="${escapeHtml(f.source_url)}" target="_blank" rel="noopener" data-stop-card>הורדה ↓</a>`
+            : `<span class="file-card-download file-card-download-disabled" title="קישור ההורדה לא נלכד בסריקה — לחץ על הכרטיס לפרטים" data-stop-card>אין קישור</span>`}
         </article>
       `;
     }).join("");
@@ -457,7 +459,17 @@
       el.modalIncidentLocation.textContent = loc || "N/A";
     }
     el.modalSize.textContent = formatBytes(file.size_bytes);
-    el.modalDownload.href = file.source_url || "#";
+    if (file.source_url) {
+      el.modalDownload.href = file.source_url;
+      el.modalDownload.removeAttribute("aria-disabled");
+      el.modalDownload.classList.remove("btn-disabled");
+      el.modalDownload.textContent = "הורדה מאתר המקור ↗";
+    } else {
+      el.modalDownload.removeAttribute("href");
+      el.modalDownload.setAttribute("aria-disabled", "true");
+      el.modalDownload.classList.add("btn-disabled");
+      el.modalDownload.textContent = "קישור ההורדה לא נלכד בסריקה";
+    }
 
     if (file.summary_he) {
       el.modalSummaryHe.textContent = file.summary_he;
