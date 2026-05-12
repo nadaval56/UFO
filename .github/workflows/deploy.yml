@@ -1,0 +1,72 @@
+name: Build manifest & deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      force_rebuild:
+        description: "Re-download Release_1.zip even if cached"
+        type: boolean
+        default: false
+  schedule:
+    # Weekly poll for new war.gov releases (Phase 4 precursor).
+    - cron: "0 8 * * 1"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build manifest from war.gov bundle
+        id: build
+        continue-on-error: true
+        run: |
+          set -e
+          cd "$GITHUB_WORKSPACE"
+          # Try to pull the real bundle and produce data/manifest.json.
+          # If war.gov is unreachable from the runner, fall back to the
+          # committed sample manifest so the site still deploys.
+          python scripts/build_manifest.py
+          echo "manifest_size=$(stat -c%s data/manifest.json)" >> "$GITHUB_OUTPUT"
+          echo "total_files=$(python -c "import json; print(json.load(open('data/manifest.json'))['total_files'])")" >> "$GITHUB_OUTPUT"
+
+      - name: Report build status
+        run: |
+          if [ "${{ steps.build.outcome }}" = "success" ]; then
+            echo "::notice ::Real manifest built (${{ steps.build.outputs.total_files }} files, ${{ steps.build.outputs.manifest_size }} bytes)"
+          else
+            echo "::warning ::Manifest build failed — keeping committed manifest as fallback. Inspect the build step log."
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}

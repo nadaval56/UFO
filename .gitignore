@@ -1,0 +1,16 @@
+# Bundles fetched by build_manifest.py — not versioned.
+data/release_01/raw/
+data/release_01/*.zip
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
