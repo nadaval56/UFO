@@ -34,15 +34,16 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build manifest from war.gov bundle
+      - name: Refresh manifest from war.gov
         id: build
         continue-on-error: true
         run: |
           set -e
           cd "$GITHUB_WORKSPACE"
-          # Try to pull the real bundle and produce data/manifest.json.
-          # If war.gov is unreachable from the runner, fall back to the
-          # committed sample manifest so the site still deploys.
+          # Pulls the latest file list from war.gov and writes data/manifest.json.
+          # Hebrew translations already in the committed manifest are preserved.
+          # If war.gov is unreachable from the runner, the committed manifest
+          # is kept and the site still deploys.
           python scripts/build_manifest.py
           echo "manifest_size=$(stat -c%s data/manifest.json)" >> "$GITHUB_OUTPUT"
           echo "total_files=$(python -c "import json; print(json.load(open('data/manifest.json'))['total_files'])")" >> "$GITHUB_OUTPUT"

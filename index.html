@@ -67,9 +67,8 @@
       <div class="container">
         <blockquote class="presidential-quote">
           <p>
-            "האמריקאים זכאים לדעת את האמת.
-            אני מורה לכל הסוכנויות הפדרליות לפתוח את הארכיונים שלהן ולשחרר כל מסמך הקשור לתופעות אוויריות
-            בלתי מוסברות לעיני הציבור."
+            "האמריקאים זכאים לדעת את האמת בנוגע לתופעות האוויריות החריגות הבלתי מזוהות. אני מורה
+            לכל הסוכנויות הפדרליות לפתוח את הארכיונים שלהן ולשחרר לעיני הציבור כל מסמך הנוגע לנושא זה."
           </p>
           <footer class="quote-attribution">
             — דונלד ג'יי. טראמפ, נשיא ארצות הברית
@@ -132,14 +131,18 @@
           <h2 class="section-title">מהדורה 01 — שוחרר ב-8 במאי 2026</h2>
         </header>
 
-        <!-- ציטוט הגסת' -->
+        <!-- ציטוט הגסת' — תרגום נאמן של ההצהרה הרשמית באתר -->
         <blockquote class="hegseth-quote">
+          <span class="quote-label">// הצהרה</span>
           <p>
-            "אנו פותחים את הארכיון. העם האמריקאי זכאי לראות את מה שהממשלה ידעה — בלי סיווג, בלי צנזורה,
-            ובלי דיחוי. זוהי רק ההתחלה."
+            "משרד המלחמה צועד יד ביד עם הנשיא טראמפ כדי להביא שקיפות חסרת תקדים בנוגע להבנת
+            הממשלה שלנו את התופעות האוויריות החריגות הבלתי מזוהות. הקבצים הללו, שהוסתרו מאחורי
+            סיווגים, הזינו זה זמן רב ספקולציות מוצדקות — והגיע הזמן שהעם האמריקאי יראה זאת
+            בעצמו. שחרור מסמכים אלה, שסיווגם הוסר, מדגים את מחויבותה הכנה של ממשל טראמפ
+            לשקיפות חסרת תקדים."
           </p>
           <footer class="quote-attribution">
-            — פיט הגסת', מזכיר המלחמה
+            — שר המלחמה של ארצות הברית, פיט הגסת'
           </footer>
         </blockquote>
 
@@ -219,16 +222,29 @@
       <div class="modal-backdrop" data-close-modal></div>
       <div class="modal-panel" role="document">
         <button class="modal-close" type="button" data-close-modal aria-label="סגירה">×</button>
+        <p class="modal-eyebrow">שם נכס</p>
         <h3 id="file-modal-title" class="modal-title mono">—</h3>
+
+        <section id="modal-summary-he-wrap" class="modal-summary" hidden>
+          <p class="modal-section-label">תקציר בעברית</p>
+          <p id="modal-summary-he" class="modal-summary-text"></p>
+        </section>
+
+        <details id="modal-summary-en-wrap" class="modal-summary-en" hidden>
+          <summary>הצגת המקור באנגלית</summary>
+          <p id="modal-summary-en" class="modal-summary-text"></p>
+        </details>
+
         <dl class="modal-meta">
           <div><dt>סוכנות</dt><dd id="modal-agency">—</dd></div>
-          <div><dt>סוג</dt><dd id="modal-type">—</dd></div>
+          <div><dt>סוג מסמך</dt><dd id="modal-type">—</dd></div>
           <div><dt>תאריך שחרור</dt><dd id="modal-release-date">—</dd></div>
+          <div><dt>תאריך אירוע</dt><dd id="modal-incident-date">—</dd></div>
+          <div><dt>מיקום אירוע</dt><dd id="modal-incident-location">—</dd></div>
           <div><dt>גודל</dt><dd id="modal-size" class="mono">—</dd></div>
-          <div><dt>מזהה מקור</dt><dd id="modal-source-id" class="mono">—</dd></div>
         </dl>
         <p class="modal-note">
-          תוכן המסמך באנגלית. סיכומים בעברית יתווספו בשלב הבא (Phase 2).
+          תוכן ה-PDF המלא באנגלית. תרגום מלא של תוכן המסמכים יתווסף בשלב הבא (Phase 2).
         </p>
         <div class="modal-actions">
           <a id="modal-download" class="btn btn-primary" href="#" target="_blank" rel="noopener">הורדה מאתר המקור ↗</a>

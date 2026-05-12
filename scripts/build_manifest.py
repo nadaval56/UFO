@@ -2,38 +2,32 @@
 """
 build_manifest.py — produce data/manifest.json for the PURSUE Hebrew Mirror.
 
-Steps:
-  1. Download Release_1.zip from war.gov (unless already cached).
-  2. Extract to data/release_01/raw/.
-  3. Walk extracted files, derive metadata heuristically from filename.
-  4. Emit data/manifest.json.
+Pipeline:
+  1. Fetch the war.gov UFO page and extract the file list from the SPA HTML.
+  2. (optional) Download Release_1.zip; extract; walk filenames.
+  3. For each file, scrape the matching detail panel for its English
+     description.
+  4. Preserve any existing Hebrew translations from the current manifest.
+  5. Emit data/manifest.json. summary_he is left null for new entries —
+     translations are added by a human (via Claude Code session) and
+     committed alongside the manifest.
+
+Default URL pattern (verified from the live site):
+
+    https://www.war.gov/medialink/ufo/release_1/{lowercase_filename}
+
+Filename pattern, FBI 62-HQ-83894 case file:
+
+    65_HS1-{9-digit-id}_62-HQ-83894_SECTION_{N}.pdf
 
 Run:
-    pip install -r requirements.txt
     python build_manifest.py
-
-Notes on metadata extraction
-----------------------------
-The war.gov bundle does not (as of inspection) include sidecar metadata
-files for individual documents. Each file's agency, type, and source_id are
-inferred from the filename.
-
-FBI filename pattern observed (from screenshot of the original page):
-    65_HS1-834228961_62-HQ-83894_SERIAL_130.pdf
-       ^prefix    ^HS id        ^class ^HQ file   ^serial
-
-We treat any filename containing `HQ-` as FBI. The pattern can be extended
-as new agencies appear in future releases.
-
-Fields we cannot fill from the filename alone (incident_date,
-incident_location, summary_he) are left null — these will be populated in
-Phase 2 by PDF text extraction + Claude API summarization.
+    python build_manifest.py --skip-download
 """
 
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import re
 import sys
@@ -49,8 +43,9 @@ from typing import Optional
 # Configuration
 # ---------------------------------------------------------------------------
 
+UFO_PAGE_URL = "https://www.war.gov/UFO/"
 BUNDLE_URL = "https://www.war.gov/medialink/ufo/bundle/Release_1.zip"
-SOURCE_FILE_URL_BASE = "https://www.war.gov/medialink/ufo/files"  # verify by sampling
+SOURCE_FILE_URL_BASE = "https://www.war.gov/medialink/ufo/release_1"
 RELEASE_ID = "release_01"
 RELEASE_DATE = "2026-05-08"
 
@@ -59,6 +54,7 @@ DATA_DIR = REPO_ROOT / "data"
 RAW_DIR = DATA_DIR / RELEASE_ID / "raw"
 ZIP_PATH = DATA_DIR / RELEASE_ID / "Release_1.zip"
 MANIFEST_PATH = DATA_DIR / "manifest.json"
+CACHE_PAGE = DATA_DIR / RELEASE_ID / "ufo_page.html"
 
 USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
@@ -73,96 +69,66 @@ KNOWN_EXTENSIONS = {
 }
 
 # ---------------------------------------------------------------------------
-# Data model
-# ---------------------------------------------------------------------------
-
-@dataclass
-class FileEntry:
-    id: str
-    filename: str
-    agency: str
-    type: str
-    size_bytes: int
-    source_url: str
-    sha256: Optional[str] = None
-    incident_date: Optional[str] = None
-    incident_location: Optional[str] = None
-    summary_he: Optional[str] = None
-
-
-# ---------------------------------------------------------------------------
-# Helpers
+# Logging
 # ---------------------------------------------------------------------------
 
 def log(msg: str) -> None:
     print(f"[build_manifest] {msg}", file=sys.stderr)
 
 
-def http_get(url: str, dest: Path, retries: int = 4) -> None:
-    """Download `url` to `dest` with retry + browser-like UA."""
-    dest.parent.mkdir(parents=True, exist_ok=True)
+# ---------------------------------------------------------------------------
+# HTTP
+# ---------------------------------------------------------------------------
+
+def http_get_bytes(url: str, retries: int = 3, timeout: int = 60) -> Optional[bytes]:
     backoff = 2
-    last_err: Optional[Exception] = None
     for attempt in range(1, retries + 1):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-            with urllib.request.urlopen(req, timeout=120) as r, dest.open("wb") as out:
-                total = 0
-                while chunk := r.read(1024 * 256):
-                    out.write(chunk)
-                    total += len(chunk)
-                log(f"downloaded {total/1_000_000:.1f} MB → {dest.name}")
-            return
-        except (urllib.error.URLError, TimeoutError) as e:
-            last_err = e
-            log(f"attempt {attempt} failed: {e}; retrying in {backoff}s")
-            time.sleep(backoff)
-            backoff *= 2
-    raise RuntimeError(f"download failed for {url}: {last_err}")
+            req = urllib.request.Request(url, headers={
+                "User-Agent": USER_AGENT,
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,application/json,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.9",
+            })
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read()
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
+            log(f"GET {url} failed (attempt {attempt}/{retries}): {e}")
+            if attempt < retries:
+                time.sleep(backoff)
+                backoff *= 2
+    return None
 
 
-def extract_zip(zip_path: Path, dest_dir: Path) -> None:
-    dest_dir.mkdir(parents=True, exist_ok=True)
-    with zipfile.ZipFile(zip_path, "r") as zf:
-        zf.extractall(dest_dir)
-    log(f"extracted to {dest_dir}")
-
-
-def sha256_of(path: Path, chunk: int = 1024 * 1024) -> str:
-    h = hashlib.sha256()
-    with path.open("rb") as f:
-        while data := f.read(chunk):
-            h.update(data)
-    return h.hexdigest()
+def http_download(url: str, dest: Path) -> bool:
+    log(f"downloading {url}")
+    data = http_get_bytes(url, timeout=180)
+    if data is None:
+        return False
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_bytes(data)
+    log(f"  → {dest} ({len(data)/1_000_000:.1f} MB)")
+    return True
 
 
 # ---------------------------------------------------------------------------
 # Filename heuristics
 # ---------------------------------------------------------------------------
 
-# FBI: filenames contain `HQ-NNNNN`
 FBI_RE = re.compile(r"\bHQ-\d{3,6}\b", re.IGNORECASE)
-# DOW: placeholder, refine when real samples seen
+SECTION_RE = re.compile(r"_SECTION_\d+", re.IGNORECASE)
+SERIAL_RE = re.compile(r"_SERIAL_\d+", re.IGNORECASE)
 DOW_RE = re.compile(r"\bDOW[-_]", re.IGNORECASE)
-# NASA: placeholder
 NASA_RE = re.compile(r"\bNASA[-_]", re.IGNORECASE)
-# ODNI / AARO: placeholders
 ODNI_RE = re.compile(r"\bODNI[-_]", re.IGNORECASE)
 AARO_RE = re.compile(r"\bAARO[-_]", re.IGNORECASE)
 
 
 def infer_agency(filename: str) -> str:
-    name = filename
-    if FBI_RE.search(name):
-        return "FBI"
-    if DOW_RE.search(name):
-        return "DOW"
-    if NASA_RE.search(name):
-        return "NASA"
-    if ODNI_RE.search(name):
-        return "ODNI"
-    if AARO_RE.search(name):
-        return "AARO"
+    if FBI_RE.search(filename): return "FBI"
+    if DOW_RE.search(filename): return "DOW"
+    if NASA_RE.search(filename): return "NASA"
+    if ODNI_RE.search(filename): return "ODNI"
+    if AARO_RE.search(filename): return "AARO"
     return "Unknown"
 
 
@@ -172,35 +138,126 @@ def infer_type(filename: str) -> str:
 
 
 def build_source_url(filename: str) -> str:
-    # Verify by clicking a real link on war.gov/UFO — adjust if pattern differs.
-    return f"{SOURCE_FILE_URL_BASE}/{filename}"
+    # war.gov serves files as lowercase paths under /release_1/
+    return f"{SOURCE_FILE_URL_BASE}/{filename.lower()}"
 
 
 # ---------------------------------------------------------------------------
-# Manifest assembly
+# Discovery: try multiple ways to find the file list
 # ---------------------------------------------------------------------------
 
-def walk_files(root: Path) -> list[Path]:
+# Filenames that look like FBI section files inside the SPA page source
+INLINE_FILENAME_RE = re.compile(
+    r"\b(\d{2}_HS\d?[-_]\d+_\d{2}-HQ-\d+_(?:SECTION|SERIAL)_\d+)\.pdf",
+    re.IGNORECASE,
+)
+
+
+def discover_from_page(html: str) -> list[str]:
+    """Return de-duplicated filename list (without .pdf) found inside the SPA HTML."""
+    seen = set()
+    out = []
+    for m in INLINE_FILENAME_RE.finditer(html):
+        name = m.group(1)
+        if name not in seen:
+            seen.add(name)
+            out.append(name)
+    return out
+
+
+def discover_from_zip(zip_path: Path, extract_to: Path) -> list[Path]:
+    if not zip_path.exists():
+        return []
+    extract_to.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(zip_path, "r") as zf:
+        zf.extractall(extract_to)
+    log(f"extracted bundle to {extract_to}")
     out: list[Path] = []
-    for p in root.rglob("*"):
+    for p in extract_to.rglob("*"):
         if p.is_file() and not p.name.startswith("."):
             out.append(p)
     out.sort(key=lambda p: p.name)
     return out
 
 
-def entry_from_path(path: Path, include_sha: bool = False) -> FileEntry:
-    name = path.name
-    file_id = path.stem
+# ---------------------------------------------------------------------------
+# Description scraping
+# ---------------------------------------------------------------------------
+
+# Heuristic: the SPA likely embeds descriptions inside JSON-ish structures
+# alongside the filename. Match either:
+#   "description": "..." right after the filename
+#   any other contextual paragraph linked to the filename
+DESCRIPTION_NEAR_FILENAME_RE = re.compile(
+    r'"description"\s*:\s*"((?:[^"\\]|\\.)*)"',
+    re.DOTALL,
+)
+
+
+def extract_descriptions_from_page(html: str) -> dict[str, str]:
+    """
+    Try to map filename → description by parsing the SPA HTML.
+
+    Returns: dict mapping the bare filename (no extension, original case as it
+    appears) to its description string. Empty if the page doesn't embed them.
+    """
+    results: dict[str, str] = {}
+    # Split the HTML by filename occurrences and look for a nearby description.
+    matches = list(INLINE_FILENAME_RE.finditer(html))
+    if not matches:
+        return results
+    for i, m in enumerate(matches):
+        name = m.group(1)
+        # window: from this match until the next, or 4KB ahead
+        start = m.end()
+        end = matches[i + 1].start() if i + 1 < len(matches) else min(len(html), start + 4000)
+        window = html[start:end]
+        d = DESCRIPTION_NEAR_FILENAME_RE.search(window)
+        if d:
+            try:
+                # Decode JSON-style escapes
+                desc = json.loads(f'"{d.group(1)}"')
+            except json.JSONDecodeError:
+                desc = d.group(1)
+            results[name] = desc.strip()
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Manifest assembly
+# ---------------------------------------------------------------------------
+
+@dataclass
+class FileEntry:
+    id: str
+    filename: str
+    agency: str
+    type: str
+    size_bytes: Optional[int] = None
+    source_url: str = ""
+    release_date: str = RELEASE_DATE
+    incident_date: Optional[str] = None
+    incident_location: Optional[str] = None
+    summary_en: Optional[str] = None
+    summary_he: Optional[str] = None
+
+
+def entry_from_name(name_no_ext: str, ext: str = ".pdf",
+                    size_bytes: Optional[int] = None) -> FileEntry:
+    filename = f"{name_no_ext}{ext}"
     return FileEntry(
-        id=file_id,
-        filename=name,
-        agency=infer_agency(name),
-        type=infer_type(name),
-        size_bytes=path.stat().st_size,
-        source_url=build_source_url(name),
-        sha256=(sha256_of(path) if include_sha else None),
+        id=name_no_ext,
+        filename=filename,
+        agency=infer_agency(filename),
+        type=infer_type(filename),
+        size_bytes=size_bytes,
+        source_url=build_source_url(filename),
     )
+
+
+def entry_from_path(path: Path) -> FileEntry:
+    e = entry_from_name(path.stem, path.suffix or ".pdf", size_bytes=path.stat().st_size)
+    return e
 
 
 def emit_manifest(entries: list[FileEntry], out_path: Path) -> None:
@@ -208,6 +265,7 @@ def emit_manifest(entries: list[FileEntry], out_path: Path) -> None:
         "release_id": RELEASE_ID,
         "release_date": RELEASE_DATE,
         "source_bundle_url": BUNDLE_URL,
+        "source_page_url": UFO_PAGE_URL,
         "total_files": len(entries),
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "files": [asdict(e) for e in entries],
@@ -218,58 +276,116 @@ def emit_manifest(entries: list[FileEntry], out_path: Path) -> None:
     log(f"wrote {out_path} ({len(entries)} files)")
 
 
+def load_existing_he(path: Path) -> dict[str, str]:
+    """Return id → summary_he map from the current manifest, so we can
+    carry translations forward across rebuilds without re-doing them."""
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    out: dict[str, str] = {}
+    for f in data.get("files", []):
+        fid = f.get("id")
+        he = f.get("summary_he")
+        if fid and he:
+            out[fid] = he
+    return out
+
+
 # ---------------------------------------------------------------------------
-# CLI
+# Main
 # ---------------------------------------------------------------------------
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(description=__doc__,
+                                     formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--skip-page-fetch", action="store_true",
+                        help="don't try to fetch the war.gov UFO page")
     parser.add_argument("--skip-download", action="store_true",
-                        help="skip downloading the bundle (use cached zip / raw dir)")
+                        help="don't download Release_1.zip")
     parser.add_argument("--skip-extract", action="store_true",
-                        help="skip extracting the bundle")
-    parser.add_argument("--with-sha256", action="store_true",
-                        help="compute SHA-256 of each file (slow but useful)")
+                        help="don't extract the zip even if it's present")
     parser.add_argument("--raw-dir", default=None,
                         help="override the directory of already-extracted files")
     args = parser.parse_args()
 
     raw_dir = Path(args.raw_dir).resolve() if args.raw_dir else RAW_DIR
 
-    if not args.skip_download:
-        if ZIP_PATH.exists():
-            log(f"bundle already at {ZIP_PATH}; pass --skip-download to skip next time")
+    # ------------------------------------------------------------------ 1. page
+    page_html = ""
+    if not args.skip_page_fetch:
+        data = http_get_bytes(UFO_PAGE_URL)
+        if data:
+            page_html = data.decode("utf-8", errors="replace")
+            CACHE_PAGE.parent.mkdir(parents=True, exist_ok=True)
+            CACHE_PAGE.write_text(page_html, encoding="utf-8")
+            log(f"cached SPA page → {CACHE_PAGE} ({len(page_html)} chars)")
         else:
-            log(f"downloading {BUNDLE_URL}")
-            http_get(BUNDLE_URL, ZIP_PATH)
+            log("could not fetch war.gov/UFO/ — continuing without page metadata")
 
-    if not args.skip_extract:
-        if not ZIP_PATH.exists() and not args.skip_download:
-            log("zip missing; cannot extract")
-            return 1
-        if ZIP_PATH.exists():
-            extract_zip(ZIP_PATH, raw_dir)
+    inline_names = discover_from_page(page_html) if page_html else []
+    descriptions = extract_descriptions_from_page(page_html) if page_html else {}
+    log(f"inline filenames from page: {len(inline_names)}; descriptions: {len(descriptions)}")
 
-    if not raw_dir.exists():
-        log(f"no raw dir at {raw_dir} — nothing to walk")
-        return 1
+    # ------------------------------------------------------------------ 2. zip
+    zip_paths: list[Path] = []
+    if not args.skip_download and not ZIP_PATH.exists():
+        if not http_download(BUNDLE_URL, ZIP_PATH):
+            log("bundle download failed")
+    if not args.skip_extract and ZIP_PATH.exists():
+        zip_paths = discover_from_zip(ZIP_PATH, raw_dir)
+    elif raw_dir.exists():
+        zip_paths = sorted([p for p in raw_dir.rglob("*") if p.is_file()])
 
-    paths = walk_files(raw_dir)
-    if not paths:
-        log("no files found in raw dir")
-        return 1
+    # ------------------------------------------------------------------ 3. merge sources
+    seen: set[str] = set()
+    entries: list[FileEntry] = []
 
-    log(f"processing {len(paths)} files (sha256={args.with_sha256})")
-    entries = [entry_from_path(p, include_sha=args.with_sha256) for p in paths]
+    # Prefer zip (gives us real sizes); fall back to inline names from the page.
+    for p in zip_paths:
+        if p.stem in seen:
+            continue
+        seen.add(p.stem)
+        e = entry_from_path(p)
+        e.summary_en = descriptions.get(p.stem)
+        entries.append(e)
+
+    for name in inline_names:
+        if name in seen:
+            continue
+        seen.add(name)
+        e = entry_from_name(name)
+        e.summary_en = descriptions.get(name)
+        entries.append(e)
+
+    if not entries:
+        log("no files discovered from page or zip — keeping existing manifest unchanged")
+        return 0
+
+    # ------------------------------------------------------------------ 4. carry over Hebrew translations
+    # Translations are produced by a human (Claude Code session) and committed
+    # to data/manifest.json. This step preserves them across rebuilds.
+    existing_he = load_existing_he(MANIFEST_PATH)
+    for e in entries:
+        if e.id in existing_he:
+            e.summary_he = existing_he[e.id]
+
+    # ------------------------------------------------------------------ 5. write
+    entries.sort(key=lambda e: e.filename)
     emit_manifest(entries, MANIFEST_PATH)
 
     agencies: dict[str, int] = {}
     types: dict[str, int] = {}
+    with_en = sum(1 for e in entries if e.summary_en)
+    with_he = sum(1 for e in entries if e.summary_he)
     for e in entries:
         agencies[e.agency] = agencies.get(e.agency, 0) + 1
         types[e.type] = types.get(e.type, 0) + 1
     log(f"agencies: {agencies}")
     log(f"types:    {types}")
+    log(f"summaries: en={with_en}, he={with_he}")
     return 0
 
 

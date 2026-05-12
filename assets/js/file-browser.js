@@ -39,8 +39,13 @@
     modalAgency: document.getElementById("modal-agency"),
     modalType: document.getElementById("modal-type"),
     modalReleaseDate: document.getElementById("modal-release-date"),
+    modalIncidentDate: document.getElementById("modal-incident-date"),
+    modalIncidentLocation: document.getElementById("modal-incident-location"),
     modalSize: document.getElementById("modal-size"),
-    modalSourceId: document.getElementById("modal-source-id"),
+    modalSummaryHe: document.getElementById("modal-summary-he"),
+    modalSummaryHeWrap: document.getElementById("modal-summary-he-wrap"),
+    modalSummaryEn: document.getElementById("modal-summary-en"),
+    modalSummaryEnWrap: document.getElementById("modal-summary-en-wrap"),
     modalDownload: document.getElementById("modal-download"),
   };
 
@@ -71,6 +76,10 @@
     return String(s).replace(/[&<>"']/g, (c) => ({
       "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
     })[c]);
+  }
+
+  function truncate(s, n) {
+    return s.length > n ? s.slice(0, n - 1).trimEnd() + "…" : s;
   }
 
   /* ------------------------- load ------------------------- */
@@ -259,9 +268,17 @@
       const safeAgency = escapeHtml(agencyLabel(f.agency));
       const safeType = escapeHtml(typeLabel(f.type));
       const idAttr = escapeHtml(f.id || f.filename);
+      const summary = (f.summary_he || f.summary_en || "").trim();
+      const snippet = summary ? escapeHtml(truncate(summary, 180)) : "";
+      const summaryHtml = snippet
+        ? `<p class="file-card-summary" dir="${f.summary_he ? "rtl" : "ltr"}">${snippet}</p>`
+        : "";
       return `
         <article class="file-card" tabindex="0" data-id="${idAttr}" data-index="${start + idx}" role="button" aria-label="פתח פרטים עבור ${safeName}">
-          <div class="file-card-name">${safeName}</div>
+          <div class="file-card-main">
+            <div class="file-card-name">${safeName}</div>
+            ${summaryHtml}
+          </div>
           <div class="file-card-field">
             <span class="file-card-field-label">סוכנות</span>
             <span class="file-card-field-value">${safeAgency}</span>
@@ -346,9 +363,25 @@
     el.modalAgency.textContent = agencyLabel(file.agency);
     el.modalType.textContent = typeLabel(file.type);
     el.modalReleaseDate.textContent = file.release_date || state.releaseDateGlobal || "—";
+    if (el.modalIncidentDate) el.modalIncidentDate.textContent = file.incident_date || "לא ידוע";
+    if (el.modalIncidentLocation) el.modalIncidentLocation.textContent = file.incident_location || "לא ידוע";
     el.modalSize.textContent = formatBytes(file.size_bytes);
-    el.modalSourceId.textContent = file.id || "—";
     el.modalDownload.href = file.source_url || "#";
+
+    if (file.summary_he) {
+      el.modalSummaryHe.textContent = file.summary_he;
+      el.modalSummaryHeWrap.hidden = false;
+    } else {
+      el.modalSummaryHeWrap.hidden = true;
+    }
+    if (file.summary_en) {
+      el.modalSummaryEn.textContent = file.summary_en;
+      el.modalSummaryEnWrap.hidden = false;
+      el.modalSummaryEnWrap.open = !file.summary_he;
+    } else {
+      el.modalSummaryEnWrap.hidden = true;
+    }
+
     el.modal.hidden = false;
     el.modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
