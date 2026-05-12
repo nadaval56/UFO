@@ -17,7 +17,14 @@
     files: [],
     filtered: [],
     page: 1,
-    filters: { agency: "", releaseDate: "", type: "", search: "" },
+    filters: {
+      agency: "",
+      releaseDate: "",
+      incidentDate: "",
+      incidentLocation: "",
+      type: "",
+      search: "",
+    },
     releaseDateGlobal: null,
   };
 
@@ -31,6 +38,8 @@
     countNum: document.getElementById("file-count-num"),
     agency: document.getElementById("filter-agency"),
     releaseDate: document.getElementById("filter-release"),
+    incidentDate: document.getElementById("filter-incident-date"),
+    incidentLocation: document.getElementById("filter-incident-location"),
     type: document.getElementById("filter-type"),
     search: document.getElementById("filter-search"),
     reset: document.getElementById("filter-reset"),
@@ -64,8 +73,24 @@
     return map[t] || (t ? t.toUpperCase() : "—");
   }
 
-  function agencyLabel(a) {
-    return a || "—";
+  function fileTitleHe(f) {
+    return f.title_he || f.title || f.filename || "—";
+  }
+
+  function fileTitleRaw(f) {
+    return f.title || f.filename || "—";
+  }
+
+  function agencyDisplayHe(f) {
+    return f.agency_he || f.agency || "—";
+  }
+
+  function incidentDateDisplay(f) {
+    return f.incident_date_display || f.incident_date || null;
+  }
+
+  function incidentLocationDisplayHe(f) {
+    return f.incident_location_he || f.incident_location || null;
   }
 
   function unique(arr) {
@@ -120,9 +145,18 @@
       ? [state.releaseDateGlobal]
       : unique(state.files.map((f) => f.release_date));
 
+    // Incident dates: prefer display form (matches what the user sees)
+    const incidentDates = unique(state.files.map((f) => incidentDateDisplay(f)));
+    const incidentLocations = unique(state.files.map((f) => f.incident_location));
+
     fillSelect(el.agency, agencies);
     fillSelect(el.type, types, typeLabel);
     fillSelect(el.releaseDate, releaseDates);
+    fillSelect(el.incidentDate, incidentDates);
+    fillSelect(el.incidentLocation, incidentLocations, (v) => {
+      const f = state.files.find((x) => x.incident_location === v);
+      return f && f.incident_location_he ? `${f.incident_location_he} (${v})` : v;
+    });
   }
 
   function fillSelect(select, values, labelFn) {
@@ -140,10 +174,22 @@
 
   /* ------------------------- events ------------------------- */
 
+  function bindFilter(elem, key) {
+    if (!elem) return;
+    elem.addEventListener("change", () => {
+      state.filters[key] = elem.value;
+      state.page = 1;
+      apply();
+      writeHash();
+    });
+  }
+
   function bindEvents() {
-    el.agency.addEventListener("change", () => { state.filters.agency = el.agency.value; state.page = 1; apply(); writeHash(); });
-    el.releaseDate.addEventListener("change", () => { state.filters.releaseDate = el.releaseDate.value; state.page = 1; apply(); writeHash(); });
-    el.type.addEventListener("change", () => { state.filters.type = el.type.value; state.page = 1; apply(); writeHash(); });
+    bindFilter(el.agency, "agency");
+    bindFilter(el.releaseDate, "releaseDate");
+    bindFilter(el.incidentDate, "incidentDate");
+    bindFilter(el.incidentLocation, "incidentLocation");
+    bindFilter(el.type, "type");
 
     let searchDebounce;
     el.search.addEventListener("input", () => {
@@ -173,12 +219,17 @@
   }
 
   function resetFilters() {
-    state.filters = { agency: "", releaseDate: "", type: "", search: "" };
+    state.filters = {
+      agency: "", releaseDate: "", incidentDate: "",
+      incidentLocation: "", type: "", search: "",
+    };
     state.page = 1;
-    el.agency.value = "";
-    el.releaseDate.value = "";
-    el.type.value = "";
-    el.search.value = "";
+    if (el.agency) el.agency.value = "";
+    if (el.releaseDate) el.releaseDate.value = "";
+    if (el.incidentDate) el.incidentDate.value = "";
+    if (el.incidentLocation) el.incidentLocation.value = "";
+    if (el.type) el.type.value = "";
+    if (el.search) el.search.value = "";
     apply();
     writeHash();
   }
@@ -186,9 +237,6 @@
   /* ------------------------- hash routing ------------------------- */
 
   function applyHash() {
-    // accepted forms:
-    //   #release/page/3
-    //   #release/page/3?agency=FBI&type=pdf&q=serial_130
     const hash = decodeURIComponent(location.hash.replace(/^#/, ""));
     if (!hash.startsWith("release")) return;
 
@@ -203,12 +251,15 @@
       const params = new URLSearchParams(queryPart);
       state.filters.agency = params.get("agency") || "";
       state.filters.releaseDate = params.get("release") || "";
+      state.filters.incidentDate = params.get("incident_date") || "";
+      state.filters.incidentLocation = params.get("location") || "";
       state.filters.type = params.get("type") || "";
       state.filters.search = (params.get("q") || "").toLowerCase();
 
-      // reflect in inputs
       if (el.agency) el.agency.value = state.filters.agency;
       if (el.releaseDate) el.releaseDate.value = state.filters.releaseDate;
+      if (el.incidentDate) el.incidentDate.value = state.filters.incidentDate;
+      if (el.incidentLocation) el.incidentLocation.value = state.filters.incidentLocation;
       if (el.type) el.type.value = state.filters.type;
       if (el.search) el.search.value = state.filters.search;
     }
@@ -218,25 +269,32 @@
     const params = new URLSearchParams();
     if (state.filters.agency) params.set("agency", state.filters.agency);
     if (state.filters.releaseDate) params.set("release", state.filters.releaseDate);
+    if (state.filters.incidentDate) params.set("incident_date", state.filters.incidentDate);
+    if (state.filters.incidentLocation) params.set("location", state.filters.incidentLocation);
     if (state.filters.type) params.set("type", state.filters.type);
     if (state.filters.search) params.set("q", state.filters.search);
     const q = params.toString();
     const hash = `release/page/${state.page}` + (q ? `?${q}` : "");
-    // avoid scroll jump
     history.replaceState(null, "", "#" + hash);
   }
 
   /* ------------------------- filter + render ------------------------- */
 
   function apply() {
-    const { agency, releaseDate, type, search } = state.filters;
+    const { agency, releaseDate, incidentDate, incidentLocation, type, search } = state.filters;
 
     state.filtered = state.files.filter((f) => {
       if (agency && f.agency !== agency) return false;
       if (type && f.type !== type) return false;
       if (releaseDate && (f.release_date || state.releaseDateGlobal) !== releaseDate) return false;
+      if (incidentDate && incidentDateDisplay(f) !== incidentDate) return false;
+      if (incidentLocation && f.incident_location !== incidentLocation) return false;
       if (search) {
-        const hay = (f.filename + " " + (f.id || "")).toLowerCase();
+        const hay = [
+          f.title, f.title_he, f.filename, f.id,
+          f.agency, f.agency_he,
+          f.incident_location, f.incident_location_he,
+        ].filter(Boolean).join(" ").toLowerCase();
         if (!hay.includes(search)) return false;
       }
       return true;
@@ -264,28 +322,38 @@
     const slice = state.filtered.slice(start, start + PAGE_SIZE);
 
     el.list.innerHTML = slice.map((f, idx) => {
-      const safeName = escapeHtml(f.filename);
-      const safeAgency = escapeHtml(agencyLabel(f.agency));
+      const titleHe = escapeHtml(fileTitleHe(f));
+      const rawName = escapeHtml(f.filename || f.id || "");
+      const safeAgency = escapeHtml(agencyDisplayHe(f));
       const safeType = escapeHtml(typeLabel(f.type));
-      const idAttr = escapeHtml(f.id || f.filename);
-      const summary = (f.summary_he || f.summary_en || "").trim();
-      const snippet = summary ? escapeHtml(truncate(summary, 180)) : "";
-      const summaryHtml = snippet
-        ? `<p class="file-card-summary" dir="${f.summary_he ? "rtl" : "ltr"}">${snippet}</p>`
-        : "";
+      const idAttr = escapeHtml(f.id || f.filename || "");
+      const incDate = incidentDateDisplay(f);
+      const incLoc = incidentLocationDisplayHe(f);
+
+      const isCodeTitle = !f.title_he && (f.title || f.filename || "").match(/^[\d_A-Z\-]+\.pdf$/i);
+      const titleClass = isCodeTitle ? "file-card-title mono code-title" : "file-card-title";
+
       return `
-        <article class="file-card" tabindex="0" data-id="${idAttr}" data-index="${start + idx}" role="button" aria-label="פתח פרטים עבור ${safeName}">
+        <article class="file-card" tabindex="0" data-id="${idAttr}" data-index="${start + idx}" role="button" aria-label="פתח פרטים עבור ${titleHe}">
           <div class="file-card-main">
-            <div class="file-card-name">${safeName}</div>
-            ${summaryHtml}
+            <div class="${titleClass}" dir="${f.title_he ? "rtl" : "ltr"}">${titleHe}</div>
+            ${isCodeTitle ? "" : `<div class="file-card-filename mono">${rawName}</div>`}
           </div>
           <div class="file-card-field">
             <span class="file-card-field-label">סוכנות</span>
             <span class="file-card-field-value">${safeAgency}</span>
           </div>
           <div class="file-card-field">
+            <span class="file-card-field-label">תאריך אירוע</span>
+            <span class="file-card-field-value">${incDate ? escapeHtml(incDate) : "N/A"}</span>
+          </div>
+          <div class="file-card-field">
+            <span class="file-card-field-label">מיקום</span>
+            <span class="file-card-field-value">${incLoc ? escapeHtml(incLoc) : "N/A"}</span>
+          </div>
+          <div class="file-card-field">
             <span class="file-card-field-label">סוג</span>
-            <span class="file-card-field-value">${safeType}</span>
+            <span class="file-card-field-value">.${safeType}</span>
           </div>
           <a class="file-card-download" href="${escapeHtml(f.source_url || "#")}" target="_blank" rel="noopener" data-stop-card>הורדה ↓</a>
         </article>
@@ -344,7 +412,6 @@
   }
 
   function buildPageList(current, total) {
-    // Always show first, last, current, neighbours, with "…" gaps.
     const pages = new Set([1, total, current, current - 1, current + 1]);
     const list = [...pages].filter((p) => p >= 1 && p <= total).sort((a, b) => a - b);
     const out = [];
@@ -359,12 +426,19 @@
 
   function openModal(file) {
     if (!file) return;
-    el.modalTitle.textContent = file.filename;
-    el.modalAgency.textContent = agencyLabel(file.agency);
+    el.modalTitle.textContent = fileTitleHe(file);
+    el.modalTitle.setAttribute("dir", file.title_he ? "rtl" : "ltr");
+    el.modalAgency.textContent = agencyDisplayHe(file);
     el.modalType.textContent = typeLabel(file.type);
     el.modalReleaseDate.textContent = file.release_date || state.releaseDateGlobal || "—";
-    if (el.modalIncidentDate) el.modalIncidentDate.textContent = file.incident_date || "לא ידוע";
-    if (el.modalIncidentLocation) el.modalIncidentLocation.textContent = file.incident_location || "לא ידוע";
+    if (el.modalIncidentDate) {
+      const d = incidentDateDisplay(file);
+      el.modalIncidentDate.textContent = d || "N/A";
+    }
+    if (el.modalIncidentLocation) {
+      const loc = incidentLocationDisplayHe(file);
+      el.modalIncidentLocation.textContent = loc || "N/A";
+    }
     el.modalSize.textContent = formatBytes(file.size_bytes);
     el.modalDownload.href = file.source_url || "#";
 

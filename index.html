@@ -176,16 +176,16 @@
               <option value="">הכול</option>
             </select>
           </div>
-          <div class="filter filter-disabled" title="יתווסף בשלב הבא (Phase 2)">
-            <label class="filter-label">תאריך אירוע <span aria-hidden="true">⏳</span></label>
-            <select class="filter-select" disabled aria-disabled="true">
-              <option>יתווסף בשלב הבא</option>
+          <div class="filter">
+            <label for="filter-incident-date" class="filter-label">תאריך אירוע</label>
+            <select id="filter-incident-date" class="filter-select">
+              <option value="">הכול</option>
             </select>
           </div>
-          <div class="filter filter-disabled" title="יתווסף בשלב הבא (Phase 2)">
-            <label class="filter-label">מיקום אירוע <span aria-hidden="true">⏳</span></label>
-            <select class="filter-select" disabled aria-disabled="true">
-              <option>יתווסף בשלב הבא</option>
+          <div class="filter">
+            <label for="filter-incident-location" class="filter-label">מיקום אירוע</label>
+            <select id="filter-incident-location" class="filter-select">
+              <option value="">הכול</option>
             </select>
           </div>
           <div class="filter">
@@ -196,7 +196,7 @@
           </div>
           <div class="filter filter-search">
             <label for="filter-search" class="filter-label">חיפוש</label>
-            <input id="filter-search" class="filter-input" type="search" placeholder="חיפוש בשם הקובץ / מזהה…" autocomplete="off">
+            <input id="filter-search" class="filter-input" type="search" placeholder="חיפוש בכותרת / שם קובץ…" autocomplete="off">
           </div>
           <button id="filter-reset" class="btn btn-ghost btn-sm" type="button">איפוס</button>
         </div>
