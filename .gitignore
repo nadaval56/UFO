@@ -1,6 +1,7 @@
 # Bundles fetched by build_manifest.py — not versioned.
 data/release_01/raw/
 data/release_01/*.zip
+data/_debug/
 
 # Python
 __pycache__/

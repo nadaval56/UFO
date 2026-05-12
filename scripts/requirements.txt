@@ -1,9 +1,1 @@
-# build_manifest.py uses only the Python standard library — no install needed.
-# Hebrew translations are produced by a human (via Claude Code) and committed
-# to data/manifest.json; the script preserves them across rebuilds.
-#
-# Phase 2 (PDF text extraction / OCR) will add:
-#   pdfplumber>=0.10
-#   pytesseract>=0.3.10
-#   Pillow>=10.0
-#   tqdm>=4.66
+playwright>=1.46

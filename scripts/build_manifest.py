@@ -1,28 +1,36 @@
 #!/usr/bin/env python3
 """
-build_manifest.py — produce data/manifest.json for the PURSUE Hebrew Mirror.
+build_manifest.py — scrape the live war.gov/UFO file list with Playwright.
 
-Pipeline:
-  1. Fetch the war.gov UFO page and extract the file list from the SPA HTML.
-  2. (optional) Download Release_1.zip; extract; walk filenames.
-  3. For each file, scrape the matching detail panel for its English
-     description.
-  4. Preserve any existing Hebrew translations from the current manifest.
-  5. Emit data/manifest.json. summary_he is left null for new entries —
-     translations are added by a human (via Claude Code session) and
-     committed alongside the manifest.
+The page is a Single-Page Application: a plain HTTP GET returns only the JS
+bundle, so heuristic filename parsing is useless. This script renders the
+page in headless Chromium, walks every row of the file table, and writes
+data/manifest.json with the real metadata.
 
-Default URL pattern (verified from the live site):
+For each file it captures:
+  - title           (human-readable, displayed on the row)
+  - filename        (the underlying asset name)
+  - agency          (FBI, DEPARTMENT OF STATE, DEPARTMENT OF WAR, …)
+  - release_date    (raw display, e.g. "5/8/26")
+  - incident_date   (raw display, e.g. "9/1/23" or "LATE 2025")
+  - incident_location  (e.g. "UNITED STATES", "TURKMENISTAN", …)
+  - type            (.pdf / .img / .vid)
+  - source_url      (real download URL — extracted from the page, not guessed)
+  - summary_en      (the description shown on the detail panel)
 
-    https://www.war.gov/medialink/ufo/release_1/{lowercase_filename}
+A HEAD request validates each source_url returns 2xx; non-2xx URLs are
+flagged in the manifest with `url_status` so the front-end can warn.
 
-Filename pattern, FBI 62-HQ-83894 case file:
+Hebrew translations are produced separately (Claude Code session) and live
+in the same manifest under summary_he / title_he / agency_he etc. This
+script preserves whatever Hebrew is already in the existing manifest.
 
-    65_HS1-{9-digit-id}_62-HQ-83894_SECTION_{N}.pdf
+Run locally:
+    pip install -r scripts/requirements.txt
+    playwright install --with-deps chromium
+    python scripts/build_manifest.py
 
-Run:
-    python build_manifest.py
-    python build_manifest.py --skip-download
+CI uses the same invocation (see .github/workflows/deploy.yml).
 """
 
 from __future__ import annotations
@@ -34,38 +42,28 @@ import sys
 import time
 import urllib.request
 import urllib.error
-import zipfile
 from dataclasses import dataclass, field, asdict
 from pathlib import Path
-from typing import Optional
-
-# ---------------------------------------------------------------------------
-# Configuration
-# ---------------------------------------------------------------------------
+from typing import Optional, Any
 
 UFO_PAGE_URL = "https://www.war.gov/UFO/"
-BUNDLE_URL = "https://www.war.gov/medialink/ufo/bundle/Release_1.zip"
-SOURCE_FILE_URL_BASE = "https://www.war.gov/medialink/ufo/release_1"
 RELEASE_ID = "release_01"
 RELEASE_DATE = "2026-05-08"
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
-RAW_DIR = DATA_DIR / RELEASE_ID / "raw"
-ZIP_PATH = DATA_DIR / RELEASE_ID / "Release_1.zip"
 MANIFEST_PATH = DATA_DIR / "manifest.json"
-CACHE_PAGE = DATA_DIR / RELEASE_ID / "ufo_page.html"
+DEBUG_DIR = DATA_DIR / "_debug"
 
 USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 )
 
-KNOWN_EXTENSIONS = {
+EXT_TYPE = {
     ".pdf": "pdf",
-    ".jpg": "img", ".jpeg": "img", ".png": "img", ".tif": "img", ".tiff": "img",
-    ".mp4": "vid", ".mov": "vid", ".m4v": "vid", ".avi": "vid",
-    ".txt": "txt", ".doc": "doc", ".docx": "doc",
+    ".jpg": "img", ".jpeg": "img", ".png": "img",
+    ".mp4": "vid", ".mov": "vid", ".m4v": "vid",
 }
 
 # ---------------------------------------------------------------------------
@@ -73,225 +71,366 @@ KNOWN_EXTENSIONS = {
 # ---------------------------------------------------------------------------
 
 def log(msg: str) -> None:
-    print(f"[build_manifest] {msg}", file=sys.stderr)
+    print(f"[build_manifest] {msg}", file=sys.stderr, flush=True)
 
 
 # ---------------------------------------------------------------------------
-# HTTP
-# ---------------------------------------------------------------------------
-
-def http_get_bytes(url: str, retries: int = 3, timeout: int = 60) -> Optional[bytes]:
-    backoff = 2
-    for attempt in range(1, retries + 1):
-        try:
-            req = urllib.request.Request(url, headers={
-                "User-Agent": USER_AGENT,
-                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,application/json,*/*;q=0.8",
-                "Accept-Language": "en-US,en;q=0.9",
-            })
-            with urllib.request.urlopen(req, timeout=timeout) as r:
-                return r.read()
-        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
-            log(f"GET {url} failed (attempt {attempt}/{retries}): {e}")
-            if attempt < retries:
-                time.sleep(backoff)
-                backoff *= 2
-    return None
-
-
-def http_download(url: str, dest: Path) -> bool:
-    log(f"downloading {url}")
-    data = http_get_bytes(url, timeout=180)
-    if data is None:
-        return False
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_bytes(data)
-    log(f"  → {dest} ({len(data)/1_000_000:.1f} MB)")
-    return True
-
-
-# ---------------------------------------------------------------------------
-# Filename heuristics
-# ---------------------------------------------------------------------------
-
-FBI_RE = re.compile(r"\bHQ-\d{3,6}\b", re.IGNORECASE)
-SECTION_RE = re.compile(r"_SECTION_\d+", re.IGNORECASE)
-SERIAL_RE = re.compile(r"_SERIAL_\d+", re.IGNORECASE)
-DOW_RE = re.compile(r"\bDOW[-_]", re.IGNORECASE)
-NASA_RE = re.compile(r"\bNASA[-_]", re.IGNORECASE)
-ODNI_RE = re.compile(r"\bODNI[-_]", re.IGNORECASE)
-AARO_RE = re.compile(r"\bAARO[-_]", re.IGNORECASE)
-
-
-def infer_agency(filename: str) -> str:
-    if FBI_RE.search(filename): return "FBI"
-    if DOW_RE.search(filename): return "DOW"
-    if NASA_RE.search(filename): return "NASA"
-    if ODNI_RE.search(filename): return "ODNI"
-    if AARO_RE.search(filename): return "AARO"
-    return "Unknown"
-
-
-def infer_type(filename: str) -> str:
-    ext = Path(filename).suffix.lower()
-    return KNOWN_EXTENSIONS.get(ext, ext.lstrip(".") or "unknown")
-
-
-def build_source_url(filename: str) -> str:
-    # war.gov serves files as lowercase paths under /release_1/
-    return f"{SOURCE_FILE_URL_BASE}/{filename.lower()}"
-
-
-# ---------------------------------------------------------------------------
-# Discovery: try multiple ways to find the file list
-# ---------------------------------------------------------------------------
-
-# Filenames that look like FBI section files inside the SPA page source
-INLINE_FILENAME_RE = re.compile(
-    r"\b(\d{2}_HS\d?[-_]\d+_\d{2}-HQ-\d+_(?:SECTION|SERIAL)_\d+)\.pdf",
-    re.IGNORECASE,
-)
-
-
-def discover_from_page(html: str) -> list[str]:
-    """Return de-duplicated filename list (without .pdf) found inside the SPA HTML."""
-    seen = set()
-    out = []
-    for m in INLINE_FILENAME_RE.finditer(html):
-        name = m.group(1)
-        if name not in seen:
-            seen.add(name)
-            out.append(name)
-    return out
-
-
-def discover_from_zip(zip_path: Path, extract_to: Path) -> list[Path]:
-    if not zip_path.exists():
-        return []
-    extract_to.mkdir(parents=True, exist_ok=True)
-    with zipfile.ZipFile(zip_path, "r") as zf:
-        zf.extractall(extract_to)
-    log(f"extracted bundle to {extract_to}")
-    out: list[Path] = []
-    for p in extract_to.rglob("*"):
-        if p.is_file() and not p.name.startswith("."):
-            out.append(p)
-    out.sort(key=lambda p: p.name)
-    return out
-
-
-# ---------------------------------------------------------------------------
-# Description scraping
-# ---------------------------------------------------------------------------
-
-# Heuristic: the SPA likely embeds descriptions inside JSON-ish structures
-# alongside the filename. Match either:
-#   "description": "..." right after the filename
-#   any other contextual paragraph linked to the filename
-DESCRIPTION_NEAR_FILENAME_RE = re.compile(
-    r'"description"\s*:\s*"((?:[^"\\]|\\.)*)"',
-    re.DOTALL,
-)
-
-
-def extract_descriptions_from_page(html: str) -> dict[str, str]:
-    """
-    Try to map filename → description by parsing the SPA HTML.
-
-    Returns: dict mapping the bare filename (no extension, original case as it
-    appears) to its description string. Empty if the page doesn't embed them.
-    """
-    results: dict[str, str] = {}
-    # Split the HTML by filename occurrences and look for a nearby description.
-    matches = list(INLINE_FILENAME_RE.finditer(html))
-    if not matches:
-        return results
-    for i, m in enumerate(matches):
-        name = m.group(1)
-        # window: from this match until the next, or 4KB ahead
-        start = m.end()
-        end = matches[i + 1].start() if i + 1 < len(matches) else min(len(html), start + 4000)
-        window = html[start:end]
-        d = DESCRIPTION_NEAR_FILENAME_RE.search(window)
-        if d:
-            try:
-                # Decode JSON-style escapes
-                desc = json.loads(f'"{d.group(1)}"')
-            except json.JSONDecodeError:
-                desc = d.group(1)
-            results[name] = desc.strip()
-    return results
-
-
-# ---------------------------------------------------------------------------
-# Manifest assembly
+# Data model
 # ---------------------------------------------------------------------------
 
 @dataclass
 class FileEntry:
     id: str
+    title: str
     filename: str
     agency: str
     type: str
-    size_bytes: Optional[int] = None
-    source_url: str = ""
-    release_date: str = RELEASE_DATE
+    source_url: str
+    release_date: Optional[str] = None
     incident_date: Optional[str] = None
     incident_location: Optional[str] = None
     summary_en: Optional[str] = None
+    # Translation fields (filled by humans via Claude Code session)
+    title_he: Optional[str] = None
+    agency_he: Optional[str] = None
+    incident_location_he: Optional[str] = None
     summary_he: Optional[str] = None
+    # Metadata
+    size_bytes: Optional[int] = None
+    url_status: Optional[int] = None  # HTTP status when validated
 
 
-def entry_from_name(name_no_ext: str, ext: str = ".pdf",
-                    size_bytes: Optional[int] = None) -> FileEntry:
-    filename = f"{name_no_ext}{ext}"
-    return FileEntry(
-        id=name_no_ext,
-        filename=filename,
-        agency=infer_agency(filename),
-        type=infer_type(filename),
-        size_bytes=size_bytes,
-        source_url=build_source_url(filename),
-    )
+# ---------------------------------------------------------------------------
+# URL validation
+# ---------------------------------------------------------------------------
+
+def validate_url(url: str, timeout: int = 15) -> tuple[int, Optional[int]]:
+    """Return (status_code, content_length). status -1 means network error."""
+    try:
+        req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            status = r.status
+            length = r.headers.get("Content-Length")
+            return status, int(length) if length else None
+    except urllib.error.HTTPError as e:
+        return e.code, None
+    except Exception as e:
+        log(f"  url check failed: {url} → {e}")
+        return -1, None
 
 
-def entry_from_path(path: Path) -> FileEntry:
-    e = entry_from_name(path.stem, path.suffix or ".pdf", size_bytes=path.stat().st_size)
-    return e
+# ---------------------------------------------------------------------------
+# Existing Hebrew preservation
+# ---------------------------------------------------------------------------
 
-
-def emit_manifest(entries: list[FileEntry], out_path: Path) -> None:
-    payload = {
-        "release_id": RELEASE_ID,
-        "release_date": RELEASE_DATE,
-        "source_bundle_url": BUNDLE_URL,
-        "source_page_url": UFO_PAGE_URL,
-        "total_files": len(entries),
-        "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "files": [asdict(e) for e in entries],
-    }
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    with out_path.open("w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
-    log(f"wrote {out_path} ({len(entries)} files)")
-
-
-def load_existing_he(path: Path) -> dict[str, str]:
-    """Return id → summary_he map from the current manifest, so we can
-    carry translations forward across rebuilds without re-doing them."""
+def load_existing(path: Path) -> dict[str, dict[str, Optional[str]]]:
+    """Map id → existing Hebrew translation fields so we don't lose them."""
     if not path.exists():
         return {}
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
         return {}
-    out: dict[str, str] = {}
+    out: dict[str, dict[str, Optional[str]]] = {}
     for f in data.get("files", []):
-        fid = f.get("id")
-        he = f.get("summary_he")
-        if fid and he:
-            out[fid] = he
+        fid = f.get("id") or f.get("filename")
+        if not fid:
+            continue
+        out[fid] = {
+            "title_he": f.get("title_he"),
+            "agency_he": f.get("agency_he"),
+            "incident_location_he": f.get("incident_location_he"),
+            "summary_he": f.get("summary_he"),
+        }
     return out
+
+
+# ---------------------------------------------------------------------------
+# Playwright scraping
+# ---------------------------------------------------------------------------
+
+EXTRACT_JS = r"""
+(() => {
+    // Try multiple strategies to locate the file rows.
+    // 1) explicit attributes the SPA may use
+    // 2) generic table rows under the file list
+
+    function pickText(el) {
+        return (el && el.textContent ? el.textContent.trim() : '').replace(/\s+/g, ' ');
+    }
+
+    function bracketsStrip(s) {
+        if (!s) return s;
+        return s.replace(/^\[|\]$/g, '').trim();
+    }
+
+    // Strategy A: look for rows that contain a download link to /medialink/ufo/
+    const links = Array.from(document.querySelectorAll('a[href*="/medialink/ufo/"]'));
+    const seen = new Set();
+    const rows = [];
+
+    for (const a of links) {
+        const href = a.href;
+        if (!href || seen.has(href)) continue;
+        // Skip bundle zips; we only want individual files.
+        if (/bundle/i.test(href)) continue;
+        seen.add(href);
+
+        // Walk up to find the row container — go up until we hit something
+        // that contains a recognizable agency token like FBI / DEPARTMENT.
+        let row = a;
+        for (let i = 0; i < 8 && row && row !== document.body; i++) {
+            row = row.parentElement;
+            if (!row) break;
+            const t = pickText(row).toUpperCase();
+            if (/(FBI|DEPARTMENT OF|NASA|ODNI|AARO)/.test(t)) break;
+        }
+
+        rows.push({
+            href: href,
+            rowText: pickText(row || a.parentElement || a),
+            rowHTML: (row || a.parentElement || a).outerHTML.slice(0, 3000),
+        });
+    }
+
+    // Strategy B (additional): collect any structured cell text within the
+    // visible release section, indexed by URL.
+    return {
+        href_count: links.length,
+        unique_urls: seen.size,
+        rows: rows,
+        pageTitle: document.title,
+        totalFilesText: (document.body.innerText.match(/(\d+)\s*FILES/i) || [])[0] || null,
+    };
+})()
+"""
+
+
+def scrape_with_playwright(
+    debug_html: bool = True,
+    page_timeout_ms: int = 60000,
+) -> list[FileEntry]:
+    """Open war.gov/UFO in headless Chromium, scroll/paginate, scrape rows."""
+    try:
+        from playwright.sync_api import sync_playwright  # type: ignore
+    except ImportError:
+        log("playwright not installed — `pip install playwright && playwright install chromium`")
+        return []
+
+    entries: list[FileEntry] = []
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        ctx = browser.new_context(user_agent=USER_AGENT)
+        page = ctx.new_page()
+        log(f"navigating to {UFO_PAGE_URL}")
+        try:
+            page.goto(UFO_PAGE_URL, wait_until="domcontentloaded", timeout=page_timeout_ms)
+        except Exception as e:
+            log(f"goto failed: {e}")
+            browser.close()
+            return []
+
+        # Wait for the SPA to render the file list. Try several strategies.
+        for selector in [
+            'a[href*="/medialink/ufo/release_1/"]',
+            '[class*="file"] a[href*=".pdf"]',
+            'a[href$=".pdf"]',
+        ]:
+            try:
+                page.wait_for_selector(selector, timeout=15000)
+                log(f"found rendered files via selector: {selector}")
+                break
+            except Exception:
+                continue
+        else:
+            log("WARN: no file selector matched — page may not have rendered, or selectors changed")
+
+        # Give late JS a moment, then try to expand pagination if any.
+        page.wait_for_load_state("networkidle", timeout=30000)
+        try_load_all_pages(page)
+
+        if debug_html:
+            DEBUG_DIR.mkdir(parents=True, exist_ok=True)
+            (DEBUG_DIR / "rendered.html").write_text(page.content(), encoding="utf-8")
+            try:
+                page.screenshot(path=str(DEBUG_DIR / "rendered.png"), full_page=True)
+            except Exception as e:
+                log(f"screenshot failed: {e}")
+
+        data = page.evaluate(EXTRACT_JS)
+        log(f"extracted: href_count={data['href_count']}, unique_urls={data['unique_urls']}, "
+            f"totalFilesText={data['totalFilesText']!r}")
+
+        if debug_html:
+            (DEBUG_DIR / "extracted.json").write_text(
+                json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
+            )
+
+        for row in data["rows"]:
+            entry = row_to_entry(row)
+            if entry:
+                entries.append(entry)
+
+        # Try to enrich each entry with description by visiting its hash route.
+        enrich_descriptions(page, entries, page_timeout_ms=page_timeout_ms)
+
+        browser.close()
+
+    return entries
+
+
+def try_load_all_pages(page) -> None:
+    """If the file browser paginates, click "NEXT" repeatedly until we've
+    surfaced every row. Some SPAs render only the current page in the DOM."""
+    last_count = -1
+    for _ in range(40):  # cap to 40 iterations as a safety
+        try:
+            count = page.evaluate(
+                'document.querySelectorAll(\'a[href*="/medialink/ufo/release_1/"]\').length'
+            )
+        except Exception:
+            count = 0
+        if count == last_count:
+            break
+        last_count = count
+        next_btn = page.query_selector('button:has-text("NEXT"), a:has-text("NEXT")')
+        if not next_btn or next_btn.is_disabled():
+            break
+        try:
+            next_btn.click()
+            page.wait_for_timeout(500)
+        except Exception:
+            break
+
+
+def row_to_entry(row: dict[str, Any]) -> Optional[FileEntry]:
+    href: str = row["href"]
+    text: str = row.get("rowText", "")
+    if not href.endswith(tuple(EXT_TYPE.keys())):
+        return None
+
+    filename = href.rsplit("/", 1)[-1]
+    file_id = filename.rsplit(".", 1)[0]
+
+    # Strip away the bracketed metadata cells from the row text.
+    # Common pattern from the live site:
+    #   "TITLE_TEXT  [AGENCY]  [RELEASE_DATE]  [INCIDENT_DATE]  [LOCATION]  [.PDF]"
+    brackets = re.findall(r"\[([^\]]+)\]", text)
+    title_text = re.sub(r"\s*\[[^\]]+\]\s*", " ", text).strip()
+
+    # Heuristically pick agency / release / incident / location / type from brackets.
+    agency = release_date = incident_date = incident_location = ext = None
+    if brackets:
+        # Last bracket is normally the file type (.pdf, .img, .vid).
+        for b in reversed(brackets):
+            if b.startswith(".") and len(b) <= 5:
+                ext = b
+                brackets.remove(b)
+                break
+        # First bracket is usually agency.
+        if brackets:
+            agency = brackets[0]
+        # Find a date-like bracket for release_date (typical: M/D/YY).
+        for b in brackets[1:]:
+            if re.match(r"^\d{1,2}/\d{1,2}/\d{2,4}$", b) and release_date is None:
+                release_date = b
+                continue
+            if re.match(r"^\d{1,2}/\d{1,2}/\d{2,4}$", b):
+                incident_date = b
+                continue
+            # ISO-ish or "LATE 2025" / "2023"
+            if re.match(r"^(LATE\s+\d{4}|EARLY\s+\d{4}|\d{4})$", b, re.I) and incident_date is None:
+                incident_date = b
+                continue
+            # Else assume location
+            if incident_location is None:
+                incident_location = b
+
+    type_ = (ext or filename.rsplit(".", 1)[-1]).lstrip(".").lower()
+    type_ = EXT_TYPE.get("." + type_, type_)
+
+    return FileEntry(
+        id=file_id,
+        title=title_text or filename,
+        filename=filename,
+        agency=(agency or "Unknown").strip().upper(),
+        type=type_,
+        source_url=href,
+        release_date=release_date or RELEASE_DATE,
+        incident_date=incident_date,
+        incident_location=incident_location,
+    )
+
+
+def enrich_descriptions(page, entries: list[FileEntry], page_timeout_ms: int) -> None:
+    """For each entry, navigate to its hash route on war.gov/UFO and
+    scrape the description from the detail panel."""
+    seen_descriptions: dict[str, str] = {}
+    for i, e in enumerate(entries):
+        # The SPA uses #<file_id> as the hash route for detail panels.
+        hash_id = e.id
+        try:
+            page.evaluate(f'window.location.hash = {json.dumps(hash_id)}')
+            page.wait_for_timeout(400)
+            # Grab any sizable paragraph in the detail panel (heuristic).
+            txt = page.evaluate(r"""
+                () => {
+                    const all = Array.from(document.querySelectorAll('p, .description, [class*="description"]'));
+                    const long = all.map(n => (n.textContent || '').trim())
+                        .filter(t => t.length > 80 && t.length < 4000);
+                    return long.length ? long[0] : null;
+                }
+            """)
+            if txt:
+                e.summary_en = txt.strip()
+                seen_descriptions[e.id] = e.summary_en
+        except Exception as ex:
+            log(f"  description fetch failed for {e.id}: {ex}")
+        if (i + 1) % 25 == 0:
+            log(f"  enriched {i + 1}/{len(entries)} descriptions")
+
+
+# ---------------------------------------------------------------------------
+# Manifest output
+# ---------------------------------------------------------------------------
+
+def merge_existing(entries: list[FileEntry], existing: dict[str, dict[str, Optional[str]]]) -> None:
+    for e in entries:
+        ex = existing.get(e.id) or existing.get(e.filename)
+        if not ex:
+            continue
+        if ex.get("title_he"): e.title_he = ex["title_he"]
+        if ex.get("agency_he"): e.agency_he = ex["agency_he"]
+        if ex.get("incident_location_he"): e.incident_location_he = ex["incident_location_he"]
+        if ex.get("summary_he"): e.summary_he = ex["summary_he"]
+
+
+def validate_all(entries: list[FileEntry]) -> None:
+    log(f"validating {len(entries)} download URLs")
+    for i, e in enumerate(entries):
+        status, length = validate_url(e.source_url)
+        e.url_status = status
+        if length is not None and e.size_bytes is None:
+            e.size_bytes = length
+        if status != 200:
+            log(f"  ⚠ {e.source_url} → {status}")
+        if (i + 1) % 25 == 0:
+            log(f"  validated {i + 1}/{len(entries)}")
+
+
+def write_manifest(entries: list[FileEntry], path: Path) -> None:
+    payload = {
+        "release_id": RELEASE_ID,
+        "release_date": RELEASE_DATE,
+        "source_page_url": UFO_PAGE_URL,
+        "total_files": len(entries),
+        "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "files": [asdict(e) for e in entries],
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    log(f"wrote {path} ({len(entries)} files, {path.stat().st_size} bytes)")
 
 
 # ---------------------------------------------------------------------------
@@ -301,91 +440,42 @@ def load_existing_he(path: Path) -> dict[str, str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--skip-page-fetch", action="store_true",
-                        help="don't try to fetch the war.gov UFO page")
-    parser.add_argument("--skip-download", action="store_true",
-                        help="don't download Release_1.zip")
-    parser.add_argument("--skip-extract", action="store_true",
-                        help="don't extract the zip even if it's present")
-    parser.add_argument("--raw-dir", default=None,
-                        help="override the directory of already-extracted files")
+    parser.add_argument("--no-validate", action="store_true",
+                        help="skip the HEAD validation step (faster, less safe)")
+    parser.add_argument("--no-debug-dump", action="store_true",
+                        help="don't write data/_debug/{rendered.html, extracted.json}")
     args = parser.parse_args()
 
-    raw_dir = Path(args.raw_dir).resolve() if args.raw_dir else RAW_DIR
+    existing = load_existing(MANIFEST_PATH)
+    log(f"existing manifest had {len(existing)} entries with Hebrew translations")
 
-    # ------------------------------------------------------------------ 1. page
-    page_html = ""
-    if not args.skip_page_fetch:
-        data = http_get_bytes(UFO_PAGE_URL)
-        if data:
-            page_html = data.decode("utf-8", errors="replace")
-            CACHE_PAGE.parent.mkdir(parents=True, exist_ok=True)
-            CACHE_PAGE.write_text(page_html, encoding="utf-8")
-            log(f"cached SPA page → {CACHE_PAGE} ({len(page_html)} chars)")
-        else:
-            log("could not fetch war.gov/UFO/ — continuing without page metadata")
-
-    inline_names = discover_from_page(page_html) if page_html else []
-    descriptions = extract_descriptions_from_page(page_html) if page_html else {}
-    log(f"inline filenames from page: {len(inline_names)}; descriptions: {len(descriptions)}")
-
-    # ------------------------------------------------------------------ 2. zip
-    zip_paths: list[Path] = []
-    if not args.skip_download and not ZIP_PATH.exists():
-        if not http_download(BUNDLE_URL, ZIP_PATH):
-            log("bundle download failed")
-    if not args.skip_extract and ZIP_PATH.exists():
-        zip_paths = discover_from_zip(ZIP_PATH, raw_dir)
-    elif raw_dir.exists():
-        zip_paths = sorted([p for p in raw_dir.rglob("*") if p.is_file()])
-
-    # ------------------------------------------------------------------ 3. merge sources
-    seen: set[str] = set()
-    entries: list[FileEntry] = []
-
-    # Prefer zip (gives us real sizes); fall back to inline names from the page.
-    for p in zip_paths:
-        if p.stem in seen:
-            continue
-        seen.add(p.stem)
-        e = entry_from_path(p)
-        e.summary_en = descriptions.get(p.stem)
-        entries.append(e)
-
-    for name in inline_names:
-        if name in seen:
-            continue
-        seen.add(name)
-        e = entry_from_name(name)
-        e.summary_en = descriptions.get(name)
-        entries.append(e)
+    entries = scrape_with_playwright(debug_html=not args.no_debug_dump)
 
     if not entries:
-        log("no files discovered from page or zip — keeping existing manifest unchanged")
-        return 0
+        log("scraper returned 0 entries — keeping existing manifest unchanged")
+        return 0  # don't fail the CI run; site keeps the old data
 
-    # ------------------------------------------------------------------ 4. carry over Hebrew translations
-    # Translations are produced by a human (Claude Code session) and committed
-    # to data/manifest.json. This step preserves them across rebuilds.
-    existing_he = load_existing_he(MANIFEST_PATH)
-    for e in entries:
-        if e.id in existing_he:
-            e.summary_he = existing_he[e.id]
+    merge_existing(entries, existing)
 
-    # ------------------------------------------------------------------ 5. write
-    entries.sort(key=lambda e: e.filename)
-    emit_manifest(entries, MANIFEST_PATH)
+    if not args.no_validate:
+        validate_all(entries)
 
+    write_manifest(entries, MANIFEST_PATH)
+
+    # Stats
     agencies: dict[str, int] = {}
-    types: dict[str, int] = {}
-    with_en = sum(1 for e in entries if e.summary_en)
-    with_he = sum(1 for e in entries if e.summary_he)
+    bad_urls = 0
+    with_desc = 0
+    with_he = 0
     for e in entries:
         agencies[e.agency] = agencies.get(e.agency, 0) + 1
-        types[e.type] = types.get(e.type, 0) + 1
-    log(f"agencies: {agencies}")
-    log(f"types:    {types}")
-    log(f"summaries: en={with_en}, he={with_he}")
+        if e.url_status not in (200, None): bad_urls += 1
+        if e.summary_en: with_desc += 1
+        if e.summary_he: with_he += 1
+    log(f"agencies:     {agencies}")
+    log(f"bad URLs:     {bad_urls}/{len(entries)}")
+    log(f"descriptions: {with_desc}/{len(entries)}")
+    log(f"hebrew:       {with_he}/{len(entries)}")
     return 0
 
 
