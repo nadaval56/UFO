@@ -1,180 +1,221 @@
-# Briefing: PDF Content Extraction Pipeline (Phase 2)
+# Briefing: PURSUE — PDF Content Extraction (standalone)
 
-You're running locally on the user's machine inside the PURSUE Hebrew Mirror
-repo. The user has extracted `Release_1.zip` (~3.2 GB, 158 files) somewhere
-on the filesystem. Your job: enrich `data/manifest.json` with per-page
-classification, smart-sample preview thumbnails, and OCR text for typewritten
-pages. The result gets committed and pushed; the public site then renders the
-new fields. Hebrew translation of the OCR'd text happens later in a separate
-Claude Code session — leave `*_he` fields alone.
+You're running locally on the user's machine. You have access to:
+- This briefing file (`EXTRACT.md`)
+- A directory of extracted PDFs (the user will tell you where, e.g. `./Release_1/`)
+- The filesystem in general
+- Internet via `curl` / `wget` (but **no GitHub MCP tools**)
+- Python 3.10+, `pip`, and the user's shell
 
-The "remote" Claude (in the user's conversational session, where the
-project was built) will write UI integration once it sees the first batch
-of output. Don't touch `assets/` or `index.html`. Only produce data.
+You **do not** have GitHub MCP tools. Do not attempt to open PRs, list
+branches, or push remotes via tools. You can `git` from the shell if the
+user has a clone — but the recommended flow is to produce a local `output/`
+directory which the user will hand back to their **remote** Claude (running
+in claude.ai/code) for integration.
 
-## What you'll find when you start
+## What is this project?
 
+The user runs a Hebrew-language mirror of the U.S. Department of War's
+PURSUE landing page (`https://www.war.gov/UFO/`) — a release of 158
+declassified UAP-related files. The site lives at
+`https://nadaval56.github.io/UFO/`, source at `github.com/nadaval56/UFO`.
+
+The existing `data/manifest.json` has metadata for every file (title,
+agency, dates, location, English description, Hebrew translation, source
+URL). Your job: **enrich each entry with per-page page-classification,
+preview thumbnails, and OCR text** so the public site can show "what's
+inside" before users download the multi-hundred-page PDFs.
+
+The PDFs are mostly scanned investigation files. Page 1 is typically a
+folder cover (useless). Real content is mixed throughout: typewritten
+reports, newspaper clippings, photographs, handwritten notes.
+
+## What you need to install
+
+The user should run before starting you:
+
+```bash
+# System binaries
+brew install poppler tesseract       # macOS
+# or: sudo apt install poppler-utils tesseract-ocr   # Linux
+
+# Python deps
+pip install pdf2image PyMuPDF Pillow numpy pytesseract tqdm
 ```
-data/manifest.json          # 158 entries, each with id/title/source_url/etc.
-                             # KEEP all existing fields. Only ADD new ones.
-scripts/extract/
-├── EXTRACT.md              # this briefing
-├── classify.py             # starter: page-by-page classifier
-├── sample.py               # starter: pick + render preview thumbnails
-├── ocr.py                  # starter: OCR typewritten pages
-├── pipeline.py             # orchestrator: runs the three in order
-└── requirements.txt        # pdf2image, Pillow, pytesseract, PyMuPDF
+
+If any are missing, ask the user to install them first.
+
+## Step 1 — bootstrap your working directory
+
+Set up `output/` next to the PDFs and pull the current manifest + starter
+scripts from GitHub raw. The starter scripts are not gospel — they're
+educated guesses. **You're expected to refine the heuristics against real
+files** once you see what they look like.
+
+```bash
+mkdir -p output/previews output/_classification output/_ocr scripts
+cd scripts
+for f in classify.py sample.py ocr.py pipeline.py; do
+  curl -O https://raw.githubusercontent.com/nadaval56/UFO/main/scripts/extract/$f
+done
+curl -o ../output/manifest.json https://raw.githubusercontent.com/nadaval56/UFO/main/data/manifest.json
+cd ..
 ```
 
-The user will tell you where they extracted the ZIP, e.g.
-`~/Downloads/Release_1/`. Expect filenames matching the `source_url`
-basename in the manifest — that's the join key. **Always work from the
-filename → manifest `id` mapping.** A file `059uap00012.pdf` joins to the
-manifest entry whose `source_url` ends in `059uap00012.pdf`.
+After this you should have:
+```
+./Release_1/        ← the user's PDFs (158 of them)
+./scripts/          ← classify.py, sample.py, ocr.py, pipeline.py
+./output/
+   manifest.json    ← current state from GitHub
+   previews/        ← will be filled with JPEGs
+   _classification/ ← per-PDF classification dumps (local cache)
+   _ocr/            ← per-page raw OCR (local cache)
+EXTRACT.md          ← this file
+```
 
-## System dependencies the user needs installed
+The scripts default to repo-relative paths. Override with `--manifest`,
+`--class-dir`, `--preview-dir`, `--ocr-dir`, `--raw-dir`.
 
-- Python 3.10+
-- `poppler-utils` (Mac: `brew install poppler` / Linux: `apt install poppler-utils`)
-- `tesseract` (Mac: `brew install tesseract` / Linux: `apt install tesseract-ocr`)
-- Then: `pip install -r scripts/extract/requirements.txt`
+## Step 2 — smoke-test on 3 files
 
-The starter scripts are templates. Adjust heuristics, thresholds, page-pick
-strategy etc. as you discover what the actual files look like. **Iterate.**
+Don't process all 158 first. Pick 3-5 representative files (one investigation
+file, one short non-FBI file, ideally one that has photos) and run:
 
-## Output schema — what to add per manifest entry
+```bash
+python scripts/pipeline.py --raw-dir ./Release_1 --limit 3 \
+  --manifest output/manifest.json \
+  --class-dir output/_classification \
+  --preview-dir output/previews \
+  --ocr-dir output/_ocr
+```
 
-Add the following fields to each `files[i]` in `data/manifest.json`. Don't
-touch existing fields:
+Then **open the previews visually** (`open output/previews/*/`). Are they
+real content or covers/blanks? Look at the classification JSONs. Are the
+labels plausible?
+
+Tune the thresholds in `classify.py` if classification is bad. Common
+adjustments for scanned investigation files:
+
+- `dark_ratio` thresholds shift down for grey/yellowed scans
+- `line_peaks` threshold for `typewritten` may need lowering — old typewriter
+  ribbons leave fainter rows
+- `midtone_ratio` for `photo` may need to go up — half-tone-printed photos
+  in clippings have lots of mid-grey
+- Add a "stamp/seal" pre-filter: pages with very dark concentrated regions
+  but no line structure are often stamps/labels — reclassify as `cover`
+
+When you tune, re-run on the same 3 files and inspect again. Iterate
+until you trust the classification.
+
+## Step 3 — full run
+
+Once you trust the heuristics:
+
+```bash
+python scripts/pipeline.py --raw-dir ./Release_1 \
+  --manifest output/manifest.json \
+  --class-dir output/_classification \
+  --preview-dir output/previews \
+  --ocr-dir output/_ocr
+```
+
+Expect: ~1-2 hours for classification, ~30 minutes for sampling/render,
+~2-3 hours for OCR on 158 files × 3 pages × 5-15 sec/page.
+
+The pipeline is **resumable**. Interrupt with Ctrl+C anytime, resume by
+running again — already-done files are skipped.
+
+## Step 4 — quality check
+
+Before handing back the output, spot-check:
+
+1. **Random 10 files**: open `output/previews/{id}/` for each. Do the
+   thumbnails look like meaningful content? (At least 1 photo or
+   clipping is great; 6 covers is bad.)
+2. **Random 5 files** with `text_preview_en`: read them. Coherent
+   English? OCR errors are fine; gibberish is not.
+3. **manifest.json sanity**: `total_files` still 158, no entry lost any
+   existing field, all new fields present where expected.
+4. **Repo size estimate**: `du -sh output/previews/` — should be
+   ~50-100 MB. If over 200 MB, JPEG quality is too high or you're
+   rendering at too high a DPI; rerun sampling with lower DPI/quality.
+
+If you find systematic issues, **tune and re-run the affected stage**.
+Don't ship low-quality output.
+
+## Step 5 — hand back to the user
+
+Bundle the result and hand to the user:
+
+```bash
+cd output
+zip -r ../extraction_output.zip manifest.json previews/
+cd ..
+ls -lh extraction_output.zip
+# expected: ~50-100 MB
+```
+
+Tell the user: "extraction_output.zip is ready. Give it to your remote
+Claude (claude.ai/code session for nadaval56/UFO) — they'll integrate
+the previews + text into the site, translate text_preview_en to Hebrew,
+commit and push."
+
+Don't include `_classification/` or `_ocr/` in the zip — those are local
+caches for resumability, not part of the deliverable.
+
+## Output schema (what gets added to manifest.json)
+
+Per `files[i]`, add only these fields. Don't touch existing ones:
 
 ```jsonc
 {
-  // ... existing fields unchanged ...
+  // ... all existing fields ...
 
   "page_count": 247,
+
   "content_kinds": ["typewritten", "photo", "clipping", "handwritten"],
-  // Deduped list, sorted by descending count of pages of each kind.
+  // Deduped, ordered by descending count of pages of each kind.
 
   "preview_pages": [
-    { "page": 23, "kind": "photo",       "path": "data/previews/059uap00012/p023.jpg" },
-    { "page": 87, "kind": "clipping",    "path": "data/previews/059uap00012/p087.jpg" },
-    { "page": 145, "kind": "typewritten","path": "data/previews/059uap00012/p145.jpg" }
-    // 4-6 entries per file. Prefer photo > clipping > typewritten.
-    // Skip cover/blank/divider/handwritten unless nothing else available.
+    { "page": 23,  "kind": "photo",       "path": "data/previews/059uap00012/p023.jpg" },
+    { "page": 87,  "kind": "clipping",    "path": "data/previews/059uap00012/p087.jpg" },
+    { "page": 145, "kind": "typewritten", "path": "data/previews/059uap00012/p145.jpg" }
+    // 4-6 entries per file. Path is relative to repo root (data/previews/...).
   ],
 
-  "text_preview_en": "The first ~3000 chars of OCR'd typewritten content...",
-  "text_preview_he": null,   // ← do NOT fill. Remote Claude handles it.
+  "text_preview_en": "OCR'd content from typewritten pages, ≤3000 chars, sentence-aligned cut.",
+  "text_preview_he": null,    // DO NOT FILL. Remote Claude does the translation.
 
   "_extracted_at": "2026-05-12T15:00:00Z"
 }
 ```
 
-### Per-page classification kinds
+### Allowed `kind` values
 
-Use these exact strings (the UI will key off them):
+`cover` · `blank` · `divider` · `typewritten` · `handwritten` · `clipping`
+· `photo` · `mixed`
 
-| kind | meaning |
-|---|---|
-| `cover` | Folder cover, title page, FBI vault headers |
-| `blank` | Mostly empty page or scanning artifacts |
-| `divider` | Section divider with just a label |
-| `typewritten` | Printed/typed body content. OCR target. |
-| `handwritten` | Cursive or manuscript. Skip OCR. |
-| `clipping` | Newspaper / magazine clipping (multi-column, dense, image-like) |
-| `photo` | Photograph or photo-like image (faces, scenes, vehicles, sky) |
-| `mixed` | Multiple kinds on the same page; pick the dominant one |
-
-### Heuristics (starting point — refine as you go)
-
-In `classify.py` the starter uses:
-1. Render page at 100 DPI → numpy array.
-2. Black-pixel density. Very low → `blank` / `divider`.
-3. Connected-component analysis on text-like blobs to spot regular line
-   spacing → `typewritten`.
-4. Histogram of brightness — bimodal continuous regions → `photo`.
-5. Many short horizontal text lines + image regions → `clipping`.
-6. Irregular ascender heights / variable stroke widths → `handwritten`.
-
-These are coarse. Adjust thresholds against a sample of files you visually
-inspect before bulk-running. The user can help you eyeball outputs.
-
-## Repo size budget
-
-- Previews: 4-6 JPEGs per file × 158 files × ~80 KB target = **~50-60 MB**.
-  Render at 250 DPI as JPEG quality 75, target ≤ 100 KB each.
-- OCR text in `text_preview_en` is inline in `manifest.json` (~3 KB each
-  × 158 = ~500 KB). That's fine.
-- Don't commit:
-  - `data/release_01/raw/` (raw PDFs — already in `.gitignore`)
-  - `data/_classification/*.json` (per-file classification dumps — keep
-    locally for re-runs but don't push)
-  - `data/_ocr/*.txt` (full OCR dumps — local cache only)
-- Do commit:
-  - `data/previews/{id}/p*.jpg`
-  - The updated `data/manifest.json`
-
-## Pipeline order
-
-1. **classify.py** — walks every PDF, renders every page at 100 DPI, writes
-   `data/_classification/{id}.json` with one entry per page (`page`, `kind`,
-   `score`, plus a few raw metrics for debugging).
-2. **sample.py** — reads the classification JSONs, picks the 4-6 best
-   pages per file, re-renders those at 300 DPI as compressed JPEG,
-   writes them to `data/previews/{id}/p{NNN}.jpg`. Updates manifest with
-   `preview_pages` and `content_kinds`.
-3. **ocr.py** — for every page classified `typewritten` (or `clipping` if
-   you can extract column text), runs `pytesseract` and concatenates
-   results. Updates manifest with `text_preview_en` (first 3000 chars,
-   sentence-aligned cut).
-4. **pipeline.py** — runs all three in sequence with a progress bar.
-
-Each script is **idempotent** and **resumable**. If `data/_classification/{id}.json`
-exists, skip. If a preview JPEG already exists, skip. The user can interrupt
-and resume.
-
-## Quality bar before you commit
-
-- Spot-check 8-10 random files: open the preview JPEGs. Do they look like
-  meaningful content (not all covers, not all blanks)?
-- Check that `text_preview_en` for at least 5 random files reads as
-  coherent English. If OCR confidence is consistently low (<60), skip the
-  file (set `text_preview_en` to `null`) — bad OCR is worse than none.
-- Verify `data/manifest.json` is still valid JSON and `total_files` is
-  still 158.
-- Verify `apply_translations.py` still passes (don't break existing translations).
-
-## Delivery
-
-When you're satisfied:
-
-```bash
-git add data/manifest.json data/previews/
-git status   # confirm no stray binaries / huge files
-git commit -m "data: extract page classifications + preview thumbnails + OCR text"
-git push origin claude/local-extraction-run-N   # any branch name
-```
-
-Then open a PR titled "Phase 2 extraction: previews + OCR".
-
-The remote Claude (the one running in the user's web/cloud session) will
-review, integrate into the UI, and translate `text_preview_en` →
-`text_preview_he` in a follow-up.
+Skip `cover` / `blank` / `divider` / `handwritten` when choosing
+`preview_pages`, unless a file has nothing else available.
 
 ## What NOT to do
 
-- Don't translate to Hebrew. That's the remote Claude's job (cost goes
-  through the user's Claude Code quota; we set it up that way deliberately).
-- Don't modify `index.html`, `assets/`, `apply_translations.py`,
-  `browser_scrape.js`. They're stable.
-- Don't try to run OCR on handwritten or photo pages — it produces gibberish.
-- Don't commit raw PDFs or per-page classification JSONs.
+- Don't translate to Hebrew. (Cost goes through the remote session's
+  Claude Code quota, which is what the user wants.)
+- Don't push to GitHub directly even if you have credentials. The user
+  prefers reviewing your output in the zip before integration.
+- Don't try to OCR `handwritten` or `photo` pages — output is gibberish.
+- Don't render at >300 DPI for previews. 250-300 DPI is plenty.
+- Don't include raw PDFs or the per-page `_classification` JSONs in the
+  zip you hand back — they're caches.
 
-## If anything is unclear
+## When you finish
 
-The remote Claude's working notes are in the conversation history at
-`claude.ai/code/session_01X7tLrZZwaCb78srULaBwUC`. The user can paste a
-question to the remote session and bring an answer back. But ideally the
-starter scripts + this brief are self-sufficient.
+Tell the user the path to `extraction_output.zip`, summarize what you
+did (e.g. "158/158 files processed, 142 had at least one photo or
+clipping, 116 produced clean OCR text, 16 files had only handwritten
+content and got no text preview"). Then stop — the remote Claude takes
+over from there.
 
-Good luck. Make it look like actual primary-source archaeology.
+Good luck. Make it look like archaeology.
