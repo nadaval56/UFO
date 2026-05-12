@@ -107,6 +107,19 @@
     return s.length > n ? s.slice(0, n - 1).trimEnd() + "…" : s;
   }
 
+  function showPlaceholderBanner(n) {
+    const wrap = document.querySelector("#release .container");
+    if (!wrap) return;
+    const note = document.createElement("div");
+    note.className = "placeholder-banner";
+    note.innerHTML = `
+      <strong>// המאניפסט בעריכה אוטומטית</strong>
+      <p>נכון לעכשיו מוצגות ${n} רשומות בלבד. סקריפט ה-Playwright ב-CI סורק את war.gov ומחליף את המאניפסט בנתונים האמיתיים.
+      בדוק את <a href="https://github.com/nadaval56/UFO/actions" target="_blank" rel="noopener">לשונית ה-Actions במאגר</a> לסטטוס הריצה.</p>`;
+    const downloads = wrap.querySelector(".release-downloads");
+    if (downloads) downloads.parentNode.insertBefore(note, downloads);
+  }
+
   /* ------------------------- load ------------------------- */
 
   async function load() {
@@ -116,6 +129,10 @@
       const data = await res.json();
       state.files = Array.isArray(data.files) ? data.files : [];
       state.releaseDateGlobal = data.release_date || null;
+      // If the manifest is the seeded placeholder, show a notice.
+      if (data._note && data.total_files < 10) {
+        showPlaceholderBanner(data.total_files);
+      }
     } catch (err) {
       console.error("manifest load failed", err);
       el.list.innerHTML = `
