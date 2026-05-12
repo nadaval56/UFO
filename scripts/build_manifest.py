@@ -206,6 +206,44 @@ EXTRACT_JS = r"""
 """
 
 
+DIAGNOSTIC_JS = r"""
+(() => {
+    const allLinks = Array.from(document.querySelectorAll('a[href]'));
+    const hostCounts = {};
+    const pathCounts = {};
+    for (const a of allLinks) {
+        try {
+            const u = new URL(a.href);
+            hostCounts[u.host] = (hostCounts[u.host] || 0) + 1;
+            const seg = u.pathname.split('/').slice(0, 4).join('/');
+            pathCounts[seg] = (pathCounts[seg] || 0) + 1;
+        } catch (e) {}
+    }
+    const interesting = allLinks
+        .filter(a => /\.(pdf|jpg|jpeg|png|mp4|mov|zip)$/i.test(a.href) || /medialink|file|download/i.test(a.href))
+        .slice(0, 30)
+        .map(a => ({href: a.href, text: (a.textContent || '').trim().slice(0, 80)}));
+
+    const bodyText = (document.body.innerText || '').trim();
+    return {
+        url: location.href,
+        title: document.title,
+        bodyTextLength: bodyText.length,
+        bodyTextSnippet: bodyText.slice(0, 800),
+        totalLinks: allLinks.length,
+        topHosts: Object.entries(hostCounts).sort((a,b)=>b[1]-a[1]).slice(0, 8),
+        topPaths: Object.entries(pathCounts).sort((a,b)=>b[1]-a[1]).slice(0, 12),
+        interestingLinks: interesting,
+        scriptCount: document.scripts.length,
+        // Look for evidence of the file table
+        hasReleaseSection: !!document.querySelector('[id*="release" i], [class*="release" i]'),
+        hasFileCount: !!(bodyText.match(/\d+\s*FILES/i)),
+        fileCountText: (bodyText.match(/\d+\s*FILES/i) || [])[0] || null,
+    };
+})()
+"""
+
+
 def scrape_with_playwright(
     debug_html: bool = True,
     page_timeout_ms: int = 60000,
@@ -221,42 +259,125 @@ def scrape_with_playwright(
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        ctx = browser.new_context(user_agent=USER_AGENT)
+        ctx = browser.new_context(
+            user_agent=USER_AGENT,
+            viewport={"width": 1440, "height": 900},
+            locale="en-US",
+        )
         page = ctx.new_page()
+
+        # Capture console + network errors for the log.
+        console_messages: list[str] = []
+        page.on("console", lambda m: console_messages.append(f"[{m.type}] {m.text[:200]}"))
+        page.on("pageerror", lambda e: console_messages.append(f"[pageerror] {str(e)[:200]}"))
+        failed_requests: list[str] = []
+        page.on("requestfailed", lambda r: failed_requests.append(f"{r.method} {r.url} → {r.failure}"))
+
+        # Snapshot every response so we can see if war.gov returned 403.
+        responses: list[tuple[int, str]] = []
+        page.on("response", lambda r: responses.append((r.status, r.url)))
+
         log(f"navigating to {UFO_PAGE_URL}")
         try:
-            page.goto(UFO_PAGE_URL, wait_until="domcontentloaded", timeout=page_timeout_ms)
+            resp = page.goto(UFO_PAGE_URL, wait_until="domcontentloaded", timeout=page_timeout_ms)
+            log(f"  initial response: status={resp.status if resp else '?'} url={resp.url if resp else '?'}")
         except Exception as e:
             log(f"goto failed: {e}")
             browser.close()
             return []
 
-        # Wait for the SPA to render the file list. Try several strategies.
+        # Wait longer for SPA hydration + lazy data load.
+        try:
+            page.wait_for_load_state("networkidle", timeout=45000)
+        except Exception as e:
+            log(f"networkidle wait timed out: {e} (continuing anyway)")
+
+        # Heuristic wait: any anchor with a file-ish href OR a count like "158 FILES"
+        try:
+            page.wait_for_function(
+                """() => {
+                    const txt = document.body.innerText || '';
+                    return /\\d+\\s*FILES/i.test(txt)
+                        || document.querySelector('a[href*=".pdf"]')
+                        || document.querySelector('a[href*="medialink"]');
+                }""",
+                timeout=25000,
+            )
+            log("  detected rendered file UI")
+        except Exception:
+            log("  WARN: file UI never appeared (timeout)")
+
+        # Try various selectors but don't fail if none match — diagnostics will tell us why.
+        matched_selector = None
         for selector in [
             'a[href*="/medialink/ufo/release_1/"]',
-            '[class*="file"] a[href*=".pdf"]',
+            'a[href*="medialink"]',
+            '[class*="file" i] a[href*=".pdf"]',
             'a[href$=".pdf"]',
         ]:
             try:
-                page.wait_for_selector(selector, timeout=15000)
+                page.wait_for_selector(selector, timeout=5000)
+                matched_selector = selector
                 log(f"found rendered files via selector: {selector}")
                 break
             except Exception:
                 continue
-        else:
+        if not matched_selector:
             log("WARN: no file selector matched — page may not have rendered, or selectors changed")
 
-        # Give late JS a moment, then try to expand pagination if any.
-        page.wait_for_load_state("networkidle", timeout=30000)
         try_load_all_pages(page)
+
+        # ---- diagnostics ALWAYS dumped ----
+        diag = page.evaluate(DIAGNOSTIC_JS)
+        log("==== DIAGNOSTICS ====")
+        log(f"  final URL:        {diag['url']}")
+        log(f"  page title:       {diag['title']!r}")
+        log(f"  body text length: {diag['bodyTextLength']}")
+        log(f"  total <a> links:  {diag['totalLinks']}")
+        log(f"  script tags:      {diag['scriptCount']}")
+        log(f"  has release sec:  {diag['hasReleaseSection']}")
+        log(f"  file-count text:  {diag['fileCountText']!r}")
+        log(f"  top hosts:        {diag['topHosts']}")
+        log(f"  top paths:        {diag['topPaths']}")
+        log(f"  first 800 chars of body text:")
+        for line in diag['bodyTextSnippet'].splitlines()[:12]:
+            log(f"    | {line}")
+        log(f"  first 30 interesting links:")
+        for L in diag['interestingLinks']:
+            log(f"    - {L['href']}   text={L['text']!r}")
+        # Response codes that came back during the page load
+        status_counts: dict[int, int] = {}
+        for s, _ in responses:
+            status_counts[s] = status_counts.get(s, 0) + 1
+        log(f"  HTTP response status counts: {status_counts}")
+        non_2xx = [(s, u) for s, u in responses if s >= 400][:10]
+        if non_2xx:
+            log("  first 10 non-2xx responses:")
+            for s, u in non_2xx:
+                log(f"    {s}  {u}")
+        if console_messages:
+            log("  console messages (first 20):")
+            for m in console_messages[:20]:
+                log(f"    {m}")
+        if failed_requests:
+            log("  failed requests (first 10):")
+            for r in failed_requests[:10]:
+                log(f"    {r}")
+        log("==== /DIAGNOSTICS ====")
 
         if debug_html:
             DEBUG_DIR.mkdir(parents=True, exist_ok=True)
             (DEBUG_DIR / "rendered.html").write_text(page.content(), encoding="utf-8")
             try:
                 page.screenshot(path=str(DEBUG_DIR / "rendered.png"), full_page=True)
+                log(f"  saved screenshot → {DEBUG_DIR / 'rendered.png'}")
             except Exception as e:
-                log(f"screenshot failed: {e}")
+                log(f"  screenshot failed: {e}")
+            (DEBUG_DIR / "diagnostics.json").write_text(
+                json.dumps(diag, ensure_ascii=False, indent=2, default=str),
+                encoding="utf-8",
+            )
+            log(f"  saved diagnostics → {DEBUG_DIR / 'diagnostics.json'}")
 
         data = page.evaluate(EXTRACT_JS)
         log(f"extracted: href_count={data['href_count']}, unique_urls={data['unique_urls']}, "
@@ -272,8 +393,8 @@ def scrape_with_playwright(
             if entry:
                 entries.append(entry)
 
-        # Try to enrich each entry with description by visiting its hash route.
-        enrich_descriptions(page, entries, page_timeout_ms=page_timeout_ms)
+        if entries:
+            enrich_descriptions(page, entries, page_timeout_ms=page_timeout_ms)
 
         browser.close()
 
