@@ -1,0 +1,13 @@
+# PDF → page images
+pdf2image>=1.17        # uses poppler-utils system binary
+PyMuPDF>=1.24          # extracts embedded images / metadata
+
+# Image inspection
+Pillow>=10.0
+numpy>=1.26
+
+# OCR
+pytesseract>=0.3.10    # wraps tesseract system binary
+
+# Progress
+tqdm>=4.66

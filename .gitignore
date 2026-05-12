@@ -3,6 +3,11 @@ data/release_01/raw/
 data/release_01/*.zip
 data/_debug/
 
+# Phase 2 extraction intermediates — kept locally for re-runs, not pushed
+data/_classification/
+data/_ocr/
+data/release_01_extracted/
+
 # Python
 __pycache__/
 *.pyc
