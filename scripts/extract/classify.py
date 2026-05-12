@@ -111,29 +111,37 @@ def classify(metrics: dict, page_no: int, total_pages: int) -> tuple[str, float]
     if d < 0.02 and lp < 5:
         return ("divider", 5)
 
-    # Cover heuristic — first page with moderate ink and few lines, or words
-    # like "FOLDER" should be detected by OCR later. For now: page 1-2 with
-    # < 20 lines and moderate ink ratio → cover.
+    # Cover heuristic — first 1-2 pages with few lines and moderate ink.
     if page_no <= 2 and lp < 15 and d < 0.15:
         return ("cover", 10)
 
-    # Photo: lots of midtone, low line-peak count
-    if mt > 0.35 and lp < 8:
-        return ("photo", 90)
-
-    # Clipping: high edge density + many short text lines
-    if ed > 0.08 and lp > 20:
-        return ("clipping", 80)
-
-    # Typewritten: moderate-to-high line peaks, regular spacing,
-    # ink ratio in typical text range
-    if lp >= 15 and 0.03 < d < 0.4:
-        # bonus if line count is "page-shaped" (40-65 lines)
+    # Typewritten gate FIRST. If a page has many regular text lines, it's a
+    # document scan no matter how grey/mid-toned the paper is. This prevents
+    # the photo branch from grabbing scanned typed pages on yellowed paper.
+    if lp >= 20 and 0.03 < d < 0.5:
         score = 60 + min(20, max(0, lp - 20))
         return ("typewritten", score)
 
-    # Handwritten — heuristic: ink ratio moderate but few clean line peaks.
-    # Very crude. Refine.
+    # Photo: lots of midtone, very low line-peak count, low edge sharpness.
+    # All three required — midtone alone catches scanned text on aged paper.
+    if mt > 0.35 and lp < 6 and ed < 0.08:
+        return ("photo", 90)
+
+    # Illustration: hand-drawn sketches / witness drawings. Moderate-to-high
+    # edge density (lines and curves), low midtone (mostly white paper with
+    # ink lines), few regular text rows.
+    if 0.04 < ed < 0.15 and mt < 0.30 and lp < 10 and 0.02 < d < 0.20:
+        return ("illustration", 85)
+
+    # Clipping: newspaper/magazine — high edge density + many short text lines.
+    if ed > 0.08 and lp > 15:
+        return ("clipping", 80)
+
+    # Looser typewritten fallback (faint old-typewriter ribbons).
+    if lp >= 12 and 0.03 < d < 0.4:
+        return ("typewritten", 55)
+
+    # Handwritten — moderate ink, few clean line peaks. Crude.
     if d > 0.05 and lp < 12:
         return ("handwritten", 30)
 
