@@ -361,6 +361,10 @@
             <span class="file-card-field-value">${safeAgency}</span>
           </div>
           <div class="file-card-field">
+            <span class="file-card-field-label">תאריך שחרור</span>
+            <span class="file-card-field-value">${f.release_date ? escapeHtml(f.release_date) : "—"}</span>
+          </div>
+          <div class="file-card-field">
             <span class="file-card-field-label">תאריך אירוע</span>
             <span class="file-card-field-value">${incDate ? escapeHtml(incDate) : "N/A"}</span>
           </div>
