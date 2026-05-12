@@ -1,15 +1,12 @@
-name: Scrape war.gov & deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
-  schedule:
-    # Weekly poll for new releases.
-    - cron: "0 8 * * 1"
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -17,58 +14,22 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+# Note on data refresh: war.gov is protected by Akamai WAF which 403s
+# every GitHub-hosted IP, so the manifest cannot be scraped from CI.
+# The manifest is built in the user's browser (scripts/browser_scrape.js
+# pasted into DevTools console on https://www.war.gov/UFO/) and committed
+# to data/manifest.json directly. This workflow then just ships the static
+# site.
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          # Need full history + write token so the scrape step can push
-          # the refreshed manifest back to main.
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-          cache-dependency-path: scripts/requirements.txt
-
-      - name: Install Playwright + Chromium
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r scripts/requirements.txt
-          python -m playwright install --with-deps chromium
-
-      - name: Scrape live file list from war.gov
-        id: scrape
-        continue-on-error: true
-        run: python scripts/build_manifest.py
-
-      - name: Upload scraper debug dump
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: scraper-debug
-          path: data/_debug/
-          if-no-files-found: warn
-          retention-days: 7
-
-      - name: Commit refreshed manifest if changed
-        if: steps.scrape.outcome == 'success'
-        run: |
-          set -e
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet -- data/manifest.json; then
-            git add data/manifest.json
-            git commit -m "ci: refresh manifest from war.gov [skip ci]"
-            # Don't push debug dumps; they're gitignored.
-            git push origin HEAD:main || echo "push failed — manifest changes will retry next run"
-          else
-            echo "manifest unchanged — no commit"
-          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -81,7 +42,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
