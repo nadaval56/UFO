@@ -113,9 +113,9 @@
     const note = document.createElement("div");
     note.className = "placeholder-banner";
     note.innerHTML = `
-      <strong>// המאניפסט בעריכה אוטומטית</strong>
-      <p>נכון לעכשיו מוצגות ${n} רשומות בלבד. סקריפט ה-Playwright ב-CI סורק את war.gov ומחליף את המאניפסט בנתונים האמיתיים.
-      בדוק את <a href="https://github.com/nadaval56/UFO/actions" target="_blank" rel="noopener">לשונית ה-Actions במאגר</a> לסטטוס הריצה.</p>`;
+      <strong>// המאניפסט ממתין לסריקה</strong>
+      <p>מוצגות ${n} רשומות בלבד. war.gov חוסם בוטים — הסריקה מתבצעת מהדפדפן שלך. הוראות מלאות:
+      <a href="https://github.com/nadaval56/UFO#איך-מרעננים-את-ה-manifest-חובה-ידנית" target="_blank" rel="noopener">README → איך מרעננים</a>.</p>`;
     const downloads = wrap.querySelector(".release-downloads");
     if (downloads) downloads.parentNode.insertBefore(note, downloads);
   }

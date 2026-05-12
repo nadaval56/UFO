@@ -1,1 +1,3 @@
-playwright>=1.46
+# build_manifest.py uses only the Python standard library.
+# Hebrew translations are written by a human (Claude Code session).
+# The data scrape itself happens in the user's browser — see browser_scrape.js.
