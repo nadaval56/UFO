@@ -3,13 +3,14 @@
 build_manifest.py — produce data/manifest.json for the PURSUE Hebrew Mirror.
 
 Pipeline:
-  1. (optional) Fetch the war.gov UFO page and try to discover a JSON manifest
-     or extract the file list from the embedded SPA bundle.
+  1. Fetch the war.gov UFO page and extract the file list from the SPA HTML.
   2. (optional) Download Release_1.zip; extract; walk filenames.
-  3. (optional) For each file, scrape the matching detail page for its
-     English description.
-  4. (optional) Translate each description to Hebrew via the Anthropic API.
-  5. Emit data/manifest.json.
+  3. For each file, scrape the matching detail panel for its English
+     description.
+  4. Preserve any existing Hebrew translations from the current manifest.
+  5. Emit data/manifest.json. summary_he is left null for new entries —
+     translations are added by a human (via Claude Code session) and
+     committed alongside the manifest.
 
 Default URL pattern (verified from the live site):
 
@@ -20,22 +21,17 @@ Filename pattern, FBI 62-HQ-83894 case file:
     65_HS1-{9-digit-id}_62-HQ-83894_SECTION_{N}.pdf
 
 Run:
-    pip install -r requirements.txt
-    python build_manifest.py                       # everything (best-effort)
-    python build_manifest.py --no-translate        # skip Anthropic call
-    python build_manifest.py --skip-download       # use cached files
-    python build_manifest.py --keep-existing-he    # don't re-translate already-translated entries
+    python build_manifest.py
+    python build_manifest.py --skip-download
 """
 
 from __future__ import annotations
 
 import argparse
 import json
-import os
 import re
 import sys
 import time
-import urllib.parse
 import urllib.request
 import urllib.error
 import zipfile
@@ -71,13 +67,6 @@ KNOWN_EXTENSIONS = {
     ".mp4": "vid", ".mov": "vid", ".m4v": "vid", ".avi": "vid",
     ".txt": "txt", ".doc": "doc", ".docx": "doc",
 }
-
-CLAUDE_MODEL = "claude-sonnet-4-6"
-TRANSLATION_SYSTEM = (
-    "אתה מתרגם מקצועי. תרגם טקסט אנגלי לעברית רהוטה ומדויקת. שמור על שמות "
-    "פרטיים, מקומות וקודי תיק (כמו 62-HQ-83894) במקור. החזר רק את התרגום, "
-    "ללא הסברים נוספים."
-)
 
 # ---------------------------------------------------------------------------
 # Logging
@@ -235,54 +224,6 @@ def extract_descriptions_from_page(html: str) -> dict[str, str]:
 
 
 # ---------------------------------------------------------------------------
-# Anthropic translation
-# ---------------------------------------------------------------------------
-
-def translate_to_hebrew(texts: list[str]) -> list[Optional[str]]:
-    """
-    Translate a batch of English strings to Hebrew. Returns a list of the same
-    length (None for entries we couldn't translate). Uses prompt caching so the
-    system prompt is cached across calls.
-    """
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        log("ANTHROPIC_API_KEY not set — skipping translation")
-        return [None] * len(texts)
-
-    try:
-        import anthropic  # type: ignore
-    except ImportError:
-        log("anthropic package not installed — skipping translation")
-        return [None] * len(texts)
-
-    client = anthropic.Anthropic(api_key=api_key)
-    out: list[Optional[str]] = []
-    for i, text in enumerate(texts, start=1):
-        if not text or not text.strip():
-            out.append(None)
-            continue
-        try:
-            resp = client.messages.create(
-                model=CLAUDE_MODEL,
-                max_tokens=2048,
-                system=[{
-                    "type": "text",
-                    "text": TRANSLATION_SYSTEM,
-                    "cache_control": {"type": "ephemeral"},
-                }],
-                messages=[{"role": "user", "content": text}],
-            )
-            translated = "".join(b.text for b in resp.content if getattr(b, "type", None) == "text").strip()
-            out.append(translated or None)
-            if i % 10 == 0:
-                log(f"translated {i}/{len(texts)}")
-        except Exception as e:
-            log(f"translation failed for entry {i}: {e}")
-            out.append(None)
-    return out
-
-
-# ---------------------------------------------------------------------------
 # Manifest assembly
 # ---------------------------------------------------------------------------
 
@@ -336,6 +277,8 @@ def emit_manifest(entries: list[FileEntry], out_path: Path) -> None:
 
 
 def load_existing_he(path: Path) -> dict[str, str]:
+    """Return id → summary_he map from the current manifest, so we can
+    carry translations forward across rebuilds without re-doing them."""
     if not path.exists():
         return {}
     try:
@@ -364,10 +307,6 @@ def main() -> int:
                         help="don't download Release_1.zip")
     parser.add_argument("--skip-extract", action="store_true",
                         help="don't extract the zip even if it's present")
-    parser.add_argument("--no-translate", action="store_true",
-                        help="skip the Anthropic translation step")
-    parser.add_argument("--keep-existing-he", action="store_true",
-                        help="re-use summary_he from the existing manifest when present")
     parser.add_argument("--raw-dir", default=None,
                         help="override the directory of already-extracted files")
     args = parser.parse_args()
@@ -425,23 +364,13 @@ def main() -> int:
         log("no files discovered from page or zip — keeping existing manifest unchanged")
         return 0
 
-    # ------------------------------------------------------------------ 4. translate
-    existing_he = load_existing_he(MANIFEST_PATH) if args.keep_existing_he else {}
-    if not args.no_translate:
-        to_translate_idx: list[int] = []
-        to_translate_txt: list[str] = []
-        for i, e in enumerate(entries):
-            if args.keep_existing_he and e.id in existing_he:
-                e.summary_he = existing_he[e.id]
-                continue
-            if e.summary_en:
-                to_translate_idx.append(i)
-                to_translate_txt.append(e.summary_en)
-        if to_translate_txt:
-            log(f"translating {len(to_translate_txt)} descriptions to Hebrew")
-            translated = translate_to_hebrew(to_translate_txt)
-            for idx, t in zip(to_translate_idx, translated):
-                entries[idx].summary_he = t
+    # ------------------------------------------------------------------ 4. carry over Hebrew translations
+    # Translations are produced by a human (Claude Code session) and committed
+    # to data/manifest.json. This step preserves them across rebuilds.
+    existing_he = load_existing_he(MANIFEST_PATH)
+    for e in entries:
+        if e.id in existing_he:
+            e.summary_he = existing_he[e.id]
 
     # ------------------------------------------------------------------ 5. write
     entries.sort(key=lambda e: e.filename)
