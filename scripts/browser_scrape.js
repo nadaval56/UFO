@@ -1,217 +1,228 @@
 /* ============================================================================
- * PURSUE Hebrew Mirror — Browser-side manifest scraper
+ * PURSUE Hebrew Mirror — Browser-side manifest scraper v2
  *
- * Paste this entire file into the DevTools Console while on
- *   https://www.war.gov/UFO/
- * It walks every page of the file browser, scrapes the metadata of every row,
- * fetches the description from each detail panel, and downloads a JSON file
- * named `manifest_scrape.json`.
+ * Paste into the DevTools Console on https://www.war.gov/UFO/.
+ * Downloads `manifest.json` describing every file in the release.
  *
- * Then in the repo:
- *   1. Save the downloaded JSON as `data/manifest.json` (overwrite).
- *   2. Commit + push.
- *   3. (optional) ask Claude Code to translate the new English summaries.
+ * Save the result to data/manifest.json in the repo, commit, push.
  *
- * Why this and not a GitHub Action: war.gov is protected by Akamai WAF,
- * which returns HTTP 403 for any AWS / GitHub-hosted IP. Your home browser
- * is the only environment that can actually reach the page.
+ * DOM (verified from a live diagnostic, 2026-05-12):
+ *   - Each row:  <button class="record-row" data-record-id="record-N">
+ *                  <span class="record-title">…</span>
+ *                  <span class="record-meta">[Agency]</span>
+ *                  <span class="record-meta">[Release Date]</span>
+ *                  <span class="record-meta">[Incident Date]</span>
+ *                  <span class="record-meta">[Location]</span>
+ *                  <span class="record-meta">[.pdf]</span>
+ *                </button>
+ *   - Clicking a row populates #record-modal with title, description,
+ *     a <dl> of facts, and a Download button that on click synthesizes
+ *     an <a href="..." download> and clicks it. We intercept that click
+ *     to capture the URL without actually downloading 158 files.
+ *   - Pagination: .pagination-button elements (numeric pages plus Prev/Next).
+ *
+ * Why this lives in the browser and not in CI: war.gov is behind Akamai WAF
+ * which 403s every datacenter IP. The user's home browser is the only
+ * environment that can reach the page.
  * ============================================================================ */
 
 (async () => {
   const SLEEP = (ms) => new Promise((r) => setTimeout(r, ms));
-  const log = (...a) => console.log("%c[PURSUE]", "color:#7df9ff", ...a);
+  const log = (...a) => console.log("%c[PURSUE]", "color:#7df9ff;font-weight:bold", ...a);
 
-  log("starting scrape on", location.href);
+  log("starting on", location.href);
 
-  /* ---------- pagination detection ---------- */
+  /* ---------- helpers ---------- */
 
-  function paginationButtons() {
-    // Numeric page buttons — could be <button> or <a>.
-    return Array.from(document.querySelectorAll('button, a'))
-      .filter((b) => /^\d+$/.test((b.textContent || "").trim()));
+  const stripBrackets = (s) => (s || "").trim().replace(/^\[\s*|\s*\]$/g, "");
+
+  function pageButtons() {
+    return Array.from(document.querySelectorAll(".pagination-button"));
   }
-  function nextButton() {
-    return Array.from(document.querySelectorAll('button, a'))
-      .find((b) => /^NEXT$/i.test((b.textContent || "").trim()));
+  function nextBtn() {
+    return pageButtons().find((b) => /^next$/i.test((b.textContent || "").trim()));
   }
-  function prevButton() {
-    return Array.from(document.querySelectorAll('button, a'))
-      .find((b) => /^PREV$/i.test((b.textContent || "").trim()));
+  function rows() {
+    return Array.from(document.querySelectorAll("button.record-row"));
   }
 
-  const pageBtnsInitial = paginationButtons();
-  let totalPages = pageBtnsInitial.length
-    ? Math.max(...pageBtnsInitial.map((b) => parseInt(b.textContent, 10)))
-    : 1;
+  /* ---------- URL capture ---------- */
+  // The modal's Download button programmatically creates an <a href="...pdf" download>
+  // and clicks it. We listen for clicks in the capture phase, grab the URL,
+  // and stop the actual navigation. This works without disturbing other links
+  // because we only attach the listener while waiting for the click.
 
-  // If pagination uses "1 ... 16", we may only see a subset; click NEXT to walk.
-  log(`detected ${totalPages} pages from numeric buttons`);
+  function captureNextDownloadURL(timeoutMs = 1200) {
+    return new Promise((resolve) => {
+      let resolved = false;
+      const onClick = (e) => {
+        const a = e.target.closest && e.target.closest("a[href]");
+        if (a && a.href) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          document.removeEventListener("click", onClick, true);
+          resolved = true;
+          resolve(a.href);
+        }
+      };
+      document.addEventListener("click", onClick, true);
+      setTimeout(() => {
+        if (resolved) return;
+        document.removeEventListener("click", onClick, true);
+        resolve(null);
+      }, timeoutMs);
+    });
+  }
 
-  /* ---------- per-row scraping ---------- */
+  /* ---------- single row scrape ---------- */
 
-  function scrapeRow(anchor) {
-    const href = anchor.href;
-    // Walk up to find a row container with enough context
-    let row = anchor;
-    for (let i = 0; i < 12; i++) {
-      const t = (row.textContent || "").trim();
-      if (
-        t.length > 80 &&
-        /(FBI|DEPARTMENT OF|NASA|ODNI|AARO|\[\.[A-Z]+\])/i.test(t)
-      ) break;
-      if (!row.parentElement) break;
-      row = row.parentElement;
+  async function scrapeRow(rowEl) {
+    rowEl.click();
+
+    // Wait for the modal to populate
+    let modal = null;
+    for (let i = 0; i < 60; i++) {
+      modal = document.querySelector("#record-modal");
+      if (modal && modal.querySelector("#record-modal-title")?.textContent?.trim()) break;
+      await SLEEP(40);
     }
-    const text = (row.textContent || "").trim().replace(/\s+/g, " ");
-    const brackets = Array.from(text.matchAll(/\[([^\]]+)\]/g)).map((m) => m[1].trim());
-    const titleClean = text.replace(/\[[^\]]+\]/g, " ").replace(/\s+/g, " ").trim();
-    const filename = href.split("/").pop();
+    if (!modal) return null;
 
-    // Classify brackets: agency (first), type (".pdf"/".img"/".vid"), dates, location.
-    let agency, releaseDate, incidentDate, incidentLocation, type;
-    const remaining = [];
-    for (const b of brackets) {
-      if (/^\.[A-Z]{2,4}$/i.test(b) && !type) { type = b.toLowerCase(); continue; }
-      if (!agency && /^[A-Z][A-Z &]+$/.test(b)) { agency = b; continue; }
-      if (/^\d{1,2}\/\d{1,2}\/\d{2,4}$/.test(b)) {
-        if (!releaseDate) releaseDate = b;
-        else if (!incidentDate) incidentDate = b;
-        continue;
+    const title = modal.querySelector("#record-modal-title")?.textContent?.trim() || null;
+    const description = modal.querySelector("[data-record-modal-copy]")?.textContent?.trim() || null;
+    const kind = modal.getAttribute("data-record-kind") || null;
+
+    const facts = {};
+    for (const fact of modal.querySelectorAll(".record-modal-fact")) {
+      const k = fact.querySelector("dt")?.textContent?.trim();
+      const v = fact.querySelector("dd")?.textContent?.trim();
+      if (k && v) facts[k] = stripBrackets(v);
+    }
+
+    // Try iframe src first (cheap), then fall back to clicking download.
+    let url = null;
+    const iframe = modal.querySelector("iframe[src], embed[src], object[data]");
+    if (iframe) {
+      url = iframe.getAttribute("src") || iframe.getAttribute("data") || null;
+      if (url && url.startsWith("/")) url = new URL(url, location.origin).href;
+    }
+    if (!url) {
+      const dlBtn = modal.querySelector(".record-modal-download, [data-record-modal-download]");
+      if (dlBtn) {
+        const urlPromise = captureNextDownloadURL();
+        dlBtn.click();
+        url = await urlPromise;
       }
-      if (/^(LATE|EARLY|MID)\s+\d{4}$|^\d{4}$/i.test(b)) {
-        if (!incidentDate) incidentDate = b;
-        else if (!incidentLocation) incidentLocation = b;
-        continue;
-      }
-      remaining.push(b);
     }
-    if (!incidentLocation && remaining.length) incidentLocation = remaining[0];
 
-    return {
-      id: filename.replace(/\.[a-z0-9]+$/i, ""),
-      title: titleClean,
-      filename,
-      source_url: href,
-      agency: agency || "UNKNOWN",
-      type: (type || ("." + (filename.split(".").pop() || "")).toLowerCase()).replace(/^\./, ""),
-      release_date: releaseDate || null,
-      incident_date: incidentDate || null,
-      incident_location: incidentLocation || null,
-      _rowText: text.length > 400 ? text.slice(0, 400) + "…" : text,
-    };
+    // Close the modal so the next row's click works cleanly.
+    const closeBtn = modal.querySelector(".record-modal-close, [data-record-modal-close]");
+    if (closeBtn) closeBtn.click();
+    await SLEEP(120);
+
+    return { title, description, kind, facts, url };
   }
 
-  function scrapeVisibleRows() {
-    const anchors = Array.from(
-      document.querySelectorAll('a[href*="/medialink/ufo/release_1/"]')
-    );
-    const rows = [];
-    const seen = new Set();
-    for (const a of anchors) {
-      if (seen.has(a.href)) continue;
-      // skip the bundle download buttons
-      if (/bundle/i.test(a.href)) continue;
-      seen.add(a.href);
-      rows.push(scrapeRow(a));
-    }
-    return rows;
-  }
+  /* ---------- walk pagination ---------- */
 
-  /* ---------- walk every page ---------- */
+  const seen = new Set();
+  const records = [];
 
-  const allRows = new Map(); // url → entry
-
-  // Go to page 1 first if a "1" button exists
-  const oneBtn = paginationButtons().find((b) => b.textContent.trim() === "1");
-  if (oneBtn) { oneBtn.click(); await SLEEP(700); }
-
-  let pageNum = 1;
-  let safety = 200;
-  while (safety-- > 0) {
-    const rows = scrapeVisibleRows();
-    log(`page ${pageNum}: scraped ${rows.length} rows (cumulative ${allRows.size + rows.filter((r) => !allRows.has(r.source_url)).length})`);
-    for (const r of rows) {
-      if (!allRows.has(r.source_url)) allRows.set(r.source_url, r);
-    }
-    const nb = nextButton();
-    if (!nb || nb.disabled || nb.getAttribute("aria-disabled") === "true") break;
-    nb.click();
-    pageNum += 1;
+  // Go to page 1 if there's an explicit "1" button and it's not active.
+  const one = pageButtons().find((b) => (b.textContent || "").trim() === "1");
+  if (one && !one.classList.contains("is-active") && !one.getAttribute("aria-current")) {
+    one.click();
     await SLEEP(700);
   }
 
-  const entries = Array.from(allRows.values());
-  log(`scraped ${entries.length} unique entries across ${pageNum} pages`);
-
-  /* ---------- enrich each entry with its description (from hash-routed detail) ---------- */
-
-  log("fetching descriptions from detail panels…");
-  let done = 0;
-  for (const e of entries) {
-    try {
-      window.location.hash = e.id;
-      await SLEEP(350);
-      // The description is the longest paragraph visible in the detail panel.
-      const candidates = Array.from(document.querySelectorAll("p, .description, [class*='description'] p"));
-      let best = "";
-      for (const n of candidates) {
-        const t = (n.textContent || "").trim();
-        if (t.length > 60 && t.length < 4000 && t.length > best.length) best = t;
+  let pageIndex = 1;
+  const SAFETY = 30;
+  while (pageIndex <= SAFETY) {
+    const pageRows = rows();
+    log(`page ${pageIndex}: ${pageRows.length} rows`);
+    for (let i = 0; i < pageRows.length; i++) {
+      const row = pageRows[i];
+      const rid = row.getAttribute("data-record-id") || `row-${pageIndex}-${i}`;
+      if (seen.has(rid)) continue;
+      seen.add(rid);
+      try {
+        const data = await scrapeRow(row);
+        if (data) records.push({ recordId: rid, ...data });
+      } catch (err) {
+        log("row scrape error", rid, err);
       }
-      if (best) e.summary_en = best;
-    } catch (err) {
-      log("description fetch failed for", e.id, err);
+      if ((i + 1) % 5 === 0) log(`  ${i + 1}/${pageRows.length} on page ${pageIndex}`);
     }
-    done += 1;
-    if (done % 20 === 0) log(`  enriched ${done}/${entries.length}`);
+
+    const nb = nextBtn();
+    if (!nb || nb.disabled || nb.getAttribute("aria-disabled") === "true") {
+      log(`reached last page (${pageIndex})`);
+      break;
+    }
+    nb.click();
+    pageIndex++;
+    await SLEEP(700);
   }
 
-  // Reset hash so the user sees the file list when the script ends
-  history.replaceState(null, "", location.pathname);
-
   /* ---------- assemble + download ---------- */
+
+  function entryFrom(r) {
+    const url = r.url || null;
+    const filenameFromUrl = url ? decodeURIComponent(url.split("/").pop().split("?")[0]) : null;
+    const id = filenameFromUrl ? filenameFromUrl.replace(/\.[a-z0-9]+$/i, "") : r.recordId;
+    const docType = (r.facts["Document Type"] || r.kind || "").replace(/^\./, "").toLowerCase() || null;
+    return {
+      id,
+      title: r.title || null,
+      title_he: null,
+      filename: filenameFromUrl,
+      agency: r.facts["Agency"] || null,
+      agency_he: null,
+      type: docType,
+      source_url: url,
+      release_date: r.facts["Release Date"] || null,
+      incident_date: r.facts["Incident Date"] || null,
+      incident_location: r.facts["Incident Location"] || null,
+      incident_location_he: null,
+      summary_en: r.description || null,
+      summary_he: null,
+      size_bytes: null,
+      url_status: null,
+      _record_id: r.recordId,
+    };
+  }
+
+  const files = records.map(entryFrom);
 
   const manifest = {
     release_id: "release_01",
     release_date: "2026-05-08",
     source_page_url: "https://www.war.gov/UFO/",
-    total_files: entries.length,
+    total_files: files.length,
     generated_at: new Date().toISOString(),
-    _scraped_by: "browser_scrape.js (DevTools console)",
-    _note: "Run scripts/translate-instructions.md against this file via Claude Code to add Hebrew translations.",
-    files: entries.map((e) => ({
-      id: e.id,
-      title: e.title,
-      title_he: null,
-      filename: e.filename,
-      agency: e.agency,
-      agency_he: null,
-      type: e.type,
-      source_url: e.source_url,
-      release_date: e.release_date,
-      incident_date: e.incident_date,
-      incident_location: e.incident_location,
-      incident_location_he: null,
-      summary_en: e.summary_en || null,
-      summary_he: null,
-      size_bytes: null,
-      url_status: null,
-    })),
+    _scraped_by: "browser_scrape.js v2 (DevTools console)",
+    _note:
+      "Hebrew translation fields (title_he, agency_he, incident_location_he, summary_he) are added separately by a Claude Code session.",
+    files,
   };
+
+  log("=== SUMMARY ===");
+  log(`  total records: ${files.length}`);
+  log(`  with URL:      ${files.filter((e) => e.source_url).length}`);
+  log(`  with summary:  ${files.filter((e) => e.summary_en).length}`);
+  log(`  agencies:      ${[...new Set(files.map((e) => e.agency).filter(Boolean))].join(", ")}`);
+  log(`  locations:     ${[...new Set(files.map((e) => e.incident_location).filter(Boolean))].join(", ")}`);
+  log("=== /SUMMARY ===");
 
   const blob = new Blob([JSON.stringify(manifest, null, 2)], { type: "application/json" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
   a.download = "manifest.json";
   document.body.appendChild(a);
-  a.click();
+  // Click directly via descriptor to bypass any listeners we may have registered.
+  HTMLElement.prototype.click.call(a);
   a.remove();
 
-  log("done — downloaded as manifest.json. Save it to data/manifest.json in the repo.");
-  log("summary:", {
-    files: entries.length,
-    with_description: entries.filter((e) => e.summary_en).length,
-    agencies: [...new Set(entries.map((e) => e.agency))],
-    locations: [...new Set(entries.map((e) => e.incident_location).filter(Boolean))],
-  });
+  log("✓ downloaded manifest.json — save it to data/manifest.json in the repo");
 })();
