@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 """
-ocr.py — OCR typewritten pages and produce `text_preview_en` per manifest entry.
+ocr.py — OCR every typewritten page and produce `text_en` + `text_preview_en`.
 
-For each manifest entry, find the pages classified as `typewritten` (and
-optionally `clipping`), render them at 300 DPI, run tesseract, drop pages
-whose confidence is too low, concatenate, trim to ~3000 chars sentence-aligned,
-write back to `manifest.files[i].text_preview_en`.
+For each manifest entry, find every page classified as `typewritten` (and
+optionally `clipping`), render at 300 DPI, run tesseract, drop pages whose
+average confidence is below MIN_CONFIDENCE, concatenate in page order. Write:
 
-Caches per-page raw OCR text in data/_ocr/{id}/p{NNN}.txt so re-runs are cheap.
+  - `text_en`         — full concatenated OCR text for all kept pages
+  - `text_preview_en` — first PREVIEW_CHAR_LIMIT chars, sentence-aligned cut
 
-Configure max pages per file via --max-pages-per-file (default: 3). Going
-higher gets you more text but also more cost; for most files 3 typewritten
-pages is plenty for a preview.
+Caches per-page raw OCR text in data/_ocr/{id}/p{NNN}.txt so re-runs are cheap
+(safe to Ctrl+C and resume). The full run is slow — that's expected.
+
+`--max-pages-per-file` defaults to 0 (no cap). Set a small number only for
+smoke-testing.
 """
 
 from __future__ import annotations
@@ -80,7 +82,8 @@ def main() -> int:
     ap.add_argument("--manifest", default=str(DEFAULT_MANIFEST))
     ap.add_argument("--class-dir", default=str(DEFAULT_CLASS_DIR))
     ap.add_argument("--ocr-dir", default=str(DEFAULT_OCR_DIR))
-    ap.add_argument("--max-pages-per-file", type=int, default=3)
+    ap.add_argument("--max-pages-per-file", type=int, default=0,
+                    help="0 = no cap (default). Small number for smoke tests.")
     ap.add_argument("--limit", type=int, default=None)
     args = ap.parse_args()
 
@@ -100,16 +103,20 @@ def main() -> int:
         eid = entry.get("id")
         if not eid:
             continue
-        if entry.get("text_preview_en"):
-            continue  # already done
+        # Resume: skip only if BOTH fields already present. text_preview_en
+        # alone is from an older run that capped at 3 pages — redo to get
+        # full text_en. (Per-page OCR cache still applies, so this is cheap.)
+        if entry.get("text_en") and entry.get("text_preview_en"):
+            continue
         cjson = class_dir / f"{eid}.json"
         if not cjson.exists():
             continue
         pages = json.loads(cjson.read_text(encoding="utf-8")).get("pages", [])
-        # Pick top N typewritten/clipping pages by score
+        # Every typewritten / clipping page, in page order
         candidates = [p for p in pages if p["kind"] in PREFERRED_KINDS]
-        candidates.sort(key=lambda p: p["score"], reverse=True)
-        candidates = candidates[: args.max_pages_per_file]
+        candidates.sort(key=lambda p: p["page"])
+        if args.max_pages_per_file and args.max_pages_per_file > 0:
+            candidates = candidates[: args.max_pages_per_file]
         if not candidates:
             continue
         pdf = find_pdf(raw_dir, entry)
@@ -137,9 +144,12 @@ def main() -> int:
                 chunks.append(text.strip())
 
         if chunks:
-            preview = trim_to_chars("\n\n".join(chunks), PREVIEW_CHAR_LIMIT)
-            entry["text_preview_en"] = preview
+            full = re.sub(r"\n{3,}", "\n\n",
+                          "\n\n".join(chunks)).strip()
+            entry["text_en"] = full
+            entry["text_preview_en"] = trim_to_chars(full, PREVIEW_CHAR_LIMIT)
 
+    # UTF-8 with ensure_ascii=False — Hebrew round-trips without mojibake
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2),
                              encoding="utf-8")
     return 0

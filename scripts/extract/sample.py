@@ -27,12 +27,13 @@ DEFAULT_CLASS_DIR = REPO_ROOT / "data" / "_classification"
 DEFAULT_PREVIEW_DIR = REPO_ROOT / "data" / "previews"
 
 KIND_PRIORITY = {
-    "photo": 4,
+    "photo": 5,
+    "illustration": 4,
     "clipping": 3,
-    "typewritten": 2,
-    "mixed": 1,
 }
-SKIP_KINDS = {"cover", "blank", "divider", "handwritten"}
+# Kinds that go into preview_pages. Anything not in here is rejected
+# from the preview pool — no fallback padding.
+ELIGIBLE_KINDS = set(KIND_PRIORITY.keys())
 TARGET_COUNT = 6
 PREVIEW_DPI = 300
 JPEG_QUALITY = 75
@@ -40,16 +41,19 @@ MAX_PREVIEW_KB = 120  # warn if a preview is bigger
 
 
 def pick_pages(pages: list[dict], target: int = TARGET_COUNT) -> list[dict]:
-    """Pick a diverse, interest-ranked subset."""
-    eligible = [p for p in pages if p["kind"] not in SKIP_KINDS]
+    """Pick up to `target` pages, photo/illustration/clipping only.
+
+    No fallback to typewritten or other kinds — if a file has nothing
+    visually interesting, it gets an empty preview list.
+    """
+    eligible = [p for p in pages if p["kind"] in ELIGIBLE_KINDS]
     if not eligible:
-        # fallback: best non-blank pages even if "skipped"
-        eligible = [p for p in pages if p["kind"] != "blank"]
+        return []
     eligible.sort(
         key=lambda p: (KIND_PRIORITY.get(p["kind"], 0), p["score"]),
         reverse=True,
     )
-    # Ensure kind diversity in the first picks
+    # Diversity-first: take the best of each kind before doubling up
     picked, kinds_seen = [], set()
     for p in eligible:
         if p["kind"] not in kinds_seen:
@@ -57,7 +61,6 @@ def pick_pages(pages: list[dict], target: int = TARGET_COUNT) -> list[dict]:
             kinds_seen.add(p["kind"])
         if len(picked) >= min(target, len(KIND_PRIORITY)):
             break
-    # Fill remaining slots with next-best regardless of kind dup
     for p in eligible:
         if len(picked) >= target:
             break
@@ -141,11 +144,14 @@ def main() -> int:
         if not pages:
             continue
 
-        # Aggregate content kinds (sorted by count desc)
+        # Aggregate content kinds (sorted by count desc). Drop only "blank"
+        # since it contributes no information; keep cover/divider/handwritten
+        # in content_kinds for the user's overview even though they're
+        # excluded from preview_pages.
         kind_counts: dict[str, int] = {}
         for p in pages:
             k = p["kind"]
-            if k in SKIP_KINDS:
+            if k == "blank":
                 continue
             kind_counts[k] = kind_counts.get(k, 0) + 1
         content_kinds = [k for k, _ in sorted(kind_counts.items(),
