@@ -900,10 +900,42 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   .filter-search { grid-column: 1 / -1; }
   .file-card {
     grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 16px 14px;
+    gap: 12px;
+    padding: 18px 16px;
   }
-  .file-card-field { flex-direction: row; align-items: baseline; gap: 8px; }
+  .file-card-main {
+    padding-block-end: 10px;
+    border-block-end: 1px dashed var(--border);
+  }
+  .file-card-title {
+    font-size: 0.92rem;
+  }
+  /* Each metadata field becomes a 2-column row: label | bracketed value */
+  .file-card-field {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: baseline;
+    gap: 0 14px;
+    padding-block: 1px;
+  }
+  .file-card-field-label {
+    font-size: 0.68rem;
+  }
+  .file-card-field-value {
+    justify-self: end;
+    text-align: end;
+    font-size: 0.88rem;
+  }
+  .file-card-download {
+    margin-block-start: 6px;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+  .file-card-filename {
+    font-size: 0.66rem;
+    word-break: break-all;
+  }
   .footer-inner { grid-template-columns: 1fr; gap: 28px; }
 }
 
@@ -921,6 +953,9 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   .release-downloads { flex-direction: column; align-items: stretch; }
   .file-count { margin-inline-start: 0; justify-content: center; }
   .modal-panel { padding: 24px 18px 18px; }
+  .container { padding: 0 16px; }
+  /* Tighten card padding on very small screens */
+  .file-card { padding: 14px 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
