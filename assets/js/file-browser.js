@@ -1,7 +1,8 @@
 /* ============================================================
    file-browser.js
    Drives the Release 01 file browser: loads manifest.json,
-   renders cards, handles pagination, filters, search and modal.
+   renders cards, handles pagination, filters, and search.
+   Cards link to the standalone file.html?id=... page.
    No dependencies — vanilla JS.
    ============================================================ */
 
@@ -43,30 +44,9 @@
     type: document.getElementById("filter-type"),
     search: document.getElementById("filter-search"),
     reset: document.getElementById("filter-reset"),
-    modal: document.getElementById("file-modal"),
-    modalTitle: document.getElementById("file-modal-title"),
-    modalAgency: document.getElementById("modal-agency"),
-    modalType: document.getElementById("modal-type"),
-    modalReleaseDate: document.getElementById("modal-release-date"),
-    modalIncidentDate: document.getElementById("modal-incident-date"),
-    modalIncidentLocation: document.getElementById("modal-incident-location"),
-    modalSize: document.getElementById("modal-size"),
-    modalSummaryHe: document.getElementById("modal-summary-he"),
-    modalSummaryHeWrap: document.getElementById("modal-summary-he-wrap"),
-    modalSummaryEn: document.getElementById("modal-summary-en"),
-    modalSummaryEnWrap: document.getElementById("modal-summary-en-wrap"),
-    modalDownload: document.getElementById("modal-download"),
   };
 
   /* ------------------------- utilities ------------------------- */
-
-  function formatBytes(bytes) {
-    if (bytes == null || isNaN(bytes)) return "—";
-    if (bytes < 1024) return bytes + " B";
-    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + " KB";
-    if (bytes < 1024 * 1024 * 1024) return (bytes / (1024 * 1024)).toFixed(1) + " MB";
-    return (bytes / (1024 * 1024 * 1024)).toFixed(2) + " GB";
-  }
 
   function typeLabel(t) {
     const map = { pdf: "PDF", img: "תמונה", vid: "וידאו", doc: "מסמך", txt: "טקסט" };
@@ -75,10 +55,6 @@
 
   function fileTitleHe(f) {
     return f.title_he || f.title || f.filename || "—";
-  }
-
-  function fileTitleRaw(f) {
-    return f.title || f.filename || "—";
   }
 
   function agencyDisplayHe(f) {
@@ -221,13 +197,6 @@
 
     el.reset.addEventListener("click", resetFilters);
     if (el.emptyReset) el.emptyReset.addEventListener("click", resetFilters);
-
-    document.querySelectorAll("[data-close-modal]").forEach((n) =>
-      n.addEventListener("click", closeModal)
-    );
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !el.modal.hidden) closeModal();
-    });
 
     window.addEventListener("hashchange", () => {
       applyHash();
@@ -389,16 +358,21 @@
       card.addEventListener("click", (e) => {
         if (e.target.closest("[data-stop-card]")) return;
         const idx = parseInt(card.dataset.index, 10);
-        openModal(state.filtered[idx]);
+        openFile(state.filtered[idx]);
       });
       card.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           const idx = parseInt(card.dataset.index, 10);
-          openModal(state.filtered[idx]);
+          openFile(state.filtered[idx]);
         }
       });
     });
+  }
+
+  function openFile(file) {
+    if (!file || !file.id) return;
+    window.location.href = "file.html?id=" + encodeURIComponent(file.id);
   }
 
   /* ------------------------- pagination ------------------------- */
@@ -445,63 +419,6 @@
       if (i < list.length - 1 && list[i + 1] - list[i] > 1) out.push("…");
     }
     return out;
-  }
-
-  /* ------------------------- modal ------------------------- */
-
-  function openModal(file) {
-    if (!file) return;
-    el.modalTitle.textContent = fileTitleHe(file);
-    el.modalTitle.setAttribute("dir", file.title_he ? "rtl" : "ltr");
-    el.modalAgency.textContent = agencyDisplayHe(file);
-    el.modalType.textContent = typeLabel(file.type);
-    el.modalReleaseDate.textContent = file.release_date || state.releaseDateGlobal || "—";
-    if (el.modalIncidentDate) {
-      const d = incidentDateDisplay(file);
-      el.modalIncidentDate.textContent = d || "N/A";
-    }
-    if (el.modalIncidentLocation) {
-      const loc = incidentLocationDisplayHe(file);
-      el.modalIncidentLocation.textContent = loc || "N/A";
-    }
-    el.modalSize.textContent = formatBytes(file.size_bytes);
-    if (file.source_url) {
-      el.modalDownload.href = file.source_url;
-      el.modalDownload.removeAttribute("aria-disabled");
-      el.modalDownload.classList.remove("btn-disabled");
-      el.modalDownload.textContent = file._url_is_record_page
-        ? "פתיחת הרשומה באתר המקור ↗"
-        : "הורדה מאתר המקור ↗";
-    } else {
-      el.modalDownload.removeAttribute("href");
-      el.modalDownload.setAttribute("aria-disabled", "true");
-      el.modalDownload.classList.add("btn-disabled");
-      el.modalDownload.textContent = "קישור ההורדה לא נלכד בסריקה";
-    }
-
-    if (file.summary_he) {
-      el.modalSummaryHe.textContent = file.summary_he;
-      el.modalSummaryHeWrap.hidden = false;
-    } else {
-      el.modalSummaryHeWrap.hidden = true;
-    }
-    if (file.summary_en) {
-      el.modalSummaryEn.textContent = file.summary_en;
-      el.modalSummaryEnWrap.hidden = false;
-      el.modalSummaryEnWrap.open = !file.summary_he;
-    } else {
-      el.modalSummaryEnWrap.hidden = true;
-    }
-
-    el.modal.hidden = false;
-    el.modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeModal() {
-    el.modal.hidden = true;
-    el.modal.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
   }
 
   /* ------------------------- go ------------------------- */

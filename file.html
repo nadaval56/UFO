@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="פרטי מסמך — PURSUE תרגום עברי בלתי רשמי של ארכיון ה-UAP של משרד המלחמה האמריקאי.">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>טוען… — PURSUE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- כתב ויתור עליון -->
+  <div class="top-banner" role="note">
+    <strong>כתב ויתור:</strong> תרגום קהילתי בלתי רשמי. לא מסונף לממשלת ארה"ב. למקור הרשמי באנגלית:
+    <a href="https://www.war.gov/UFO/" target="_blank" rel="noopener">war.gov/UFO</a>
+  </div>
+
+  <!-- כותרת אתר -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-logo" aria-hidden="true">★</span>
+        <span class="brand-text">
+          <span class="brand-title">PURSUE</span>
+          <span class="brand-sub">משרד המלחמה האמריקאי</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="ניווט ראשי">
+        <a href="index.html#directive">ההנחיה</a>
+        <a href="index.html#release">מהדורה 01</a>
+        <a href="index.html#learn">למידע נוסף</a>
+        <a href="https://www.war.gov/UFO/" target="_blank" rel="noopener" class="nav-original">מקור באנגלית ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="container file-page">
+
+      <!-- breadcrumb -->
+      <nav class="file-crumb" aria-label="פירורי לחם">
+        <a href="index.html#release">← חזרה לארכיון</a>
+      </nav>
+
+      <!-- עומס שגיאה / טעינה -->
+      <div id="file-loading" class="file-loading">טוען…</div>
+      <div id="file-error" class="file-error" hidden></div>
+
+      <article id="file-article" class="file-article" hidden>
+
+        <!-- כותרת המסמך -->
+        <header class="file-head">
+          <p id="file-eyebrow" class="file-eyebrow mono">—</p>
+          <h1 id="file-title" class="file-title">—</h1>
+          <p id="file-filename" class="file-filename mono"></p>
+        </header>
+
+        <!-- חטיבת גלריה + מטא-דאטה -->
+        <div class="file-top-grid">
+
+          <!-- גלריה -->
+          <section id="gallery" class="gallery" hidden aria-label="תצוגות מקדימות מהמסמך">
+            <div class="gallery-stage">
+              <button id="gallery-prev" type="button" class="gallery-arrow gallery-arrow-prev" aria-label="התמונה הקודמת">
+                <span aria-hidden="true">‹</span>
+              </button>
+              <div class="gallery-image-wrap">
+                <img id="gallery-image" alt="" loading="lazy">
+              </div>
+              <button id="gallery-next" type="button" class="gallery-arrow gallery-arrow-next" aria-label="התמונה הבאה">
+                <span aria-hidden="true">›</span>
+              </button>
+            </div>
+            <div class="gallery-info">
+              <span id="gallery-counter" class="mono">—</span>
+              <span id="gallery-kind" class="gallery-kind">—</span>
+            </div>
+            <div id="gallery-thumbs" class="gallery-thumbs" role="tablist" aria-label="בחירת תצוגה"></div>
+          </section>
+
+          <!-- אם אין תמונות: placeholder -->
+          <section id="gallery-empty" class="gallery-empty" hidden>
+            <p class="gallery-empty-eyebrow mono">// אין תצוגות מקדימות</p>
+            <p>הקובץ אינו מכיל תוכן ויזואלי שזוהה (תמונה / קליפינג / רישום). תוכן המסמך זמין דרך ה-OCR למטה ובהורדת המקור.</p>
+          </section>
+
+          <!-- מטא-דאטה ותיק הורדה -->
+          <aside class="file-meta">
+            <dl class="file-meta-list">
+              <div><dt>סוכנות</dt><dd id="meta-agency">—</dd></div>
+              <div><dt>סוג מסמך</dt><dd id="meta-type">—</dd></div>
+              <div><dt>תאריך שחרור</dt><dd id="meta-release">—</dd></div>
+              <div><dt>תאריך אירוע</dt><dd id="meta-incident-date">—</dd></div>
+              <div><dt>מיקום אירוע</dt><dd id="meta-incident-loc">—</dd></div>
+              <div><dt>מספר עמודים</dt><dd id="meta-pages">—</dd></div>
+              <div><dt>גודל</dt><dd id="meta-size" class="mono">—</dd></div>
+              <div><dt>סוגי תוכן</dt><dd id="meta-kinds">—</dd></div>
+            </dl>
+            <a id="meta-download" class="btn btn-primary file-download" href="#" target="_blank" rel="noopener">הורדה מאתר המקור ↗</a>
+          </aside>
+        </div>
+
+        <!-- תיאור ארכאולוגי (Claude) -->
+        <section id="narrative-section" class="text-block text-block-narrative" hidden>
+          <header class="text-block-head">
+            <p class="text-block-label mono">// תיאור ארכאולוגי</p>
+            <p class="text-block-byline">סקירה עברית מבוססת על המסמך, ה-OCR והתמונות.</p>
+          </header>
+          <div id="narrative-body" class="text-block-body"></div>
+        </section>
+
+        <!-- תקציר רשמי (מהמקור) -->
+        <section id="summary-section" class="text-block text-block-summary" hidden>
+          <header class="text-block-head">
+            <p class="text-block-label mono">// תקציר רשמי</p>
+            <p class="text-block-byline">מתוך התיאור הרשמי של war.gov.</p>
+          </header>
+          <div id="summary-he" class="text-block-body"></div>
+          <details id="summary-en-wrap" class="text-original" hidden>
+            <summary>הצגת המקור באנגלית</summary>
+            <div id="summary-en" class="text-original-body" dir="ltr" lang="en"></div>
+          </details>
+        </section>
+
+        <!-- OCR — תרגום עברי -->
+        <section id="ocr-he-section" class="text-block text-block-ocr-he" hidden>
+          <header class="text-block-head">
+            <p class="text-block-label mono">// תוכן המסמך — תרגום</p>
+            <p class="text-block-byline">תרגום עברי של ~3,000 התווים הראשונים מתוך ה-OCR.</p>
+          </header>
+          <div id="ocr-he-body" class="text-block-body"></div>
+        </section>
+
+        <!-- OCR — מקור באנגלית -->
+        <section id="ocr-en-section" class="text-block text-block-ocr-en" hidden>
+          <header class="text-block-head">
+            <p class="text-block-label mono">// Original OCR Excerpt</p>
+            <p class="text-block-byline">~3,000 התווים הראשונים — אנגלית, sentence-aligned.</p>
+          </header>
+          <div id="ocr-en-body" class="text-block-body" dir="ltr" lang="en"></div>
+        </section>
+
+        <!-- OCR מלא — חלון נגלל -->
+        <section id="ocr-full-section" class="text-block text-block-ocr-full" hidden>
+          <header class="text-block-head">
+            <p class="text-block-label mono">// OCR מלא</p>
+            <p class="text-block-byline">
+              טקסט גולמי, ללא עיבוד. שגיאות OCR צפויות. גלילה כדי לקרוא.
+              חיפוש בעמוד: <span class="mono">Ctrl+F</span>.
+            </p>
+          </header>
+          <pre id="ocr-full-body" class="ocr-scroll" dir="ltr" lang="en"></pre>
+        </section>
+
+        <!-- footer פעולות -->
+        <div class="file-footer-actions">
+          <a href="index.html#release" class="btn btn-ghost">חזרה לארכיון</a>
+          <a id="meta-download-2" class="btn btn-primary" href="#" target="_blank" rel="noopener">הורדה מאתר המקור ↗</a>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- פוטר -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <p class="footer-brand">PURSUE — מראה עברית</p>
+        <p class="footer-disclaimer">
+          תרגום קהילתי בלתי רשמי. לא מסונף לממשלת ארצות הברית או לכל סוכנות פדרלית.
+          תוכן המקור — יצירת ממשלת ארה"ב — נמצא בנחלת הכלל לפי 17 U.S.C. § 105.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>קישורים</h4>
+        <ul>
+          <li><a href="https://www.war.gov/UFO/" target="_blank" rel="noopener">מקור רשמי — war.gov/UFO</a></li>
+          <li><a href="https://github.com/nadaval56/ufo" target="_blank" rel="noopener">GitHub — קוד הפרויקט</a></li>
+          <li><a href="index.html#release">מהדורה 01</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>מילון מונחים</h4>
+        <ul class="footer-glossary">
+          <li><span class="mono">UAP</span> — תופעות אוויריות בלתי מוסברות</li>
+          <li><span class="mono">UFO</span> — עצם מעופף בלתי מזוהה</li>
+          <li><span class="mono">DOW</span> — משרד המלחמה</li>
+          <li><span class="mono">ODNI</span> — מנהל המודיעין הלאומי</li>
+          <li><span class="mono">AARO</span> — משרד פתרון תופעות כל-תחומיות</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="mono">38°52′16″N · 77°03′21″W</p>
+      <p>© 2026 PURSUE Hebrew Mirror — קוד תחת רישיון MIT</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/file-detail.js" defer></script>
+</body>
+</html>
