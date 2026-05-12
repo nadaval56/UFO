@@ -33,17 +33,29 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
 
-      - name: Build manifest from war.gov bundle
+      - name: Install Python deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: Build manifest from war.gov + translate to Hebrew
         id: build
         continue-on-error: true
+        env:
+          # Optional: set the ANTHROPIC_API_KEY repo secret to enable
+          # automatic Hebrew translation of file descriptions.
+          # Without it, summary_he is left null.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           set -e
           cd "$GITHUB_WORKSPACE"
-          # Try to pull the real bundle and produce data/manifest.json.
+          # Try to pull real data from war.gov and produce data/manifest.json.
           # If war.gov is unreachable from the runner, fall back to the
           # committed sample manifest so the site still deploys.
-          python scripts/build_manifest.py
+          # --keep-existing-he avoids re-translating already-translated entries
+          # to save Anthropic API cost on subsequent runs.
+          python scripts/build_manifest.py --keep-existing-he
           echo "manifest_size=$(stat -c%s data/manifest.json)" >> "$GITHUB_OUTPUT"
           echo "total_files=$(python -c "import json; print(json.load(open('data/manifest.json'))['total_files'])")" >> "$GITHUB_OUTPUT"
 

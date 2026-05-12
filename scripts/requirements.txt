@@ -1,9 +1,9 @@
-# The current build_manifest.py uses only Python stdlib.
-# Listed here as planned dependencies for Phase 2 (PDF text + Hebrew summaries).
-# Uncomment when implementing:
-#
-# pdfplumber>=0.10        # extract text from digital PDFs
-# pytesseract>=0.3.10     # OCR for scanned PDFs (requires tesseract system binary)
-# Pillow>=10.0            # image handling for OCR
-# anthropic>=0.39         # Claude API for Hebrew summaries
-# tqdm>=4.66              # progress bars
+# Required for Hebrew translation of file descriptions via the Claude API.
+# Skip translation with `python build_manifest.py --no-translate`.
+anthropic>=0.39
+
+# Phase 2 — uncomment when wiring PDF text extraction / OCR:
+# pdfplumber>=0.10
+# pytesseract>=0.3.10
+# Pillow>=10.0
+# tqdm>=4.66
