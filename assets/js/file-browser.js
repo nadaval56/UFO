@@ -377,8 +377,10 @@
             <span class="file-card-field-value">.${safeType}</span>
           </div>
           ${f.source_url
-            ? `<a class="file-card-download" href="${escapeHtml(f.source_url)}" target="_blank" rel="noopener" data-stop-card>הורדה ↓</a>`
-            : `<span class="file-card-download file-card-download-disabled" title="קישור ההורדה לא נלכד בסריקה — לחץ על הכרטיס לפרטים" data-stop-card>אין קישור</span>`}
+            ? (f._url_is_record_page
+                ? `<a class="file-card-download file-card-download-page" href="${escapeHtml(f.source_url)}" target="_blank" rel="noopener" data-stop-card title="פתיחה בעמוד הקובץ באתר המקור">פתח ↗</a>`
+                : `<a class="file-card-download" href="${escapeHtml(f.source_url)}" target="_blank" rel="noopener" data-stop-card>הורדה ↓</a>`)
+            : `<span class="file-card-download file-card-download-disabled" data-stop-card>אין קישור</span>`}
         </article>
       `;
     }).join("");
@@ -467,7 +469,9 @@
       el.modalDownload.href = file.source_url;
       el.modalDownload.removeAttribute("aria-disabled");
       el.modalDownload.classList.remove("btn-disabled");
-      el.modalDownload.textContent = "הורדה מאתר המקור ↗";
+      el.modalDownload.textContent = file._url_is_record_page
+        ? "פתיחת הרשומה באתר המקור ↗"
+        : "הורדה מאתר המקור ↗";
     } else {
       el.modalDownload.removeAttribute("href");
       el.modalDownload.setAttribute("aria-disabled", "true");
