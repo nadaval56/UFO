@@ -172,12 +172,27 @@
       }
     }
 
+    // Strategy 4: for videos/audio the <video src> is a Blob URL (useless).
+    // Fall back to the war.gov record-page URL using the title slug — this
+    // matches the hash route the SPA uses internally (e.g.
+    // war.gov/UFO/#NASA-UAP-D3A-Gemini-7-Audio-Excerpt-1965). Clicking the
+    // "Download" link in our UI then lands the user on the original record
+    // page where they can use the site's native Download button.
+    let urlIsRecordPage = false;
+    if (!url && title) {
+      const slug = title.replace(/[,\s]+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+      if (slug) {
+        url = `https://www.war.gov/UFO/#${slug}`;
+        urlIsRecordPage = true;
+      }
+    }
+
     // Close the modal so the next row's click works cleanly.
     const closeBtn = modal.querySelector(".record-modal-close, [data-record-modal-close]");
     if (closeBtn) closeBtn.click();
     await SLEEP(120);
 
-    return { title, description, kind, facts, url };
+    return { title, description, kind, facts, url, urlIsRecordPage };
   }
 
   /* ---------- walk pagination ---------- */
@@ -225,10 +240,12 @@
 
   function entryFrom(r) {
     const url = r.url || null;
-    const filenameFromUrl = url ? decodeURIComponent(url.split("/").pop().split("?")[0]) : null;
+    const isPageURL = r.urlIsRecordPage === true;
+    const filenameFromUrl =
+      url && !isPageURL ? decodeURIComponent(url.split("/").pop().split("?")[0]) : null;
     const id = filenameFromUrl ? filenameFromUrl.replace(/\.[a-z0-9]+$/i, "") : r.recordId;
     const docType = (r.facts["Document Type"] || r.kind || "").replace(/^\./, "").toLowerCase() || null;
-    return {
+    const entry = {
       id,
       title: r.title || null,
       title_he: null,
@@ -247,6 +264,8 @@
       url_status: null,
       _record_id: r.recordId,
     };
+    if (isPageURL) entry._url_is_record_page = true;
+    return entry;
   }
 
   const files = records.map(entryFrom);
