@@ -607,6 +607,20 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   text-decoration: none;
   transition: all 120ms ease;
 }
+.file-card-download-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-style: dashed;
+}
+.file-card:hover .file-card-download-disabled {
+  border-color: var(--border-strong);
+  color: var(--text-muted);
+}
+.btn-disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 .file-card:hover .file-card-download {
   border-color: var(--accent);
   color: var(--accent);
