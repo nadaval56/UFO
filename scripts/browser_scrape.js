@@ -152,8 +152,10 @@
       if (dlBtn) {
         _captured_url = null;
         dlBtn.click();
-        // Give the site's handler a moment to run
-        await SLEEP(400);
+        // Give the site's handler a moment to run. The download appears to
+        // be triggered asynchronously, so 400ms was too short — 700ms catches
+        // it reliably (the verified diagnostic used 1500ms).
+        await SLEEP(700);
         url = _captured_url;
       }
     }
