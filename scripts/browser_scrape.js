@@ -153,7 +153,7 @@
         _captured_url = null;
         dlBtn.click();
         // Give the site's handler a moment to run
-        await SLEEP(400);
+        await SLEEP(700);
         url = _captured_url;
       }
     }
