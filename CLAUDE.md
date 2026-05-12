@@ -127,3 +127,8 @@ Commit `manifest.json` to `/data/manifest.json`.
 - **Phase 3:** Interactive map.
 - **Phase 4:** Weekly poll of war.gov for new releases.
 - **Phase 5:** "ידעת ש?" facts feed.
+
+## Investigation log
+
+- 2026-05-12 — war.gov/UFO returned HTTP 403 to a server-side fetch. The "is there a JSON manifest exposed?" check (CLAUDE.md Step 2) must be done from a real browser DevTools session before relying on filename heuristics in production.
+- 2026-05-12 — `SOURCE_FILE_URL_BASE` in `scripts/build_manifest.py` is a best guess (`https://www.war.gov/medialink/ufo/files/`); verify against a real download link.
