@@ -47,32 +47,64 @@
   }
 
   /* ---------- URL capture ---------- */
-  // The modal's Download button programmatically creates an <a href="...pdf" download>
-  // and clicks it. We listen for clicks in the capture phase, grab the URL,
-  // and stop the actual navigation. This works without disturbing other links
-  // because we only attach the listener while waiting for the click.
+  // The modal's Download <button> doesn't synthesize an <a href> we can
+  // intercept — it goes via window.open or assigns window.location.href.
+  // So we install global hooks for the duration of the scrape that record
+  // whatever URL the page tries to navigate to, and prevent the actual
+  // navigation/download.
 
-  function captureNextDownloadURL(timeoutMs = 1200) {
-    return new Promise((resolve) => {
-      let resolved = false;
-      const onClick = (e) => {
-        const a = e.target.closest && e.target.closest("a[href]");
-        if (a && a.href) {
-          e.preventDefault();
-          e.stopPropagation();
-          e.stopImmediatePropagation();
-          document.removeEventListener("click", onClick, true);
-          resolved = true;
-          resolve(a.href);
-        }
-      };
-      document.addEventListener("click", onClick, true);
-      setTimeout(() => {
-        if (resolved) return;
-        document.removeEventListener("click", onClick, true);
-        resolve(null);
-      }, timeoutMs);
+  let _captured_url = null;
+
+  const _origOpen = window.open;
+  window.open = function (url, ...rest) {
+    if (url) _captured_url = String(url);
+    return null; // don't actually open
+  };
+
+  // Hook assignments to window.location.assign / replace / href
+  const _origAssign = window.location.assign.bind(window.location);
+  const _origReplace = window.location.replace.bind(window.location);
+  window.location.assign = (url) => { if (url) _captured_url = String(url); };
+  window.location.replace = (url) => { if (url) _captured_url = String(url); };
+  // location.href setter is harder to hook reliably; capture via Object.defineProperty on document
+  // (best-effort; some browsers won't allow it)
+  try {
+    const _hrefSetter = Object.getOwnPropertyDescriptor(Location.prototype, "href").set;
+    Object.defineProperty(Location.prototype, "href", {
+      set(v) {
+        if (v) _captured_url = String(v);
+        // intentionally do not call _hrefSetter — would actually navigate
+      },
+      configurable: true,
     });
+  } catch (e) {
+    log("could not hook Location.href setter:", e.message);
+  }
+
+  // Also catch synthesized anchor clicks (older / alternate site code paths)
+  const _onDocClick = (e) => {
+    const a = e.target.closest && e.target.closest("a[href]");
+    if (a && a.href) {
+      // Allow row clicks, pagination clicks etc. to proceed.
+      // Only intercept if href looks like a file download.
+      if (/\/medialink\/ufo\/|\.(pdf|jpg|jpeg|png|mp4|mov|zip)$/i.test(a.href)) {
+        _captured_url = a.href;
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+      }
+    }
+  };
+  document.addEventListener("click", _onDocClick, true);
+
+  // Restore hooks on script end (best-effort)
+  function _restoreHooks() {
+    window.open = _origOpen;
+    try {
+      window.location.assign = _origAssign;
+      window.location.replace = _origReplace;
+    } catch (e) {}
+    document.removeEventListener("click", _onDocClick, true);
   }
 
   /* ---------- single row scrape ---------- */
@@ -100,19 +132,40 @@
       if (k && v) facts[k] = stripBrackets(v);
     }
 
-    // Try iframe src first (cheap), then fall back to clicking download.
+    // Strategy 1: iframe / embed / video src already in modal
     let url = null;
-    const iframe = modal.querySelector("iframe[src], embed[src], object[data]");
-    if (iframe) {
-      url = iframe.getAttribute("src") || iframe.getAttribute("data") || null;
+    const media = modal.querySelector(
+      ".record-media iframe[src], .record-media embed[src], .record-media object[data], " +
+      ".record-media video source[src], .record-media video[src], .record-media img[src]"
+    );
+    if (media) {
+      url = media.getAttribute("src") || media.getAttribute("data") || null;
       if (url && url.startsWith("/")) url = new URL(url, location.origin).href;
+      // Skip preview thumbnails / data URIs
+      if (url && (url.startsWith("data:") || /thumb/i.test(url))) url = null;
     }
+
+    // Strategy 2: click the Download button and let our window.open /
+    // location-assign / location-href hooks capture the URL.
     if (!url) {
       const dlBtn = modal.querySelector(".record-modal-download, [data-record-modal-download]");
       if (dlBtn) {
-        const urlPromise = captureNextDownloadURL();
+        _captured_url = null;
         dlBtn.click();
-        url = await urlPromise;
+        // Give the site's handler a moment to run
+        await SLEEP(400);
+        url = _captured_url;
+      }
+    }
+
+    // Strategy 3: check the download button's data-* after click (some
+    // implementations populate it instead of navigating)
+    if (!url) {
+      const dlBtn = modal.querySelector(".record-modal-download, [data-record-modal-download]");
+      if (dlBtn) {
+        url = dlBtn.getAttribute("data-record-modal-download") ||
+              dlBtn.getAttribute("data-url") ||
+              dlBtn.getAttribute("href") || null;
       }
     }
 
@@ -215,13 +268,16 @@
   log(`  locations:     ${[...new Set(files.map((e) => e.incident_location).filter(Boolean))].join(", ")}`);
   log("=== /SUMMARY ===");
 
+  // Restore navigation hooks BEFORE triggering our own download (otherwise our
+  // download anchor click would itself be captured by the hooks).
+  _restoreHooks();
+
   const blob = new Blob([JSON.stringify(manifest, null, 2)], { type: "application/json" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
   a.download = "manifest.json";
   document.body.appendChild(a);
-  // Click directly via descriptor to bypass any listeners we may have registered.
-  HTMLElement.prototype.click.call(a);
+  a.click();
   a.remove();
 
   log("✓ downloaded manifest.json — save it to data/manifest.json in the repo");
