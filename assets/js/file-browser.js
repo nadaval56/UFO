@@ -77,6 +77,60 @@
     return first;
   }
 
+  /** Human-readable card headline. Prefers title_he, then the first
+   *  phrase of narrative_he (before em-dash or first sentence end).
+   *  If the first em-dash segment is too short (e.g. just a year),
+   *  promotes to the next segment to get a meaningful title. */
+  function cardHeadline(f) {
+    if (f.title_he) return f.title_he;
+    const n = (f.narrative_he || "").trim();
+    if (!n) return f.title || f.filename || "(ללא כותרת)";
+
+    const dashIdx = n.indexOf(" — ");
+    if (dashIdx >= 4 && dashIdx <= 80) {
+      // If the first segment is a short date / context (< 20 chars), expand
+      // through the next phrase so the headline carries real meaning.
+      if (dashIdx < 20) {
+        const budget = 80 - dashIdx - 3;
+        const after = n.slice(dashIdx + 3);
+        if (after.length <= budget) return (n.slice(0, dashIdx + 3) + after).trim();
+        const piece = after.slice(0, budget);
+        const lastSp = piece.lastIndexOf(" ");
+        const trimmedAfter = (lastSp > 10 ? piece.slice(0, lastSp) : piece).replace(/[,;.]$/, "");
+        return (n.slice(0, dashIdx + 3) + trimmedAfter).trim() + "…";
+      }
+      return n.slice(0, dashIdx).trim();
+    }
+    // No em-dash: take first ~55 chars, ending at the nearest word boundary
+    const limit = 55;
+    if (n.length <= limit) return n;
+    const cut = n.slice(0, limit);
+    const lastBreak = Math.max(cut.lastIndexOf(" "), cut.lastIndexOf(","), cut.lastIndexOf("׳"));
+    const trimmed = (lastBreak > 25 ? cut.slice(0, lastBreak) : cut).trim().replace(/[,;.]$/, "");
+    return trimmed + "…";
+  }
+
+  /** True if the given value is N/A / לא ידוע / blank — shouldn't render. */
+  function isBlank(v) {
+    if (v == null) return true;
+    const s = String(v).trim().toLowerCase();
+    return s === "" || s === "n/a" || s === "—" || s === "-" || s === "לא ידוע" || s === "לא רלוונטי";
+  }
+
+  /** Card blurb: the rest of narrative_he after the headline is removed. */
+  function cardBlurb(f, headline) {
+    const n = (f.narrative_he || "").trim();
+    if (!n) return "";
+    // Strip ellipsis from the headline before prefix-matching so that
+    // truncated headlines still consume their matched prefix from n.
+    const clean = (headline || "").replace(/…$/, "").trim();
+    if (clean && n.startsWith(clean)) {
+      const rest = n.slice(clean.length).replace(/^\s*[—\-,;.]\s*/, "").trim();
+      if (rest) return narrativeBlurb(rest, 220);
+    }
+    return narrativeBlurb(n, 220);
+  }
+
   function incidentDateDisplay(f) {
     return f.incident_date_display || f.incident_date || null;
   }
@@ -325,50 +379,49 @@
     const slice = state.filtered.slice(start, start + PAGE_SIZE);
 
     el.list.innerHTML = slice.map((f, idx) => {
-      const titleHe = escapeHtml(fileTitleHe(f));
+      const headline = cardHeadline(f);
+      const headlineSafe = escapeHtml(headline);
+      const blurb = escapeHtml(cardBlurb(f, headline));
       const rawName = escapeHtml(f.filename || f.id || "");
-      const safeAgency = escapeHtml(agencyDisplayHe(f));
       const safeType = escapeHtml(typeLabel(f.type));
       const idAttr = escapeHtml(f.id || f.filename || "");
+      const isCodeHeadline = !f.title_he && /^[\d_A-Z\-]+(\.pdf)?$/i.test(headline);
+
+      // Build metadata items, skipping empty ones entirely
+      const agency = f.agency_he || f.agency;
       const incDate = incidentDateDisplay(f);
       const incLoc = incidentLocationDisplayHe(f);
+      const metaItems = [];
+      if (!isBlank(agency)) metaItems.push({ icon: "🏛", label: "סוכנות", value: agency });
+      if (!isBlank(f.release_date)) metaItems.push({ icon: "📅", label: "שחרור", value: f.release_date });
+      if (!isBlank(incDate)) metaItems.push({ icon: "🕰", label: "אירוע", value: incDate });
+      if (!isBlank(incLoc)) metaItems.push({ icon: "📍", label: "מיקום", value: incLoc });
 
-      const isCodeTitle = !f.title_he && (f.title || f.filename || "").match(/^[\d_A-Z\-]+\.pdf$/i);
-      const titleClass = isCodeTitle ? "file-card-title mono code-title" : "file-card-title";
+      const metaHtml = metaItems.map((it) => `
+        <li class="file-card-meta-item">
+          <span class="meta-icon" aria-hidden="true">${it.icon}</span>
+          <span class="meta-label">${escapeHtml(it.label)}</span>
+          <span class="meta-value">${escapeHtml(it.value)}</span>
+        </li>`).join("");
 
-      const blurb = escapeHtml(narrativeBlurb(f.narrative_he));
+      const downloadHtml = f.source_url
+        ? (f._url_is_record_page
+            ? `<a class="file-card-download file-card-download-page" href="${escapeHtml(f.source_url)}" target="_blank" rel="noopener" data-stop-card title="פתיחה בעמוד הקובץ באתר המקור">פתח ↗</a>`
+            : `<a class="file-card-download" href="${escapeHtml(f.source_url)}" target="_blank" rel="noopener" data-stop-card>הורדה ↓</a>`)
+        : `<span class="file-card-download file-card-download-disabled" data-stop-card>אין קישור</span>`;
+
       return `
-        <article class="file-card" tabindex="0" data-id="${idAttr}" data-index="${start + idx}" role="button" aria-label="פתח פרטים עבור ${titleHe}">
-          <div class="file-card-main">
-            <div class="${titleClass}" dir="${f.title_he ? "rtl" : "ltr"}">${titleHe}</div>
-            ${isCodeTitle ? "" : `<div class="file-card-filename mono">${rawName}</div>`}
-            ${blurb ? `<p class="file-card-blurb">${blurb}</p>` : ""}
+        <article class="file-card" tabindex="0" data-id="${idAttr}" data-index="${start + idx}" role="button" aria-label="פתח פרטים עבור ${headlineSafe}">
+          <header class="file-card-head">
+            <h3 class="file-card-title${isCodeHeadline ? " code-title" : ""}" dir="${isCodeHeadline ? "ltr" : "rtl"}">${headlineSafe}</h3>
+            <span class="file-card-type-badge mono">.${safeType}</span>
+          </header>
+          ${blurb ? `<p class="file-card-blurb">${blurb}</p>` : ""}
+          ${metaItems.length ? `<ul class="file-card-meta">${metaHtml}</ul>` : ""}
+          <div class="file-card-footer">
+            ${downloadHtml}
+            <p class="file-card-filename mono" title="${rawName}">${rawName}</p>
           </div>
-          <div class="file-card-field">
-            <span class="file-card-field-label">סוכנות</span>
-            <span class="file-card-field-value">${safeAgency}</span>
-          </div>
-          <div class="file-card-field">
-            <span class="file-card-field-label">תאריך שחרור</span>
-            <span class="file-card-field-value">${f.release_date ? escapeHtml(f.release_date) : "—"}</span>
-          </div>
-          <div class="file-card-field">
-            <span class="file-card-field-label">תאריך אירוע</span>
-            <span class="file-card-field-value">${incDate ? escapeHtml(incDate) : "N/A"}</span>
-          </div>
-          <div class="file-card-field">
-            <span class="file-card-field-label">מיקום</span>
-            <span class="file-card-field-value">${incLoc ? escapeHtml(incLoc) : "N/A"}</span>
-          </div>
-          <div class="file-card-field">
-            <span class="file-card-field-label">סוג</span>
-            <span class="file-card-field-value">.${safeType}</span>
-          </div>
-          ${f.source_url
-            ? (f._url_is_record_page
-                ? `<a class="file-card-download file-card-download-page" href="${escapeHtml(f.source_url)}" target="_blank" rel="noopener" data-stop-card title="פתיחה בעמוד הקובץ באתר המקור">פתח ↗</a>`
-                : `<a class="file-card-download" href="${escapeHtml(f.source_url)}" target="_blank" rel="noopener" data-stop-card>הורדה ↓</a>`)
-            : `<span class="file-card-download file-card-download-disabled" data-stop-card>אין קישור</span>`}
         </article>
       `;
     }).join("");
