@@ -929,6 +929,41 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   align-items: start;
 }
 
+/* ---------- Media Player (video / audio) ---------- */
+
+.media-player {
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.media-player video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  background: #000;
+  border: 1px solid var(--border);
+}
+.media-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+.media-source a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.media-source a:hover {
+  text-decoration: underline;
+}
+
 /* ---------- Gallery ---------- */
 
 .gallery {

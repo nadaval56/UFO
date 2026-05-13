@@ -40,6 +40,11 @@
     galleryThumbs: document.getElementById("gallery-thumbs"),
     galleryFallbackNote: document.getElementById("gallery-fallback-note"),
 
+    mediaPlayer: document.getElementById("media-player"),
+    mediaVideo: document.getElementById("media-video"),
+    mediaDuration: document.getElementById("media-duration"),
+    mediaSource: document.getElementById("media-source"),
+
     metaAgency: document.getElementById("meta-agency"),
     metaType: document.getElementById("meta-type"),
     metaRelease: document.getElementById("meta-release"),
@@ -204,10 +209,16 @@
     setupDownload(el.metaDownload, f);
     setupDownload(el.metaDownload2, f);
 
-    // גלריה
-    if (state.previews.length > 0) {
+    // נגן וידאו — לקבצי וידאו עם media_url
+    if (f.media_url && el.mediaPlayer) {
+      el.mediaPlayer.hidden = false;
+      el.gallery.hidden = true;
+      el.galleryEmpty.hidden = true;
+      renderMedia();
+    } else if (state.previews.length > 0) {
       el.gallery.hidden = false;
       el.galleryEmpty.hidden = true;
+      if (el.mediaPlayer) el.mediaPlayer.hidden = true;
       if (el.galleryFallbackNote) {
         el.galleryFallbackNote.hidden = !state.previewsAreFallback;
       }
@@ -216,6 +227,7 @@
     } else {
       el.gallery.hidden = true;
       el.galleryEmpty.hidden = false;
+      if (el.mediaPlayer) el.mediaPlayer.hidden = true;
     }
 
     // תיאור ארכאולוגי (Claude)
@@ -308,6 +320,45 @@
   }
 
   /* ------------------------- gallery ------------------------- */
+
+  function formatDuration(secs) {
+    if (secs == null || !Number.isFinite(secs)) return "—";
+    const m = Math.floor(secs / 60);
+    const s = Math.floor(secs % 60);
+    return `${m}:${String(s).padStart(2, "0")}`;
+  }
+
+  function renderMedia() {
+    const f = state.file;
+    const v = el.mediaVideo;
+    v.innerHTML = "";
+
+    // sources by descending quality so the browser picks the best one it can play
+    const sources = [
+      { url: f.media_url_hq, label: "1080p" },
+      { url: f.media_url,    label: "720p"  },
+      { url: f.media_url_lq, label: "288p"  },
+    ].filter((s) => !!s.url);
+    // dedupe (sometimes hq == md == lq if the asset has only one quality)
+    const seen = new Set();
+    sources.forEach((s) => {
+      if (seen.has(s.url)) return;
+      seen.add(s.url);
+      const el = document.createElement("source");
+      el.src = s.url;
+      el.type = "video/mp4";
+      v.appendChild(el);
+    });
+    if (f.poster_url) v.poster = f.poster_url;
+    v.setAttribute("aria-label", f.title_he || f.title || "נגן וידאו");
+
+    el.mediaDuration.textContent = `אורך: ${formatDuration(f.duration_s)}`;
+    if (f.dvids_url) {
+      el.mediaSource.innerHTML = `מקור: <a href="${escapeHtml(f.dvids_url)}" target="_blank" rel="noopener">DVIDS ↗</a>`;
+    } else {
+      el.mediaSource.textContent = "";
+    }
+  }
 
   function renderThumbs() {
     el.galleryThumbs.innerHTML = state.previews.map((p, i) => {
