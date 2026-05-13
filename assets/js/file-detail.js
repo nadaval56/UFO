@@ -183,7 +183,7 @@
 
     // עדכון title של הדפדפן
     const titleHe = f.title_he || f.title || f.filename || "מסמך";
-    document.title = `${titleHe} — PURSUE`;
+    document.title = `${titleHe} — עב"מים`;
 
     // כותרת
     el.eyebrow.textContent = f.agency_he || f.agency || "מסמך";
