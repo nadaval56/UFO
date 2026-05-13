@@ -14,7 +14,8 @@
 
   const state = {
     file: null,
-    previews: [],     // [{ page, kind, path }, ...]
+    previews: [],         // [{ page, kind, path }, ...]
+    previewsAreFallback: false, // true if showing preview_pages_fallback
     galleryIdx: 0,
   };
 
@@ -37,6 +38,7 @@
     galleryCounter: document.getElementById("gallery-counter"),
     galleryKind: document.getElementById("gallery-kind"),
     galleryThumbs: document.getElementById("gallery-thumbs"),
+    galleryFallbackNote: document.getElementById("gallery-fallback-note"),
 
     metaAgency: document.getElementById("meta-agency"),
     metaType: document.getElementById("meta-type"),
@@ -146,7 +148,19 @@
     }
 
     state.file = file;
-    state.previews = Array.isArray(file.preview_pages) ? file.preview_pages : [];
+    // Prefer curated preview_pages (visually interesting). If empty, fall back
+    // to preview_pages_fallback (first non-blank pages of the document).
+    const primary = Array.isArray(file.preview_pages) ? file.preview_pages : [];
+    const fallback = Array.isArray(file.preview_pages_fallback)
+      ? file.preview_pages_fallback
+      : [];
+    if (primary.length > 0) {
+      state.previews = primary;
+      state.previewsAreFallback = false;
+    } else {
+      state.previews = fallback;
+      state.previewsAreFallback = fallback.length > 0;
+    }
 
     render();
 
@@ -194,6 +208,9 @@
     if (state.previews.length > 0) {
       el.gallery.hidden = false;
       el.galleryEmpty.hidden = true;
+      if (el.galleryFallbackNote) {
+        el.galleryFallbackNote.hidden = !state.previewsAreFallback;
+      }
       renderThumbs();
       showImage(0);
     } else {
