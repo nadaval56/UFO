@@ -61,6 +61,22 @@
     return f.agency_he || f.agency || "—";
   }
 
+  /** First sentence of a Hebrew narrative, capped at maxChars. */
+  function narrativeBlurb(text, maxChars = 200) {
+    if (!text) return "";
+    const trimmed = String(text).trim();
+    // Split on Hebrew/Latin sentence enders. The first "chunk" is the blurb.
+    const m = trimmed.match(/^([^.!?]*[.!?])\s/);
+    let first = m ? m[1] : trimmed;
+    if (first.length > maxChars) {
+      // Back up to the last space within budget
+      const cut = first.slice(0, maxChars);
+      const sp = cut.lastIndexOf(" ");
+      first = (sp > 100 ? cut.slice(0, sp) : cut) + "…";
+    }
+    return first;
+  }
+
   function incidentDateDisplay(f) {
     return f.incident_date_display || f.incident_date || null;
   }
@@ -280,6 +296,7 @@
           f.title, f.title_he, f.filename, f.id,
           f.agency, f.agency_he,
           f.incident_location, f.incident_location_he,
+          f.summary_he, f.narrative_he,
         ].filter(Boolean).join(" ").toLowerCase();
         if (!hay.includes(search)) return false;
       }
@@ -319,11 +336,13 @@
       const isCodeTitle = !f.title_he && (f.title || f.filename || "").match(/^[\d_A-Z\-]+\.pdf$/i);
       const titleClass = isCodeTitle ? "file-card-title mono code-title" : "file-card-title";
 
+      const blurb = escapeHtml(narrativeBlurb(f.narrative_he));
       return `
         <article class="file-card" tabindex="0" data-id="${idAttr}" data-index="${start + idx}" role="button" aria-label="פתח פרטים עבור ${titleHe}">
           <div class="file-card-main">
             <div class="${titleClass}" dir="${f.title_he ? "rtl" : "ltr"}">${titleHe}</div>
             ${isCodeTitle ? "" : `<div class="file-card-filename mono">${rawName}</div>`}
+            ${blurb ? `<p class="file-card-blurb">${blurb}</p>` : ""}
           </div>
           <div class="file-card-field">
             <span class="file-card-field-label">סוכנות</span>
