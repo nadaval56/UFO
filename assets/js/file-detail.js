@@ -59,11 +59,16 @@
 
     ocrHeSection: document.getElementById("ocr-he-section"),
     ocrHeBody: document.getElementById("ocr-he-body"),
+    ocrHeByline: null, // populated below
+    ocrEnWrap: document.getElementById("ocr-en-wrap"),
     ocrEnSection: document.getElementById("ocr-en-section"),
     ocrEnBody: document.getElementById("ocr-en-body"),
     ocrFullSection: document.getElementById("ocr-full-section"),
     ocrFullBody: document.getElementById("ocr-full-body"),
   };
+  el.ocrHeByline = el.ocrHeSection
+    ? el.ocrHeSection.querySelector(".text-block-byline")
+    : null;
 
   /* ------------------------- utils ------------------------- */
 
@@ -225,23 +230,32 @@
       el.summarySection.hidden = true;
     }
 
-    // OCR — תרגום עברי
-    if (f.text_preview_he) {
+    // OCR — תרגום עברי (prefer full text_he; fall back to 3000-char text_preview_he)
+    const heFull = f.text_he;
+    const heExcerpt = f.text_preview_he;
+    const heText = heFull || heExcerpt;
+    if (heText) {
       el.ocrHeSection.hidden = false;
-      el.ocrHeBody.innerHTML = paragraphsToHtml(f.text_preview_he);
+      el.ocrHeBody.innerHTML = paragraphsToHtml(heText);
+      if (el.ocrHeByline) {
+        el.ocrHeByline.textContent = heFull
+          ? "תרגום עברי מלא של ה-OCR."
+          : "תרגום עברי של ~3,000 התווים הראשונים מתוך ה-OCR (תרגום מלא בעבודה).";
+      }
     } else {
       el.ocrHeSection.hidden = true;
     }
 
-    // OCR — אנגלית
+    // English OCR collapsible — contains both the excerpt and the full text.
+    // Show the wrap if either field exists; show each inner sub-section by data.
+    const hasEn = !!(f.text_preview_en || f.text_en);
+    el.ocrEnWrap.hidden = !hasEn;
     if (f.text_preview_en) {
       el.ocrEnSection.hidden = false;
       el.ocrEnBody.innerHTML = paragraphsToHtml(f.text_preview_en);
     } else {
       el.ocrEnSection.hidden = true;
     }
-
-    // OCR מלא
     if (f.text_en) {
       el.ocrFullSection.hidden = false;
       el.ocrFullBody.textContent = f.text_en;

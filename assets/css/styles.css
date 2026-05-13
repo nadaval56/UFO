@@ -29,6 +29,11 @@
 
 * { box-sizing: border-box; }
 
+/* Make the HTML `hidden` attribute win over component display rules.
+   Without this, a `display: flex` on .gallery / .gallery-empty overrides
+   the user-agent default of `[hidden] { display: none; }`. */
+[hidden] { display: none !important; }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -1155,12 +1160,63 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 }
 .text-block-narrative .text-block-label { color: var(--accent-strong); }
 
-/* English OCR — mono + LTR */
-.text-block-ocr-en .text-block-body {
+/* English-source bundle — collapsible <details> that wraps the 3000-char
+   excerpt and the full OCR scroll-pane. Default closed; visually subtle. */
+.text-block-collapsible {
+  background: var(--bg-elev-1);
+  border: 1px dashed var(--border);
+  padding: 0;
+  margin: 0 0 20px;
+}
+.text-block-collapsible-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 18px 22px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--text-muted);
+}
+.text-block-collapsible-head::-webkit-details-marker { display: none; }
+.text-block-collapsible-head:hover { color: var(--accent); }
+.text-block-collapsible-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--border-strong);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.text-block-collapsible[open] .text-block-collapsible-toggle::before { content: "−"; }
+.text-block-collapsible:not([open]) .text-block-collapsible-toggle::before { content: "+"; }
+.text-block-collapsible-toggle::before { line-height: 1; }
+.text-block-collapsible-head .text-block-label { margin: 0; flex-shrink: 0; }
+.text-block-collapsible-head .text-block-byline { margin: 0; flex: 1; min-width: 200px; }
+.text-block-collapsible-body {
+  padding: 0 22px 22px;
+  border-block-start: 1px solid var(--border);
+}
+.text-original-subheader {
+  margin: 18px 0 8px;
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  direction: ltr;
+  text-align: left;
+}
+.text-block-collapsible-body .text-block-body {
   font-family: var(--font-mono);
   font-size: 0.86rem;
   line-height: 1.7;
   color: var(--text-muted);
+}
+.text-block-collapsible-body .text-block-byline {
+  margin-block-end: 8px;
 }
 
 /* English original (collapsible inside summary block) */
