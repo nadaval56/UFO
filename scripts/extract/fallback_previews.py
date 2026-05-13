@@ -178,8 +178,12 @@ def main() -> int:
         rendered: list[dict] = []
         for p in picks:
             jpg_name = f"p{p['page']:03d}.jpg"
+            # The "path" stored in the manifest is always repo-relative so
+            # the front-end can resolve it from the deployed site root.
             jpg_rel = Path("data") / "previews" / eid / jpg_name
-            jpg_abs = REPO_ROOT / jpg_rel
+            # The actual rendering target obeys --preview-dir so the script
+            # is usable from a working dir other than the repo root.
+            jpg_abs = preview_dir / eid / jpg_name
             if not jpg_abs.exists():
                 try:
                     render_preview(pdf, p["page"], jpg_abs)
