@@ -1004,15 +1004,17 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 }
 
 .gallery-fallback-note {
-  margin: 0;
-  padding: 8px 12px;
-  background: rgba(125,251,255,0.04);
-  border: 1px dashed rgba(125,251,255,0.25);
+  margin: 4px 0 0;
+  padding: 0;
+  background: none;
+  border: none;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   color: var(--text-dim);
   letter-spacing: 0.04em;
-  line-height: 1.55;
+  line-height: 1.5;
+  text-align: center;
+  font-style: italic;
 }
 
 .gallery-thumbs {
