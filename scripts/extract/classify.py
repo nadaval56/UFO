@@ -61,10 +61,19 @@ def page_metrics(img_pil) -> dict:
     dark = arr < 90
     dark_ratio = float(dark.sum()) / (h * w)
 
-    # row-wise dark density — for line-spacing estimation
-    row_dark = dark.sum(axis=1)
-    # count peaks (rows with >= 0.5% of width as dark) to estimate text lines
-    threshold = w * 0.005
+    # row-wise dark density — for line-spacing estimation.
+    # Adaptive threshold: take the gap between the typical "whitespace" row
+    # (~50th percentile) and the typical "text" row (~95th percentile), and put
+    # the threshold partway between them. This is robust both to clean digital
+    # pages (whitespace rows ~0) and to heavily-scanned grey-background pages
+    # (whitespace rows have ~30-50 dark pixels of noise).
+    row_dark = dark.sum(axis=1).astype(np.int64)
+    p50 = float(np.percentile(row_dark, 50))
+    p95 = float(np.percentile(row_dark, 95))
+    if p95 - p50 > 5:
+        threshold = p50 + (p95 - p50) * 0.35
+    else:
+        threshold = max(p50 + w * 0.005, w * 0.015)
     line_peaks = 0
     in_peak = False
     for v in row_dark:
@@ -84,11 +93,24 @@ def page_metrics(img_pil) -> dict:
     midtone = (arr > 60) & (arr < 200)
     midtone_ratio = float(midtone.sum()) / (h * w)
 
+    # Concentration of darkness in a small region — distinguishes stamps/seals
+    # (lots of ink in one spot) from text (ink spread across the page). Split
+    # the page into a 4x4 grid and look at the heaviest cell vs the overall mean.
+    rows_split = np.array_split(dark, 4, axis=0)
+    grid_max = 0.0
+    for rs in rows_split:
+        for cs in np.array_split(rs, 4, axis=1):
+            cell = float(cs.sum()) / max(cs.size, 1)
+            if cell > grid_max:
+                grid_max = cell
+    dark_concentration = grid_max / dark_ratio if dark_ratio > 0 else 0.0
+
     return {
         "dark_ratio": dark_ratio,
         "line_peaks": line_peaks,
         "edge_density": edge_density,
         "midtone_ratio": midtone_ratio,
+        "dark_concentration": dark_concentration,
         "width": w,
         "height": h,
     }
@@ -104,6 +126,7 @@ def classify(metrics: dict, page_no: int, total_pages: int) -> tuple[str, float]
     lp = metrics["line_peaks"]
     ed = metrics["edge_density"]
     mt = metrics["midtone_ratio"]
+    dc = metrics.get("dark_concentration", 1.0)
 
     # Very low ink → blank or divider
     if d < 0.005:
@@ -111,38 +134,38 @@ def classify(metrics: dict, page_no: int, total_pages: int) -> tuple[str, float]
     if d < 0.02 and lp < 5:
         return ("divider", 5)
 
-    # Cover heuristic — first 1-2 pages with few lines and moderate ink.
-    if page_no <= 2 and lp < 15 and d < 0.15:
-        return ("cover", 10)
+    # Stamp/seal/label pages: ink is concentrated in one corner/region with
+    # no real line structure. Treat them like covers so they don't get picked
+    # as previews.
+    if dc > 4.0 and lp < 6:
+        return ("cover", 8)
 
-    # Typewritten gate FIRST. If a page has many regular text lines, it's a
-    # document scan no matter how grey/mid-toned the paper is. This prevents
-    # the photo branch from grabbing scanned typed pages on yellowed paper.
-    if lp >= 20 and 0.03 < d < 0.5:
-        score = 60 + min(20, max(0, lp - 20))
-        return ("typewritten", score)
-
-    # Photo: lots of midtone, very low line-peak count, low edge sharpness.
-    # All three required — midtone alone catches scanned text on aged paper.
-    if mt > 0.35 and lp < 6 and ed < 0.08:
+    # Photo: lots of midtone, low line count, AND enough actual ink to be a
+    # real picture (rules out grey bleed-through backs of typed pages). Run
+    # this BEFORE the "page 1 = cover" rule so single-page photo PDFs (the
+    # FBI-Photo-B series) don't get demoted to covers.
+    if mt > 0.30 and lp < 6 and dc < 3.5 and d > 0.10:
         return ("photo", 90)
 
-    # Illustration: hand-drawn sketches / witness drawings. Moderate-to-high
-    # edge density (lines and curves), low midtone (mostly white paper with
-    # ink lines), few regular text rows.
-    if 0.04 < ed < 0.15 and mt < 0.30 and lp < 10 and 0.02 < d < 0.20:
-        return ("illustration", 85)
+    # Cover heuristic — early pages with few lines and moderate ink, or pages
+    # that are mostly blank with a small label block.
+    if page_no <= 2 and lp < 10 and d < 0.20:
+        return ("cover", 10)
 
-    # Clipping: newspaper/magazine — high edge density + many short text lines.
-    if ed > 0.08 and lp > 15:
+    # Clipping: high edge density + many text lines + visible halftone/mid-grey
+    # (otherwise pure clean digital text is mis-tagged here).
+    if ed > 0.08 and lp > 20 and mt > 0.07:
         return ("clipping", 80)
 
-    # Looser typewritten fallback (faint old-typewriter ribbons).
-    if lp >= 12 and 0.03 < d < 0.4:
-        return ("typewritten", 55)
+    # Typewritten: a clear set of text lines and ink in normal range. Covers
+    # both modern digital cables (clean) and old typewriter scans (faded ribbon).
+    if lp >= 12 and 0.015 < d < 0.45:
+        score = 60 + min(25, max(0, lp - 15))
+        return ("typewritten", score)
 
-    # Handwritten — moderate ink, few clean line peaks. Crude.
-    if d > 0.05 and lp < 12:
+    # Handwritten — moderate-to-low ink, few line peaks, no halftone signal.
+    # Hard to distinguish from a heavily faded typewriter scan; keep it narrow.
+    if 0.04 < d < 0.20 and lp < 10 and mt < 0.25:
         return ("handwritten", 30)
 
     return ("mixed", 40)
@@ -178,6 +201,7 @@ def process_pdf(pdf_path: Path, out_path: Path, dpi: int = 100) -> None:
             "line_peaks": m["line_peaks"],
             "edge_density": round(m["edge_density"], 4),
             "midtone_ratio": round(m["midtone_ratio"], 4),
+            "dark_concentration": round(m.get("dark_concentration", 0.0), 3),
         })
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps({
