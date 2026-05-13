@@ -62,6 +62,15 @@
         <!-- חטיבת גלריה + מטא-דאטה -->
         <div class="file-top-grid">
 
+          <!-- נגן וידאו / אודיו (לקבצי וידאו) -->
+          <section id="media-player" class="media-player" hidden aria-label="נגן וידאו">
+            <video id="media-video" controls preload="metadata" playsinline crossorigin="anonymous"></video>
+            <div class="media-info">
+              <span id="media-duration" class="mono">—</span>
+              <span id="media-source" class="media-source"></span>
+            </div>
+          </section>
+
           <!-- גלריה -->
           <section id="gallery" class="gallery" hidden aria-label="תצוגות מקדימות מהמסמך">
             <div class="gallery-stage">
