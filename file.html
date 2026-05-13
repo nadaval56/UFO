@@ -130,31 +130,30 @@
         <section id="ocr-he-section" class="text-block text-block-ocr-he" hidden>
           <header class="text-block-head">
             <p class="text-block-label mono">// תוכן המסמך — תרגום</p>
-            <p class="text-block-byline">תרגום עברי של ~3,000 התווים הראשונים מתוך ה-OCR.</p>
+            <p class="text-block-byline">תרגום עברי של ה-OCR.</p>
           </header>
           <div id="ocr-he-body" class="text-block-body"></div>
         </section>
 
-        <!-- OCR — מקור באנגלית -->
-        <section id="ocr-en-section" class="text-block text-block-ocr-en" hidden>
-          <header class="text-block-head">
-            <p class="text-block-label mono">// Original OCR Excerpt</p>
-            <p class="text-block-byline">~3,000 התווים הראשונים — אנגלית, sentence-aligned.</p>
-          </header>
-          <div id="ocr-en-body" class="text-block-body" dir="ltr" lang="en"></div>
-        </section>
-
-        <!-- OCR מלא — חלון נגלל -->
-        <section id="ocr-full-section" class="text-block text-block-ocr-full" hidden>
-          <header class="text-block-head">
-            <p class="text-block-label mono">// OCR מלא</p>
-            <p class="text-block-byline">
-              טקסט גולמי, ללא עיבוד. שגיאות OCR צפויות. גלילה כדי לקרוא.
-              חיפוש בעמוד: <span class="mono">Ctrl+F</span>.
-            </p>
-          </header>
-          <pre id="ocr-full-body" class="ocr-scroll" dir="ltr" lang="en"></pre>
-        </section>
+        <!-- המקור באנגלית — בלוק נפתח, מכיל גם תקציר וגם OCR מלא -->
+        <details id="ocr-en-wrap" class="text-block text-block-collapsible" hidden>
+          <summary class="text-block-collapsible-head">
+            <span class="text-block-collapsible-toggle">+</span>
+            <span class="text-block-label mono">// המקור באנגלית</span>
+            <span class="text-block-byline">OCR גולמי. פתח להשוואה / העמקה.</span>
+          </summary>
+          <div class="text-block-collapsible-body">
+            <section id="ocr-en-section" hidden>
+              <h3 class="text-original-subheader mono">// Excerpt (first ~3,000 chars)</h3>
+              <div id="ocr-en-body" class="text-block-body" dir="ltr" lang="en"></div>
+            </section>
+            <section id="ocr-full-section" hidden>
+              <h3 class="text-original-subheader mono">// Full OCR</h3>
+              <p class="text-block-byline">חיפוש בעמוד: <span class="mono">Ctrl+F</span>.</p>
+              <pre id="ocr-full-body" class="ocr-scroll" dir="ltr" lang="en"></pre>
+            </section>
+          </div>
+        </details>
 
         <!-- footer פעולות -->
         <div class="file-footer-actions">
