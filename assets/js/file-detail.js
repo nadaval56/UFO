@@ -181,9 +181,24 @@
   function render() {
     const f = state.file;
 
-    // עדכון title של הדפדפן
+    // עדכון title של הדפדפן + canonical + OG/Twitter לכל קובץ
     const titleHe = f.title_he || f.title || f.filename || "מסמך";
     document.title = `${titleHe} — עב"מים`;
+
+    const pageUrl = `https://nadaval56.github.io/UFO/file.html?id=${encodeURIComponent(f.id)}`;
+    const desc = (f.summary_he || f.narrative_he || `פרטי מסמך מארכיון ה-UAP — ${titleHe}`)
+      .replace(/\s+/g, " ").slice(0, 280);
+
+    function setAttr(selector, attr, value) {
+      const node = document.querySelector(selector);
+      if (node) node.setAttribute(attr, value);
+    }
+    setAttr('link[rel="canonical"]', "href", pageUrl);
+    setAttr('meta[property="og:title"]', "content", `${titleHe} — עב"מים`);
+    setAttr('meta[property="og:description"]', "content", desc);
+    setAttr('meta[property="og:url"]', "content", pageUrl);
+    setAttr('meta[name="twitter:title"]', "content", `${titleHe} — עב"מים`);
+    setAttr('meta[name="twitter:description"]', "content", desc);
 
     // כותרת
     el.eyebrow.textContent = f.agency_he || f.agency || "מסמך";
