@@ -1,17 +1,23 @@
 # `/data` — מקור הנתונים של דפדפן הקבצים
 
 קובץ `manifest.json` הוא מקור האמת היחיד עבור דפדפן הקבצים בעמוד `index.html`.
-הוא נטען ב-client-side ב-`fetch()` ומכיל את כל המסמכים במהדורה.
+הוא נטען ב-client-side ב-`fetch()` ומכיל את כל המסמכים מכל המהדורות (טבלה מאוחדת).
+כל רשומה נושאת את `release_date` שלה, ופילטר "תאריך שחרור" באתר נבנה מהערכים האלה —
+כך שהמעבר בין מהדורה 01, מהדורה 02 וכו' עובד אוטומטית ככל שנוספות מהדורות.
 
 ## סכמה
 
 ```jsonc
 {
-  "release_id": "release_01",          // מזהה המהדורה
-  "release_date": "2026-05-08",        // תאריך הפרסום (YYYY-MM-DD)
-  "source_bundle_url": "https://www.war.gov/...Release_1.zip",
-  "total_files": 156,
-  "generated_at": "2026-05-12T10:00:00Z",
+  "release_id": "combined",            // "release_01" למהדורה אחת, "combined" לכמה
+  "release_date": null,                // ערך יחיד רק אם יש מהדורה אחת; null כשיש כמה
+  "source_page_url": "https://www.war.gov/UFO/",
+  "total_files": 222,
+  "releases": [                        // פירוט מהדורות שנסרקו (data-driven)
+    { "label": "5/22/26 - RELEASE 02", "count": 64 },
+    { "label": "5/8/26", "count": 158 }
+  ],
+  "generated_at": "2026-05-26T10:00:00Z",
   "files": [
     {
       "id": "65_HS1-834228961_62-HQ-83894_SERIAL_130",
