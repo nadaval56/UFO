@@ -61,20 +61,33 @@ def get_json(url: str, params: dict) -> dict:
     raise SystemExit(f"giving up on {url}")
 
 
-def search_ids(api_key: str, query: str) -> list[str]:
+def search_ids(api_key: str, query: str, unit_id: str | None) -> list[str]:
     """Page through search results, returning every video asset id."""
     ids: list[str] = []
     page = 1
     while True:
-        data = get_json(SEARCH_URL, {
+        params = {
             "q": query,
             "type": "video",
             "max_results": 50,
             "page": page,
             "api_key": api_key,
-        })
-        results = data.get("results") or []
+        }
+        if unit_id:
+            params["unit_id"] = unit_id
+        data = get_json(SEARCH_URL, params)
+        results = data.get("results")
+        if results is None:
+            # Unexpected shape — show what we got so we can adjust the params.
+            log("!! search response had no 'results' key. Top-level keys: "
+                f"{list(data.keys())}")
+            log(f"!! raw (first 500 chars): {json.dumps(data, ensure_ascii=False)[:500]}")
+            log("!! send this output back and I'll fix the query/params.")
+            break
         if not results:
+            if page == 1:
+                log(f"!! search for {query!r} returned 0 results. Try a different "
+                    "--query, or --unit-id 8597 (the AARO unit). Send me the output.")
             break
         for r in results:
             rid = r.get("id")
@@ -103,6 +116,8 @@ def main() -> int:
     ap.add_argument("--api-key", default=os.environ.get("DVIDS_API_KEY"),
                     help="DVIDS API key (or set env DVIDS_API_KEY)")
     ap.add_argument("--query", default="UAPVIDEOS", help="search keyword (default: UAPVIDEOS)")
+    ap.add_argument("--unit-id", default=None,
+                    help="optional DVIDS unit_id filter (the AARO unit is 8597)")
     ap.add_argument("--dry-run", action="store_true", help="fetch and report; don't write")
     args = ap.parse_args()
 
@@ -110,7 +125,7 @@ def main() -> int:
         raise SystemExit("no API key — set DVIDS_API_KEY or pass --api-key "
                          "(get one free at https://api.dvidshub.net/)")
 
-    ids = search_ids(args.api_key, args.query)
+    ids = search_ids(args.api_key, args.query, args.unit_id)
     log(f"found {len(ids)} video assets for query {args.query!r}")
 
     existing = {}
