@@ -16,10 +16,13 @@ Video/audio records arrive with unstable `record-N` ids (the row index, which
 shifts every scrape), so new ones are re-keyed to a stable slug from their
 document code (e.g. DOW-UAP-PR050 -> dow-uap-pr050).
 
+Release dates are stored in Israeli day/month order (DD/MM/YY), e.g. "22/5/26".
+war.gov serves them month/day (M/D/YY), so pass --release-label already flipped.
+
 Usage:
     python scripts/merge_release.py --new ~/Downloads/manifest.json \\
-        --release-label "5/22/26"
-    python scripts/merge_release.py --new scrape.json --release-label "5/22/26" --dry-run
+        --release-label "22/5/26"
+    python scripts/merge_release.py --new scrape.json --release-label "22/5/26" --dry-run
 """
 
 from __future__ import annotations
@@ -74,7 +77,7 @@ def main() -> int:
     ap.add_argument("--manifest", default=str(MANIFEST_PATH),
                     help="manifest to merge into (default: data/manifest.json)")
     ap.add_argument("--release-label", required=True,
-                    help='release_date to stamp on new records, e.g. "5/22/26"')
+                    help='release_date to stamp on new records, Israeli DD/MM/YY, e.g. "22/5/26"')
     ap.add_argument("--dry-run", action="store_true", help="report only; don't write")
     args = ap.parse_args()
 
