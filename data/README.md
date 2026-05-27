@@ -14,8 +14,8 @@
   "source_page_url": "https://www.war.gov/UFO/",
   "total_files": 222,
   "releases": [                        // פירוט מהדורות שנסרקו (data-driven)
-    { "label": "5/22/26 - RELEASE 02", "count": 64 },
-    { "label": "5/8/26", "count": 158 }
+    { "label": "22/5/26", "count": 64 },   // תאריכים בפורמט ישראלי (יום/חודש)
+    { "label": "8/5/26", "count": 158 }
   ],
   "generated_at": "2026-05-26T10:00:00Z",
   "files": [
