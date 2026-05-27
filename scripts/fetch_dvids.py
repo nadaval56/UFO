@@ -33,6 +33,7 @@ import json
 import os
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -54,6 +55,22 @@ def get_json(url: str, params: dict) -> dict:
         try:
             with urllib.request.urlopen(full, timeout=30) as r:
                 return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            # Surface the response body — DVIDS puts the real reason (e.g.
+            # "Invalid API key") there, not in the status line.
+            try:
+                body = e.read().decode("utf-8", "replace")[:400]
+            except Exception:  # noqa: BLE001
+                body = "(no body)"
+            log(f"  HTTP {e.code} {e.reason} — body: {body}")
+            if e.code in (401, 403):
+                # Auth problems won't fix themselves on retry — stop early.
+                raise SystemExit(
+                    f"DVIDS rejected the request ({e.code}). Check the API key. "
+                    f"Response: {body}")
+            wait = 2 ** (attempt + 1)
+            log(f"  retrying in {wait}s")
+            time.sleep(wait)
         except Exception as e:  # noqa: BLE001 — surface and back off
             wait = 2 ** (attempt + 1)
             log(f"  request failed ({e}); retry in {wait}s")
