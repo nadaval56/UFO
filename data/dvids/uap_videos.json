@@ -7516,5 +7516,1908 @@
       "width": 122,
       "height": 92
     }
+  },
+  "973048": {
+    "id": "video:973048",
+    "type": "video",
+    "title": "PR-002, Resolved as Migratory Birds, Africa 2024",
+    "description": "In 2024, the United States Africa Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of one minute and eighteen seconds of video footage from an infrared sensor aboard a U.S. military platform.\r\n\r\nAARO assesses, with high confidence, that the objects depicted in the video are almost certainly (≥95% likelihood) a group of migratory birds. AARO bases its assessment on the objects’ strong morphological consistency with other resolved imagery depicting birds and the objects’ flight behavior corresponding to known migration routes. An external Intelligence Community partner concurred with AARO’s assessment.",
+    "keywords": "UAP",
+    "date_published": "2025-08-07T13:29:06-04:00",
+    "date": "2024-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-10-24T16:36:47-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2508/973048/DOD_111216951.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/973048/pr-002-resolved-migratory-birds-africa-2024",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "240101-A-D0360-3316",
+    "duration": 78,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216951/DOD_111216951.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 7980714,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216951/DOD_111216951-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 8539529,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216951/DOD_111216951-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 5405973,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216951/DOD_111216951-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 3408731,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216951/DOD_111216951-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 2538566,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216951/DOD_111216951-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 1531944,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216951/DOD_111216951-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 1273757,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/973048.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2508/973048/DOD_111216951.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "988676": {
+    "id": "video:988676",
+    "type": "video",
+    "title": "PR-018, Unresolved UAP Report, Europe 2024",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of ten minutes and thirty seconds of video footage from an infrared sensor aboard a U.S. military platform in 2024. AARO assesses, with high confidence, that the footage depicts the presence of a physical object. The object’s morphological features, performance characteristics, and behaviors are unremarkable and do not warrant further analysis. AARO will continue to investigate this case should further information become available to enable a more conclusive attribution. This unresolved report contributes to AARO’s historical and locational trend analyses.",
+    "date_published": "2025-12-04T10:17:06-05:00",
+    "date": "2024-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-12-04T10:18:21-05:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/988676/DOD_111415223.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/988676/pr-018-unresolved-uap-report-europe-2024",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "240101-D-D0360-3182",
+    "duration": 630,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415223/DOD_111415223.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 318422373,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415223/DOD_111415223-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 291013779,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415223/DOD_111415223-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 170017345,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415223/DOD_111415223-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 79245677,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415223/DOD_111415223-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 49463872,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415223/DOD_111415223-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 22812983,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415223/DOD_111415223-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 12953804,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/988676.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/988676/DOD_111415223.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "988675": {
+    "id": "video:988675",
+    "type": "video",
+    "title": "PR-017, Unresolved UAP Report, Europe 2024",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of thirty seconds of video footage from a commercially available cellular device’s rear-facing digital camera in 2024. The video footage associated with this report is insufficient for AARO to render a determination on its subject matter. This unresolved report contributes to AARO’s historical and locational trend analyses.",
+    "date_published": "2025-12-04T10:10:18-05:00",
+    "date": "2024-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-12-04T10:11:58-05:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/988675/DOD_111415215.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/988675/pr-017-unresolved-uap-report-europe-2024",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "240101-D-D0360-6202",
+    "duration": 31,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415215/DOD_111415215.mp4",
+        "type": "video/mp4",
+        "height": 1920,
+        "width": 1080,
+        "size": 11458325,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415215/DOD_111415215-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 3849235,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415215/DOD_111415215-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 2411607,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415215/DOD_111415215-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 1089364,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415215/DOD_111415215-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 911590,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415215/DOD_111415215-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 547796,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415215/DOD_111415215-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 447383,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/988675.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/988675/DOD_111415215.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "973055": {
+    "id": "video:973055",
+    "type": "video",
+    "title": "PR-003, Unresolved UAP Report, Africa 2023",
+    "description": "In 2023, the United States Africa Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of four minutes and fifty-eight seconds of video footage from an infrared sensor aboard a U.S. military platform. \r\n\r\nThe footage shows an apparent heat signature with characteristics consistent with those of a physical object. However, AARO cannot determine whether the observed signature originates from a physical source, either as a thermal emission or a thermal reflection, or other source, such as a heat differential in the environment or sensor display error. The available data is insufficient to evaluate the phenomenon’s performance characteristics.",
+    "keywords": "UAP",
+    "date_published": "2025-08-07T13:37:05-04:00",
+    "date": "2023-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-10-24T16:36:59-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2508/973055/DOD_111217027.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/973055/pr-003-unresolved-uap-report-africa-2023",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "230101-A-D0360-5018",
+    "duration": 298,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111217027/DOD_111217027.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 306846779,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111217027/DOD_111217027-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 277589262,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111217027/DOD_111217027-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 179440664,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111217027/DOD_111217027-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 88135653,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111217027/DOD_111217027-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 55013353,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111217027/DOD_111217027-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 21611129,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111217027/DOD_111217027-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 9184494,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/973055.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2508/973055/DOD_111217027.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "988673": {
+    "id": "video:988673",
+    "type": "video",
+    "title": "PR-016, Resolved as Birds, Europe 2023",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of twenty-five seconds of video footage from an infrared sensor aboard a U.S. military platform in 2023. AARO assesses, with high confidence, that the objects depicted in the video are almost certainly (>95% likelihood) birds. AARO bases its assessment on the objects’ strong morphological consistency with other resolved imagery featuring birds and the objects’ behavioral characteristics strongly aligning with those of birds, e.g. maintaining relative positioning for energy conservation during flight, pulsating infrared return at a frequency consistent with wing beats.",
+    "date_published": "2025-12-04T10:08:06-05:00",
+    "date": "2023-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-12-04T10:09:18-05:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/988673/DOD_111415209.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/988673/pr-016-resolved-birds-europe-2023",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "230101-D-D0360-4637",
+    "duration": 25,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415209/DOD_111415209.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 27156067,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415209/DOD_111415209-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 24526327,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415209/DOD_111415209-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 14344837,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415209/DOD_111415209-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 7862017,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415209/DOD_111415209-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 5219691,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415209/DOD_111415209-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 2642243,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111415209/DOD_111415209-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 1285384,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/988673.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/988673/DOD_111415209.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "992262": {
+    "id": "video:992262",
+    "type": "video",
+    "title": "PR-013, Unresolved UAP Report, Europe 2022",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of twenty seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022. AARO assesses, with high confidence, that the footage depicts the presence of a physical object. The object’s morphological features, performance characteristics, and behaviors are unremarkable and do not warrant further analysis. AARO will continue to investigate this case should further information become available to enable a more conclusive attribution. This unresolved report contributes to AARO’s historical and locational trend analyses.",
+    "date_published": "2026-01-06T13:38:05-05:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-01-06T13:44:18-05:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2601/992262/DOD_111469070.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/992262/pr-013-unresolved-uap-report-europe-2022",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "220101-D-D0360-5787",
+    "duration": 21,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469070/DOD_111469070.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 24698515,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469070/DOD_111469070-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 20367331,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469070/DOD_111469070-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 13333052,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469070/DOD_111469070-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 7233518,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469070/DOD_111469070-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 4697109,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469070/DOD_111469070-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 2261408,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469070/DOD_111469070-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 1176658,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/992262.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2601/992262/DOD_111469070.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "977839": {
+    "id": "video:977839",
+    "type": "video",
+    "title": "PR-008, Unresolved UAP Report, Europe 2022",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of one minute and twenty-one seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022. \r\n\r\nThe footage depicts an apparent heat signature with characteristics consistent with those of a physical object, However, AARO cannot determine whether the observed signature originates from a physical source, either as a thermal emission or a thermal reflection, or other source, such as a heat differential in the environment or sensor display error. The available data is insufficient to evaluate the phenomenon’s performance characteristics.",
+    "date_published": "2025-09-22T12:35:18-04:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-10-24T16:02:34-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977839/DOD_111311867.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/977839/pr-008-unresolved-uap-report-europe-2022",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "220101-O-D0360-4619",
+    "duration": 81,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311867/DOD_111311867.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 27493002,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311867/DOD_111311867-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 27712249,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311867/DOD_111311867-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 17426831,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311867/DOD_111311867-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 9603957,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311867/DOD_111311867-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 6687577,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311867/DOD_111311867-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 3282644,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311867/DOD_111311867-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 1847366,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/977839.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977839/DOD_111311867.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "977840": {
+    "id": "video:977840",
+    "type": "video",
+    "title": "PR-009, UAP Report Resolved as a Balloon, Europe 2022",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of twenty seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022. \r\n\r\nAARO assesses, with high confidence, that the object depicted in the video is almost certainly (≥95% likelihood) a balloon. AARO bases its assessment on the object’s strong morphological consistency with other resolved imagery featuring balloons and the object’s performance characteristics strongly aligning with those of lighter-than-air objects, e.g., drifting at wind speed and direction.",
+    "date_published": "2025-09-22T12:36:06-04:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-10-24T16:00:22-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977840/DOD_111311872.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/977840/pr-009-uap-report-resolved-balloon-europe-2022",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "220101-O-D0360-4641",
+    "duration": 20,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311872/DOD_111311872.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 18242560,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311872/DOD_111311872-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 17271892,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311872/DOD_111311872-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 11121499,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311872/DOD_111311872-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 6190721,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311872/DOD_111311872-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 4425428,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311872/DOD_111311872-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 2226143,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311872/DOD_111311872-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 1206615,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/977840.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977840/DOD_111311872.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "977838": {
+    "id": "video:977838",
+    "type": "video",
+    "title": "PR-007, UAP Report Closed as Not Anomalous, Europe 2022",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of six seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022. \r\n\r\nAARO assesses, with high confidence, that the object depicted in the video demonstrates performance characteristics consistent with those of a prosaic aircraft. However, the available data is insufficient to attribute the object to a specific origin or render a determination on its type or application. Though AARO cannot conclusively resolve this object, it does not meet the morphological or performance criteria to warrant further analysis.",
+    "date_published": "2025-09-22T12:31:06-04:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-10-24T16:37:19-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977838/DOD_111311861.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/977838/pr-007-uap-report-closed-not-anomalous-europe-2022",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "220101-O-D0360-2159",
+    "duration": 5,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311861/DOD_111311861.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 2148615,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311861/DOD_111311861-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 2508060,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311861/DOD_111311861-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 1552669,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311861/DOD_111311861-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 746183,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311861/DOD_111311861-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 446015,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311861/DOD_111311861-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 180931,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311861/DOD_111311861-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 116474,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/977838.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977838/DOD_111311861.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "977837": {
+    "id": "video:977837",
+    "type": "video",
+    "title": "PR-006, UAP Report Resolved as a Balloon, Europe 2022",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of twenty seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022. \r\n\r\nAARO assesses, with high confidence, that the object depicted in the video is almost certainly (≥95% likelihood) a balloon. AARO bases its assessment on the object’s strong morphological consistency with other resolved imagery featuring balloons and the object’s performance characteristics strongly aligning with those of lighter-than-air objects, e.g., drifting at wind speed and direction.",
+    "date_published": "2025-09-22T12:30:17-04:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-10-24T16:37:30-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977837/DOD_111311856.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/977837/pr-006-uap-report-resolved-balloon-europe-2022",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "220101-O-D0360-3781",
+    "duration": 21,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311856/DOD_111311856.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 25949977,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311856/DOD_111311856-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 20301330,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311856/DOD_111311856-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 14213277,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311856/DOD_111311856-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 7517729,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311856/DOD_111311856-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 5144400,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311856/DOD_111311856-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 2625694,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311856/DOD_111311856-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 1335605,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/977837.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977837/DOD_111311856.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "977834": {
+    "id": "video:977834",
+    "type": "video",
+    "title": "PR-005, UAP Report Resolved as a Balloon, Europe 2022",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of thirty-two seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022. \r\n\r\nAARO assesses, with high confidence, that the object depicted in the video is almost certainly (≥95% likelihood) a balloon. AARO bases its assessment on the object’s strong morphological consistency with other resolved imagery featuring balloons and the object’s performance characteristics strongly aligning with those of lighter-than-air objects, e.g., drifting at wind speed and direction.",
+    "date_published": "2025-09-22T12:27:06-04:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-10-24T16:37:44-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977834/DOD_111311850.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/977834/pr-005-uap-report-resolved-balloon-europe-2022",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "220101-O-D0360-2261",
+    "duration": 32,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311850/DOD_111311850.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 39100771,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311850/DOD_111311850-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 32434565,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311850/DOD_111311850-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 22217940,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311850/DOD_111311850-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 11546514,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311850/DOD_111311850-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 7425516,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311850/DOD_111311850-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 3607952,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111311850/DOD_111311850-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 2480006,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/977834.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977834/DOD_111311850.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "973045": {
+    "id": "video:973045",
+    "type": "video",
+    "title": "PR-001 Unresolved UAP Report, Africa 2022",
+    "description": "In 2022, the United States Africa Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of thirty-one seconds of video footage from an infrared sensor aboard a U.S. military platform. \r\n\r\nThe footage shows an apparent heat signature with characteristics consistent with those of a physical object. However, AARO cannot determine whether the observed signature originates from a physical source, either as a thermal emission or a thermal reflection, or other source, such as a heat differential in the environment or sensor display error. The available data is insufficient to evaluate the phenomenon’s performance characteristics.",
+    "keywords": "UAP",
+    "date_published": "2025-08-07T13:13:06-04:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-10-24T16:37:56-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2508/973045/DOD_111216897.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/973045/pr-001-unresolved-uap-report-africa-2022",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "220101-A-D0360-7287",
+    "duration": 31,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216897/DOD_111216897.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 40100348,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216897/DOD_111216897-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 32840966,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216897/DOD_111216897-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 22411042,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216897/DOD_111216897-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 11684009,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216897/DOD_111216897-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 7683246,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216897/DOD_111216897-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 3787157,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2508/DOD_111216897/DOD_111216897-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 1750843,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/973045.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2508/973045/DOD_111216897.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "977221": {
+    "id": "video:977221",
+    "type": "video",
+    "title": "PR-004, UAP Report Resolved as a Balloon, Europe 2022",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of thirty-one seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022. \r\n\r\nAARO assesses, with high confidence, that the object depicted in the video is almost certainly (≥95% likelihood) a balloon. AARO bases its assessment on the object’s strong morphological consistency with other resolved imagery featuring balloons and the object’s performance characteristics strongly aligning with those of lighter-than-air objects, e.g., drifting at wind speed and direction.",
+    "date_published": "2025-09-17T10:30:17-04:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-10-24T16:38:07-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977221/DOD_111300649.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/977221/pr-004-uap-report-resolved-balloon-europe-2022",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "220101-O-D0360-1702",
+    "duration": 32,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111300649/DOD_111300649.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 40385938,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111300649/DOD_111300649-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 33200426,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111300649/DOD_111300649-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 22317280,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111300649/DOD_111300649-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 11817237,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111300649/DOD_111300649-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 8038107,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111300649/DOD_111300649-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 3775851,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111300649/DOD_111300649-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 1867757,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/977221.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977221/DOD_111300649.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "976937": {
+    "id": "video:976937",
+    "type": "video",
+    "title": "PR-010, UAP Report Resolved as a Balloon, Europe 2022",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of seven minutes and fifty-six seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022.\r\n\r\nAARO assesses, with high confidence, that the object depicted in the video is almost certainly (≥95% likelihood) a balloon. AARO bases its assessment on the object’s strong morphological consistency with other resolved imagery featuring balloons and the object’s performance characteristics strongly aligning with those of lighter-than-air objects, e.g., drifting at wind speed and direction.",
+    "date_published": "2025-09-15T12:12:06-04:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-10-24T16:38:19-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/976937/DOD_111294469.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/976937/pr-010-uap-report-resolved-balloon-europe-2022",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "220101-O-D0360-9133",
+    "duration": 476,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111294469/DOD_111294469.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 473424174,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111294469/DOD_111294469-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 409594160,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111294469/DOD_111294469-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 275997496,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111294469/DOD_111294469-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 145550416,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111294469/DOD_111294469-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 99993030,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111294469/DOD_111294469-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 49502603,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2509/DOD_111294469/DOD_111294469-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 26457727,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/976937.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/976937/DOD_111294469.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "989430": {
+    "id": "video:989430",
+    "type": "video",
+    "title": "PR-015, Unresolved UAP Report, Europe 2022",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of thirteen seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022. \r\nAARO assesses, with high confidence, that the footage depicts the presence of a physical object. The object’s morphological features, performance characteristics, and behaviors are unremarkable and do not warrant further analysis. AARO will continue to investigate this case should further information become available to enable a more conclusive attribution. This unresolved report contributes to AARO’s historical and locational trend analyses.",
+    "date_published": "2025-12-09T11:34:07-05:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-12-09T19:55:03-05:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/989430/DOD_111426410.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/989430/pr-015-unresolved-uap-report-europe-2022",
+    "credit": [
+      {
+        "id": 1898871,
+        "name": "Shana Kieran-Kaufman",
+        "rank": "",
+        "url": "https://www.dvidshub.net/portfolio/1898871"
+      }
+    ],
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "220101-O-UY549-8460",
+    "duration": 13,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426410/DOD_111426410.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 5831141,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426410/DOD_111426410-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 5864652,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426410/DOD_111426410-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 3252042,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426410/DOD_111426410-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 1353306,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426410/DOD_111426410-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 759479,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426410/DOD_111426410-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 393896,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426410/DOD_111426410-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 244860,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/989430.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/989430/DOD_111426410.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "989429": {
+    "id": "video:989429",
+    "type": "video",
+    "title": "PR-014, Unresolved UAP Report, Europe 2022",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of forty-three seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022. \nAARO assesses, with high confidence, that the footage depicts the presence of a physical object. The object’s morphological features, performance characteristics, and behaviors are unremarkable and do not warrant further analysis. AARO will continue to investigate this case should further information become available to enable a more conclusive attribution. This unresolved report contributes to AARO’s historical and locational trend analyses.",
+    "date_published": "2025-12-09T11:30:18-05:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-12-09T11:33:33-05:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/989429/DOD_111426407.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/989429/pr-014-unresolved-uap-report-europe-2022",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "220101-D-D0360-8485",
+    "duration": 43,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426407/DOD_111426407.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 52378751,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426407/DOD_111426407-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 39171563,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426407/DOD_111426407-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 25786391,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426407/DOD_111426407-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 14048365,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426407/DOD_111426407-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 9275674,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426407/DOD_111426407-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 4898974,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426407/DOD_111426407-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 2477983,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/989429.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/989429/DOD_111426407.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "989428": {
+    "id": "video:989428",
+    "type": "video",
+    "title": "PR-012, Unresolved UAP Report, Europe 2022",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of fifty-five seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022.\nAARO assesses, with high confidence, that the footage depicts the presence of a physical object. The object’s morphological features, performance characteristics, and behaviors are unremarkable and do not warrant further analysis. AARO will continue to investigate this case should further information become available to enable a more conclusive attribution. This unresolved report contributes to AARO’s historical and locational trend analyses.",
+    "date_published": "2025-12-09T11:27:06-05:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2025-12-09T11:33:40-05:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/989428/DOD_111426396.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/989428/pr-012-unresolved-uap-report-europe-2022",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "220101-D-D0360-2617",
+    "duration": 55,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426396/DOD_111426396.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 69596265,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426396/DOD_111426396-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 56488137,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426396/DOD_111426396-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 40651878,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426396/DOD_111426396-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 21180871,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426396/DOD_111426396-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 14501572,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426396/DOD_111426396-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 7284194,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2512/DOD_111426396/DOD_111426396-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 3610525,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/989428.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/989428/DOD_111426396.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "992261": {
+    "id": "video:992261",
+    "type": "video",
+    "title": "PR-011, UAP Report Undergoing Analysis, Europe 2021",
+    "description": "The United States European Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of two minutes and eight seconds of video footage from an infrared sensor aboard a U.S. military platform in 2021. The footage depicts an area of contrast in the infrared sensor display, suggesting the presence of a physical object.  Analysis of the object’s physical attributes and performance characteristics is ongoing.",
+    "date_published": "2026-01-06T13:35:17-05:00",
+    "date": "2021-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-01-06T13:39:51-05:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2601/992261/DOD_111469069.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/992261/pr-011-uap-report-undergoing-analysis-europe-2021",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "210101-D-D0360-5804",
+    "duration": 128,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469069/DOD_111469069.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 97040175,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469069/DOD_111469069-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 91167990,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469069/DOD_111469069-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 56818587,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469069/DOD_111469069-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 26231650,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469069/DOD_111469069-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 15536965,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469069/DOD_111469069-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 7475061,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2601/DOD_111469069/DOD_111469069-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 3888628,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/992261.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2601/992261/DOD_111469069.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1007712": {
+    "id": "video:1007712",
+    "type": "video",
+    "title": "DOW-UAP-PR089, \"31 AUG [CALLSIGN] [CALLSIGN] Observes UAP part2\"",
+    "description": "\"On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\n\nAARO assesses that this video, whose uploader-defined title is, “31 AUG 2020 [CALLSIGN] [CALLSIGN] Observes UAP part2,” is likely derived from an infrared sensor aboard a U.S. military platform operating within the United States Central Command area of responsibility in 2020. A user uploaded this video to a classified network in August 2020.\n\nVideo Duration: 00:04:58\nVideo Description:\n00:00-00:45: The sensor tracks an area of contrast near the center of the screen.\n00:46-01:09: Another area of contrast enters the field-of-view from the lower right side of the screen. The sensor pans to track both areas, but the second area of contrast exits the field-of-view.\n01:10-01:22: The sensor cycles contrast modes, causing the area of contrast to momentarily lose distinctiveness against the background.\n01:23-02:35: Several areas of contrast enter and exit the frame.\n02:36-02:41: The areas of contrast become indistinct against the background.\n02:42-03:22: The areas of contrast become distinguishable again.\n03:23-03:43: Several areas of contrast enter and exit the screen.\n03:44-03:48: The sensor pans to track the area of contrast.\n03:49-04:01: The area of contrast exits the sensor field of view from the right side of the frame.\n04:02-04:58: No content.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.\"",
+    "keywords": "UAP, AAR052226",
+    "date_published": "2026-05-22T07:30:21-04:00",
+    "date": "2020-08-31T00:00:00-04:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-05-22T07:44:53-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007712/DOD_111719730.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1007712/dow-uap-pr089-31-aug-callsign-callsign-observes-uap-part2",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "Undisclosed Location",
+      "country_abbreviation": "UL"
+    },
+    "time_start": 0,
+    "virin": "200831-D-D0360-2504",
+    "duration": 298,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719730/DOD_111719730.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 59014273,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719730/DOD_111719730-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 119655190,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719730/DOD_111719730-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 82799027,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719730/DOD_111719730-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 43593945,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719730/DOD_111719730-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 31914923,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719730/DOD_111719730-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 16014104,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719730/DOD_111719730-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 8646554,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1007712.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007712/DOD_111719730.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1007716": {
+    "id": "video:1007716",
+    "type": "video",
+    "title": "DOW-UAP-PR091, \"21 AUG [CALLSIGN] Observes UAP in Persian Gulf",
+    "description": "\"On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\n\nAARO assesses that this video, whose uploader-defined title is, “21 AUG 2020 [CALLSIGN] Observes UAP in Persian Gulf,” is likely derived from an infrared sensor aboard a U.S. military platform operating within the United States Central Command area of responsibility in 2020. A user uploaded this video to a classified network in August 2020.\n\nVideo Duration: 00:04:48\nVideo Description:\n00:00-03:07: No content.\n03:08-03:10: The sensor zooms out. An area of contrast transits from the top of the screen to the bottom, exiting the frame.\n03:11-03:48: The sensor zooms out and back in. The sensor pans to track the area of contrast.\n03:49-04:48: The area of contrast becomes indistinguishable from the grain of the video and the sensor zooms out.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.\"",
+    "keywords": "UAP, AAR052226",
+    "date_published": "2026-05-22T07:30:23-04:00",
+    "date": "2020-08-21T00:00:00-04:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-05-22T07:41:34-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007716/DOD_111719739.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1007716/dow-uap-pr091-21-aug-callsign-observes-uap-persian-gulf",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "Undisclosed Location",
+      "country_abbreviation": "UL"
+    },
+    "time_start": 0,
+    "virin": "200821-D-D0360-5657",
+    "duration": 288,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719739/DOD_111719739.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 113393509,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719739/DOD_111719739-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 109941662,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719739/DOD_111719739-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 74332765,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719739/DOD_111719739-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 37219992,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719739/DOD_111719739-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 27396773,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719739/DOD_111719739-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 14732659,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719739/DOD_111719739-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 8090311,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1007716.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007716/DOD_111719739.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1007715": {
+    "id": "video:1007715",
+    "type": "video",
+    "title": "DOW-UAP-PR092, \"08 AUG 2020 [CALLSIGN] [CALLSIGN] UAP observation",
+    "description": "\"On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\n\nAARO assesses that this video, whose uploader-defined title is, “08 AUG 2020 [CALLSIGN] [CALLSIGN] UAP observation,” is likely derived from an infrared sensor aboard a U.S. military platform operating within the United States Central Command area of responsibility in 2020. A user uploaded this video to a classified network in August 2020.\n\nVideo Duration: 00:04:52\nVideo Description:\n00:00-00:47: No content.\n00:48-00:51: An area of contrast enters the field-of-view from the lower right side of the screen.\n00:52-00:53: The area of contrast exits the field-of-view from the lower left side of the screen.\n00:54-01:09: The sensor pans to track the area of contrast and hold it within the center of the screen.\n01:10-01:34: The sensor zooms in on the area of contrast.\n01:35-01:37: The sensor zooms in further. The area of contrast remains visible at the top of the screen.\n01:38-03:45: The sensor zooms out to track the area of contrast.\n03:46-03:50: The sensor zooms in. The area of contrast remains visible at the top of the screen.\n03:51-04:07: The sensor zooms out to track the area of contrast.\n04:08-04:25: The sensor changes visual settings, continuing to track the area of contrast.\n04:26-04:52: The sensor zooms out and in several times.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.\"",
+    "keywords": "UAP, AAR052226",
+    "date_published": "2026-05-22T07:30:22-04:00",
+    "date": "2020-08-08T00:00:00-04:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-05-22T07:41:46-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007715/DOD_111719736.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1007715/dow-uap-pr092-08-aug-2020-callsign-callsign-uap-observation",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "Undisclosed Location",
+      "country_abbreviation": "UL"
+    },
+    "time_start": 0,
+    "virin": "200808-D-D0360-5833",
+    "duration": 292,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719736/DOD_111719736.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 99366171,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719736/DOD_111719736-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 129915480,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719736/DOD_111719736-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 90017860,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719736/DOD_111719736-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 46826405,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719736/DOD_111719736-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 32363253,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719736/DOD_111719736-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 16732518,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719736/DOD_111719736-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 11873526,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1007715.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007715/DOD_111719736.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
   }
 }
