@@ -6663,7 +6663,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007706/DOD_111719709.0000001/122x92_q95.jpg",
       "duration_s": 9,
       "aspect_ratio": "16:9",
-      "dvids_date": "2022-08-26T00:00:00-04:00"
+      "dvids_date": "2022-08-26T00:00:00-04:00",
+      "narrative_he": "ארבעה עצמים במבנה חוצים את עדשת האינפרא-אדום מעל מים מול חופי איראן, אוגוסט 2022."
     },
     {
       "id": "dow-uap-pr051",
@@ -6692,7 +6693,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007707/DOD_111719715.0000001/122x92_q95.jpg",
       "duration_s": 302,
       "aspect_ratio": "16:9",
-      "dvids_date": "2021-01-01T00:00:00-05:00"
+      "dvids_date": "2021-01-01T00:00:00-05:00",
+      "narrative_he": "עצם מעל סוריה, 2021, שהוגבר ונותח במהירויות שונות בניסיון לחשוף את צורתו."
     },
     {
       "id": "dow-uap-d017_general_correspondence_of_sandia",
@@ -6711,7 +6713,8 @@
       "summary_he": "תיק זה מכיל 116 עמודים של תיעוד מתוכנית הנשק המיוחד של הכוחות המזוינים (AFSWP) — היורשת הישירה של פרויקט מנהטן לאחר מלחמת העולם השנייה — ומחיל האוויר האמריקאי, הנוגעים לסדרת תצפיות וחקירות בסנדיה, ניו מקסיקו, בין השנים 1948–1950. התיק מכיל 209 תצפיות של \"כדורי אור ירוקים\", \"דיסקיות\" ו\"כדורי אש\" שדווחו בקרבת הבסיס הצבאי. עדים דיווחו על תופעות אוויריות חריגות בלתי מזוהות (UAP) המתמרנות, נמלטות מן העין, נעלמות או מתפוצצות. המסמכים כוללים גם את תוצאותיהן של חקירות בנות התקופה בנוגע לאבקת נחושת שרידית שנמצאה בכמה מן האזורים שבהם דווחו תצפיות. מספר חקירות מבין אלו היוו את הבסיס לפרויקט Grudge, שאסף דיווחים על עצמים מעופפים בלתי מזוהים ממתקנים צבאיים שונים אחרים — אף הם נכללים באוסף זה.",
       "size_bytes": null,
       "url_status": null,
-      "_record_id": "record-003"
+      "_record_id": "record-003",
+      "narrative_he": "209 תצפיות בכדורי אור ירוקים, דיסקיות וכדורי אש סביב בסיס סנדיה בניו מקסיקו, 1948–1950 — מתועדות בידי יורשת פרויקט מנהטן וחיל האוויר."
     },
     {
       "id": "cia-uap-d001_intelligence_information_report_ussr_1973",
@@ -6730,7 +6733,8 @@
       "summary_he": "מסמך זה הוא דו\"ח מידע מודיעיני (IIR) של סוכנות הביון המרכזית (CIA), המתאר פעילות איסוף מודיעין אנושי בברית המועצות (USSR). הדו\"ח מאפיין את תוכנו כמידע, ולא כמודיעין שהוערך באופן סופי. בסעיף 14 של המסמך מתאר המקור אירוע שהתרחש בקיץ 1973, שבמהלכו חזה לכאורה בעצם בלתי מזוהה, מרחף, זוהר ובצבע ירוק בהיר. המקור תיאר מעגלים קונצנטריים שנוצרו סביב התופעה במשך מספר דקות, בטרם התפוגגה. המקור ציין גם כי התצפית לא לוותה בכל קול. המקור לא חיווה דעה על טבעה של התופעה ולא היה מסוגל לספק פרטים נוספים בנוגע לאירוע. בוצעו השמטות כדי להגן על זהות עדי ראייה, מיקומי מתקנים ממשלתיים, או מידע פוטנציאלית רגיש על אתרים צבאיים שאינם קשורים ל-UAP. לא בוצעו השמטות בקבצים שפורסמו תחת הנחיית הנשיא טראמפ בנוגע למידע על טבעם או קיומם של מפגשים שדווחו כ-UAP או תופעות נלוות.",
       "size_bytes": null,
       "url_status": null,
-      "_record_id": "record-004"
+      "_record_id": "record-004",
+      "narrative_he": "מקור מודיעין תיאר עצם ירוק-זוהר המרחף בשמי ברית המועצות בקיץ 1973, ומעגלים קונצנטריים שנוצרו סביבו בדממה מוחלטת — מתוך דו\"ח של ה-CIA."
     },
     {
       "id": "odni-uap-d001_usper_narrative_senior_usic",
@@ -6749,7 +6753,8 @@
       "summary_he": "מסמך זה הוא עדות ממקור ראשון שנכתבה על ידי בכיר בקהילת המודיעין האמריקאית המכהן נכון למאי 2026. הבכיר היה חלק מצוות שחקר דיווחים על רעשים בלתי שגרתיים ועל תצפיות בתופעות אוויריות חריגות בלתי מזוהות בתוך מתקן צבאי אמריקאי רגיש ובקרבתו בשלהי 2025. מנקודת מבטו כנוסע במסוק, מתאר הבכיר מפגש עם \"כדורי אור\" זוהרים בלתי מזוהים, הן בטווח קרוב והן ממרחק. העדות מתארת עצם מהיר לכאורה הנע נמוך מעל הקרקע, שנדמה היה כי התפצל לשניים והאיץ והתרחק בשני כיוונים שונים. היא מתארת גם \"כדורי אור\" רבים בגובה רב יותר, שאת חלקם העריך הבכיר כנמצאים בקרבה רבה למסוק. לעדות זו מצורף תיעוד באינפרא-אדום שצולם במהלך אותו תרגיל על ידי פקידים פדרליים אחרים מן הקרקע, ושפורסם במקור ב-war.gov/UFO ב-8 במאי 2026.",
       "size_bytes": null,
       "url_status": null,
-      "_record_id": "record-005"
+      "_record_id": "record-005",
+      "narrative_he": "בכיר מודיעין מספר ממקור ראשון כיצד רדף, מתוך מסוק, אחר כדורי אור זוהרים סמוך למתקן צבאי רגיש בשלהי 2025."
     },
     {
       "id": "nasa-uap-d008",
@@ -6769,7 +6774,8 @@
       "size_bytes": null,
       "url_status": null,
       "_record_id": "record-006",
-      "_url_is_record_page": true
+      "_url_is_record_page": true,
+      "narrative_he": "צוות Apollo 12 מתאר הבזקי אור שראו בחשכה בניסיון להירדם, 1969 — תופעה שנאס\"א ייחסה בהמשך לראייה עצמה ולא למקור חיצוני."
     },
     {
       "id": "doe-uap-d001_pantex_image",
@@ -6788,7 +6794,8 @@
       "summary_he": "דו\"ח אירוע על עצם בלתי מזוהה ממתקן Pantex, הכולל תמונה משופרת ממגדל מכ\"ם לסיור קרקעי. בוצעו השמטות כדי להגן על זהות עדי ראייה, מיקומי מתקנים ממשלתיים, או מידע פוטנציאלית רגיש על אתרים צבאיים שאינם קשורים ל-UAP. לא בוצעו השמטות בקבצים שפורסמו תחת הנחיית הנשיא טראמפ בנוגע למידע על טבעם או קיומם של מפגשים שדווחו כ-UAP או תופעות נלוות.",
       "size_bytes": null,
       "url_status": null,
-      "_record_id": "record-007"
+      "_record_id": "record-007",
+      "narrative_he": "דו\"ח אירוע ממתקן הנשק הגרעיני פנטקס, ובו תמונה משופרת ממגדל מכ\"ם של עצם בלתי מזוהה."
     },
     {
       "id": "doe-uap-d002_jamestuck_correspondence",
@@ -6807,7 +6814,8 @@
       "summary_he": "תכתובת אישית אל הפיזיקאי ג'יימס טאק, המזוהה עם המעבדה הלאומית לוס אלמוס, וממנו, בנוגע להתעניינותו בתופעות אוויריות חריגות בלתי מזוהות סביב שנות ה-70. בוצעו השמטות כדי להגן על זהות עדי ראייה, מיקומי מתקנים ממשלתיים, או מידע פוטנציאלית רגיש על אתרים צבאיים שאינם קשורים ל-UAP. לא בוצעו השמטות בקבצים שפורסמו תחת הנחיית הנשיא טראמפ בנוגע למידע על טבעם או קיומם של מפגשים שדווחו כ-UAP או תופעות נלוות.",
       "size_bytes": null,
       "url_status": null,
-      "_record_id": "record-040"
+      "_record_id": "record-040",
+      "narrative_he": "תכתובת אישית של הפיזיקאי ג'יימס טאק מלוס אלמוס, החושפת את התעניינותו בתופעות בלתי מזוהות בשנות ה-70."
     },
     {
       "id": "doe-uap-d003_pajarito_astronomers",
@@ -6826,7 +6834,8 @@
       "summary_he": "מכתב אל חברי מועדון האסטרונומים פחריטו (Pajarito Astronomers) בנוגע למפגש קרב שבמרכזו הרצאה של הפיזיקאי ד\"ר ג'ון וורן, המזוהה עם המעבדה הלאומית לוס אלמוס, שכותרתה \"מדוע על מדען לחשוש מ-UFO?\". האירוע הנזכר לא נערך באופן רשמי על ידי לוס אלמוס, ולמעבדה אין כל תיעוד של הנושאים שנדונו במפגש. בוצעו השמטות כדי להגן על זהות עדי ראייה, מיקומי מתקנים ממשלתיים, או מידע פוטנציאלית רגיש על אתרים צבאיים שאינם קשורים ל-UAP. לא בוצעו השמטות בקבצים שפורסמו תחת הנחיית הנשיא טראמפ בנוגע למידע על טבעם או קיומם של מפגשים שדווחו כ-UAP או תופעות נלוות.",
       "size_bytes": null,
       "url_status": null,
-      "_record_id": "record-041"
+      "_record_id": "record-041",
+      "narrative_he": "הזמנה למפגש אסטרונומים בניו מקסיקו, 1986, ובמרכזה הרצאה של פיזיקאי מלוס אלמוס: \"מדוע על מדען לחשוש מ-UFO?\"."
     },
     {
       "id": "dow-uap-pr052",
@@ -6855,7 +6864,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007708/DOD_111719718.0000001/122x92_q95.jpg",
       "duration_s": 495,
       "aspect_ratio": "16:9",
-      "dvids_date": "2024-06-01T00:00:00-04:00"
+      "dvids_date": "2024-06-01T00:00:00-04:00",
+      "narrative_he": "ארבעה אזורי ניגודיות במבנה, בקטע שעבר עריכה דיגיטלית לפני שהועלה לרשת מסווגת."
     },
     {
       "id": "dow-uap-pr053",
@@ -6884,7 +6894,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007709/DOD_111719723.0000001/122x92_q95.jpg",
       "duration_s": 21,
       "aspect_ratio": "16:9",
-      "dvids_date": "2022-10-15T00:00:00-04:00"
+      "dvids_date": "2022-10-15T00:00:00-04:00",
+      "narrative_he": "עצם בצורת סיגר — או שמא כדור מהיר — חולף בעדשה, אוקטובר 2022."
     },
     {
       "id": "dow-uap-pr054",
@@ -6913,7 +6924,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007711/DOD_111719726.0000001/122x92_q95.jpg",
       "duration_s": 237,
       "aspect_ratio": "16:9",
-      "dvids_date": "2022-08-01T00:00:00-04:00"
+      "dvids_date": "2022-08-01T00:00:00-04:00",
+      "narrative_he": "עצם כדורי בתנועה לא סדירה מעל אזור הפיקוד האירופי, אוגוסט 2022 — שעריכה דיגיטלית משבשת את הערכת ביצועיו."
     },
     {
       "id": "dow-uap-pr055",
@@ -6942,7 +6954,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007713/DOD_111719732.0000001/122x92_q95.jpg",
       "duration_s": 47,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-11-23T00:00:00-05:00"
+      "dvids_date": "2020-11-23T00:00:00-05:00",
+      "narrative_he": "כדור נכנס ויוצא מן העננים מעל אפגניסטן, נובמבר 2020, מוצג גם בהילוך אטי ומחודד."
     },
     {
       "id": "dow-uap-pr056",
@@ -6971,7 +6984,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007718/DOD_111719741.0000001/122x92_q95.jpg",
       "duration_s": 212,
       "aspect_ratio": "16:9",
-      "dvids_date": "2024-06-01T00:00:00-04:00"
+      "dvids_date": "2024-06-01T00:00:00-04:00",
+      "narrative_he": "עצם כדורי הולם מעל מים, נשמר במרכז העדשה לאורך הקטע כולו."
     },
     {
       "id": "dow-uap-pr057a",
@@ -7000,7 +7014,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007720/DOD_111719752.0000001/122x92_q95.jpg",
       "duration_s": 70,
       "aspect_ratio": "16:9",
-      "dvids_date": "2023-01-01T00:00:00-05:00"
+      "dvids_date": "2023-01-01T00:00:00-05:00",
+      "narrative_he": "כדור בעננים מעל הים הצהוב, ינואר 2023 — אחד משני עותקים שהועלו תחת כותרות שונות."
     },
     {
       "id": "dow-uap-pr057b",
@@ -7029,7 +7044,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007720/DOD_111719752.0000001/122x92_q95.jpg",
       "duration_s": 70,
       "aspect_ratio": "16:9",
-      "dvids_date": "2023-01-01T00:00:00-05:00"
+      "dvids_date": "2023-01-01T00:00:00-05:00",
+      "narrative_he": "אותו מפגש מעל הים הצהוב, ינואר 2023, שהועלה בשם אחר על ידי מעלה שני."
     },
     {
       "id": "dow-uap-pr058",
@@ -7058,7 +7074,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007723/DOD_111719800.0000001/122x92_q95.jpg",
       "duration_s": 648,
       "aspect_ratio": "16:9",
-      "dvids_date": "2024-06-24T00:00:00-04:00"
+      "dvids_date": "2024-06-24T00:00:00-04:00",
+      "narrative_he": "כמעט אחת-עשרה דקות של מעקב אחר עצם, מאזור פיקוד אינדו-פסיפיק, בקטע שיוצב וחודד."
     },
     {
       "id": "dow-uap-pr059",
@@ -7087,7 +7104,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007727/DOD_111719809.0000001/122x92_q95.jpg",
       "duration_s": 291,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-06-01T00:00:00-04:00"
+      "dvids_date": "2020-06-01T00:00:00-04:00",
+      "narrative_he": "עצם הנעקב בכוורת כיוון לאורך כמעט חמש דקות, פיקוד מרכז, 2020."
     },
     {
       "id": "dow-uap-pr060",
@@ -7116,7 +7134,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007734/DOD_111719823.0000001/122x92_q95.jpg",
       "duration_s": 290,
       "aspect_ratio": "16:9",
-      "dvids_date": "2021-04-12T00:00:00-04:00"
+      "dvids_date": "2021-04-12T00:00:00-04:00",
+      "narrative_he": "עצם כדורי הנצפה בווידאו במהירות מלאה ובאינפרא-אדום, אפריל 2021 (עצם 2)."
     },
     {
       "id": "dow-uap-pr061",
@@ -7145,7 +7164,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007735/DOD_111719828.0000001/122x92_q95.jpg",
       "duration_s": 286,
       "aspect_ratio": "16:9",
-      "dvids_date": "2021-04-12T00:00:00-04:00"
+      "dvids_date": "2021-04-12T00:00:00-04:00",
+      "narrative_he": "המשך תיעוד העצם הכדורי מ-12 באפריל 2021 (סרטון 0)."
     },
     {
       "id": "dow-uap-pr062",
@@ -7174,7 +7194,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007739/DOD_111719847.0000001/122x92_q95.jpg",
       "duration_s": 289,
       "aspect_ratio": "16:9",
-      "dvids_date": "2021-04-12T00:00:00-04:00"
+      "dvids_date": "2021-04-12T00:00:00-04:00",
+      "narrative_he": "מעקב רצוף אחר העצם הכדורי, 12 באפריל 2021 (סרטון 1)."
     },
     {
       "id": "dow-uap-pr063",
@@ -7203,7 +7224,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007740/DOD_111719850.0000001/122x92_q95.jpg",
       "duration_s": 289,
       "aspect_ratio": "16:9",
-      "dvids_date": "2021-04-12T00:00:00-04:00"
+      "dvids_date": "2021-04-12T00:00:00-04:00",
+      "narrative_he": "קטע נוסף של אותו עצם כדורי, 12 באפריל 2021 (סרטון 2)."
     },
     {
       "id": "dow-uap-pr064",
@@ -7232,7 +7254,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007741/DOD_111719852.0000001/122x92_q95.jpg",
       "duration_s": 17,
       "aspect_ratio": "16:9",
-      "dvids_date": "2017-07-01T00:00:00-04:00"
+      "dvids_date": "2017-07-01T00:00:00-04:00",
+      "narrative_he": "שתי שניות בלבד: עצם חולף בעדשה מעל קאבול, יולי 2017."
     },
     {
       "id": "dow-uap-pr065",
@@ -7261,7 +7284,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007777/DOD_111720692.0000001/122x92_q95.jpg",
       "duration_s": 39,
       "aspect_ratio": "16:9",
-      "dvids_date": "2024-04-24T00:00:00-04:00"
+      "dvids_date": "2024-04-24T00:00:00-04:00",
+      "narrative_he": "מטוס של משמר החופים מתעד עצם בחתימת \"טיק-טק\" אינפרא-אדומה מעל דרום-מזרח ארה\"ב, אפריל 2024."
     },
     {
       "id": "dow-uap-pr066",
@@ -7290,7 +7314,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007778/DOD_111720693.0000001/122x92_q95.jpg",
       "duration_s": 48,
       "aspect_ratio": "16:9",
-      "dvids_date": "2024-04-24T00:00:00-04:00"
+      "dvids_date": "2024-04-24T00:00:00-04:00",
+      "narrative_he": "תיעוד נוסף של עצמי \"טיק-טק\" מאותה משימת משמר חופים, אפריל 2024 — שהחיישן מתקשה לעקוב אחריהם."
     },
     {
       "id": "dow-uap-pr067",
@@ -7319,7 +7344,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007779/DOD_111720696.0000001/122x92_q95.jpg",
       "duration_s": 290,
       "aspect_ratio": "16:9",
-      "dvids_date": "2022-03-25T00:00:00-04:00"
+      "dvids_date": "2022-03-25T00:00:00-04:00",
+      "narrative_he": "מספר כדורים נכנסים ויוצאים מן המים סמוך לצוללת, מרץ 2022."
     },
     {
       "id": "dow-uap-pr068",
@@ -7348,7 +7374,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007780/DOD_111720698.0000001/122x92_q95.jpg",
       "duration_s": 63,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-01-23T00:00:00-05:00"
+      "dvids_date": "2020-01-23T00:00:00-05:00",
+      "narrative_he": "מטוס דור חמישי מתעד תופעה בלתי מזוהה — ולקראת הסוף נראה עצם שני, ינואר 2023."
     },
     {
       "id": "dow-uap-pr069",
@@ -7377,7 +7404,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007781/DOD_111720700.0000001/122x92_q95.jpg",
       "duration_s": 29,
       "aspect_ratio": "16:9",
-      "dvids_date": "2022-01-01T00:00:00-05:00"
+      "dvids_date": "2022-01-01T00:00:00-05:00",
+      "narrative_he": "תיעוד FLIR ממטוס F/A-18, ובו כוורת כיוון ננעלת על עצם ואז מאבדת אותו."
     },
     {
       "id": "dow-uap-pr070",
@@ -7406,7 +7434,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007783/DOD_111720720.0000001/122x92_q95.jpg",
       "duration_s": 30,
       "aspect_ratio": "16:9",
-      "dvids_date": "2023-02-13T00:00:00-05:00"
+      "dvids_date": "2023-02-13T00:00:00-05:00",
+      "narrative_he": "צוות אוויר מבסיס אגלין צופה בתופעה בלתי מזוהה, פברואר 2023."
     },
     {
       "id": "dow-uap-pr071",
@@ -7435,7 +7464,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007784/DOD_111720731.0000001/122x92_q95.jpg",
       "duration_s": 46,
       "aspect_ratio": "16:9",
-      "dvids_date": "2023-02-12T00:00:00-05:00"
+      "dvids_date": "2023-02-12T00:00:00-05:00",
+      "narrative_he": "מטוס F-16C מפיל עצם בלתי מזוהה מעל אגם היורון, פברואר 2023 — ובשנייה ה-20 נראית התפצלות עתירת-אנרגיה."
     },
     {
       "id": "dow-uap-pr072",
@@ -7464,7 +7494,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007788/DOD_111720752.0000004/122x92_q95.jpg",
       "duration_s": 17,
       "aspect_ratio": "16:9",
-      "dvids_date": "2022-03-01T00:00:00-05:00"
+      "dvids_date": "2022-03-01T00:00:00-05:00",
+      "narrative_he": "תופעה זוהרת בעלת שובלים, מצולמת בטלפון נייד סמוך לנמל התעופה קארגנדה שבקזחסטן, מרץ 2022."
     },
     {
       "id": "dow-uap-pr073",
@@ -7493,7 +7524,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007790/DOD_111720765.0000001/122x92_q95.jpg",
       "duration_s": 88,
       "aspect_ratio": "4:3",
-      "dvids_date": "2022-11-01T00:00:00-04:00"
+      "dvids_date": "2022-11-01T00:00:00-04:00",
+      "narrative_he": "מספר תופעות בלתי מזוהות בקרבת קולומבוס שבאוהיו, נובמבר 2022."
     },
     {
       "id": "dow-uap-pr074",
@@ -7522,7 +7554,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007791/DOD_111720775.0000001/122x92_q95.jpg",
       "duration_s": 285,
       "aspect_ratio": "16:9",
-      "dvids_date": "2022-06-01T00:00:00-04:00"
+      "dvids_date": "2022-06-01T00:00:00-04:00",
+      "narrative_he": "כמעט חמש דקות עמוסות — עצמים בודדים, רביעיות וקבוצות חולפים בעדשה מעל פיקוד מרכז, יוני 2022."
     },
     {
       "id": "dow-uap-pr075",
@@ -7551,7 +7584,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007795/DOD_111720809.0000001/122x92_q95.jpg",
       "duration_s": 23,
       "aspect_ratio": "16:9",
-      "dvids_date": "2021-06-09T00:00:00-04:00"
+      "dvids_date": "2021-06-09T00:00:00-04:00",
+      "narrative_he": "עשרים ושלוש שניות מעל ים סין המזרחי, יוני 2021, עד שהחיישן מאבד את העצם."
     },
     {
       "id": "dow-uap-pr076",
@@ -7580,7 +7614,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007804/DOD_111720857.0000001/122x92_q95.jpg",
       "duration_s": 297,
       "aspect_ratio": "16:9",
-      "dvids_date": "2021-01-03T00:00:00-05:00"
+      "dvids_date": "2021-01-03T00:00:00-05:00",
+      "narrative_he": "כמעט חמש דקות של שקט — ואז, בדקה השנייה, עצם מופיע ונעקב, ינואר 2021."
     },
     {
       "id": "dow-uap-pr077",
@@ -7609,7 +7644,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007809/DOD_111720884.0000001/122x92_q95.jpg",
       "duration_s": 298,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-11-02T00:00:00-05:00"
+      "dvids_date": "2020-11-02T00:00:00-05:00",
+      "narrative_he": "מעקב אחר עצם נמוך ההולך ומתבהר, נובמבר 2020 (1 מתוך 2)."
     },
     {
       "id": "dow-uap-pr078",
@@ -7638,7 +7674,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007812/DOD_111720890.0000001/122x92_q95.jpg",
       "duration_s": 298,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-11-02T00:00:00-05:00"
+      "dvids_date": "2020-11-02T00:00:00-05:00",
+      "narrative_he": "מפגש דומה מאוד מאותו יום, נובמבר 2020 — נבדל מקודמו (2 מתוך 2)."
     },
     {
       "id": "dow-uap-pr079",
@@ -7667,7 +7704,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007816/DOD_111720899.0000001/122x92_q95.jpg",
       "duration_s": 240,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-10-29T00:00:00-04:00"
+      "dvids_date": "2020-10-29T00:00:00-04:00",
+      "narrative_he": "שלושה עצמים נעים במהירות, אוקטובר 2020, נעקבים זה אחר זה."
     },
     {
       "id": "dow-uap-pr080",
@@ -7696,7 +7734,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007803/DOD_111720856.0000006/122x92_q95.jpg",
       "duration_s": 294,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-10-20T00:00:00-04:00"
+      "dvids_date": "2020-10-20T00:00:00-04:00",
+      "narrative_he": "סדרת עצמים החוצים את העדשה שוב ושוב, אוקטובר 2020."
     },
     {
       "id": "dow-uap-pr081",
@@ -7725,7 +7764,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007805/DOD_111720858.0000001/122x92_q95.jpg",
       "duration_s": 299,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-10-18T00:00:00-04:00"
+      "dvids_date": "2020-10-18T00:00:00-04:00",
+      "narrative_he": "עצם בודד חוצה את העדשה באלכסון מעל אזור פיקוד אפריקה, אוקטובר 2020."
     },
     {
       "id": "dow-uap-pr082",
@@ -7754,7 +7794,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007807/DOD_111720861.0000001/122x92_q95.jpg",
       "duration_s": 297,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-10-16T00:00:00-04:00"
+      "dvids_date": "2020-10-16T00:00:00-04:00",
+      "narrative_he": "הבזק קצר: עצם חוצה את הפריים מעל אזור פיקוד אפריקה, אוקטובר 2020."
     },
     {
       "id": "dow-uap-pr083",
@@ -7783,7 +7824,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007808/DOD_111720883.0000001/122x92_q95.jpg",
       "duration_s": 274,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-10-07T00:00:00-04:00"
+      "dvids_date": "2020-10-07T00:00:00-04:00",
+      "narrative_he": "מעקב ממושך אחר עצם דועך והולך, אוקטובר 2020."
     },
     {
       "id": "dow-uap-pr084",
@@ -7812,7 +7854,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007810/DOD_111720886.0000001/122x92_q95.jpg",
       "duration_s": 253,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-09-17T00:00:00-04:00"
+      "dvids_date": "2020-09-17T00:00:00-04:00",
+      "narrative_he": "שתי שניות: עצם חוצה אלכסונית את המסך, ספטמבר 2020."
     },
     {
       "id": "dow-uap-pr085",
@@ -7841,7 +7884,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007796/DOD_111720822.0000001/122x92_q95.jpg",
       "duration_s": 284,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-09-16T00:00:00-04:00"
+      "dvids_date": "2020-09-16T00:00:00-04:00",
+      "narrative_he": "עצם עולה מתחתית הפריים ונעקב כדקה, ספטמבר 2020."
     },
     {
       "id": "dow-uap-pr086",
@@ -7870,7 +7914,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007797/DOD_111720827.0000001/122x92_q95.jpg",
       "duration_s": 34,
       "aspect_ratio": "16:9",
-      "dvids_date": "2019-12-01T00:00:00-05:00"
+      "dvids_date": "2019-12-01T00:00:00-05:00",
+      "narrative_he": "תיעוד מהחוף המזרחי, דצמבר 2019, ובו מעבר בין מצבי ניגודיות סביב העצם."
     },
     {
       "id": "dow-uap-pr087",
@@ -7899,7 +7944,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007799/DOD_111720830.0000001/122x92_q95.jpg",
       "duration_s": 294,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-09-05T00:00:00-04:00"
+      "dvids_date": "2020-09-05T00:00:00-04:00",
+      "narrative_he": "שלושה מעברים אנכיים של עצם לאורך הקטע, ספטמבר 2020."
     },
     {
       "id": "dow-uap-pr088",
@@ -7928,7 +7974,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007800/DOD_111720843.0000001/122x92_q95.jpg",
       "duration_s": 298,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-08-31T00:00:00-04:00"
+      "dvids_date": "2020-08-31T00:00:00-04:00",
+      "narrative_he": "ריבוי עצמים נכנסים ויוצאים מן העדשה, אוגוסט 2020."
     },
     {
       "id": "dow-uap-pr089",
@@ -7948,7 +7995,17 @@
       "size_bytes": null,
       "url_status": null,
       "_record_id": "record-149",
-      "_url_is_record_page": true
+      "_url_is_record_page": true,
+      "narrative_he": "המשך אותו מפגש עתיר-עצמים, אוגוסט 2020 (חלק 2).",
+      "dvids_id": "1007712",
+      "dvids_url": "https://www.dvidshub.net/video/1007712/dow-uap-pr089-31-aug-callsign-callsign-observes-uap-part2",
+      "media_url": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719730/DOD_111719730-1280x720-3000k.mp4",
+      "media_url_hq": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719730/DOD_111719730-1920x1080-6000k.mp4",
+      "media_url_lq": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719730/DOD_111719730-512x288-1000k.mp4",
+      "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007712/DOD_111719730.0000001/122x92_q95.jpg",
+      "duration_s": 298,
+      "aspect_ratio": "16:9",
+      "dvids_date": "2020-08-31T00:00:00-04:00"
     },
     {
       "id": "dow-uap-pr090",
@@ -7977,7 +8034,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007719/DOD_111719746.0000001/122x92_q95.jpg",
       "duration_s": 298,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-08-24T00:00:00-04:00"
+      "dvids_date": "2020-08-24T00:00:00-04:00",
+      "narrative_he": "עצם נעקב ומוגדל, אוגוסט 2020, עד שהוא יוצא ונכנס שוב ושוב."
     },
     {
       "id": "dow-uap-pr091",
@@ -7997,7 +8055,17 @@
       "size_bytes": null,
       "url_status": null,
       "_record_id": "record-151",
-      "_url_is_record_page": true
+      "_url_is_record_page": true,
+      "narrative_he": "במפרץ הפרסי, אוגוסט 2020: עצם חוצה מלמעלה למטה עד שהוא נבלע בגרגירי הווידאו.",
+      "dvids_id": "1007716",
+      "dvids_url": "https://www.dvidshub.net/video/1007716/dow-uap-pr091-21-aug-callsign-observes-uap-persian-gulf",
+      "media_url": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719739/DOD_111719739-1280x720-3000k.mp4",
+      "media_url_hq": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719739/DOD_111719739-1920x1080-6000k.mp4",
+      "media_url_lq": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719739/DOD_111719739-512x288-1000k.mp4",
+      "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007716/DOD_111719739.0000001/122x92_q95.jpg",
+      "duration_s": 288,
+      "aspect_ratio": "16:9",
+      "dvids_date": "2020-08-21T00:00:00-04:00"
     },
     {
       "id": "dow-uap-pr092",
@@ -8017,7 +8085,17 @@
       "size_bytes": null,
       "url_status": null,
       "_record_id": "record-152",
-      "_url_is_record_page": true
+      "_url_is_record_page": true,
+      "narrative_he": "מעקב מתמשך עם זום הולך וגדל אחר עצם בראש המסך, אוגוסט 2020.",
+      "dvids_id": "1007715",
+      "dvids_url": "https://www.dvidshub.net/video/1007715/dow-uap-pr092-08-aug-2020-callsign-callsign-uap-observation",
+      "media_url": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719736/DOD_111719736-1280x720-3000k.mp4",
+      "media_url_hq": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719736/DOD_111719736-1920x1080-6000k.mp4",
+      "media_url_lq": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719736/DOD_111719736-512x288-1000k.mp4",
+      "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007715/DOD_111719736.0000001/122x92_q95.jpg",
+      "duration_s": 292,
+      "aspect_ratio": "16:9",
+      "dvids_date": "2020-08-08T00:00:00-04:00"
     },
     {
       "id": "dow-uap-pr093",
@@ -8046,7 +8124,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007721/DOD_111719795.0000001/122x92_q95.jpg",
       "duration_s": 30,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-05-05T00:00:00-04:00"
+      "dvids_date": "2020-05-05T00:00:00-04:00",
+      "narrative_he": "מפרץ ערב, מאי 2020 — שלושים שניות ובהן מספר עצמים (אחד משני קטעים נבדלים)."
     },
     {
       "id": "dow-uap-pr094",
@@ -8075,7 +8154,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007722/DOD_111719799.0000001/122x92_q95.jpg",
       "duration_s": 299,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-02-13T00:00:00-05:00"
+      "dvids_date": "2020-02-13T00:00:00-05:00",
+      "narrative_he": "מעבר בין חיישן אלקטרו-אופטי לאינפרא-אדום סביב עצם בודד, פברואר 2020."
     },
     {
       "id": "dow-uap-pr095",
@@ -8104,7 +8184,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007725/DOD_111719804.0000001/122x92_q95.jpg",
       "duration_s": 288,
       "aspect_ratio": "16:9",
-      "dvids_date": "2020-05-05T00:00:00-04:00"
+      "dvids_date": "2020-05-05T00:00:00-04:00",
+      "narrative_he": "מפרץ ערב, מאי 2020 — בהגדלה גבוהה העצם הבודד מתפצל למספר נקודות (קטע נבדל מ-PR093)."
     },
     {
       "id": "dow-uap-pr096",
@@ -8133,7 +8214,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007726/DOD_111719807.0000001/122x92_q95.jpg",
       "duration_s": 79,
       "aspect_ratio": "16:9",
-      "dvids_date": "2018-07-03T00:00:00-04:00"
+      "dvids_date": "2018-07-03T00:00:00-04:00",
+      "narrative_he": "שני עצמים הופכים לשלושה בקו ישר ומתרחקים זה מזה, יולי 2018."
     },
     {
       "id": "dow-uap-pr097",
@@ -8162,7 +8244,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007728/DOD_111719813.0000001/122x92_q95.jpg",
       "duration_s": 299,
       "aspect_ratio": "16:9",
-      "dvids_date": "2019-09-25T00:00:00-04:00"
+      "dvids_date": "2019-09-25T00:00:00-04:00",
+      "narrative_he": "ברזולוציה גבוהה: אשכול עצמים במרכז העדשה בעוד המסך מהבהב בשחור-לבן, ספטמבר 2019."
     },
     {
       "id": "dow-uap-pr098",
@@ -8191,7 +8274,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007737/DOD_111719833.0000001/122x92_q95.jpg",
       "duration_s": 1056,
       "aspect_ratio": "16:9",
-      "dvids_date": "2019-01-01T00:00:00-05:00"
+      "dvids_date": "2019-01-01T00:00:00-05:00",
+      "narrative_he": "מעל שבע-עשרה דקות של מעקב אחר עצם הנבלע ומתגלה שוב בגרגירי הווידאו מעל המפרץ הפרסי."
     },
     {
       "id": "dow-uap-pr099",
@@ -8220,7 +8304,8 @@
       "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007738/DOD_111719835.0000001/122x92_q95.jpg",
       "duration_s": 291,
       "aspect_ratio": "16:9",
-      "dvids_date": "2019-09-23T00:00:00-04:00"
+      "dvids_date": "2019-09-23T00:00:00-04:00",
+      "narrative_he": "ברזולוציה גבוהה: עצמים מרובים נכנסים ויוצאים מן העדשה בין הבזקי מסך שחורים, ספטמבר 2019."
     },
     {
       "id": "nasa-uap-d009",
@@ -8240,7 +8325,8 @@
       "size_bytes": null,
       "url_status": null,
       "_record_id": "record-204",
-      "_url_is_record_page": true
+      "_url_is_record_page": true,
+      "narrative_he": "בדרך לירח, צוות Apollo 17 מתאר \"חלקיקים\" בהירים ומשוננים הנסחפים סביב החללית, דצמבר 1972."
     },
     {
       "id": "nasa-uap-d010",
@@ -8260,7 +8346,8 @@
       "size_bytes": null,
       "url_status": null,
       "_record_id": "record-205",
-      "_url_is_record_page": true
+      "_url_is_record_page": true,
+      "narrative_he": "הטייס גורדון קופר מדווח על \"גחליליותיו של ג'ון\" במסלול סביב כדור הארץ, מאי 1963 — נצנוצים שהתבררו כעיבוי קפוא."
     },
     {
       "id": "nasa-uap-d011",
@@ -8280,7 +8367,8 @@
       "size_bytes": null,
       "url_status": null,
       "_record_id": "record-206",
-      "_url_is_record_page": true
+      "_url_is_record_page": true,
+      "narrative_he": "קופר מתאר חלקיקים לבנים זעירים הנסחפים מן החללית עם הזריחה, מאי 1963."
     },
     {
       "id": "nasa-uap-d012",
@@ -8300,7 +8388,8 @@
       "size_bytes": null,
       "url_status": null,
       "_record_id": "record-207",
-      "_url_is_record_page": true
+      "_url_is_record_page": true,
+      "narrative_he": "וולי שירה מתאר \"עצמים לבנים קטנים\" ו\"נסורת מחרטה\" הנסחפים מן הקפסולה, אוקטובר 1962."
     },
     {
       "id": "nasa-uap-d013",
@@ -8320,7 +8409,8 @@
       "size_bytes": null,
       "url_status": null,
       "_record_id": "record-208",
-      "_url_is_record_page": true
+      "_url_is_record_page": true,
+      "narrative_he": "סקוט קרפנטר מתאר חלקיקים לבנים הנעים באקראי ו\"נראים בדיוק כמו פתיתי שלג\", מאי 1962."
     },
     {
       "id": "nasa-uap-d014",
@@ -8340,7 +8430,8 @@
       "size_bytes": null,
       "url_status": null,
       "_record_id": "record-209",
-      "_url_is_record_page": true
+      "_url_is_record_page": true,
+      "narrative_he": "בחילוץ Liberty Bell 7 דן הצוות במנת צבע שבמים שלא הופעלה, יולי 1961."
     }
   ],
   "releases": [

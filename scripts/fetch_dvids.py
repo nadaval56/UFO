@@ -84,12 +84,13 @@ def search_ids(api_key: str, query: str, unit_id: str | None) -> list[str]:
     page = 1
     while True:
         params = {
-            "q": query,
             "type": "video",
             "max_results": 50,
             "page": page,
             "api_key": api_key,
         }
+        if query:
+            params["q"] = query  # omit for a broad unit-only search
         if unit_id:
             params["unit_id"] = unit_id
         data = get_json(SEARCH_URL, params)
