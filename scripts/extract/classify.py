@@ -61,13 +61,26 @@ def page_metrics(img_pil) -> dict:
     dark = arr < 90
     dark_ratio = float(dark.sum()) / (h * w)
 
-    # row-wise dark density — for line-spacing estimation
-    row_dark = dark.sum(axis=1)
-    # count peaks (rows with >= 0.5% of width as dark) to estimate text lines
-    threshold = w * 0.005
+    # ink_ratio: looser threshold to catch faint typewriter ribbon and
+    # light-colored ink (e.g., blue ballpoint on tinted paper) that misses
+    # the dark<90 cutoff. Used by blank/handwritten gates so a low-contrast
+    # handwritten letter isn't tagged blank just because the ink is pale.
+    ink = arr < 180
+    ink_ratio = float(ink.sum()) / (h * w)
+
+    # row-wise ink density — for line-spacing estimation. Use the looser
+    # `ink` mask so faint text rows still register; pair with a dynamic
+    # threshold (median + delta) so pages with continuous noise/stamps
+    # don't collapse to a single peak. The original `dark<90 / w*0.005`
+    # rule produced line_peaks=1 for every typewritten page on yellowed
+    # or stamp-covered paper because every row exceeded the threshold —
+    # the rising-edge counter then fired exactly once.
+    row_ink = ink.sum(axis=1)
+    baseline = float(np.median(row_ink))
+    threshold = max(w * 0.005, baseline + max(w * 0.01, baseline * 0.5))
     line_peaks = 0
     in_peak = False
-    for v in row_dark:
+    for v in row_ink:
         if v > threshold and not in_peak:
             line_peaks += 1
             in_peak = True
@@ -84,11 +97,23 @@ def page_metrics(img_pil) -> dict:
     midtone = (arr > 60) & (arr < 200)
     midtone_ratio = float(midtone.sum()) / (h * w)
 
+    # photo region: count contiguous mid-grey areas. A single sparse image
+    # in a mostly-white page (e.g. PANTEX radar/thermal scans) has low
+    # midtone_ratio overall but still has a notable photo region. Estimate
+    # by counting "blob" rows — rows where ink+midtone density is between
+    # 0.05 and 0.95 (rules out pure-white rows and pure-black stamps).
+    blob_mask = (arr > 30) & (arr < 220)
+    row_blob = blob_mask.sum(axis=1)
+    blob_rows = int(((row_blob > w * 0.03) & (row_blob < w * 0.95)).sum())
+    photo_region_ratio = blob_rows / float(h) if h else 0.0
+
     return {
         "dark_ratio": dark_ratio,
+        "ink_ratio": ink_ratio,
         "line_peaks": line_peaks,
         "edge_density": edge_density,
         "midtone_ratio": midtone_ratio,
+        "photo_region_ratio": photo_region_ratio,
         "width": w,
         "height": h,
     }
@@ -101,30 +126,42 @@ def page_metrics(img_pil) -> dict:
 def classify(metrics: dict, page_no: int, total_pages: int) -> tuple[str, float]:
     """Return (kind, interest_score). Refine thresholds against real samples."""
     d = metrics["dark_ratio"]
+    ink = metrics["ink_ratio"]
     lp = metrics["line_peaks"]
     ed = metrics["edge_density"]
     mt = metrics["midtone_ratio"]
+    pr = metrics["photo_region_ratio"]
 
-    # Very low ink → blank or divider
-    if d < 0.005:
+    # Very low ink → blank or divider. Use ink_ratio (loose threshold) so
+    # pale-blue handwritten pages aren't tagged blank.
+    if ink < 0.005:
         return ("blank", 0)
-    if d < 0.02 and lp < 5:
+    if ink < 0.02 and lp < 5:
         return ("divider", 5)
 
-    # Cover heuristic — first 1-2 pages with few lines and moderate ink.
-    if page_no <= 2 and lp < 15 and d < 0.15:
+    # Cover heuristic — first 1-2 pages with few lines and moderate ink,
+    # AND no notable image region (so we don't tag a sparse-image first
+    # page like a PANTEX radar shot as cover).
+    if page_no <= 2 and lp < 15 and d < 0.15 and mt < 0.10 and pr < 0.15:
         return ("cover", 10)
 
     # Typewritten gate FIRST. If a page has many regular text lines, it's a
     # document scan no matter how grey/mid-toned the paper is. This prevents
     # the photo branch from grabbing scanned typed pages on yellowed paper.
-    if lp >= 20 and 0.03 < d < 0.5:
+    if lp >= 20 and 0.03 < ink < 0.7:
         score = 60 + min(20, max(0, lp - 20))
         return ("typewritten", score)
 
-    # Photo: lots of midtone, very low line-peak count, low edge sharpness.
-    # All three required — midtone alone catches scanned text on aged paper.
-    if mt > 0.35 and lp < 6 and ed < 0.08:
+    # Photo, three cases:
+    #   A. Full-page mid-grey photograph (lots of midtone, no text rows).
+    #   B. Photograph mounted on a page — large photo region + dark mass
+    #      (the photo itself) + few text rows. Catches classic UAP photos
+    #      with a typed caption below.
+    #   C. Sparse image on white background — small graphic in lots of
+    #      whitespace (e.g. radar/thermal scans). Low ink, low edges.
+    if (mt > 0.35 and lp < 6 and ed < 0.08) or \
+       (pr > 0.30 and lp < 8 and (mt > 0.30 or ink > 0.20)) or \
+       (pr > 0.15 and ink < 0.05 and ed < 0.05 and lp < 16):
         return ("photo", 90)
 
     # Illustration: hand-drawn sketches / witness drawings. Moderate-to-high
@@ -137,12 +174,15 @@ def classify(metrics: dict, page_no: int, total_pages: int) -> tuple[str, float]
     if ed > 0.08 and lp > 15:
         return ("clipping", 80)
 
-    # Looser typewritten fallback (faint old-typewriter ribbons).
-    if lp >= 12 and 0.03 < d < 0.4:
+    # Looser typewritten fallback — covers faint old-typewriter ribbons
+    # AND short typed letters with lots of whitespace (ink can be as low
+    # as 1%). Lower bound just rules out near-blank pages.
+    if lp >= 12 and ink > 0.003 and ink < 0.6:
         return ("typewritten", 55)
 
-    # Handwritten — moderate ink, few clean line peaks. Crude.
-    if d > 0.05 and lp < 12:
+    # Handwritten — moderate ink (or even light ink), few clean line peaks.
+    # Use ink_ratio so light-colored ballpoint catches.
+    if ink > 0.02 and lp < 12:
         return ("handwritten", 30)
 
     return ("mixed", 40)
@@ -175,9 +215,11 @@ def process_pdf(pdf_path: Path, out_path: Path, dpi: int = 100) -> None:
             "kind": kind,
             "score": score,
             "dark_ratio": round(m["dark_ratio"], 4),
+            "ink_ratio": round(m["ink_ratio"], 4),
             "line_peaks": m["line_peaks"],
             "edge_density": round(m["edge_density"], 4),
             "midtone_ratio": round(m["midtone_ratio"], 4),
+            "photo_region_ratio": round(m["photo_region_ratio"], 4),
         })
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps({
