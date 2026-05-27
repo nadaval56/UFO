@@ -22,6 +22,12 @@ MANIFEST = ROOT / "data" / "manifest.json"
 DVIDS = ROOT / "data" / "dvids" / "uap_videos.json"
 
 
+def _norm_pr(s: str) -> str:
+    """Make PR codes zero-pad-insensitive so DOW-UAP-PR050 == DOW-UAP-PR50.
+    war.gov re-padded the codes between Release 01 and 02."""
+    return re.sub(r"PR0*(\d+)", r"PR\1", s)
+
+
 def title_key(title: str) -> str:
     """Extract a canonical prefix usable for matching anchors.
 
@@ -31,7 +37,7 @@ def title_key(title: str) -> str:
     if title.startswith("NASA Audio"):
         return "NASA-UAP-D3A"  # Gemini 7 audio, 12/5/1965 — confirmed via analyticsParams
     m = re.match(r"^(DOW-UAP-PR\d+)", title)
-    return m.group(1) if m else title
+    return _norm_pr(m.group(1)) if m else title
 
 
 def anchor_key(anchor: str) -> str:
@@ -39,7 +45,7 @@ def anchor_key(anchor: str) -> str:
     if anchor.startswith("NASA-UAP-D3A"):
         return "NASA-UAP-D3A"
     m = re.match(r"^(DOW-UAP-PR\d+)", anchor)
-    return m.group(1) if m else anchor
+    return _norm_pr(m.group(1)) if m else anchor
 
 
 def pick_mp4(files: list, target_height: int) -> dict | None:
@@ -65,6 +71,7 @@ def main():
 
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     applied, missed = 0, []
+    total_vid = sum(1 for f in manifest["files"] if f.get("type") == "vid")
 
     for f in manifest["files"]:
         if f.get("type") != "vid":
@@ -105,7 +112,7 @@ def main():
         applied += 1
 
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"applied: {applied}/28")
+    print(f"applied: {applied}/{total_vid}")
     if missed:
         print(f"missed: {missed}")
 

@@ -1,8 +1,15 @@
 /* ============================================================================
- * PURSUE Hebrew Mirror — Browser-side manifest scraper v2
+ * PURSUE Hebrew Mirror — Browser-side manifest scraper v3 (multi-release)
  *
  * Paste into the DevTools Console on https://www.war.gov/UFO/.
- * Downloads `manifest.json` describing every file in the release.
+ * Downloads `manifest.json` describing every file across ALL releases.
+ *
+ * ⚠ BEFORE RUNNING: set the three table filters to their defaults —
+ *   "ALL AGENCIES", "ALL RELEASES", "ALL TYPES" — so the unified table
+ *   contains every record (e.g. all 222 across Release 01 + Release 02).
+ *   The scraper walks the visible table's pagination; whatever the filters
+ *   hide, it won't see. Each row is tagged with its own Release Date, so a
+ *   single walk captures every release.
  *
  * Save the result to data/manifest.json in the repo, commit, push.
  *
@@ -208,7 +215,7 @@
   }
 
   let pageIndex = 1;
-  const SAFETY = 30;
+  const SAFETY = 60; // unified multi-release table is larger than a single release
   while (pageIndex <= SAFETY) {
     const pageRows = rows();
     log(`page ${pageIndex}: ${pageRows.length} rows`);
@@ -270,13 +277,25 @@
 
   const files = records.map(entryFrom);
 
+  // Summarize the releases present in the scraped set (data-driven, so the
+  // manifest is correct whether war.gov is showing one release or several).
+  const releaseCounts = {};
+  for (const f of files) {
+    const r = f.release_date || "unknown";
+    releaseCounts[r] = (releaseCounts[r] || 0) + 1;
+  }
+  const releases = Object.entries(releaseCounts)
+    .map(([label, count]) => ({ label, count }))
+    .sort((a, b) => b.count - a.count);
+
   const manifest = {
-    release_id: "release_01",
-    release_date: "2026-05-08",
+    release_id: releases.length > 1 ? "combined" : "release_01",
+    release_date: releases.length === 1 ? (files[0] && files[0].release_date) || null : null,
     source_page_url: "https://www.war.gov/UFO/",
     total_files: files.length,
+    releases,
     generated_at: new Date().toISOString(),
-    _scraped_by: "browser_scrape.js v2 (DevTools console)",
+    _scraped_by: "browser_scrape.js v3 (DevTools console, multi-release)",
     _note:
       "Hebrew translation fields (title_he, agency_he, incident_location_he, summary_he) are added separately by a Claude Code session.",
     files,
@@ -284,6 +303,7 @@
 
   log("=== SUMMARY ===");
   log(`  total records: ${files.length}`);
+  log(`  releases:      ${releases.map((r) => `${r.label} (${r.count})`).join(" | ")}`);
   log(`  with URL:      ${files.filter((e) => e.source_url).length}`);
   log(`  with summary:  ${files.filter((e) => e.summary_en).length}`);
   log(`  agencies:      ${[...new Set(files.map((e) => e.agency).filter(Boolean))].join(", ")}`);

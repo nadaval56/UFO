@@ -31,6 +31,9 @@ AGENCY_HE: dict[str, str] = {
     "Department of War": "משרד המלחמה",
     "Department of State": "מחלקת המדינה",
     "NASA": "NASA",
+    "Central Intelligence Agency": "סוכנות הביון המרכזית",
+    "Department of Energy": "משרד האנרגיה",
+    "Office of the Director of National Intelligence": "משרד מנהל המודיעין הלאומי",
 }
 
 # ---------------------------------------------------------------------------
@@ -39,7 +42,20 @@ AGENCY_HE: dict[str, str] = {
 
 LOCATION_HE: dict[str, str] = {
     "N/A": "לא ידוע",
+    "AFRICOM": "פיקוד אפריקה",
     "Aegean Sea": "הים האגאי",
+    "CENTCOM": "פיקוד מרכז",
+    "Cislunar Space": "מרחב ציס-לונרי",
+    "EUCOM": "הפיקוד האירופי",
+    "INDOPACOM": "פיקוד אינדו-פסיפיק",
+    "Midwestern United States": "המערב התיכון של ארצות הברית",
+    "New Mexico": "ניו מקסיקו",
+    "North Atlantic Ocean": "צפון האוקיינוס האטלנטי",
+    "NORTHCOM": "הפיקוד הצפוני",
+    "Southeastern United States": "דרום-מזרח ארצות הברית",
+    "Texas": "טקסס",
+    "USSR": "ברית המועצות",
+    "Yellow Sea": "הים הצהוב",
     "Arabian Gulf": "המפרץ הערבי",
     "Arabian Sea": "הים הערבי",
     "Azerbaijan": "אזרבייג'ן",

@@ -11,11 +11,12 @@
 ### תהליך הסריקה (פעם בכל מהדורה חדשה — דקה של עבודה)
 
 1. פתח את [https://www.war.gov/UFO/](https://www.war.gov/UFO/) בדפדפן.
-2. פתח DevTools (F12) → Console.
-3. העתק את כל התוכן של [`scripts/browser_scrape.js`](./scripts/browser_scrape.js), הדבק בקונסול, הקש Enter.
-4. הסקריפט יעבור על כל 16 העמודים, יסרוק כל שורה, יכנס לכל פאנל פרטים כדי לקחת את התיאור באנגלית, ויוריד `manifest.json` (אורך הריצה: כ-1-2 דקות בגלל המתנות בין עמודים).
-5. החלף את `data/manifest.json` בקובץ שירד.
-6. `git add data/manifest.json && git commit -m 'data: refresh manifest from war.gov' && git push`.
+2. **הגדר את שלושת הפילטרים של הטבלה ל-ALL** — `ALL AGENCIES`, `ALL RELEASES`, `ALL TYPES` — כדי שהטבלה המאוחדת תכלול את כל הרשומות מכל המהדורות (למשל כל 222 הקבצים של מהדורה 01 + 02). הסקרייפר סורק רק את מה שמוצג בטבלה.
+3. פתח DevTools (F12) → Console.
+4. העתק את כל התוכן של [`scripts/browser_scrape.js`](./scripts/browser_scrape.js), הדבק בקונסול, הקש Enter.
+5. הסקריפט יעבור על כל העמודים, יסרוק כל שורה (כל שורה מתויגת בתאריך השחרור/המהדורה שלה), יכנס לכל פאנל פרטים כדי לקחת את התיאור באנגלית, ויוריד `manifest.json`. בסיום הוא מדפיס בקונסול פירוט של כמה רשומות נמצאו בכל מהדורה — ודא שהמספר תואם למצופה.
+6. החלף את `data/manifest.json` בקובץ שירד.
+7. `git add data/manifest.json && git commit -m 'data: refresh manifest from war.gov' && git push`.
 
 GitHub Pages יפרוס את הגרסה החדשה תוך 1-2 דקות.
 

@@ -26,7 +26,6 @@
       type: "",
       search: "",
     },
-    releaseDateGlobal: null,
   };
 
   /* ------------------------- elements ------------------------- */
@@ -174,7 +173,6 @@
       if (!res.ok) throw new Error("HTTP " + res.status);
       const data = await res.json();
       state.files = Array.isArray(data.files) ? data.files : [];
-      state.releaseDateGlobal = data.release_date || null;
       // If the manifest is the seeded placeholder, show a notice.
       if (data._note && data.total_files < 10) {
         showPlaceholderBanner(data.total_files);
@@ -204,9 +202,10 @@
   function initFilters() {
     const agencies = unique(state.files.map((f) => f.agency));
     const types = unique(state.files.map((f) => f.type));
-    const releaseDates = state.releaseDateGlobal
-      ? [state.releaseDateGlobal]
-      : unique(state.files.map((f) => f.release_date));
+    // Release options come from the per-file release_date values so the
+    // filter works across multiple releases (and matches the value compared
+    // in apply()). The global release_date is only a display fallback.
+    const releaseDates = unique(state.files.map((f) => f.release_date));
 
     // Incident dates: prefer display form (matches what the user sees)
     const incidentDates = unique(state.files.map((f) => incidentDateDisplay(f)));
@@ -342,7 +341,7 @@
     state.filtered = state.files.filter((f) => {
       if (agency && f.agency !== agency) return false;
       if (type && f.type !== type) return false;
-      if (releaseDate && (f.release_date || state.releaseDateGlobal) !== releaseDate) return false;
+      if (releaseDate && f.release_date !== releaseDate) return false;
       if (incidentDate && incidentDateDisplay(f) !== incidentDate) return false;
       if (incidentLocation && f.incident_location !== incidentLocation) return false;
       if (search) {
