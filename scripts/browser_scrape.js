@@ -1,5 +1,5 @@
 /* ============================================================================
- * PURSUE Hebrew Mirror — Browser-side manifest scraper v3 (multi-release)
+ * PURSUE Hebrew Mirror — Browser-side manifest scraper v4 (per-release tabs)
  *
  * Paste into the DevTools Console on https://www.war.gov/UFO/.
  * Downloads `manifest.json` describing every file across ALL releases.
@@ -117,6 +117,26 @@
   /* ---------- single row scrape ---------- */
 
   async function scrapeRow(rowEl) {
+    // Capture the release straight from the row's RELEASE cell BEFORE opening
+    // the modal. war.gov v4 (2026-07) moved the release out of the modal's
+    // fact list and into the table column, formatted "[7/10/26 - RELEASE 04]".
+    // Every row (including video/audio, whose download URL is only a #fragment)
+    // carries it here, so this is the one reliable per-file release signal.
+    let rowRelease = null; // e.g. { release_no: "04", release: "release_04", release_date_raw: "7/10/26" }
+    for (const meta of rowEl.querySelectorAll(".record-meta")) {
+      const txt = stripBrackets(meta.textContent || "");
+      const m = txt.match(/(\d{1,2}\/\d{1,2}\/\d{2,4})?\s*-?\s*RELEASE\s*0*(\d+)/i);
+      if (m) {
+        const no = String(m[2]).padStart(2, "0");
+        rowRelease = {
+          release_no: no,
+          release: `release_${no}`,
+          release_date_raw: m[1] || null,
+        };
+        break;
+      }
+    }
+
     rowEl.click();
 
     // Wait for the modal to populate
@@ -199,7 +219,7 @@
     if (closeBtn) closeBtn.click();
     await SLEEP(120);
 
-    return { title, description, kind, facts, url, urlIsRecordPage };
+    return { title, description, kind, facts, url, urlIsRecordPage, rowRelease };
   }
 
   /* ---------- walk pagination ---------- */
@@ -252,6 +272,11 @@
       url && !isPageURL ? decodeURIComponent(url.split("/").pop().split("?")[0]) : null;
     const id = filenameFromUrl ? filenameFromUrl.replace(/\.[a-z0-9]+$/i, "") : r.recordId;
     const docType = (r.facts["Document Type"] || r.kind || "").replace(/^\./, "").toLowerCase() || null;
+    // Release: prefer the modal fact if war.gov ever restores it, else the
+    // RELEASE column captured from the row (v4). `release`/`release_no` are the
+    // stable per-file tab keys; `release_date` keeps the raw war.gov M/D/YY date
+    // (merge_release.py converts it to Israeli DD/MM/YY).
+    const rr = r.rowRelease || {};
     const entry = {
       id,
       title: r.title || null,
@@ -261,7 +286,9 @@
       agency_he: null,
       type: docType,
       source_url: url,
-      release_date: r.facts["Release Date"] || null,
+      release: rr.release || null,
+      release_no: rr.release_no || null,
+      release_date: r.facts["Release Date"] || rr.release_date_raw || null,
       incident_date: r.facts["Incident Date"] || null,
       incident_location: r.facts["Incident Location"] || null,
       incident_location_he: null,
@@ -281,12 +308,12 @@
   // manifest is correct whether war.gov is showing one release or several).
   const releaseCounts = {};
   for (const f of files) {
-    const r = f.release_date || "unknown";
+    const r = f.release || "unknown";
     releaseCounts[r] = (releaseCounts[r] || 0) + 1;
   }
   const releases = Object.entries(releaseCounts)
     .map(([label, count]) => ({ label, count }))
-    .sort((a, b) => b.count - a.count);
+    .sort((a, b) => a.label.localeCompare(b.label));
 
   const manifest = {
     release_id: releases.length > 1 ? "combined" : "release_01",
@@ -295,7 +322,7 @@
     total_files: files.length,
     releases,
     generated_at: new Date().toISOString(),
-    _scraped_by: "browser_scrape.js v3 (DevTools console, multi-release)",
+    _scraped_by: "browser_scrape.js v4 (DevTools console, per-release tabs)",
     _note:
       "Hebrew translation fields (title_he, agency_he, incident_location_he, summary_he) are added separately by a Claude Code session.",
     files,
