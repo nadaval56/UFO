@@ -13,9 +13,9 @@
   "release_date": null,                // ערך יחיד רק אם יש מהדורה אחת; null כשיש כמה
   "source_page_url": "https://www.war.gov/UFO/",
   "total_files": 222,
-  "releases": [                        // פירוט מהדורות שנסרקו (data-driven)
-    { "label": "22/5/26", "count": 64 },   // תאריכים בפורמט ישראלי (יום/חודש)
-    { "label": "8/5/26", "count": 158 }
+  "releases": [                        // פירוט מהדורות שנסרקו (data-driven, ממוין לפי מספר)
+    { "release": "release_01", "release_no": "01", "date": "8/5/26", "count": 158 },
+    { "release": "release_02", "release_no": "02", "date": "22/5/26", "count": 64 }
   ],
   "generated_at": "2026-05-26T10:00:00Z",
   "files": [
@@ -24,6 +24,9 @@
       "filename": "65_HS1-834228961_62-HQ-83894_SERIAL_130.pdf",
       "agency": "FBI",                  // FBI | DOW | NASA | ODNI | AARO | Unknown
       "type": "pdf",                    // pdf | img | vid | doc | txt | …
+      "release": "release_01",          // מפתח מהדורה יציב — נותן לשוניות הטבלה
+      "release_no": "01",               // מספר מהדורה מוצג
+      "release_date": "8/5/26",         // תאריך שחרור, פורמט ישראלי (מקור האמת לסדר)
       "size_bytes": 1234567,
       "source_url": "https://www.war.gov/medialink/ufo/files/65_HS1-...SERIAL_130.pdf",
       "sha256": null,                   // אופציונלי

@@ -20,7 +20,7 @@
     page: 1,
     filters: {
       agency: "",
-      releaseDate: "",
+      release: "",
       incidentDate: "",
       incidentLocation: "",
       type: "",
@@ -36,8 +36,9 @@
     emptyReset: document.getElementById("file-list-empty-reset"),
     pagination: document.getElementById("pagination"),
     countNum: document.getElementById("file-count-num"),
+    tabs: document.getElementById("release-tabs"),
     agency: document.getElementById("filter-agency"),
-    releaseDate: document.getElementById("filter-release"),
+    releaseSelect: document.getElementById("filter-release"),
     incidentDate: document.getElementById("filter-incident-date"),
     incidentLocation: document.getElementById("filter-incident-location"),
     type: document.getElementById("filter-type"),
@@ -142,6 +143,81 @@
     return Array.from(new Set(arr.filter(Boolean))).sort();
   }
 
+  /* ------------------------- release model ------------------------- */
+  // Every file carries a stable `release` key ("release_03") produced by the
+  // scraper / merge step. The per-release tabs and the "מהדורה" filter are two
+  // views of this same dimension and stay in sync.
+
+  function fileRelease(f) {
+    return f.release || "";
+  }
+
+  function releaseNo(key) {
+    const m = /(\d+)/.exec(key || "");
+    return m ? String(parseInt(m[1], 10)).padStart(2, "0") : null;
+  }
+
+  function releaseLabel(no) {
+    return "מהדורה " + (no || "?");
+  }
+
+  /** Ordered list of releases present in the data: {key, no, date, count}. */
+  function releaseList() {
+    const map = new Map();
+    state.files.forEach((f) => {
+      const key = fileRelease(f);
+      if (!key) return;
+      if (!map.has(key)) {
+        map.set(key, { key, no: releaseNo(key), date: f.release_date || null, count: 0 });
+      }
+      map.get(key).count += 1;
+    });
+    return Array.from(map.values()).sort((a, b) => (a.no || "").localeCompare(b.no || ""));
+  }
+
+  /** Set the active release (from a tab click or the dropdown) and re-render. */
+  function setRelease(key) {
+    state.filters.release = key || "";
+    if (el.releaseSelect) el.releaseSelect.value = state.filters.release;
+    state.page = 1;
+    updateTabActive();
+    apply();
+    writeHash();
+  }
+
+  function renderTabs() {
+    if (!el.tabs) return;
+    const rels = releaseList();
+    if (!rels.length) { el.tabs.innerHTML = ""; return; }
+    const active = state.filters.release || "";
+
+    const tabBtn = (key, label, count) => {
+      const on = key === active;
+      return `<button type="button" role="tab" class="release-tab${on ? " is-active" : ""}"` +
+        ` aria-selected="${on ? "true" : "false"}" data-release="${escapeHtml(key)}">` +
+        `<span class="release-tab-label">${escapeHtml(label)}</span>` +
+        `<span class="release-tab-count mono">${count}</span></button>`;
+    };
+
+    const html = [tabBtn("", "הכול", state.files.length)];
+    rels.forEach((r) => html.push(tabBtn(r.key, releaseLabel(r.no), r.count)));
+    el.tabs.innerHTML = html.join("");
+
+    el.tabs.querySelectorAll("[data-release]").forEach((b) => {
+      b.addEventListener("click", () => setRelease(b.dataset.release));
+    });
+  }
+
+  function updateTabActive() {
+    if (!el.tabs) return;
+    const active = state.filters.release || "";
+    el.tabs.querySelectorAll("[data-release]").forEach((b) => {
+      const on = b.dataset.release === active;
+      b.classList.toggle("is-active", on);
+      b.setAttribute("aria-selected", on ? "true" : "false");
+    });
+  }
+
   function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, (c) => ({
       "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -202,18 +278,27 @@
   function initFilters() {
     const agencies = unique(state.files.map((f) => f.agency));
     const types = unique(state.files.map((f) => f.type));
-    // Release options come from the per-file release_date values so the
-    // filter works across multiple releases (and matches the value compared
-    // in apply()). The global release_date is only a display fallback.
-    const releaseDates = unique(state.files.map((f) => f.release_date));
 
     // Incident dates: prefer display form (matches what the user sees)
     const incidentDates = unique(state.files.map((f) => incidentDateDisplay(f)));
     const incidentLocations = unique(state.files.map((f) => f.incident_location));
 
+    // Release: the dropdown and the tabs are two views of the same dimension.
+    // Options carry the stable release key as value, with a "מהדורה NN · date"
+    // label; apply() compares against fileRelease(f).
+    const rels = releaseList();
+    fillSelect(
+      el.releaseSelect,
+      rels.map((r) => r.key),
+      (key) => {
+        const r = rels.find((x) => x.key === key);
+        return r ? releaseLabel(r.no) + (r.date ? " · " + r.date : "") : key;
+      }
+    );
+    renderTabs();
+
     fillSelect(el.agency, agencies);
     fillSelect(el.type, types, typeLabel);
-    fillSelect(el.releaseDate, releaseDates);
     fillSelect(el.incidentDate, incidentDates);
     fillSelect(el.incidentLocation, incidentLocations, (v) => {
       const f = state.files.find((x) => x.incident_location === v);
@@ -248,7 +333,11 @@
 
   function bindEvents() {
     bindFilter(el.agency, "agency");
-    bindFilter(el.releaseDate, "releaseDate");
+    // Release select drives the same state as the tabs — route through setRelease
+    // so the two controls stay visually in sync.
+    if (el.releaseSelect) {
+      el.releaseSelect.addEventListener("change", () => setRelease(el.releaseSelect.value));
+    }
     bindFilter(el.incidentDate, "incidentDate");
     bindFilter(el.incidentLocation, "incidentLocation");
     bindFilter(el.type, "type");
@@ -275,16 +364,17 @@
 
   function resetFilters() {
     state.filters = {
-      agency: "", releaseDate: "", incidentDate: "",
+      agency: "", release: "", incidentDate: "",
       incidentLocation: "", type: "", search: "",
     };
     state.page = 1;
     if (el.agency) el.agency.value = "";
-    if (el.releaseDate) el.releaseDate.value = "";
+    if (el.releaseSelect) el.releaseSelect.value = "";
     if (el.incidentDate) el.incidentDate.value = "";
     if (el.incidentLocation) el.incidentLocation.value = "";
     if (el.type) el.type.value = "";
     if (el.search) el.search.value = "";
+    updateTabActive();
     apply();
     writeHash();
   }
@@ -305,14 +395,15 @@
     if (queryPart) {
       const params = new URLSearchParams(queryPart);
       state.filters.agency = params.get("agency") || "";
-      state.filters.releaseDate = params.get("release") || "";
+      state.filters.release = params.get("release") || "";
       state.filters.incidentDate = params.get("incident_date") || "";
       state.filters.incidentLocation = params.get("location") || "";
       state.filters.type = params.get("type") || "";
       state.filters.search = (params.get("q") || "").toLowerCase();
 
       if (el.agency) el.agency.value = state.filters.agency;
-      if (el.releaseDate) el.releaseDate.value = state.filters.releaseDate;
+      if (el.releaseSelect) el.releaseSelect.value = state.filters.release;
+      updateTabActive();
       if (el.incidentDate) el.incidentDate.value = state.filters.incidentDate;
       if (el.incidentLocation) el.incidentLocation.value = state.filters.incidentLocation;
       if (el.type) el.type.value = state.filters.type;
@@ -323,7 +414,7 @@
   function writeHash() {
     const params = new URLSearchParams();
     if (state.filters.agency) params.set("agency", state.filters.agency);
-    if (state.filters.releaseDate) params.set("release", state.filters.releaseDate);
+    if (state.filters.release) params.set("release", state.filters.release);
     if (state.filters.incidentDate) params.set("incident_date", state.filters.incidentDate);
     if (state.filters.incidentLocation) params.set("location", state.filters.incidentLocation);
     if (state.filters.type) params.set("type", state.filters.type);
@@ -336,12 +427,12 @@
   /* ------------------------- filter + render ------------------------- */
 
   function apply() {
-    const { agency, releaseDate, incidentDate, incidentLocation, type, search } = state.filters;
+    const { agency, release, incidentDate, incidentLocation, type, search } = state.filters;
 
     state.filtered = state.files.filter((f) => {
       if (agency && f.agency !== agency) return false;
       if (type && f.type !== type) return false;
-      if (releaseDate && f.release_date !== releaseDate) return false;
+      if (release && fileRelease(f) !== release) return false;
       if (incidentDate && incidentDateDisplay(f) !== incidentDate) return false;
       if (incidentLocation && f.incident_location !== incidentLocation) return false;
       if (search) {

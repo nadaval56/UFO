@@ -151,8 +151,8 @@
     <section id="release" class="section release">
       <div class="container">
         <header class="section-head">
-          <h2 class="section-title">ארכיון המסמכים — מהדורות 01 ו-02</h2>
-          <p class="section-eyebrow">ארכיון פתוח · שוחרר ב-8 וב-22 במאי 2026</p>
+          <h2 class="section-title">ארכיון המסמכים — מהדורות 01–04</h2>
+          <p class="section-eyebrow">ארכיון פתוח · שוחרר ב-8 וב-22 במאי, 12 ביוני ו-10 ביולי 2026</p>
         </header>
 
         <!-- ציטוט הגסת' — תרגום נאמן של ההצהרה הרשמית באתר -->
@@ -188,11 +188,32 @@
             <span>מהדורה 02 — חבילת סרטונים</span>
             <span class="btn-meta mono">uap052226.zip</span>
           </a>
+          <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/061226/release_03/release_03_documents.zip" target="_blank" rel="noopener">
+            <span>מהדורה 03 — חבילת PDF + תמונות</span>
+            <span class="btn-meta mono">release_03_documents.zip</span>
+          </a>
+          <a class="btn btn-primary" href="https://d34w7g4gy10iej.cloudfront.net/release_03/uap_videos_061226.zip" target="_blank" rel="noopener">
+            <span>מהדורה 03 — חבילת סרטונים</span>
+            <span class="btn-meta mono">uap_videos_061226.zip</span>
+          </a>
+          <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/071026/release_04/release_04_documents_071026.zip" target="_blank" rel="noopener">
+            <span>מהדורה 04 — חבילת PDF + תמונות</span>
+            <span class="btn-meta mono">release_04_documents_071026.zip</span>
+          </a>
+          <a class="btn btn-primary" href="https://d34w7g4gy10iej.cloudfront.net/release_04/uap_release04_videos_071026.zip" target="_blank" rel="noopener">
+            <span>מהדורה 04 — חבילת סרטונים</span>
+            <span class="btn-meta mono">uap_release04_videos_071026.zip</span>
+          </a>
           <div class="file-count" aria-live="polite">
             <span id="file-count-num" class="mono">—</span>
             <span class="file-count-label">קבצים</span>
           </div>
         </div>
+
+        <!-- לשוניות מהדורות — משוכפל מבנה הטאבים של האתר המקורי -->
+        <nav id="release-tabs" class="release-tabs" role="tablist" aria-label="בחירת מהדורה">
+          <!-- לשוניות נבנות דינמית מ-manifest.json ע"י file-browser.js -->
+        </nav>
 
         <!-- שורת סינון -->
         <div class="filters" role="region" aria-label="סינון מסמכים">
@@ -203,7 +224,7 @@
             </select>
           </div>
           <div class="filter">
-            <label for="filter-release" class="filter-label">תאריך שחרור</label>
+            <label for="filter-release" class="filter-label">מהדורה</label>
             <select id="filter-release" class="filter-select">
               <option value="">הכול</option>
             </select>
