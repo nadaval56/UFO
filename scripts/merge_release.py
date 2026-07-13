@@ -42,6 +42,28 @@ def log(msg: str) -> None:
     print(f"[merge_release] {msg}", file=sys.stderr, flush=True)
 
 
+def flip_us_to_il(d: str | None) -> str | None:
+    """war.gov serves dates month/day/year (M/D/YY); the mirror shows Israeli
+    day/month/year. Swap the first two components. '7/10/26' -> '10/7/26'.
+    Values that don't look like M/D/YY are returned unchanged."""
+    if not d:
+        return d
+    parts = str(d).strip().split("/")
+    if len(parts) != 3 or not all(p.strip().isdigit() for p in parts):
+        return d
+    m, day, y = (p.strip() for p in parts)
+    return f"{int(day)}/{int(m)}/{y}"
+
+
+def il_date_key(d: str | None) -> tuple[int, int, int]:
+    """Sort key for an Israeli DD/MM/YY date string (chronological)."""
+    try:
+        day, month, year = (int(p) for p in str(d).split("/"))
+        return (year if year > 99 else 2000 + year, month, day)
+    except Exception:
+        return (9999, 99, 99)
+
+
 def canon(title: str | None) -> str:
     """Canonical match key from a title: the document code before the first
     comma, uppercased, spaces stripped, and digit-runs normalized to drop
@@ -76,8 +98,10 @@ def main() -> int:
     ap.add_argument("--new", required=True, help="freshly downloaded scrape manifest.json")
     ap.add_argument("--manifest", default=str(MANIFEST_PATH),
                     help="manifest to merge into (default: data/manifest.json)")
-    ap.add_argument("--release-label", required=True,
-                    help='release_date to stamp on new records, Israeli DD/MM/YY, e.g. "22/5/26"')
+    ap.add_argument("--release-label", default=None,
+                    help='optional: force one release_date (Israeli DD/MM/YY) on ALL new records, '
+                         'e.g. "22/5/26". Omit for v4 scrapes — each record keeps its own date, '
+                         'converted from war.gov M/D/YY. Required only for older label-less scrapes.')
     ap.add_argument("--dry-run", action="store_true", help="report only; don't write")
     args = ap.parse_args()
 
@@ -97,26 +121,49 @@ def main() -> int:
             continue  # already have it (this or a prior release) — keep enriched copy
         entry = dict(f)
         entry["id"] = make_id(f, used_ids)
-        entry["release_date"] = args.release_label
+        # Date source of truth: an explicit --release-label overrides; otherwise
+        # convert the scrape's raw war.gov M/D/YY date to Israeli DD/MM/YY. A
+        # single scrape can carry several new releases, so per-file conversion
+        # (not one label) is the correct multi-release path.
+        entry["release_date"] = args.release_label or flip_us_to_il(f.get("release_date"))
         new_records.append(entry)
 
-    log(f"new records for release {args.release_label!r}: {len(new_records)}")
     from collections import Counter
-    by_type = dict(Counter(e.get("type") for e in new_records))
-    log(f"  by type: {by_type}")
+    log(f"new records: {len(new_records)} | by type: {dict(Counter(e.get('type') for e in new_records))}")
 
     merged = existing + new_records
+
+    # Assign a stable per-file `release` / `release_no` across ALL files, keyed
+    # by chronological release-date order (release order == date order). This is
+    # the tab dimension the site renders, and it backfills older records that
+    # predate the field. Date is the source of truth — both existing (Israeli)
+    # and freshly-converted new records carry it.
+    distinct_dates = sorted({f.get("release_date") for f in merged if f.get("release_date")},
+                            key=il_date_key)
+    date_to_no = {d: i + 1 for i, d in enumerate(distinct_dates)}
+    for f in merged:
+        no = date_to_no.get(f.get("release_date"))
+        if no:
+            f["release_no"] = f"{no:02d}"
+            f["release"] = f"release_{no:02d}"
+        else:
+            f["release_no"] = f.get("release_no")
+            f["release"] = f.get("release")
+
     manifest["files"] = merged
     manifest["total_files"] = len(merged)
 
-    # Rebuild the data-driven release summary from per-file release_date.
-    counts: dict[str, int] = {}
+    # Rebuild the data-driven release summary, keyed by the stable release id.
+    summary: dict[str, dict] = {}
     for f in merged:
-        counts[f.get("release_date") or "unknown"] = counts.get(f.get("release_date") or "unknown", 0) + 1
-    manifest["releases"] = [{"label": k, "count": v}
-                            for k, v in sorted(counts.items(), key=lambda kv: -kv[1])]
-    manifest["release_id"] = "combined" if len(counts) > 1 else manifest.get("release_id")
-    manifest["release_date"] = None if len(counts) > 1 else next(iter(counts), None)
+        rel = f.get("release") or "unknown"
+        s = summary.setdefault(rel, {"release": rel, "release_no": f.get("release_no"),
+                                     "date": f.get("release_date"), "count": 0})
+        s["count"] += 1
+    manifest["releases"] = [summary[k] for k in sorted(summary, key=lambda k: str(summary[k].get("release_no")))]
+    n_rel = len(summary)
+    manifest["release_id"] = "combined" if n_rel > 1 else manifest.get("release_id")
+    manifest["release_date"] = None if n_rel > 1 else next(iter(distinct_dates), None)
     manifest["generated_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
 
     log(f"merged total: {len(merged)} | releases: {manifest['releases']}")

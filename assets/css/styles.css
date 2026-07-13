@@ -447,6 +447,62 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   color: var(--accent);
 }
 
+/* Release tabs — mirrors the ALL / RELEASE 01–04 tab bar on the source site */
+.release-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.release-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: var(--radius) var(--radius) 0 0;
+  margin-bottom: -1px;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+}
+.release-tab:hover {
+  color: var(--accent);
+  background: var(--accent-faint);
+}
+.release-tab.is-active {
+  color: var(--accent-strong);
+  background: var(--bg-elev-1);
+  border-color: var(--border);
+  border-bottom: 1px solid var(--bg-elev-1);
+}
+.release-tab-count {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 8px;
+  min-width: 1.6em;
+  text-align: center;
+}
+.release-tab.is-active .release-tab-count {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+.release-tab:focus-visible {
+  outline: none;
+  color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent-dim);
+}
+
 /* Filters */
 .filters {
   display: grid;

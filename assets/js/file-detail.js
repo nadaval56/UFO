@@ -213,7 +213,9 @@
     // מטא-דאטה
     el.metaAgency.textContent = f.agency_he || f.agency || "—";
     el.metaType.textContent = typeLabel(f.type);
-    el.metaRelease.textContent = f.release_date || "—";
+    el.metaRelease.textContent = f.release_no
+      ? `מהדורה ${f.release_no}${f.release_date ? " · " + f.release_date : ""}`
+      : (f.release_date || "—");
     el.metaIncidentDate.textContent = f.incident_date_display || f.incident_date || "N/A";
     el.metaIncidentLoc.textContent = f.incident_location_he || f.incident_location || "N/A";
     el.metaPages.textContent = f.page_count != null ? String(f.page_count) : "—";
