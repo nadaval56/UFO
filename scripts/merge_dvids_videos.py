@@ -36,7 +36,8 @@ def title_key(title: str) -> str:
     """
     if title.startswith("NASA Audio"):
         return "NASA-UAP-D3A"  # Gemini 7 audio, 12/5/1965 — confirmed via analyticsParams
-    m = re.match(r"^(DOW-UAP-PR\d+)", title)
+    # Any agency PR code (DOW/FBI/CIA/…-UAP-PR###), not just DOW.
+    m = re.match(r"^([A-Z]{2,5}-UAP-PR\d+)", title)
     return _norm_pr(m.group(1)) if m else title
 
 
@@ -44,7 +45,7 @@ def anchor_key(anchor: str) -> str:
     """First segment of anchor: DOW-UAP-PR19-..., NASA-UAP-D3A-... -> prefix."""
     if anchor.startswith("NASA-UAP-D3A"):
         return "NASA-UAP-D3A"
-    m = re.match(r"^(DOW-UAP-PR\d+)", anchor)
+    m = re.match(r"^([A-Z]{2,5}-UAP-PR\d+)", anchor)
     return _norm_pr(m.group(1)) if m else anchor
 
 
