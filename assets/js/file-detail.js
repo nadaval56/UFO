@@ -103,6 +103,14 @@
     return map[t] || (t ? t.toUpperCase() : "—");
   }
 
+  /** For image files whose source_url points straight at an image, return that
+   *  URL so it can be shown as the preview. Excludes SPA record-page fragments. */
+  function directImageUrl(f) {
+    if (!f || f.type !== "img" || f._url_is_record_page) return null;
+    const u = f.source_url || "";
+    return /^https?:\/\/.*\.(jpe?g|png|gif|webp|bmp|tiff?)(\?.*)?$/i.test(u) ? u : null;
+  }
+
   const KIND_LABEL_HE = {
     photo: "תצלום",
     illustration: "רישום",
@@ -162,9 +170,18 @@
     if (primary.length > 0) {
       state.previews = primary;
       state.previewsAreFallback = false;
-    } else {
+    } else if (fallback.length > 0) {
       state.previews = fallback;
-      state.previewsAreFallback = fallback.length > 0;
+      state.previewsAreFallback = true;
+    } else if (directImageUrl(file)) {
+      // Standalone image files (type "img", e.g. the NASA STS-80 stills) have
+      // no extracted PDF pages — the file itself is the preview. Show it straight
+      // from its source URL (the viewer's browser can reach war.gov).
+      state.previews = [{ page: 1, kind: "photo", path: directImageUrl(file) }];
+      state.previewsAreFallback = false;
+    } else {
+      state.previews = [];
+      state.previewsAreFallback = false;
     }
 
     render();
