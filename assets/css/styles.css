@@ -625,6 +625,9 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   gap: 10px;
   cursor: pointer;
   transition: background 120ms ease, border-color 120ms ease;
+  /* Let the grid item shrink below its content's min-content width so a long
+     unbreakable filename (e.g. the CIA R03 docs) can't stretch the page. */
+  min-width: 0;
 }
 .file-card:hover {
   background: var(--accent-faint);
