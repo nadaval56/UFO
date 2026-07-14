@@ -463,60 +463,63 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   color: var(--accent);
 }
 
-/* Release tabs — mirrors the ALL / RELEASE 01–04 tab bar on the source site */
+/* Release tabs — mirrors the ALL / RELEASE 01–04 tab bar on the source site.
+   Styled as prominent, clearly-clickable pills with a bold active state. */
 .release-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border);
+  gap: 8px;
+  margin-bottom: 24px;
 }
 .release-tab {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: transparent;
-  border: 1px solid transparent;
-  border-bottom: none;
-  color: var(--text-dim);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-strong);
+  color: var(--text-muted);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 10px 16px;
+  padding: 12px 22px;
   cursor: pointer;
-  border-radius: var(--radius) var(--radius) 0 0;
-  margin-bottom: -1px;
-  transition: color 0.15s, background 0.15s, border-color 0.15s;
+  border-radius: var(--radius);
+  transition: color 0.15s, background 0.15s, border-color 0.15s, box-shadow 0.15s;
 }
 .release-tab:hover {
-  color: var(--accent);
+  color: var(--accent-strong);
+  border-color: var(--accent);
   background: var(--accent-faint);
 }
 .release-tab.is-active {
-  color: var(--accent-strong);
-  background: var(--bg-elev-1);
-  border-color: var(--border);
-  border-bottom: 1px solid var(--bg-elev-1);
+  color: #00121a;
+  background: var(--accent);
+  border-color: var(--accent);
+  font-weight: 700;
+  box-shadow: 0 0 20px var(--accent-dim), 0 2px 8px rgba(0,0,0,0.4);
 }
 .release-tab-count {
-  font-size: 0.72rem;
+  font-size: 0.76rem;
+  font-weight: 600;
   color: var(--text-muted);
   background: var(--bg-elev-2);
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 1px 8px;
-  min-width: 1.6em;
+  padding: 2px 9px;
+  min-width: 1.7em;
   text-align: center;
 }
 .release-tab.is-active .release-tab-count {
-  color: var(--accent);
-  border-color: var(--accent-dim);
+  color: var(--accent-strong);
+  background: rgba(0,10,15,0.45);
+  border-color: rgba(0,10,15,0.35);
 }
 .release-tab:focus-visible {
   outline: none;
-  color: var(--accent);
-  box-shadow: 0 0 0 1px var(--accent-dim);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-dim);
 }
 
 /* Filters */
