@@ -521,6 +521,17 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   border-color: var(--accent);
   box-shadow: 0 0 0 2px var(--accent-dim);
 }
+/* Mobile: stack tabs one per row (full width), label + count at the edges. */
+@media (max-width: 640px) {
+  .release-tabs {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .release-tab {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
 
 /* Filters */
 .filters {
