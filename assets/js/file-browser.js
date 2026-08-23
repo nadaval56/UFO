@@ -1,7 +1,7 @@
 /* ============================================================
    file-browser.js
-   Drives the Release 01 file browser: loads manifest.json,
-   renders cards, handles pagination, filters, and search.
+   Drives the archive browser across every PURSUE release: loads
+   manifest.json, renders cards, handles pagination, filters, and search.
    Cards link to the standalone file.html?id=... page.
    No dependencies — vanilla JS.
    ============================================================ */
@@ -401,7 +401,13 @@
     );
     renderTabs();
 
-    fillSelect(el.agency, agencies);
+    // Show the Hebrew agency label the cards use; keep the English in parens
+    // since the document codes (DOW-, FBI-, DOS-, EOP-) are English too.
+    fillSelect(el.agency, agencies, (v) => {
+      const f = state.files.find((x) => x.agency === v);
+      const he = f && f.agency_he;
+      return he && he !== v ? `${he} (${v})` : v;
+    });
     fillSelect(el.type, types, typeLabel);
     fillSelect(el.incidentDate, incidentDates);
     fillSelect(el.incidentLocation, incidentLocations, (v) => {
