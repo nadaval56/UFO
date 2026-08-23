@@ -417,30 +417,118 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   line-height: 1.75;
 }
 
+/* One column per release, so the block always reads as two rows:
+   documents on top, video underneath. auto-fit keeps that true as
+   releases are added — it was hardcoded to 4 and Release 05 wrapped. */
 .release-downloads {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
   margin-bottom: 16px;
 }
 .release-download-col {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  display: grid;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 6px;
   min-width: 0;
 }
+/* The release number lives once per column, so neither button has to
+   repeat "מהדורה NN" — that is what made five columns impossible. */
+.release-download-no {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  color: var(--text-dim);
+  padding-inline-start: 2px;
+}
+.release-download-col:hover .release-download-no { color: var(--accent); }
 .release-downloads .btn {
   flex-direction: column;
   align-items: flex-start;
-  gap: 2px;
-  padding: 13px 18px;
+  justify-content: center;
+  gap: 1px;
+  padding: 10px 12px;
   width: 100%;
+  min-width: 0;
+}
+/* .btn::before is the terminal-prompt chevron. In a column-flex button it
+   claims a whole line of its own, so move it inline onto the label. */
+.release-downloads .btn::before { display: none; }
+.release-downloads .btn-label {
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+.release-downloads .btn-label::before {
+  content: ">";
+  opacity: 0.8;
+  margin-inline-end: 6px;
+}
+/* Filenames are long and of wildly different lengths across releases;
+   clip rather than let one of them set the column width. */
+.release-downloads .btn-meta {
+  font-size: 0.62rem;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  direction: ltr;
+  text-align: start;
+}
+
+/* Mobile: ten buttons is a wall, so fold them behind one control. */
+.release-downloads-toggle { display: none; }
+
+/* Five columns stop being readable around here; wrap to a 2-up grid. */
+@media (max-width: 1100px) {
+  .release-downloads .btn-meta { font-size: 0.58rem; }
+}
+@media (max-width: 900px) {
+  .release-downloads {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .release-downloads .btn-meta { font-size: 0.64rem; }
 }
 @media (max-width: 768px) {
-  .release-downloads { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 460px) {
-  .release-downloads { grid-template-columns: 1fr; }
+  .release-downloads-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 14px 16px;
+    background: var(--bg-elev-1);
+    border: 1px solid var(--border-strong);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: start;
+  }
+  .release-downloads-toggle[aria-expanded="true"] {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .release-downloads-toggle-meta {
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+  }
+  .release-downloads-toggle-chevron {
+    margin-inline-start: auto;
+    transition: transform 140ms ease;
+  }
+  .release-downloads-toggle[aria-expanded="true"] .release-downloads-toggle-chevron {
+    transform: rotate(180deg);
+  }
+  /* Collapsed only inside this breakpoint — desktop never hides the grid,
+     so the toggle failing to initialise can't strand the buttons. */
+  .release-downloads.is-collapsed { display: none; }
+  .release-downloads { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: 1fr; gap: 14px; }
+  .release-download-col { grid-template-rows: auto auto auto; }
+  .release-downloads .btn-meta { font-size: 0.66rem; }
 }
 .release-count-bar {
   display: flex;
@@ -1031,7 +1119,6 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   .hero { min-height: 480px; }
   .hero-inner { padding: 48px 16px; }
   .filters { grid-template-columns: 1fr; }
-  .release-downloads { flex-direction: column; align-items: stretch; }
   .file-count { margin-inline-start: 0; justify-content: center; }
   .container { padding: 0 16px; }
   /* Tighten card padding on very small screens */

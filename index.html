@@ -170,56 +170,78 @@
           </footer>
         </blockquote>
 
-        <!-- כפתורי הורדה — עמודה לכל מהדורה: מסמכים למעלה, סרטונים למטה -->
-        <div class="release-downloads">
+        <!-- כפתורי הורדה — עמודה לכל מהדורה: מסמכים למעלה, סרטונים למטה.
+             במובייל הכל מתקפל מאחורי כפתור אחד (ראו #release-downloads-toggle). -->
+        <button id="release-downloads-toggle" class="release-downloads-toggle" type="button"
+                aria-expanded="false" aria-controls="release-downloads">
+          <span class="release-downloads-toggle-text">הורדת חבילות המקור</span>
+          <span class="release-downloads-toggle-meta mono">10 קבצים · 5 מהדורות</span>
+          <span class="release-downloads-toggle-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="release-downloads" id="release-downloads">
           <div class="release-download-col">
-            <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/bundle/Release_1.zip" target="_blank" rel="noopener">
-              <span>מהדורה 01 — חבילת PDF + תמונות</span>
-              <span class="btn-meta mono">Release_1.zip</span>
+            <span class="release-download-no mono" aria-hidden="true">01</span>
+            <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/bundle/Release_1.zip" target="_blank" rel="noopener"
+               aria-label="מהדורה 01 — הורדת חבילת מסמכים ותמונות (Release_1.zip)">
+              <span class="btn-label">מסמכים ותמונות</span>
+              <span class="btn-meta mono" title="Release_1.zip">Release_1.zip</span>
             </a>
-            <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/bundle/Release_1_Videos.zip" target="_blank" rel="noopener">
-              <span>מהדורה 01 — חבילת סרטונים</span>
-              <span class="btn-meta mono">Release_1_Videos.zip</span>
+            <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/bundle/Release_1_Videos.zip" target="_blank" rel="noopener"
+               aria-label="מהדורה 01 — הורדת חבילת סרטונים (Release_1_Videos.zip)">
+              <span class="btn-label">סרטונים</span>
+              <span class="btn-meta mono" title="Release_1_Videos.zip">Release_1_Videos.zip</span>
             </a>
           </div>
           <div class="release-download-col">
-            <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/052226/release_02/release_02_document_bundle.zip" target="_blank" rel="noopener">
-              <span>מהדורה 02 — חבילת PDF + תמונות</span>
-              <span class="btn-meta mono">release_02_document_bundle.zip</span>
+            <span class="release-download-no mono" aria-hidden="true">02</span>
+            <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/052226/release_02/release_02_document_bundle.zip" target="_blank" rel="noopener"
+               aria-label="מהדורה 02 — הורדת חבילת מסמכים ותמונות (release_02_document_bundle.zip)">
+              <span class="btn-label">מסמכים ותמונות</span>
+              <span class="btn-meta mono" title="release_02_document_bundle.zip">release_02_document_bundle.zip</span>
             </a>
-            <a class="btn btn-primary" href="https://d34w7g4gy10iej.cloudfront.net/uap052226.zip" target="_blank" rel="noopener">
-              <span>מהדורה 02 — חבילת סרטונים</span>
-              <span class="btn-meta mono">uap052226.zip</span>
-            </a>
-          </div>
-          <div class="release-download-col">
-            <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/061226/release_03/release_03_documents.zip" target="_blank" rel="noopener">
-              <span>מהדורה 03 — חבילת PDF + תמונות</span>
-              <span class="btn-meta mono">release_03_documents.zip</span>
-            </a>
-            <a class="btn btn-primary" href="https://d34w7g4gy10iej.cloudfront.net/release_03/uap_videos_061226.zip" target="_blank" rel="noopener">
-              <span>מהדורה 03 — חבילת סרטונים</span>
-              <span class="btn-meta mono">uap_videos_061226.zip</span>
+            <a class="btn btn-primary" href="https://d34w7g4gy10iej.cloudfront.net/uap052226.zip" target="_blank" rel="noopener"
+               aria-label="מהדורה 02 — הורדת חבילת סרטונים (uap052226.zip)">
+              <span class="btn-label">סרטונים</span>
+              <span class="btn-meta mono" title="uap052226.zip">uap052226.zip</span>
             </a>
           </div>
           <div class="release-download-col">
-            <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/071026/release_04/release_04_documents_071026.zip" target="_blank" rel="noopener">
-              <span>מהדורה 04 — חבילת PDF + תמונות</span>
-              <span class="btn-meta mono">release_04_documents_071026.zip</span>
+            <span class="release-download-no mono" aria-hidden="true">03</span>
+            <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/061226/release_03/release_03_documents.zip" target="_blank" rel="noopener"
+               aria-label="מהדורה 03 — הורדת חבילת מסמכים ותמונות (release_03_documents.zip)">
+              <span class="btn-label">מסמכים ותמונות</span>
+              <span class="btn-meta mono" title="release_03_documents.zip">release_03_documents.zip</span>
             </a>
-            <a class="btn btn-primary" href="https://d34w7g4gy10iej.cloudfront.net/release_04/uap_release04_videos_071026.zip" target="_blank" rel="noopener">
-              <span>מהדורה 04 — חבילת סרטונים</span>
-              <span class="btn-meta mono">uap_release04_videos_071026.zip</span>
+            <a class="btn btn-primary" href="https://d34w7g4gy10iej.cloudfront.net/release_03/uap_videos_061226.zip" target="_blank" rel="noopener"
+               aria-label="מהדורה 03 — הורדת חבילת סרטונים (uap_videos_061226.zip)">
+              <span class="btn-label">סרטונים</span>
+              <span class="btn-meta mono" title="uap_videos_061226.zip">uap_videos_061226.zip</span>
             </a>
           </div>
           <div class="release-download-col">
-            <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/release_05/Aug_07/release_05_Aug_07_documents.zip" target="_blank" rel="noopener">
-              <span>מהדורה 05 — חבילת PDF + תמונות</span>
-              <span class="btn-meta mono">release_05_Aug_07_documents.zip</span>
+            <span class="release-download-no mono" aria-hidden="true">04</span>
+            <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/071026/release_04/release_04_documents_071026.zip" target="_blank" rel="noopener"
+               aria-label="מהדורה 04 — הורדת חבילת מסמכים ותמונות (release_04_documents_071026.zip)">
+              <span class="btn-label">מסמכים ותמונות</span>
+              <span class="btn-meta mono" title="release_04_documents_071026.zip">release_04_documents_071026.zip</span>
             </a>
-            <a class="btn btn-primary" href="https://d34w7g4gy10iej.cloudfront.net/release_05/uap_videos_080726.zip" target="_blank" rel="noopener">
-              <span>מהדורה 05 — חבילת סרטונים</span>
-              <span class="btn-meta mono">uap_videos_080726.zip</span>
+            <a class="btn btn-primary" href="https://d34w7g4gy10iej.cloudfront.net/release_04/uap_release04_videos_071026.zip" target="_blank" rel="noopener"
+               aria-label="מהדורה 04 — הורדת חבילת סרטונים (uap_release04_videos_071026.zip)">
+              <span class="btn-label">סרטונים</span>
+              <span class="btn-meta mono" title="uap_release04_videos_071026.zip">uap_release04_videos_071026.zip</span>
+            </a>
+          </div>
+          <div class="release-download-col">
+            <span class="release-download-no mono" aria-hidden="true">05</span>
+            <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/release_05/Aug_07/release_05_Aug_07_documents.zip" target="_blank" rel="noopener"
+               aria-label="מהדורה 05 — הורדת חבילת מסמכים ותמונות (release_05_Aug_07_documents.zip)">
+              <span class="btn-label">מסמכים ותמונות</span>
+              <span class="btn-meta mono" title="release_05_Aug_07_documents.zip">release_05_Aug_07_documents.zip</span>
+            </a>
+            <a class="btn btn-primary" href="https://d34w7g4gy10iej.cloudfront.net/release_05/uap_videos_080726.zip" target="_blank" rel="noopener"
+               aria-label="מהדורה 05 — הורדת חבילת סרטונים (uap_videos_080726.zip)">
+              <span class="btn-label">סרטונים</span>
+              <span class="btn-meta mono" title="uap_videos_080726.zip">uap_videos_080726.zip</span>
             </a>
           </div>
         </div>
