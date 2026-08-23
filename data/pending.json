@@ -1,0 +1,12 @@
+{
+  "_note": "Releases published on war.gov but not yet mirrored here. Hand-maintained: add an entry the day a tranche is announced, delete it once its files are merged into manifest.json. Drives the notice in the archive section — the site itself never invents this, so an empty list means 'we believe we are current'.",
+  "pending": [
+    {
+      "no": "05",
+      "date_he": "7 באוגוסט 2026",
+      "file_count": 41,
+      "headline_he": "המהדורה החמישית — שישה סרטונים מהמפגש במפרץ עומאן ב-2021, שבו צוות מטוס AC-130J של כוחות מיוחדים עקב אחר כ-25 עצמים בלתי מזוהים; ראיון FBI שסיווגו הוסר על משולש שקט בגודל כ-500 רגל מעל באגראם שבאפגניסטן ב-2002; ניתוח חיל הים מ-1953 לצילומי גרייט פולס וטרמונטון; רשומות פיקוד החימוש האווירי ו'רקטות הרפאים' מ-1947–1948; חומרי CIA מפוארטו ריקו; ומברקי משרד החוץ מ-1963 על האירוע בבאהיה שבברזיל.",
+      "announcement_url": "https://www.war.gov/News/Releases/Release/Article/4565994/department-of-war-publishes-fifth-release-of-unidentified-anomalous-phenomena-f/"
+    }
+  ]
+}

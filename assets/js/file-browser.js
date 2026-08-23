@@ -10,6 +10,7 @@
   "use strict";
 
   const MANIFEST_URL = "data/manifest.json";
+  const PENDING_URL = "data/pending.json";
   const PAGE_SIZE = 10;
 
   /* ------------------------- state ------------------------- */
@@ -37,6 +38,9 @@
     pagination: document.getElementById("pagination"),
     countNum: document.getElementById("file-count-num"),
     tabs: document.getElementById("release-tabs"),
+    releaseTitle: document.getElementById("release-title"),
+    releaseEyebrow: document.getElementById("release-eyebrow"),
+    pending: document.getElementById("pending-release"),
     agency: document.getElementById("filter-agency"),
     releaseSelect: document.getElementById("filter-release"),
     incidentDate: document.getElementById("filter-incident-date"),
@@ -185,6 +189,89 @@
     writeHash();
   }
 
+  // Hebrew month names for the eyebrow line — release_date is Israeli DD/MM/YY.
+  const MONTHS_HE = ["ינואר", "פברואר", "מרץ", "אפריל", "מאי", "יוני", "יולי",
+                     "אוגוסט", "ספטמבר", "אוקטובר", "נובמבר", "דצמבר"];
+
+  function parseIlDate(d) {
+    const parts = String(d || "").split("/");
+    if (parts.length !== 3) return null;
+    const day = parseInt(parts[0], 10);
+    const month = parseInt(parts[1], 10);
+    let year = parseInt(parts[2], 10);
+    if (!day || !month || Number.isNaN(year)) return null;
+    if (year < 100) year += 2000;
+    return { day, month, year };
+  }
+
+  // "8 במאי, 22 במאי, 12 ביוני ו-10 ביולי 2026" — the year is stated once when
+  // every release shares it, and the last item gets the conjunction, the way
+  // the hand-written heading used to read.
+  function releaseDatesLine(rels) {
+    const parsed = rels.map((r) => parseIlDate(r.date)).filter(Boolean);
+    if (!parsed.length) return null;
+    const sameYear = parsed.every((p) => p.year === parsed[0].year);
+    const parts = parsed.map((p, i) => {
+      const base = `${p.day} ב${MONTHS_HE[p.month - 1]}`;
+      return sameYear && i < parsed.length - 1 ? base : `${base} ${p.year}`;
+    });
+    if (parts.length === 1) return parts[0];
+    return parts.slice(0, -1).join(", ") + " ו-" + parts[parts.length - 1];
+  }
+
+  // The section heading used to name the releases by hand ("מהדורות 01–04"),
+  // which silently went stale every time a tranche landed. Derive it instead.
+  function renderReleaseHeader() {
+    const rels = releaseList();
+    if (!rels.length) return;
+    const first = rels[0].no, last = rels[rels.length - 1].no;
+
+    if (el.releaseTitle) {
+      el.releaseTitle.textContent = rels.length > 1
+        ? `ארכיון המסמכים — מהדורות ${first}–${last}`
+        : `ארכיון המסמכים — ${releaseLabel(first)}`;
+    }
+    if (el.releaseEyebrow) {
+      const dates = releaseDatesLine(rels);
+      el.releaseEyebrow.textContent = dates
+        ? `ארכיון פתוח · ${state.files.length} קבצים · שוחרר ב-${dates}`
+        : `ארכיון פתוח · ${state.files.length} קבצים`;
+    }
+  }
+
+  // A tranche announced on war.gov but not yet mirrored. Listing it is the
+  // honest alternative to a tab strip that quietly stops at the last release
+  // we happened to scrape.
+  async function renderPending() {
+    if (!el.pending) return;
+    let list = [];
+    try {
+      const res = await fetch(PENDING_URL, { cache: "no-cache" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      list = Array.isArray(data.pending) ? data.pending : [];
+    } catch (err) {
+      console.warn("pending.json unavailable", err);
+      return;                       // no file, no claim
+    }
+    if (!list.length) return;       // nothing outstanding
+
+    el.pending.innerHTML = list.map((r) => `
+      <div class="pending-release-item">
+        <p class="pending-release-head">
+          <span class="pending-release-badge mono">${escapeHtml(r.no || "?")}</span>
+          <strong>מהדורה ${escapeHtml(r.no || "?")} פורסמה ב-${escapeHtml(r.date_he || "")}</strong>
+          <span class="pending-release-count">${r.file_count ? escapeHtml(String(r.file_count)) + " קבצים" : ""}</span>
+        </p>
+        ${r.headline_he ? `<p class="pending-release-body">${escapeHtml(r.headline_he)}</p>` : ""}
+        <p class="pending-release-foot">
+          החומרים טרם שוקפו לעברית — war.gov חוסם סריקה משרתים, והרענון מתבצע ידנית מהדפדפן.
+          ${r.announcement_url ? `<a href="${escapeHtml(r.announcement_url)}" target="_blank" rel="noopener">ההודעה הרשמית ↗</a>` : ""}
+        </p>
+      </div>`).join("");
+    el.pending.hidden = false;
+  }
+
   function renderTabs() {
     if (!el.tabs) return;
     const rels = releaseList();
@@ -268,6 +355,8 @@
     }
 
     initFilters();
+    renderReleaseHeader();
+    renderPending();
     applyHash();
     bindEvents();
     apply();

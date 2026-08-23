@@ -15,10 +15,35 @@
 3. פתח DevTools (F12) → Console.
 4. העתק את כל התוכן של [`scripts/browser_scrape.js`](./scripts/browser_scrape.js), הדבק בקונסול, הקש Enter.
 5. הסקריפט יעבור על כל העמודים, יסרוק כל שורה (כל שורה מתויגת בתאריך השחרור/המהדורה שלה), יכנס לכל פאנל פרטים כדי לקחת את התיאור באנגלית, ויוריד `manifest.json`. בסיום הוא מדפיס בקונסול פירוט של כמה רשומות נמצאו בכל מהדורה — ודא שהמספר תואם למצופה.
-6. החלף את `data/manifest.json` בקובץ שירד.
+6. **אל תדרוס את `data/manifest.json` בקובץ שירד** — הקובץ הקיים מכיל תרגומים, תצוגות מקדימות,
+   OCR והטמעות וידאו שהסריקה אינה מכילה. במקום זאת, מזג רק את הרשומות החדשות:
+
+   ```bash
+   cp ~/Downloads/manifest.json ./scrape.json
+   python scripts/merge_release.py --new scrape.json --dry-run   # בדיקה: כמה רשומות חדשות?
+   python scripts/merge_release.py --new scrape.json             # ביצוע
+   ```
+
+   הסקריפט משאיר את הרשומות הקיימות כפי שהן, מוסיף רק מה שבאמת חדש, ומקצה לכל קובץ
+   `release` / `release_no` לפי סדר תאריכי השחרור — כך שמהדורה חדשה מקבלת לשונית משלה מעצמה.
 7. `git add data/manifest.json && git commit -m 'data: refresh manifest from war.gov' && git push`.
 
 GitHub Pages יפרוס את הגרסה החדשה תוך 1-2 דקות.
+
+### מהדורה חדשה — התהליך המלא
+
+סריקה לבדה מביאה רק את הטבלה. מהדורה חדשה דורשת גם את חבילות ה-ZIP, תצוגות מקדימות, OCR
+וסרטוני DVIDS — וכל אלה חסומים מהסביבה הענן. התהליך המלא ארוז כהנחיה אחת להדבקה בסשן
+Claude Code **מקומי**:
+
+- מהדורה 05: [`scripts/extract/LOCAL_TASK_R05.md`](./scripts/extract/LOCAL_TASK_R05.md)
+- מהדורות 03–04 (לדוגמה): [`scripts/extract/LOCAL_TASK_R03_R04.md`](./scripts/extract/LOCAL_TASK_R03_R04.md)
+
+מהסשן המקומי חוזר zip אחד; הסשן המרוחק מטמיע אותו ומתרגם.
+
+**כל עוד מהדורה פורסמה וטרם שוקפה**, יש לרשום אותה ב-[`data/pending.json`](./data/pending.json).
+האתר מציג על סמך זה הודעה גלויה מעל לשוניות המהדורות, כדי שלא ייווצר רושם שהארכיון מלא.
+מוחקים את הרשומה משם ברגע שהקבצים מוזגו.
 
 ### תרגום לעברית (Claude Code)
 
