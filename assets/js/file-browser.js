@@ -40,6 +40,7 @@
     tabs: document.getElementById("release-tabs"),
     releaseTitle: document.getElementById("release-title"),
     releaseEyebrow: document.getElementById("release-eyebrow"),
+    latestReleaseDate: document.getElementById("latest-release-date"),
     pending: document.getElementById("pending-release"),
     agency: document.getElementById("filter-agency"),
     releaseSelect: document.getElementById("filter-release"),
@@ -236,6 +237,15 @@
       el.releaseEyebrow.textContent = dates
         ? `ארכיון פתוח · ${state.files.length} קבצים · שוחרר ב-${dates}`
         : `ארכיון פתוח · ${state.files.length} קבצים`;
+    }
+    // The directive aside used to name a specific release by hand and froze
+    // at 02; take the newest date from the data instead.
+    if (el.latestReleaseDate) {
+      const p = parseIlDate(rels[rels.length - 1].date);
+      if (p) {
+        el.latestReleaseDate.textContent =
+          `${p.year}-${String(p.month).padStart(2, "0")}-${String(p.day).padStart(2, "0")}`;
+      }
     }
   }
 

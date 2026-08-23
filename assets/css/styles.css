@@ -492,6 +492,35 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   .release-downloads .btn-meta { font-size: 0.64rem; }
 }
 @media (max-width: 768px) {
+  /* The glossary and the aside were four tall stacked cards each — roughly
+     720px of chrome before the archive. One line per entry says the same
+     thing: the label is short and the value is short, so they fit together. */
+  .directive-facts {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin-top: 20px;
+  }
+  .directive-facts li,
+  .aside-card {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 9px 12px;
+  }
+  .fact-label,
+  .aside-label {
+    margin: 0;
+    flex: 0 0 auto;
+    min-width: 4.5em;
+  }
+  .fact-value,
+  .aside-value {
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+  .aside-value { font-size: 0.92rem; }
+  .directive-aside { gap: 6px; }
+  .directive-text p { font-size: 0.95rem; line-height: 1.7; margin-bottom: 10px; }
   .release-downloads-toggle {
     display: flex;
     align-items: center;
@@ -1080,7 +1109,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
-  .directive-grid { grid-template-columns: 1fr; gap: 32px; }
+  .directive-grid { grid-template-columns: 1fr; gap: 24px; }
   .filters { grid-template-columns: repeat(2, 1fr); }
   .filter-search { grid-column: 1 / -1; }
   .file-card { padding: 16px 14px; }
