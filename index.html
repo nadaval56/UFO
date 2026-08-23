@@ -151,8 +151,8 @@
     <section id="release" class="section release">
       <div class="container">
         <header class="section-head">
-          <h2 class="section-title">ארכיון המסמכים — מהדורות 01–04</h2>
-          <p class="section-eyebrow">ארכיון פתוח · שוחרר ב-8 וב-22 במאי, 12 ביוני ו-10 ביולי 2026</p>
+          <h2 class="section-title" id="release-title">ארכיון המסמכים</h2>
+          <p class="section-eyebrow" id="release-eyebrow">ארכיון פתוח</p>
         </header>
 
         <!-- ציטוט הגסת' — תרגום נאמן של ההצהרה הרשמית באתר -->
@@ -212,6 +212,16 @@
               <span class="btn-meta mono">uap_release04_videos_071026.zip</span>
             </a>
           </div>
+          <div class="release-download-col">
+            <a class="btn btn-primary" href="https://www.war.gov/medialink/ufo/release_05/Aug_07/release_05_Aug_07_documents.zip" target="_blank" rel="noopener">
+              <span>מהדורה 05 — חבילת PDF + תמונות</span>
+              <span class="btn-meta mono">release_05_Aug_07_documents.zip</span>
+            </a>
+            <a class="btn btn-primary" href="https://d34w7g4gy10iej.cloudfront.net/release_05/uap_videos_080726.zip" target="_blank" rel="noopener">
+              <span>מהדורה 05 — חבילת סרטונים</span>
+              <span class="btn-meta mono">uap_videos_080726.zip</span>
+            </a>
+          </div>
         </div>
         <div class="release-count-bar">
           <div class="file-count" aria-live="polite">
@@ -219,6 +229,9 @@
             <span class="file-count-label">קבצים</span>
           </div>
         </div>
+
+        <!-- הודעה על מהדורה שפורסמה וטרם שוקפה — נבנית מ-data/pending.json -->
+        <div id="pending-release" class="pending-release" hidden></div>
 
         <!-- לשוניות מהדורות — משוכפל מבנה הטאבים של האתר המקורי -->
         <nav id="release-tabs" class="release-tabs" role="tablist" aria-label="בחירת מהדורה">

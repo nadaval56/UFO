@@ -1,0 +1,4 @@
+{
+  "_note": "Releases published on war.gov but not yet mirrored here. Hand-maintained: add an entry the day a tranche is announced, delete it once its files are merged into manifest.json. Drives the notice in the archive section — the site itself never invents this, so an empty list means 'we believe we are current'. `bundles` are the official download URLs read off war.gov; they let visitors get the originals even before we have mirrored the metadata.",
+  "pending": []
+}
