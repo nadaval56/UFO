@@ -87,32 +87,30 @@ python scripts/merge_release.py --new scrape.json
 cp data/manifest.json output/manifest.json
 ```
 
+> **If you only have time for one thing, do Part A.** The scrape alone gets all
+> 41 files listed, titled, filtered, searchable and translatable on the site —
+> it just leaves them without page previews, OCR text or inline video. Parts B
+> and C are enrichment and can follow in a second pass. In that case, hand back
+> `data/manifest.json` after the merge and stop there.
+
 ## Part B — page previews + OCR (the new Release 05 PDFs)
 
 ```bash
 mkdir -p raw output/previews output/_classification output/_ocr
 ```
 
-Download the Release 05 **document** bundle. The exact URL is not known — every
-release has used a different path, so **read it off the page** rather than
-guessing: on war.gov/UFO the download buttons sit above the table. For
-reference, the previous releases were:
+The Release 05 bundle URLs are known (read off war.gov, 2026-08-23):
 
 ```
-R02 docs  https://www.war.gov/medialink/ufo/052226/release_02/release_02_document_bundle.zip
-R03 docs  https://www.war.gov/medialink/ufo/061226/release_03/release_03_documents.zip
-R04 docs  https://www.war.gov/medialink/ufo/071026/release_04/release_04_documents_071026.zip
-R02 video https://d34w7g4gy10iej.cloudfront.net/uap052226.zip
-R03 video https://d34w7g4gy10iej.cloudfront.net/release_03/uap_videos_061226.zip
-R04 video https://d34w7g4gy10iej.cloudfront.net/release_04/uap_release04_videos_071026.zip
+docs   https://www.war.gov/medialink/ufo/release_05/Aug_07/release_05_Aug_07_documents.zip
+video  https://d34w7g4gy10iej.cloudfront.net/release_05/uap_videos_080726.zip
 ```
 
-**Tell me both Release 05 URLs once you have them** — the remote session needs
-them for the download buttons, and a guessed URL has already shipped broken once
-(PR #39 existed only to fix invented R02 bundle links).
+Only the document bundle is needed here — the video bundle is multi-gigabyte and
+the site links to it rather than processing it.
 
 ```bash
-curl -L -o r05.zip "<THE RELEASE 05 DOCUMENT BUNDLE URL>"
+curl -L -o r05.zip "https://www.war.gov/medialink/ufo/release_05/Aug_07/release_05_Aug_07_documents.zip"
 unzip -o r05.zip -d raw/
 find raw -iname '*.pdf' | wc -l      # expect roughly 20-25 (the rest are video)
 ```
@@ -181,8 +179,7 @@ cd ..
 ls -lh release_05_bundle.zip
 ```
 
-Send me **`release_05_bundle.zip`**, plus the two Release 05 bundle URLs from
-Part B. That's it.
+Send me **`release_05_bundle.zip`**. That's it.
 
 ### What the remote session takes from it
 
@@ -191,7 +188,6 @@ Part B. That's it.
   `preview_pages_fallback`, `text_en`, `text_preview_en` — and the
   `previews/{id}/*.jpg` images.
 - `uap_videos.json` → remote runs `merge_dvids_videos.py` to add inline playback.
-- The two bundle URLs → the Release 05 download column in `index.html`.
 
 Then remotely: Hebrew translation of the 41 new records (`title_he`,
 `agency_he`, `incident_location_he`, `summary_he`, `narrative_he`, `text_he`),

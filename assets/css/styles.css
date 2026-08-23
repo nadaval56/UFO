@@ -514,6 +514,45 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 }
 .pending-release-foot a { color: var(--accent); }
 
+.pending-release-bundles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-block-start: 12px;
+  padding-block-start: 12px;
+  border-block-start: 1px solid var(--border);
+}
+.pending-release-bundles-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.pending-release-bundle {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 14px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elev-1);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text);
+  transition: border-color 120ms ease, background 120ms ease;
+}
+.pending-release-bundle:hover {
+  border-color: var(--accent);
+  background: var(--accent-faint);
+  text-decoration: none;
+}
+.pending-release-bundle .mono {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  word-break: break-all;
+}
+
 .release-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -573,6 +612,8 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 /* Mobile: stack tabs one per row (full width), label + count at the edges. */
 @media (max-width: 640px) {
   .pending-release-head { font-size: 0.82rem; }
+  .pending-release-bundles { flex-direction: column; align-items: stretch; }
+  .pending-release-bundle { width: 100%; }
   .release-tabs {
     flex-direction: column;
     gap: 6px;

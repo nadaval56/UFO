@@ -268,8 +268,23 @@
           החומרים טרם שוקפו לעברית — war.gov חוסם סריקה משרתים, והרענון מתבצע ידנית מהדפדפן.
           ${r.announcement_url ? `<a href="${escapeHtml(r.announcement_url)}" target="_blank" rel="noopener">ההודעה הרשמית ↗</a>` : ""}
         </p>
+        ${renderPendingBundles(r)}
       </div>`).join("");
     el.pending.hidden = false;
+  }
+
+  function renderPendingBundles(r) {
+    const bundles = (r.bundles || []).filter((b) => b && b.url);
+    if (!bundles.length) return "";
+    return `
+      <div class="pending-release-bundles">
+        <span class="pending-release-bundles-label">הורדה ישירה מהמקור:</span>
+        ${bundles.map((b) => `
+          <a class="pending-release-bundle" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">
+            <span>${escapeHtml(b.label_he || "חבילה")}</span>
+            <span class="mono">${escapeHtml(b.filename || "")}</span>
+          </a>`).join("")}
+      </div>`;
   }
 
   function renderTabs() {
