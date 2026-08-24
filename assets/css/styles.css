@@ -325,6 +325,53 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   line-height: 1.8;
 }
 .directive-text p + p { margin-top: 16px; }
+/* Agencies in the directive section — chips rather than one row each, so
+   the full list (11 values) fits in less space than the four hardcoded
+   rows it replaces. */
+.directive-agencies-label {
+  margin: 28px 0 10px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.directive-agencies {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.agency-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 7px 11px;
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 120ms ease, background 120ms ease;
+}
+.agency-chip:hover {
+  border-color: var(--accent);
+  background: var(--accent-faint);
+}
+.agency-chip-count {
+  font-size: 0.72rem;
+  color: var(--accent);
+}
+.agency-chip-more {
+  color: var(--text-dim);
+  border-style: dashed;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+}
+
 .directive-facts {
   list-style: none;
   padding: 0;
@@ -534,6 +581,8 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   /* The glossary and the aside were four tall stacked cards each — roughly
      720px of chrome before the archive. One line per entry says the same
      thing: the label is short and the value is short, so they fit together. */
+  .directive-agencies-label { margin-top: 20px; }
+  .agency-chip { font-size: 0.8rem; padding: 6px 10px; }
   .directive-facts {
     grid-template-columns: 1fr;
     gap: 6px;
