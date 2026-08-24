@@ -49,6 +49,9 @@
     type: document.getElementById("filter-type"),
     search: document.getElementById("filter-search"),
     reset: document.getElementById("filter-reset"),
+    filtersToggle: document.getElementById("filters-toggle"),
+    filtersPanel: document.getElementById("filters"),
+    filtersCount: document.getElementById("filters-toggle-count"),
   };
 
   /* ------------------------- utilities ------------------------- */
@@ -297,6 +300,47 @@
       </div>`;
   }
 
+  /* ------------------------- mobile filter collapse ------------------------- */
+  // `release` is deliberately excluded from the count: picking a release is
+  // done from the tab strip, which stays visible and shows its own active
+  // state, so counting it here would report the same thing twice.
+  const COUNTED_FILTERS = ["agency", "incidentDate", "incidentLocation", "type", "search"];
+
+  function activeFilterCount() {
+    return COUNTED_FILTERS.filter((k) => state.filters[k]).length;
+  }
+
+  function setFiltersExpanded(open) {
+    if (!el.filtersToggle || !el.filtersPanel) return;
+    el.filtersToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    el.filtersPanel.classList.toggle("is-collapsed", !open);
+  }
+
+  function updateFilterChrome() {
+    if (!el.filtersCount) return;
+    const n = activeFilterCount();
+    el.filtersCount.textContent = n ? String(n) : "";
+    el.filtersCount.hidden = n === 0;
+  }
+
+  function initFilterCollapse() {
+    if (!el.filtersToggle || !el.filtersPanel) return;
+    const mobile = window.matchMedia("(max-width: 768px)");
+
+    function syncToBreakpoint() {
+      // Above the breakpoint the CSS ignores .is-collapsed entirely. Below it,
+      // start closed — unless a filter is already active (a deep link), in
+      // which case hiding the controls that caused it would be baffling.
+      setFiltersExpanded(!mobile.matches || activeFilterCount() > 0);
+    }
+
+    syncToBreakpoint();
+    el.filtersToggle.addEventListener("click", () => {
+      setFiltersExpanded(el.filtersToggle.getAttribute("aria-expanded") !== "true");
+    });
+    mobile.addEventListener("change", syncToBreakpoint);
+  }
+
   function renderTabs() {
     if (!el.tabs) return;
     const rels = releaseList();
@@ -383,6 +427,11 @@
     renderReleaseHeader();
     renderPending();
     applyHash();
+    // After applyHash: the collapse decision reads the filter state, and on a
+    // deep link that state only exists once the hash has been parsed. Running
+    // it earlier left a shared ?type=... link collapsed with an active badge
+    // and no visible controls.
+    initFilterCollapse();
     bindEvents();
     apply();
   }
@@ -573,6 +622,7 @@
 
     el.countNum.textContent = String(state.filtered.length);
 
+    updateFilterChrome();
     renderList();
     renderPagination(totalPages);
   }
