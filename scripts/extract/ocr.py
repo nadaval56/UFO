@@ -31,8 +31,42 @@ DEFAULT_OCR_DIR = REPO_ROOT / "data" / "_ocr"
 
 OCR_DPI = 300
 PREVIEW_CHAR_LIMIT = 3000
-MIN_CONFIDENCE = 60        # average tesseract confidence threshold
+# Tesseract's mean confidence is a weak signal on this corpus — it clears 60
+# on pure noise, and on DOS-UAP-D001 it returned 1,683 characters of perfectly
+# legible telegram text at 59.3, which the old gate discarded wholesale. The
+# wordish-ratio/junk filters downstream do the real rejecting, so this is now
+# only a floor against total garbage.
+MIN_CONFIDENCE = 45        # average tesseract confidence threshold
 PREFERRED_KINDS = ["typewritten", "clipping"]
+
+
+def wants_ocr(page: dict) -> bool:
+    """Should this page be sent to tesseract?
+
+    Typewritten and clipping pages always. Plus tinted-paper pages that
+    classify as `photo` only because `page_metrics` thresholds ink at an
+    absolute `arr < 180`: strongly coloured stock puts every pixel under it,
+    `line_peaks` collapses to 0, and real typed text lands in `photo`.
+    DOW-UAP-D100 p1 — the 3 Nov 1948 Project SIGN memo, typed on green stock
+    and the most significant page in Release 05 — was skipped entirely for
+    this reason.
+
+    The dark_ratio bound is about runtime as much as accuracy. Selecting on
+    midtone alone also sweeps in faded photographs on brown paper, where
+    tesseract spends ~30 minutes on a single 2.8 MB scan and returns nothing
+    the junk filter keeps:
+
+        typed text on tinted stock   dark_ratio 0.069 - 0.131   OCR it
+        faded photo on brown paper   dark_ratio 0.001 - 0.015   skip
+        near-black night rendering   dark_ratio 0.671           skip
+    """
+    if page.get("kind") in PREFERRED_KINDS:
+        return True
+    if page.get("kind") == "photo":
+        mt = page.get("midtone_ratio", 0.0)
+        dr = page.get("dark_ratio", 0.0)
+        return mt > 0.5 and 0.05 <= dr < 0.5
+    return False
 
 
 def ocr_page(pdf_path: Path, page_num: int, dpi: int = OCR_DPI) -> tuple[str, float]:
@@ -112,8 +146,8 @@ def main() -> int:
         if not cjson.exists():
             continue
         pages = json.loads(cjson.read_text(encoding="utf-8")).get("pages", [])
-        # Every typewritten / clipping page, in page order
-        candidates = [p for p in pages if p["kind"] in PREFERRED_KINDS]
+        # Every page worth OCR'ing, in page order
+        candidates = [p for p in pages if wants_ocr(p)]
         candidates.sort(key=lambda p: p["page"])
         if args.max_pages_per_file and args.max_pages_per_file > 0:
             candidates = candidates[: args.max_pages_per_file]
