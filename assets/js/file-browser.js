@@ -734,9 +734,9 @@
         : `<span class="file-card-download file-card-download-disabled" data-stop-card>אין קישור</span>`;
 
       return `
-        <article class="file-card" tabindex="0" data-id="${idAttr}" data-index="${start + idx}" role="button" aria-label="פתח פרטים עבור ${headlineSafe}">
+        <article class="file-card" data-id="${idAttr}" data-index="${start + idx}">
           <header class="file-card-head">
-            <h3 class="file-card-title${isCodeHeadline ? " code-title" : ""}" dir="${isCodeHeadline ? "ltr" : "rtl"}">${headlineSafe}</h3>
+            <h3 class="file-card-title${isCodeHeadline ? " code-title" : ""}" dir="${isCodeHeadline ? "ltr" : "rtl"}"><a class="file-card-link" href="file.html?id=${encodeURIComponent(f.id || "")}">${headlineSafe}</a></h3>
             <span class="file-card-type-badge mono">.${safeType}</span>
           </header>
           ${blurb ? `<p class="file-card-blurb">${blurb}</p>` : ""}
@@ -752,15 +752,11 @@
     el.list.querySelectorAll(".file-card").forEach((card) => {
       card.addEventListener("click", (e) => {
         if (e.target.closest("[data-stop-card]")) return;
+        // The title is a real link: let the browser handle it, so
+        // middle-click, ctrl-click and "open in new tab" all work.
+        if (e.target.closest("a")) return;
         const idx = parseInt(card.dataset.index, 10);
         openFile(state.filtered[idx]);
-      });
-      card.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          const idx = parseInt(card.dataset.index, 10);
-          openFile(state.filtered[idx]);
-        }
       });
     });
   }

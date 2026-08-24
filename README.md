@@ -80,6 +80,7 @@ python3 -m http.server 8000
 ```
 /
 ├── index.html                # האתר
+├── archive.html              # אינדקס סטטי של כל המסמכים (נוצר, לא נערך ביד)
 ├── CLAUDE.md                 # הנחיות פיתוח
 ├── README.md
 ├── LICENSE
