@@ -159,9 +159,14 @@ def classify(metrics: dict, page_no: int, total_pages: int) -> tuple[str, float]
     #      with a typed caption below.
     #   C. Sparse image on white background — small graphic in lots of
     #      whitespace (e.g. radar/thermal scans). Low ink, low edges.
+    #      `lp < 8` and `mt > 0.03` keep sparse *text* out of this branch:
+    #      DOS-UAP-D002 p2 is three typed lines and a signature on yellowed
+    #      paper (pr≈0.97, ink≈0.015). It used to win the curated-preview
+    #      slot, which suppressed the fallback previews, so the card showed
+    #      a near-blank page.
     if (mt > 0.35 and lp < 6 and ed < 0.08) or \
        (pr > 0.30 and lp < 8 and (mt > 0.30 or ink > 0.20)) or \
-       (pr > 0.15 and ink < 0.05 and ed < 0.05 and lp < 16):
+       (pr > 0.15 and ink < 0.05 and ed < 0.05 and lp < 8 and mt > 0.03):
         return ("photo", 90)
 
     # Illustration: hand-drawn sketches / witness drawings. Moderate-to-high
