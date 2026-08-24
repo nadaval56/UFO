@@ -492,6 +492,45 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   .release-downloads .btn-meta { font-size: 0.64rem; }
 }
 @media (max-width: 768px) {
+  .filters-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 14px 16px;
+    background: var(--bg-elev-1);
+    border: 1px solid var(--border-strong);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: start;
+  }
+  .filters-toggle[aria-expanded="true"] {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  /* An active filter must never be invisible just because the row is
+     closed — otherwise a short result list looks like a bug. */
+  .filters-toggle-count {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 1px 8px;
+    font-size: 0.72rem;
+    font-weight: 500;
+  }
+  .filters-toggle-chevron {
+    margin-inline-start: auto;
+    transition: transform 140ms ease;
+  }
+  .filters-toggle[aria-expanded="true"] .filters-toggle-chevron {
+    transform: rotate(180deg);
+  }
+  /* Scoped inside the breakpoint, so a JS failure cannot strand the
+     filters on desktop. */
+  .filters.is-collapsed { display: none; }
+
   /* The glossary and the aside were four tall stacked cards each — roughly
      720px of chrome before the archive. One line per entry says the same
      thing: the label is short and the value is short, so they fit together. */
@@ -739,6 +778,17 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
     width: 100%;
     justify-content: space-between;
   }
+}
+
+/* Mobile: the filter row is 464px of controls before any document is
+   visible, so it folds behind one button — same pattern as the release
+   download bundles.
+   Stated as min-width rather than a bare `display: none`, so it cannot be
+   overridden by source order — this rule sits after the max-width:768 block
+   that reveals the button, and as a bare rule it silently won, hiding the
+   toggle while the panel stayed collapsed. */
+@media (min-width: 769px) {
+  .filters-toggle { display: none; }
 }
 
 /* Filters */

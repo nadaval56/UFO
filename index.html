@@ -259,8 +259,14 @@
           <!-- לשוניות נבנות דינמית מ-manifest.json ע"י file-browser.js -->
         </nav>
 
-        <!-- שורת סינון -->
-        <div class="filters" role="region" aria-label="סינון מסמכים">
+        <!-- שורת סינון — במובייל מתקפלת מאחורי כפתור אחד (ראו #filters-toggle) -->
+        <button id="filters-toggle" class="filters-toggle" type="button"
+                aria-expanded="false" aria-controls="filters">
+          <span class="filters-toggle-text">סינון וחיפוש</span>
+          <span id="filters-toggle-count" class="filters-toggle-count mono" hidden></span>
+          <span class="filters-toggle-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="filters" id="filters" role="region" aria-label="סינון מסמכים">
           <div class="filter">
             <label for="filter-agency" class="filter-label">סוכנות</label>
             <select id="filter-agency" class="filter-select">
