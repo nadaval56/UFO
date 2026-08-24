@@ -951,6 +951,9 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   gap: 10px;
   min-width: 0;
 }
+.file-card-link { color: inherit; text-decoration: none; }
+.file-card-link:hover { color: var(--accent); text-decoration: none; }
+.file-card:focus-within { outline: 1px solid var(--accent); outline-offset: -1px; }
 .file-card-title {
   flex: 1 1 auto;
   margin: 0;

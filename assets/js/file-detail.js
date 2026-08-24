@@ -211,11 +211,47 @@
       if (node) node.setAttribute(attr, value);
     }
     setAttr('link[rel="canonical"]', "href", pageUrl);
+    // meta[name=description] drives the search snippet, and was the one tag
+    // not being updated — all 375 pages shared the generic placeholder.
+    setAttr('meta[name="description"]', "content", desc);
     setAttr('meta[property="og:title"]', "content", `${titleHe} — עב"מים`);
     setAttr('meta[property="og:description"]', "content", desc);
     setAttr('meta[property="og:url"]', "content", pageUrl);
     setAttr('meta[name="twitter:title"]', "content", `${titleHe} — עב"מים`);
     setAttr('meta[name="twitter:description"]', "content", desc);
+
+    // Structured data, so the document can surface as more than a blue link.
+    // Source material is a US federal work, hence the public-domain license.
+    const ld = {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      name: titleHe,
+      alternateName: f.title || undefined,
+      description: desc,
+      inLanguage: "he",
+      url: pageUrl,
+      identifier: f.id,
+      license: "https://www.usa.gov/government-works",
+      isAccessibleForFree: true,
+      creditText: f.agency_he || f.agency || undefined,
+      isPartOf: {
+        "@type": "Collection",
+        name: 'עב"מים — כל מה שהותר לפרסום',
+        url: "https://nadaval56.github.io/UFO/",
+      },
+      publisher: { "@type": "Organization", name: "U.S. Department of War" },
+    };
+    if (f.source_url) ld.sameAs = f.source_url;
+    if (f.incident_date && f.incident_date !== "N/A") ld.temporalCoverage = f.incident_date;
+    if (f.incident_location_he) ld.contentLocation = { "@type": "Place", name: f.incident_location_he };
+    const firstPreview = (f.preview_pages || f.preview_pages_fallback || [])[0];
+    if (firstPreview && firstPreview.path) {
+      ld.image = "https://nadaval56.github.io/UFO/" + firstPreview.path;
+    }
+    const ldNode = document.createElement("script");
+    ldNode.type = "application/ld+json";
+    ldNode.textContent = JSON.stringify(ld, (k, v) => (v === undefined ? undefined : v));
+    document.head.appendChild(ldNode);
 
     // כותרת
     el.eyebrow.textContent = f.agency_he || f.agency || "מסמך";
