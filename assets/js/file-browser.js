@@ -41,6 +41,7 @@
     releaseTitle: document.getElementById("release-title"),
     releaseEyebrow: document.getElementById("release-eyebrow"),
     latestReleaseDate: document.getElementById("latest-release-date"),
+    agencyList: document.getElementById("directive-agencies"),
     pending: document.getElementById("pending-release"),
     agency: document.getElementById("filter-agency"),
     releaseSelect: document.getElementById("filter-release"),
@@ -341,6 +342,67 @@
     mobile.addEventListener("change", syncToBreakpoint);
   }
 
+  // The directive section used to name four agencies by hand. That list was
+  // written for Release 01 and never revisited: by Release 05 it still said
+  // AARO (0 files) and ODNI (1), while omitting NASA (40), CIA, State, DOE
+  // and the Executive Office of the President entirely. Build it from the
+  // data instead, with counts, and make each one filter the archive.
+  function renderAgencies() {
+    if (!el.agencyList) return;
+    const counts = new Map();
+    state.files.forEach((f) => {
+      const key = f.agency;
+      if (!key) return;
+      if (!counts.has(key)) counts.set(key, { agency: key, he: f.agency_he || key, n: 0 });
+      counts.get(key).n += 1;
+    });
+    const rows = [...counts.values()].sort((a, b) => b.n - a.n);
+    if (!rows.length) return;
+
+    // war.gov's agency values have a long tail of one-file entries with long
+    // Hebrew names — showing all eleven at once is taller than the four
+    // hardcoded rows this replaces. Lead with the substantial ones and put
+    // the rest behind a chip, so nothing is hidden permanently.
+    const LEAD = 6;
+    const chip = (r) => `
+      <li>
+        <button type="button" class="agency-chip" data-agency="${escapeHtml(r.agency)}"
+                title="סינון הארכיון לפי ${escapeHtml(r.he)}">
+          <span class="agency-chip-name">${escapeHtml(r.he)}</span>
+          <span class="agency-chip-count mono">${r.n}</span>
+        </button>
+      </li>`;
+
+    const lead = rows.slice(0, LEAD);
+    const tail = rows.slice(LEAD);
+    el.agencyList.innerHTML =
+      lead.map(chip).join("") +
+      tail.map((r) => chip(r).replace("<li>", '<li class="agency-tail" hidden>')).join("") +
+      (tail.length
+        ? `<li><button type="button" class="agency-chip agency-chip-more" id="agency-more">
+             +${tail.length} נוספות</button></li>`
+        : "");
+
+    const more = el.agencyList.querySelector("#agency-more");
+    if (more) {
+      more.addEventListener("click", () => {
+        el.agencyList.querySelectorAll(".agency-tail").forEach((li) => { li.hidden = false; });
+        more.parentElement.remove();
+      });
+    }
+
+    el.agencyList.querySelectorAll("[data-agency]").forEach((b) => {
+      b.addEventListener("click", () => {
+        state.filters.agency = b.dataset.agency;
+        state.page = 1;
+        if (el.agency) el.agency.value = state.filters.agency;
+        apply();
+        writeHash();
+        document.getElementById("release").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  }
+
   function renderTabs() {
     if (!el.tabs) return;
     const rels = releaseList();
@@ -424,6 +486,7 @@
     }
 
     initFilters();
+    renderAgencies();
     renderReleaseHeader();
     renderPending();
     applyHash();
