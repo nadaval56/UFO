@@ -89,11 +89,6 @@ python scripts/merge_release.py --new scrape.json
 cp data/manifest.json output/manifest.json
 ```
 
-**Also read the two bundle download URLs off the page** (the DOCUMENTS and
-VIDEOS download buttons for Release 06) and put them in your final message.
-war.gov has used a different path scheme for every release so far — never
-guess them. Don't download the video bundle.
-
 > **If you only have time for one thing, do Part A.** The scrape alone gets all
 > 71 files listed, titled, filtered, searchable and translatable on the site —
 > it just leaves them without page previews, OCR text or inline video. Parts B
@@ -102,9 +97,19 @@ guess them. Don't download the video bundle.
 
 ## Part B — page previews + OCR (the new Release 06 PDFs)
 
+The Release 06 bundle URLs are known (read off war.gov by the user, 2026-09-26):
+
+```
+docs   https://www.war.gov/medialink/ufo/sept-18/release-06/documents_release_06_sept_18_2026.zip
+video  https://d34w7g4gy10iej.cloudfront.net/release_06/pursue_vids_091826.zip
+```
+
+Only the document bundle is needed here — the site links to the video bundle
+rather than processing it.
+
 ```bash
 mkdir -p raw output/previews output/_classification output/_ocr
-curl -L -o r06.zip "<DOCUMENTS bundle URL you read off the page in Part A>"
+curl -L -o r06.zip "https://www.war.gov/medialink/ufo/sept-18/release-06/documents_release_06_sept_18_2026.zip"
 unzip -o r06.zip -d raw/
 find raw -iname '*.pdf' | wc -l      # expect ~55
 ```
