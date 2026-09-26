@@ -36,6 +36,24 @@ DVIDS_API_KEY = <<PASTE YOUR DVIDS API KEY HERE — from your dvidshub.net email
 If that placeholder is still there or the key doesn't work, tell me and I'll get
 one from https://api.dvidshub.net/ (free, instant registration).
 
+## Setup
+
+```bash
+# system tools (macOS shown; Linux: sudo apt install poppler-utils tesseract-ocr;
+# Windows: use WSL, or install Poppler + Tesseract and add both to PATH)
+brew install poppler tesseract
+pip install pdf2image PyMuPDF Pillow numpy pytesseract tqdm requests
+
+git clone https://github.com/nadaval56/UFO.git
+cd UFO
+# the pipeline.py fix this briefing relies on lives on this branch until PR #58
+# is merged; once merged (or the branch is deleted) main already has it
+git checkout claude/update-version-6-nw6a7j 2>/dev/null || true
+```
+
+Read `scripts/extract/EXTRACT.md` — it's the full method and the two quality
+policies (what counts as an "interesting" preview; OCR every typewritten page).
+
 ## Part A — scrape war.gov (this is the step that unblocks everything)
 
 Release 06's file list only exists on the live page, so this comes first.
