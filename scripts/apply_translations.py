@@ -34,6 +34,7 @@ AGENCY_HE: dict[str, str] = {
     "Central Intelligence Agency": "סוכנות הביון המרכזית",
     "Department of Energy": "משרד האנרגיה",
     "Office of the Director of National Intelligence": "משרד מנהל המודיעין הלאומי",
+    "Local Law Enforcement": "רשויות אכיפת חוק מקומיות",
 }
 
 # ---------------------------------------------------------------------------

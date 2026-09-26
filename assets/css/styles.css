@@ -526,7 +526,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 /* Mobile: ten buttons is a wall, so fold them behind one control. */
 .release-downloads-toggle { display: none; }
 
-/* Five columns stop being readable around here; wrap to a 2-up grid. */
+/* Five-plus columns stop being readable around here; wrap to a 2-up grid. */
 @media (max-width: 1100px) {
   .release-downloads .btn-meta { font-size: 0.58rem; }
 }
