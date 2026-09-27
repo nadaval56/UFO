@@ -30,6 +30,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2   # indexnow.py diffs HEAD~1..HEAD
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -42,3 +44,16 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # Tell Bing & co. which pages changed (scripts/indexnow.py). A manual
+      # run of this workflow resubmits every sitemap URL. Never fails the
+      # deploy: the site is already live by this point.
+      - name: Notify IndexNow
+        continue-on-error: true
+        run: |
+          sleep 30
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python3 scripts/indexnow.py --all
+          else
+            python3 scripts/indexnow.py
+          fi
