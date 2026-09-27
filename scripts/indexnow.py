@@ -19,6 +19,8 @@ import json
 import re
 import subprocess
 import sys
+import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -53,20 +55,52 @@ def all_urls() -> list[str]:
     return re.findall(r"<loc>([^<]+)</loc>", (ROOT / "sitemap.xml").read_text(encoding="utf-8"))
 
 
+def wait_for_key(key: str, tries: int = 20, delay: int = 15) -> bool:
+    """IndexNow verifies the key by fetching <key>.txt from the site. Right
+    after a deploy the Pages CDN may not serve a new file yet, and a
+    submission then gets 403 — so confirm the file is live first."""
+    url = f"{BASE}/{key}.txt"
+    for i in range(tries):
+        try:
+            with urllib.request.urlopen(url + f"?t={int(time.time())}", timeout=15) as res:
+                if res.read().decode().strip() == key:
+                    return True
+        except (urllib.error.URLError, TimeoutError):
+            pass
+        print(f"indexnow: key file not live yet ({i + 1}/{tries}), waiting {delay}s")
+        time.sleep(delay)
+    return False
+
+
+def submit(key: str, urls: list[str], attempts: int = 3) -> None:
+    body = json.dumps({"host": HOST, "key": key, "keyLocation": f"{BASE}/{key}.txt",
+                       "urlList": urls}).encode()
+    for attempt in range(1, attempts + 1):
+        req = urllib.request.Request(ENDPOINT, data=body, method="POST",
+                                     headers={"Content-Type": "application/json; charset=utf-8"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as res:
+                print(f"indexnow: submitted {len(urls)} URLs -> HTTP {res.status}")
+                return
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode(errors="replace")[:300]
+            print(f"indexnow: attempt {attempt} -> HTTP {e.code} {e.reason} {detail}")
+            # 403 = key not (yet) verifiable, 429 = throttled: worth a retry.
+            if e.code not in (403, 429) or attempt == attempts:
+                raise
+            time.sleep(60)
+
+
 def main() -> int:
     key = find_key()
     urls = all_urls() if "--all" in sys.argv else changed_urls()
     if not urls:
         print("indexnow: no page changes to report")
         return 0
+    if not wait_for_key(key):
+        raise SystemExit(f"indexnow: {BASE}/{key}.txt never became reachable; not submitting")
     for i in range(0, len(urls), 10000):          # protocol limit per request
-        body = json.dumps({"host": HOST, "key": key,
-                           "keyLocation": f"{BASE}/{key}.txt",
-                           "urlList": urls[i:i + 10000]}).encode()
-        req = urllib.request.Request(ENDPOINT, data=body, method="POST",
-                                     headers={"Content-Type": "application/json; charset=utf-8"})
-        with urllib.request.urlopen(req, timeout=30) as res:
-            print(f"indexnow: submitted {len(urls[i:i + 10000])} URLs -> HTTP {res.status}")
+        submit(key, urls[i:i + 10000])
     return 0
 
 

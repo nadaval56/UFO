@@ -51,7 +51,6 @@ jobs:
       - name: Notify IndexNow
         continue-on-error: true
         run: |
-          sleep 30
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             python3 scripts/indexnow.py --all
           else
