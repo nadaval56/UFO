@@ -2,7 +2,7 @@
    file-browser.js
    Drives the archive browser across every PURSUE release: loads
    manifest.json, renders cards, handles pagination, filters, and search.
-   Cards link to the standalone file.html?id=... page.
+   Cards link to each document's static page, doc/<id>.html.
    No dependencies — vanilla JS.
    ============================================================ */
 
@@ -477,6 +477,11 @@
     });
   }
 
+  // Must match page_name() in scripts/build_static_pages.py.
+  function docPath(id) {
+    return "doc/" + String(id).replace(/[^A-Za-z0-9._-]+/g, "_").replace(/^_+|_+$/g, "") + ".html";
+  }
+
   function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, (c) => ({
       "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -778,7 +783,7 @@
       return `
         <article class="file-card" data-id="${idAttr}" data-index="${start + idx}">
           <header class="file-card-head">
-            <h3 class="file-card-title${isCodeHeadline ? " code-title" : ""}" dir="${isCodeHeadline ? "ltr" : "rtl"}"><a class="file-card-link" href="file.html?id=${encodeURIComponent(f.id || "")}">${headlineSafe}</a></h3>
+            <h3 class="file-card-title${isCodeHeadline ? " code-title" : ""}" dir="${isCodeHeadline ? "ltr" : "rtl"}"><a class="file-card-link" href="${docPath(f.id || "")}">${headlineSafe}</a></h3>
             <span class="file-card-type-badge mono">.${safeType}</span>
           </header>
           ${blurb ? `<p class="file-card-blurb">${blurb}</p>` : ""}
@@ -805,7 +810,7 @@
 
   function openFile(file) {
     if (!file || !file.id) return;
-    window.location.href = "file.html?id=" + encodeURIComponent(file.id);
+    window.location.href = docPath(file.id);
   }
 
   /* ------------------------- pagination ------------------------- */
