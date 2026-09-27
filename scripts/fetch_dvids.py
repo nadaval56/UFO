@@ -30,6 +30,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import os
 import sys
 import time
@@ -120,6 +121,18 @@ def search_ids(api_key: str, query: str, unit_id: str | None) -> list[str]:
     return ids
 
 
+def scrub_key(obj):
+    """DVIDS echoes the caller's api_key inside some URLs (e.g. hls_url).
+    This file is committed to a public repo, so strip it before writing."""
+    if isinstance(obj, dict):
+        return {k: scrub_key(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [scrub_key(v) for v in obj]
+    if isinstance(obj, str) and "api_key=" in obj:
+        return re.sub(r"[?&]api_key=[^&#]*", "", obj)
+    return obj
+
+
 def fetch_asset(api_key: str, asset_id: str) -> dict | None:
     data = get_json(ASSET_URL, {"id": asset_id, "api_key": api_key})
     res = data.get("results")
@@ -157,7 +170,7 @@ def main() -> int:
         if not asset:
             continue
         key = str(asset.get("id", aid)).replace("video:", "")
-        existing[key] = asset
+        existing[key] = scrub_key(asset)
         fetched += 1
         if fetched % 10 == 0:
             log(f"  fetched {fetched}/{len(ids)}")
@@ -171,6 +184,7 @@ def main() -> int:
         log("dry-run: not writing")
         return 0
 
+    existing = scrub_key(existing)   # also cleans records kept from older runs
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(existing, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     log(f"wrote {OUT}")

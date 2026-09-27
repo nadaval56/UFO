@@ -83,7 +83,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006056.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006056.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006056/DOD_111688723.0000001/122x92_q95.jpg",
       "width": 122,
@@ -174,7 +174,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006059.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006059.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006059/DOD_111688762.0000001/122x92_q95.jpg",
       "width": 122,
@@ -265,7 +265,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006060.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006060.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006060/DOD_111688775.0000001/122x92_q95.jpg",
       "width": 122,
@@ -356,7 +356,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006062.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006062.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006062/DOD_111688809.0000001/122x92_q95.jpg",
       "width": 122,
@@ -447,7 +447,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006063.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006063.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006063/DOD_111688816.0000001/122x92_q95.jpg",
       "width": 122,
@@ -538,7 +538,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006067.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006067.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006067/DOD_111688825.0000001/122x92_q95.jpg",
       "width": 122,
@@ -629,7 +629,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006073.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006073.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006073/DOD_111688954.0000001/122x92_q95.jpg",
       "width": 122,
@@ -720,7 +720,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006074.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006074.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006074/DOD_111688964.0000001/122x92_q95.jpg",
       "width": 122,
@@ -811,7 +811,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006076.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006076.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006076/DOD_111688970.0000001/122x92_q95.jpg",
       "width": 122,
@@ -902,7 +902,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006078.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006078.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006078/DOD_111688997.0000001/122x92_q95.jpg",
       "width": 122,
@@ -993,7 +993,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006079.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006079.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006079/DOD_111689005.0000001/122x92_q95.jpg",
       "width": 122,
@@ -1084,7 +1084,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006080.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006080.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006080/DOD_111689011.0000001/122x92_q95.jpg",
       "width": 122,
@@ -1175,7 +1175,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006082.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006082.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006082/DOD_111689022.0000001/122x92_q95.jpg",
       "width": 122,
@@ -1266,7 +1266,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006083.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006083.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006083/DOD_111689030.0000001/122x92_q95.jpg",
       "width": 122,
@@ -1357,7 +1357,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006087.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006087.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006087/DOD_111689044.0000001/122x92_q95.jpg",
       "width": 122,
@@ -1448,7 +1448,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006088.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006088.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006088/DOD_111689051.0000001/122x92_q95.jpg",
       "width": 122,
@@ -1539,7 +1539,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006089.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006089.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006089/DOD_111689057.0000001/122x92_q95.jpg",
       "width": 122,
@@ -1630,7 +1630,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006093.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006093.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006093/DOD_111689082.0000001/122x92_q95.jpg",
       "width": 122,
@@ -1721,7 +1721,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006094.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006094.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006094/DOD_111689083.0000001/122x92_q95.jpg",
       "width": 122,
@@ -1812,7 +1812,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006097.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006097.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006097/DOD_111689090.0000001/122x92_q95.jpg",
       "width": 122,
@@ -1903,7 +1903,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006104.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006104.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006104/DOD_111689115.0000001/122x92_q95.jpg",
       "width": 122,
@@ -1994,7 +1994,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006105.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006105.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006105/DOD_111689123.0000001/122x92_q95.jpg",
       "width": 122,
@@ -2085,7 +2085,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006106.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006106.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006106/DOD_111689133.0000001/122x92_q95.jpg",
       "width": 122,
@@ -2176,7 +2176,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006107.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006107.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006107/DOD_111689142.0000001/122x92_q95.jpg",
       "width": 122,
@@ -2267,7 +2267,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006110.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006110.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006110/DOD_111689167.0000001/122x92_q95.jpg",
       "width": 122,
@@ -2358,7 +2358,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006111.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006111.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006111/DOD_111689168.0000001/122x92_q95.jpg",
       "width": 122,
@@ -2449,10 +2449,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006119.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006119.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1006119&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1006119&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1006119&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1006119&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006119/DOD_111689232.0000001/122x92_q95.jpg",
@@ -2544,7 +2544,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1006159.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1006159.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006159/DOD_111689759.0000001/122x92_q95.jpg",
       "width": 122,
@@ -2635,7 +2635,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007723.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007723.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007723/DOD_111719800.0000001/122x92_q95.jpg",
       "width": 122,
@@ -2726,10 +2726,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007718.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007718.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007718&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007718&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007718&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007718&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007718/DOD_111719741.0000001/122x92_q95.jpg",
@@ -2821,7 +2821,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007708.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007708.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007708/DOD_111719718.0000001/122x92_q95.jpg",
       "width": 122,
@@ -2912,7 +2912,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007778.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007778.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007778/DOD_111720693.0000001/122x92_q95.jpg",
       "width": 122,
@@ -3003,7 +3003,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007777.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007777.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007777/DOD_111720692.0000001/122x92_q95.jpg",
       "width": 122,
@@ -3094,7 +3094,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007783.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007783.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007783/DOD_111720720.0000001/122x92_q95.jpg",
       "width": 122,
@@ -3185,7 +3185,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007784.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007784.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007784/DOD_111720731.0000001/122x92_q95.jpg",
       "width": 122,
@@ -3276,7 +3276,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007720.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007720.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007720/DOD_111719752.0000001/122x92_q95.jpg",
       "width": 122,
@@ -3375,7 +3375,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007790.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007790.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007790/DOD_111720765.0000001/122x92_q95.jpg",
       "width": 122,
@@ -3466,7 +3466,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007709.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007709.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007709/DOD_111719723.0000001/122x92_q95.jpg",
       "width": 122,
@@ -3557,7 +3557,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007706.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007706.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007706/DOD_111719709.0000001/122x92_q95.jpg",
       "width": 122,
@@ -3648,7 +3648,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007711.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007711.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007711/DOD_111719726.0000001/122x92_q95.jpg",
       "width": 122,
@@ -3739,7 +3739,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007791.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007791.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007791/DOD_111720775.0000001/122x92_q95.jpg",
       "width": 122,
@@ -3830,7 +3830,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007779.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007779.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007779/DOD_111720696.0000001/122x92_q95.jpg",
       "width": 122,
@@ -3921,7 +3921,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007788.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007788.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007788/DOD_111720752.0000004/122x92_q95.jpg",
       "width": 122,
@@ -4012,7 +4012,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007781.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007781.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007781/DOD_111720700.0000001/122x92_q95.jpg",
       "width": 122,
@@ -4103,7 +4103,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007795.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007795.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007795/DOD_111720809.0000001/122x92_q95.jpg",
       "width": 122,
@@ -4194,7 +4194,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007740.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007740.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007740/DOD_111719850.0000001/122x92_q95.jpg",
       "width": 122,
@@ -4285,7 +4285,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007739.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007739.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007739/DOD_111719847.0000001/122x92_q95.jpg",
       "width": 122,
@@ -4376,7 +4376,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007735.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007735.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007735/DOD_111719828.0000001/122x92_q95.jpg",
       "width": 122,
@@ -4467,7 +4467,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007734.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007734.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007734/DOD_111719823.0000001/122x92_q95.jpg",
       "width": 122,
@@ -4558,7 +4558,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007804.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007804.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007804/DOD_111720857.0000001/122x92_q95.jpg",
       "width": 122,
@@ -4649,7 +4649,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007707.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007707.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007707/DOD_111719715.0000001/122x92_q95.jpg",
       "width": 122,
@@ -4740,10 +4740,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007713.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007713.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007713&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007713&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007713&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007713&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007713/DOD_111719732.0000001/122x92_q95.jpg",
@@ -4835,7 +4835,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007812.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007812.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007812/DOD_111720890.0000001/122x92_q95.jpg",
       "width": 122,
@@ -4926,7 +4926,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007809.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007809.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007809/DOD_111720884.0000001/122x92_q95.jpg",
       "width": 122,
@@ -5017,7 +5017,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007816.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007816.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007816/DOD_111720899.0000001/122x92_q95.jpg",
       "width": 122,
@@ -5108,7 +5108,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007803.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007803.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007803/DOD_111720856.0000006/122x92_q95.jpg",
       "width": 122,
@@ -5199,7 +5199,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007805.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007805.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007805/DOD_111720858.0000001/122x92_q95.jpg",
       "width": 122,
@@ -5290,7 +5290,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007807.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007807.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007807/DOD_111720861.0000001/122x92_q95.jpg",
       "width": 122,
@@ -5381,7 +5381,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007808.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007808.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007808/DOD_111720883.0000001/122x92_q95.jpg",
       "width": 122,
@@ -5472,7 +5472,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007810.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007810.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007810/DOD_111720886.0000001/122x92_q95.jpg",
       "width": 122,
@@ -5563,7 +5563,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007796.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007796.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007796/DOD_111720822.0000001/122x92_q95.jpg",
       "width": 122,
@@ -5654,7 +5654,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007799.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007799.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007799/DOD_111720830.0000001/122x92_q95.jpg",
       "width": 122,
@@ -5745,7 +5745,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007800.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007800.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007800/DOD_111720843.0000001/122x92_q95.jpg",
       "width": 122,
@@ -5836,7 +5836,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007719.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007719.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007719/DOD_111719746.0000001/122x92_q95.jpg",
       "width": 122,
@@ -5927,10 +5927,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007727.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007727.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007727&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007727&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007727&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007727&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007727/DOD_111719809.0000001/122x92_q95.jpg",
@@ -6022,7 +6022,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007721.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007721.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007721/DOD_111719795.0000001/122x92_q95.jpg",
       "width": 122,
@@ -6113,7 +6113,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007725.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007725.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007725/DOD_111719804.0000001/122x92_q95.jpg",
       "width": 122,
@@ -6204,7 +6204,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007722.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007722.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007722/DOD_111719799.0000001/122x92_q95.jpg",
       "width": 122,
@@ -6295,7 +6295,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007780.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007780.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007780/DOD_111720698.0000001/122x92_q95.jpg",
       "width": 122,
@@ -6386,7 +6386,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007797.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007797.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007797/DOD_111720827.0000001/122x92_q95.jpg",
       "width": 122,
@@ -6477,7 +6477,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007728.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007728.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007728/DOD_111719813.0000001/122x92_q95.jpg",
       "width": 122,
@@ -6568,7 +6568,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007738.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007738.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007738/DOD_111719835.0000001/122x92_q95.jpg",
       "width": 122,
@@ -6659,7 +6659,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007737.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007737.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007737/DOD_111719833.0000001/122x92_q95.jpg",
       "width": 122,
@@ -6750,7 +6750,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007726.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007726.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007726/DOD_111719807.0000001/122x92_q95.jpg",
       "width": 122,
@@ -6841,10 +6841,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007741.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007741.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007741&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007741&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007741&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007741&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007741/DOD_111719852.0000001/122x92_q95.jpg",
@@ -6936,10 +6936,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007872.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007872.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007872&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007872&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007872&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007872&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007872/DOD_111721698.0000001/122x92_q95.jpg",
@@ -7031,10 +7031,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007870.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007870.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007870&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007870&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007870&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007870&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007870/DOD_111721693.0000001/122x92_q95.jpg",
@@ -7126,10 +7126,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007876.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007876.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007876&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007876&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007876&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007876&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007876/DOD_111721737.0000001/122x92_q95.jpg",
@@ -7221,10 +7221,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007874.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007874.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007874&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007874&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007874&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007874&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007874/DOD_111721711.0000001/122x92_q95.jpg",
@@ -7316,10 +7316,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007877.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007877.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007877&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007877&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007877&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007877&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007877/DOD_111721747.0000001/122x92_q95.jpg",
@@ -7411,10 +7411,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007879.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007879.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007879&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007879&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007879&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007879&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007879/DOD_111721758.0000001/122x92_q95.jpg",
@@ -7506,10 +7506,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007878.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007878.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007878&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007878&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007878&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007878&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007878/DOD_111721755.0000001/122x92_q95.jpg",
@@ -7601,7 +7601,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/973048.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/973048.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2508/973048/DOD_111216951.0000001/122x92_q95.jpg",
       "width": 122,
@@ -7691,7 +7691,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/988676.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/988676.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/988676/DOD_111415223.0000001/122x92_q95.jpg",
       "width": 122,
@@ -7781,7 +7781,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/988675.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/988675.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/988675/DOD_111415215.0000001/122x92_q95.jpg",
       "width": 122,
@@ -7872,7 +7872,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/973055.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/973055.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2508/973055/DOD_111217027.0000001/122x92_q95.jpg",
       "width": 122,
@@ -7962,7 +7962,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/988673.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/988673.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/988673/DOD_111415209.0000001/122x92_q95.jpg",
       "width": 122,
@@ -8052,7 +8052,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/992262.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/992262.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2601/992262/DOD_111469070.0000001/122x92_q95.jpg",
       "width": 122,
@@ -8142,7 +8142,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/977839.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/977839.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977839/DOD_111311867.0000001/122x92_q95.jpg",
       "width": 122,
@@ -8232,7 +8232,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/977840.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/977840.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977840/DOD_111311872.0000001/122x92_q95.jpg",
       "width": 122,
@@ -8322,7 +8322,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/977838.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/977838.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977838/DOD_111311861.0000001/122x92_q95.jpg",
       "width": 122,
@@ -8412,7 +8412,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/977837.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/977837.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977837/DOD_111311856.0000001/122x92_q95.jpg",
       "width": 122,
@@ -8502,7 +8502,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/977834.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/977834.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977834/DOD_111311850.0000001/122x92_q95.jpg",
       "width": 122,
@@ -8593,7 +8593,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/973045.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/973045.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2508/973045/DOD_111216897.0000001/122x92_q95.jpg",
       "width": 122,
@@ -8683,7 +8683,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/977221.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/977221.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/977221/DOD_111300649.0000001/122x92_q95.jpg",
       "width": 122,
@@ -8773,7 +8773,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/976937.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/976937.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2509/976937/DOD_111294469.0000001/122x92_q95.jpg",
       "width": 122,
@@ -8870,7 +8870,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/989430.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/989430.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/989430/DOD_111426410.0000001/122x92_q95.jpg",
       "width": 122,
@@ -8960,7 +8960,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/989429.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/989429.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/989429/DOD_111426407.0000001/122x92_q95.jpg",
       "width": 122,
@@ -9050,7 +9050,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/989428.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/989428.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2512/989428/DOD_111426396.0000001/122x92_q95.jpg",
       "width": 122,
@@ -9140,7 +9140,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/992261.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/992261.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2601/992261/DOD_111469069.0000001/122x92_q95.jpg",
       "width": 122,
@@ -9231,7 +9231,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007712.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007712.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007712/DOD_111719730.0000001/122x92_q95.jpg",
       "width": 122,
@@ -9322,7 +9322,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007716.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007716.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007716/DOD_111719739.0000001/122x92_q95.jpg",
       "width": 122,
@@ -9413,7 +9413,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1007715.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1007715.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007715/DOD_111719736.0000001/122x92_q95.jpg",
       "width": 122,
@@ -9504,7 +9504,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017801.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017801.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017801/DOD_111887430.0000001/122x92_q95.jpg",
       "width": 122,
@@ -9595,7 +9595,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1010269.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1010269.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010269/DOD_111764177.0000001/122x92_q95.jpg",
       "width": 122,
@@ -9686,7 +9686,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014103.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014103.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014103/DOD_111830030.0000001/122x92_q95.jpg",
       "width": 122,
@@ -9777,7 +9777,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014101.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014101.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014101/DOD_111830027.0000001/122x92_q95.jpg",
       "width": 122,
@@ -9868,7 +9868,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017797.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017797.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017797/DOD_111887419.0000001/122x92_q95.jpg",
       "width": 122,
@@ -9959,7 +9959,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017792.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017792.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017792/DOD_111887390.0000001/122x92_q95.jpg",
       "width": 122,
@@ -10050,7 +10050,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014099.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014099.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014099/DOD_111830015.0000001/122x92_q95.jpg",
       "width": 122,
@@ -10141,7 +10141,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014098.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014098.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014098/DOD_111830012.0000001/122x92_q95.jpg",
       "width": 122,
@@ -10232,7 +10232,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014097.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014097.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014097/DOD_111830007.0000001/122x92_q95.jpg",
       "width": 122,
@@ -10323,7 +10323,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1010276.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1010276.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010276/DOD_111764213.0000001/122x92_q95.jpg",
       "width": 122,
@@ -10414,7 +10414,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1010272.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1010272.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010272/DOD_111764189.0000001/122x92_q95.jpg",
       "width": 122,
@@ -10505,7 +10505,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014096.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014096.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014096/DOD_111830004.0000001/122x92_q95.jpg",
       "width": 122,
@@ -10596,7 +10596,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014102.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014102.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014102/DOD_111830028.0000001/122x92_q95.jpg",
       "width": 122,
@@ -10687,7 +10687,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014100.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014100.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014100/DOD_111830020.0000001/122x92_q95.jpg",
       "width": 122,
@@ -10778,7 +10778,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017796.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017796.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017796/DOD_111887413.0000001/122x92_q95.jpg",
       "width": 122,
@@ -10869,7 +10869,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017799.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017799.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017799/DOD_111887426.0000001/122x92_q95.jpg",
       "width": 122,
@@ -10960,10 +10960,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1010264.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1010264.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010264&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010264&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010264&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010264&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010264/DOD_111764148.0000001/122x92_q95.jpg",
@@ -11055,7 +11055,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1010263.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1010263.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010263/DOD_111764142.0000001/122x92_q95.jpg",
       "width": 122,
@@ -11146,7 +11146,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017800.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017800.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017800/DOD_111887427.0000001/122x92_q95.jpg",
       "width": 122,
@@ -11237,7 +11237,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017803.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017803.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017803/DOD_111887446.0000001/122x92_q95.jpg",
       "width": 122,
@@ -11328,7 +11328,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017802.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017802.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017802/DOD_111887439.0000001/122x92_q95.jpg",
       "width": 122,
@@ -11419,7 +11419,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017795.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017795.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017795/DOD_111887407.0000001/122x92_q95.jpg",
       "width": 122,
@@ -11510,7 +11510,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017793.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017793.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017793/DOD_111887401.0000001/122x92_q95.jpg",
       "width": 122,
@@ -11601,7 +11601,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017798.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017798.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017798/DOD_111887421.0000000/122x92_q95.jpg",
       "width": 122,
@@ -11692,7 +11692,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014114.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014114.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014114/DOD_111830080.0000001/122x92_q95.jpg",
       "width": 122,
@@ -11783,7 +11783,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014112.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014112.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014112/DOD_111830075.0000001/122x92_q95.jpg",
       "width": 122,
@@ -11874,7 +11874,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014105.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014105.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014105/DOD_111830041.0000001/122x92_q95.jpg",
       "width": 122,
@@ -11965,7 +11965,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014124.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014124.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014124/DOD_111830151.0000001/122x92_q95.jpg",
       "width": 122,
@@ -12056,7 +12056,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014104.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014104.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014104/DOD_111830034.0000001/122x92_q95.jpg",
       "width": 122,
@@ -12147,7 +12147,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014106.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014106.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014106/DOD_111830058.0000001/122x92_q95.jpg",
       "width": 122,
@@ -12238,7 +12238,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014128.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014128.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014128/DOD_111830201.0000001/122x92_q95.jpg",
       "width": 122,
@@ -12329,7 +12329,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014123.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014123.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014123/DOD_111830147.0000001/122x92_q95.jpg",
       "width": 122,
@@ -12420,7 +12420,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017805.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017805.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017805/DOD_111887456.0000001/122x92_q95.jpg",
       "width": 122,
@@ -12511,7 +12511,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017791.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017791.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017791/DOD_111887384.0000001/122x92_q95.jpg",
       "width": 122,
@@ -12602,7 +12602,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017790.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017790.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017790/DOD_111887380.0000001/122x92_q95.jpg",
       "width": 122,
@@ -12693,7 +12693,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017806.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017806.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017806/DOD_111887460.0000001/122x92_q95.jpg",
       "width": 122,
@@ -12784,7 +12784,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1017788.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1017788.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2608/1017788/DOD_111887376.0000001/122x92_q95.jpg",
       "width": 122,
@@ -12875,7 +12875,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014121.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014121.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014121/DOD_111830143.0000001/122x92_q95.jpg",
       "width": 122,
@@ -12966,7 +12966,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014108.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014108.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014108/DOD_111830065.0000001/122x92_q95.jpg",
       "width": 122,
@@ -13057,7 +13057,7 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014119.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014119.m3u8",
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014119/DOD_111830133.0000001/122x92_q95.jpg",
       "width": 122,
@@ -13149,10 +13149,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014117.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014117.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014117&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014117&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014117&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014117&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014117/DOD_111830092.0000001/122x92_q95.jpg",
@@ -13245,10 +13245,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014116.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014116.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014116&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014116&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014116&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014116&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014116/DOD_111830085.0000001/122x92_q95.jpg",
@@ -13340,10 +13340,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1010336.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1010336.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010336&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010336&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010336&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010336&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010336/DOD_111764902.0000001/122x92_q95.jpg",
@@ -13435,10 +13435,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1010319.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1010319.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010319&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010319&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010319&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010319&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010319/DOD_111764796.0000001/122x92_q95.jpg",
@@ -13531,10 +13531,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014110.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014110.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014110&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014110&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014110&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014110&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014110/DOD_111830069.0000001/122x92_q95.jpg",
@@ -13627,10 +13627,10 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1014107.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1014107.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014107&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014107&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014107&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1014107&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2607/1014107/DOD_111830063.0000001/122x92_q95.jpg",
@@ -13722,13 +13722,1475 @@
         "bitrate": 0
       }
     ],
-    "hls_url": "https://api.dvidshub.net/hls/video/1010337.m3u8?api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
+    "hls_url": "https://api.dvidshub.net/hls/video/1010337.m3u8",
     "closed_caption_urls": {
-      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010337&format=srt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd",
-      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010337&format=webvtt&api_key=14d29d8037d85ef6edb5510eb75d6c9e369608cd"
+      "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010337&format=srt",
+      "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010337&format=webvtt"
     },
     "thumbnail": {
       "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010337/DOD_111764959.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023397": {
+    "id": "video:1023397",
+    "type": "video",
+    "title": "DOW-UAP-PR135, Unresolved UAP Report, Middle East, 2025",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 1 minute of video footage from an infrared sensor aboard a U.S. military platform in 2025. An accompanying mission report, DOW-UAP-D108, described the UAP as “six small spherical objects grouped together, and characterized their behavior as “seem[ingly] agile,” and “frequently changing direction.” The reporter estimated the speed of the UAP to have been 480 miles per hour.\n\nVideo Description:\n00:00-00:04: No content.\n00:05-00:10: Several areas of contrast transit the sensor field-of-view, entering from the top of the frame and exiting from the bottom.\n00:11-00:47: The sensor pans to track the areas of contrast, keeping them generally within the center of the frame.\n00:48-1:00: The sensor changes its level of magnification. No content.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:09-04:00",
+    "date": "2025-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:33:31-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023397/DOD_111985782.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023397/dow-uap-pr135-unresolved-uap-report-middle-east-2025",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "Undisclosed Location",
+      "country_abbreviation": "UL"
+    },
+    "time_start": 0,
+    "virin": "250101-D-D0360-6771",
+    "duration": 59,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985782/DOD_111985782.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 22766393,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985782/DOD_111985782-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 40884941,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985782/DOD_111985782-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 26259699,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985782/DOD_111985782-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 14374003,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985782/DOD_111985782-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 9823070,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985782/DOD_111985782-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 4228015,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985782/DOD_111985782-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 1777121,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023397.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023397/DOD_111985782.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023396": {
+    "id": "video:1023396",
+    "type": "video",
+    "title": "DOW-UAP-PR133, Unresolved UAP Report, Middle East, 2025",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 4 minutes and 58 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2024. An accompanying mission report, DOW-UAP-D107, described the UAP as “look[ing] like a white round orbit… moving as fast as 500 miles per hour.”\n\nVideo Description:\n00:00-00:04: The sensor pans to track an area of contrast, keeping it generally centered within the frame.\n00:05-00:50: The sensor decreases its level of magnification and continues to track the area of contrast, keeping it generally within the center of the frame.\n00:51-01:21: The sensor decreases its level of magnification and adjusts its panning speed to track the area of contrast, keeping it generally within the center of the frame.\n01:22-01:41: The sensor increases its level of magnification and adjusts its panning speed to track the area of contrast, keeping it generally within the center of the frame.\n01:43-2:05: A rectangular digital overlay, or “focus box,” appears near the center of the frame. This display element is a graphical component of the sensor system and does indicate a physical change in the environment. The sensor pans to track the area of contrast, keeping it generally within the center of the frame before exiting the sensor field-of-view from the bottom edge.\n02:06-02:21: The sensor pans across the scene and decreases its level of magnification. The area of contrast intermittently re-appears from the left edge of the frame.\n02:22-02:28: The sensor pans across the scene, reacquiring the area of contrast. After the area of contrast re-enters the scene, the sensor continues to pan to track it, keeping it generally within the center of the frame. The sensor engages briefly stops panning and the area of contrast exits on the right side once again.\n02:29-02:36: The sensor activates an auto-tracking reticle, which does not establish a lock on the area of contrast. After the auto-track reticle disengages, the sensor stops panning, causing the area of contrast to exit the frame from the right edge.\n02:37-3:22: The sensor pans and requires the area of contrast, keeping it within its field-of-view before it exits the bottom edge of the frame.\n3:23-4:29: The sensor continues to pan then zooms out and reacquires the area of contrast, now significantly smaller in the sensor’s field of view. The sensor continuously pans to keep the area of contrast in the field of view.\n4:30-4:58: The sensor zooms in, and the area of contrast transits the field-of-view, exiting the top of the frame. The sensor cycles magnification levels multiple times.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:09-04:00",
+    "date": "2025-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:33:40-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023396/DOD_111985772.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023396/dow-uap-pr133-unresolved-uap-report-middle-east-2025",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "Undisclosed Location",
+      "country_abbreviation": "UL"
+    },
+    "time_start": 0,
+    "virin": "250101-D-D0360-5891",
+    "duration": 298,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985772/DOD_111985772.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 80052070,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985772/DOD_111985772-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 163938713,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985772/DOD_111985772-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 116873229,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985772/DOD_111985772-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 58149273,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985772/DOD_111985772-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 49576584,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985772/DOD_111985772-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 23139721,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985772/DOD_111985772-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 11156026,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023396.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023396/DOD_111985772.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023416": {
+    "id": "video:1023416",
+    "type": "video",
+    "title": "LLE-UAP-PR004, Unresolved UAP Report, Colorado, October 2023",
+    "description": "A local law enforcement officer submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office consisting of 1 minute and 42 seconds of video footage from a commercially available cellular device’s rear-facing camera in October 2023. The reporting officer described the phenomenon as “silent” and as featuring “red, blue, and green flashing lights.”\n\nVideo Description: In the first 2 seconds of this video, AARO digitally altered this footage by blurring the bottom half to obscure information whose release could be reasonably expected to affect the privacy or other protected interest of a U.S. person or commercial entity.\n\n00:00-00:35: The camera focuses on an apparent light source, keeping it generally within the center of the frame.\n00:36-01:04: An approaching vehicle influences the camera’s automatic image-processing filters, including autofocus. The camera remains focused on the apparent light source.\n01:05-1:27: The camera remains focused on the apparent light source.\n01:28-01:37: An approaching vehicle influences the camera’s automatic image-processing filters, including autofocus. The camera remains focused on the apparent light source.\n01:38-01:42: The camera pans down.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.\n\nAARO Comment: Cellular devices of the type used to capture this footage employ autofocus and other automated image-processing functions that may distort the apparent morphological and kinematic characteristics of distant subjects, particularly at high magnification.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:16-04:00",
+    "date": "2023-10-01T00:00:00-04:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:30:28-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023416/DOD_111985855.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023416/lle-uap-pr004-unresolved-uap-report-colorado-october-2023",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "Colorado",
+      "country": "United States",
+      "state_abbreviation": "CO",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "231001-D-D0360-1358",
+    "duration": 102,
+    "aspect_ratio": "4:3",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985855/DOD_111985855.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 608,
+        "size": 6608849,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985855/DOD_111985855-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 7568783,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985855/DOD_111985855-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 5192088,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985855/DOD_111985855-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 2919984,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985855/DOD_111985855-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 2384870,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985855/DOD_111985855-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 1780617,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985855/DOD_111985855-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 1605239,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023416.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023416/DOD_111985855.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023414": {
+    "id": "video:1023414",
+    "type": "video",
+    "title": "LLE-UAP-PR003, Unresolved UAP Report, Colorado, October 2023",
+    "description": "A local law enforcement officer submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office consisting of 27 seconds of video footage from a commercially available cellular device’s rear-facing camera in October 2023. The reporting officer described the phenomenon as “silent” and as featuring “red, blue, and green flashing lights.”\n\nVideo Description: In the first 2 seconds of this video, AARO digitally altered this footage by blurring the bottom half to obscure information whose release could be reasonably expected to affect the privacy or other protected interest of a U.S. person or commercial entity.\n\n00:00-00:27: The camera increases its level of magnification and focuses on an apparent light source for the duration of the video, keeping it generally centered and within the top third of the frame.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.\n\nAARO Comment: Cellular devices of the type used to capture this footage employ autofocus and other automated image-processing functions that may distort the apparent morphological and kinematic characteristics of distant subjects, particularly at high magnification.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:15-04:00",
+    "date": "2023-10-01T00:00:00-04:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:30:42-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023414/DOD_111985850.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023414/lle-uap-pr003-unresolved-uap-report-colorado-october-2023",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "Colorado",
+      "country": "United States",
+      "state_abbreviation": "CO",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "231001-D-D0360-2153",
+    "duration": 27,
+    "aspect_ratio": "4:3",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985850/DOD_111985850.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 608,
+        "size": 12614687,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985850/DOD_111985850-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 15113610,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985850/DOD_111985850-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 9169060,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985850/DOD_111985850-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 4590992,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985850/DOD_111985850-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 2776013,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985850/DOD_111985850-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 1137908,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985850/DOD_111985850-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 569611,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023414.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023414/DOD_111985850.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023412": {
+    "id": "video:1023412",
+    "type": "video",
+    "title": "LLE-UAP-PR002, Unresolved UAP Report, Colorado, October 2023",
+    "description": "PURSUE Title: LLE-UAP-PR002, Unresolved UAP Report, Colorado, October 2023\nA local law enforcement officer submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office consisting of 1 minute and 19 seconds of video footage from a commercially available cellular device’s rear-facing camera in October 2023. The reporting officer described the phenomenon as “silent” and as featuring “red, blue, and green flashing lights.”\n\nVideo Description: AARO digitally altered this footage by blurring the bottom half to obscure information whose release could be reasonably expected to affect the privacy or other protected interest of a U.S. person or commercial entity.\n\n00:00-15:00: The camera focuses on an apparent light source for the duration of the video, keeping it generally centered within the frame.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.\n\nAARO Comment: Cellular devices of the type used to capture this footage employ autofocus and other automated image-processing functions that may distort the apparent morphological and kinematic characteristics of distant subjects, particularly at high magnification.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:15-04:00",
+    "date": "2023-10-01T00:00:00-04:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:30:54-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023412/DOD_111985844.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023412/lle-uap-pr002-unresolved-uap-report-colorado-october-2023",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "Colorado",
+      "country": "United States",
+      "state_abbreviation": "CO",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "231001-D-D0360-5713",
+    "duration": 900,
+    "aspect_ratio": "4:3",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985844/DOD_111985844.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 608,
+        "size": 81428767,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985844/DOD_111985844-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 137312993,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985844/DOD_111985844-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 87098987,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985844/DOD_111985844-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 46903521,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985844/DOD_111985844-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 33400089,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985844/DOD_111985844-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 21291288,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985844/DOD_111985844-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 19264494,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023412.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023412/DOD_111985844.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023409": {
+    "id": "video:1023409",
+    "type": "video",
+    "title": "LLE-UAP-PR001, Unresolved UAP Report, Colorado, 2023",
+    "description": "A local law enforcement officer submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office consisting of 1 minute and 19 seconds of video footage from a commercially available cellular device’s rear-facing camera in October 2023. The reporting officer described the phenomenon as “silent” and as featuring “red, blue, and green flashing lights.”\n\nVideo Description: AARO digitally altered this footage by blurring the bottom half to obscure information whose release could be reasonably expected to affect the privacy or other protected interest of a U.S. person or commercial entity.\n\n00:00-00:47: The camera pans to track an apparent light source, keeping it generally centered within the frame.\n00:48-01:19: The camera increases and decreases its level of magnification several times and continues to pan to track the apparent light source. \n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.\n\nAARO Comment: Cellular devices of the type used to capture this footage employ autofocus and other automated image-processing functions that may distort the apparent morphological and kinematic characteristics of distant subjects, particularly at high magnification.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:14-04:00",
+    "date": "2023-10-01T00:00:00-04:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:31:25-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023409/DOD_111985834.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023409/lle-uap-pr001-unresolved-uap-report-colorado-2023",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "Colorado",
+      "country": "United States",
+      "state_abbreviation": "CO",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "231001-D-D0360-9385",
+    "duration": 79,
+    "aspect_ratio": "4:3",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985834/DOD_111985834.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 608,
+        "size": 7383993,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985834/DOD_111985834-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 10575311,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985834/DOD_111985834-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 6865459,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985834/DOD_111985834-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 3805048,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985834/DOD_111985834-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 2892169,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985834/DOD_111985834-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 1827703,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985834/DOD_111985834-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 1559256,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023409.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023409/DOD_111985834.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023410": {
+    "id": "video:1023410",
+    "type": "video",
+    "title": "DOW-UAP-PR152, Unresolved UAP Report, Yellow Sea, 2023",
+    "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 1 minute and 38 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2023.\n\nVideo Description:\n00:00-01:38: The sensor pans to track an area of contrast, keeping it generally within the center of the frame.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:14-04:00",
+    "date": "2023-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:31:15-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023410/DOD_111985835.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023410/dow-uap-pr152-unresolved-uap-report-yellow-sea-2023",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "Yellow Sea",
+      "country_abbreviation": "Q9"
+    },
+    "time_start": 0,
+    "virin": "230101-D-D0360-2627",
+    "duration": 98,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985835/DOD_111985835.mp4",
+        "type": "video/mp4",
+        "height": 668,
+        "width": 1188,
+        "size": 20973165,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985835/DOD_111985835-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 65752143,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985835/DOD_111985835-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 37572796,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985835/DOD_111985835-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 16200287,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985835/DOD_111985835-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 12153423,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985835/DOD_111985835-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 5711093,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985835/DOD_111985835-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 3262218,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023410.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023410/DOD_111985835.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023408": {
+    "id": "video:1023408",
+    "type": "video",
+    "title": "DOW-UAP-PR151, Unresolved UAP Report, Yellow Sea, 2023",
+    "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 49 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2023.\n\nVideo Description:\n00:00-00:15: The sensor pans to track an area of contrast.\n00:16-00:18: The sensor increases its level of magnification and pans to track the area of contrast.\n00:19-00:49: The sensor pans to track an area of contrast, keeping it generally within the center of the frame.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:14-04:00",
+    "date": "2023-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:31:34-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023408/DOD_111985832.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023408/dow-uap-pr151-unresolved-uap-report-yellow-sea-2023",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "Yellow Sea",
+      "country_abbreviation": "Q9"
+    },
+    "time_start": 0,
+    "virin": "230101-D-D0360-9631",
+    "duration": 49,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985832/DOD_111985832.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 60826819,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985832/DOD_111985832-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 52604522,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985832/DOD_111985832-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 36738618,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985832/DOD_111985832-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 19284843,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985832/DOD_111985832-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 13159443,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985832/DOD_111985832-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 6798669,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985832/DOD_111985832-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 4629039,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023408.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023408/DOD_111985832.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023406": {
+    "id": "video:1023406",
+    "type": "video",
+    "title": "DOW-UAP-PR150, Unresolved UAP Report, Yellow Sea, 2023",
+    "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 57 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2023.\n\nVideo Description:\n00:00-00:05: No content.\n00:06-00:07: An area of contrast enters the sensor field-of view from the bottom edge.\n00:08-00:51: A rectangular digital overlay, or “focus box,” appears near the center of the frame. This display element is a graphical component of the sensor system and does indicate a physical change in the environment. The sensor pans to track the area of contrast.\n00:52-00:57: The collection platform geometry occludes the sensor, blurring the display and blocking the right side of the screen.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:12-04:00",
+    "date": "2023-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:32:12-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023406/DOD_111985822.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023406/dow-uap-pr150-unresolved-uap-report-yellow-sea-2023",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "Yellow Sea",
+      "country_abbreviation": "Q9"
+    },
+    "time_start": 0,
+    "virin": "230101-D-D0360-4417",
+    "duration": 57,
+    "aspect_ratio": "4:3",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985822/DOD_111985822.mp4",
+        "type": "video/mp4",
+        "height": 512,
+        "width": 908,
+        "size": 3228077,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985822/DOD_111985822-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 10055171,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985822/DOD_111985822-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 6593846,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985822/DOD_111985822-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 3984489,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985822/DOD_111985822-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 2694280,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985822/DOD_111985822-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 1472764,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985822/DOD_111985822-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 1115598,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023406.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023406/DOD_111985822.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023405": {
+    "id": "video:1023405",
+    "type": "video",
+    "title": "DOW-UAP-PR148, Unresolved UAP Report, East China Sea, 2023",
+    "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 59 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2023.\n\nVideo Description:\n00:00-00:03: No content.\n00:04-00:46: The sensor pans to track an area of contrast, keeping it generally within the center of the frame.\n00:47-00:59: The sensor increases its level of magnification while panning to track the area of contrast.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:11-04:00",
+    "date": "2023-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:32:21-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023405/DOD_111985821.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023405/dow-uap-pr148-unresolved-uap-report-east-china-sea-2023",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "East China Sea",
+      "country_abbreviation": "E3"
+    },
+    "time_start": 0,
+    "virin": "230101-D-D0360-4446",
+    "duration": 59,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985821/DOD_111985821.mp4",
+        "type": "video/mp4",
+        "height": 1028,
+        "width": 1908,
+        "size": 71519688,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985821/DOD_111985821-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 64211334,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985821/DOD_111985821-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 43540202,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985821/DOD_111985821-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 22373860,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985821/DOD_111985821-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 15274143,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985821/DOD_111985821-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 7541110,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985821/DOD_111985821-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 4377314,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023405.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023405/DOD_111985821.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023404": {
+    "id": "video:1023404",
+    "type": "video",
+    "title": "DOW-UAP-PR144, Unresolved UAP Report, Yellow Sea, 2023",
+    "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 27 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2023.\n\nVideo Description:\n00:00-00:02: An area of contrast is visible above and to the left of the center of the frame.\n00:03-00:27: The sensor increases its level of magnification and pans to track the area of contrast, keeping it generally within the center of the frame.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:11-04:00",
+    "date": "2023-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:32:31-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023404/DOD_111985820.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023404/dow-uap-pr144-unresolved-uap-report-yellow-sea-2023",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "Yellow Sea",
+      "country_abbreviation": "Q9"
+    },
+    "time_start": 0,
+    "virin": "230101-D-D0360-9860",
+    "duration": 27,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985820/DOD_111985820.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 31383900,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985820/DOD_111985820-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 27981081,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985820/DOD_111985820-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 18778134,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985820/DOD_111985820-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 9494669,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985820/DOD_111985820-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 6503831,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985820/DOD_111985820-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 3427054,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985820/DOD_111985820-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 2111636,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023404.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023404/DOD_111985820.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023403": {
+    "id": "video:1023403",
+    "type": "video",
+    "title": "DOW-UAP-PR143, Unresolved UAP Report, Yellow Sea, 2023",
+    "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 19 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2023.\n\nVideo Description:\n00:00-00:19: The sensor pans to track an area of contrast, keeping it generally within the center of the frame.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:11-04:00",
+    "date": "2023-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:32:42-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023403/DOD_111985818.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023403/dow-uap-pr143-unresolved-uap-report-yellow-sea-2023",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "Yellow Sea",
+      "country_abbreviation": "Q9"
+    },
+    "time_start": 0,
+    "virin": "230101-D-D0360-5004",
+    "duration": 19,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985818/DOD_111985818.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 24071535,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985818/DOD_111985818-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 20932044,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985818/DOD_111985818-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 14579845,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985818/DOD_111985818-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 7466572,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985818/DOD_111985818-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 5088546,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985818/DOD_111985818-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 2708423,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985818/DOD_111985818-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 1942034,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023403.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023403/DOD_111985818.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023400": {
+    "id": "video:1023400",
+    "type": "video",
+    "title": "DOW-UAP-PR141, Unresolved UAP Report, Middle East, 2022",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 2 minutes and 36 seconds of video footage from an electro-optical (right) and infrared (left) sensor aboard a U.S. military platform in 2022. An accompanying mission report, DOW-UAP-D109, described the UAP as “traveling at various speeds between 80-180 miles per hour.”\n\nVideo Description:\n00:00-00:12: An area of contract enters the sensor field-of-view from the lower right of the frame. The sensor pans to track the area of contrast, keeping it generally within the center of the frame.\n00:13-00:14: The sensor switches modes to display an infrared (left) and electro-optical (right) feed.\n00:15-00:18: The object enters the frame from the lower right, transiting the sensor field-of-view and exiting from the upper left.\n00:19-00:20: The sensor switches to infrared mode, panning to track an area of contrast.\n00:21-00:27: The sensor switches modes to display an infrared (left) and electro-optical (right) feed.\n00:28-00:52: The sensor switches to infrared mode, panning to track an area of contrast. 00:52-00:57: A second area of contrast briefly enters the sensor field-of-view.\n00:58-01:16: The sensor pans to track an area of contrast.\n01:17-01:21: The sensor switches modes to display an infrared (left) and electro-optical (right) feed. The sensor pans to track the object. The object leaves the sensor field-of-view from the left edge of the frame.\n01:22-01:27: No content.\n01:28-01:31: The sensor switches to infrared mode. No content.\n01:32-02:36: The area of contrast enters the sensor field-of-view from the lower left of the frame. The sensor pans to track the area of contrast, intermittently losing contact with it.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:10-04:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:33:04-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023400/DOD_111985798.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023400/dow-uap-pr141-unresolved-uap-report-middle-east-2022",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "Undisclosed Location",
+      "country_abbreviation": "UL"
+    },
+    "time_start": 0,
+    "virin": "220101-D-D0360-9315",
+    "duration": 156,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985798/DOD_111985798.mp4",
+        "type": "video/mp4",
+        "height": 828,
+        "width": 1472,
+        "size": 138505272,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985798/DOD_111985798-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 174750012,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985798/DOD_111985798-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 118393998,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985798/DOD_111985798-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 60722598,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985798/DOD_111985798-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 41354931,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985798/DOD_111985798-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 20230450,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985798/DOD_111985798-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 7149447,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023400.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023400/DOD_111985798.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023398": {
+    "id": "video:1023398",
+    "type": "video",
+    "title": "DOW-UAP-PR140, Unresolved UAP Report, Middle East, 2022",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 1 minute and 47 seconds of video footage from an electro-optical and infrared sensor aboard a U.S. military platform in 2022. An accompanying mission report, DOW-UAP-D109, described the UAP as “traveling at various speeds between 80-180 miles per hour.”\n\nVideo Description:\n00:00-00:05: No content.\n00:06-00:08: An area of contrast transits the sensor field-of-view, entering from the top of the frame and exiting from the bottom.\n00:09-00:15: No content.\n00:16-00:26: The sensor pans to track the area of contrast, keeping it generally centered within the frame.\n00:27-00:31: The sensor switches to electro-optical mode, and the object moves out of the sensor field-of-view from the left edge of the frame.\n00:32-00:45: The sensor switches to infrared mode and pans to track the area of contrast, keeping it generally within the center of the frame.\n00:46-01:10: The sensor switches to electro-optical mode and pans to track the area of contrast. 01:11-01:12: No content.\n01:13-01:42: The sensor switches to infrared mode and pans to track the area of contrast.\n01:43-01:47: The sensor switches to electro-optical mode and pans to track the area of contrast.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:10-04:00",
+    "date": "2022-01-01T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:33:14-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023398/DOD_111985790.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023398/dow-uap-pr140-unresolved-uap-report-middle-east-2022",
+    "credit": "Courtesy",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "Undisclosed Location",
+      "country_abbreviation": "UL"
+    },
+    "time_start": 0,
+    "virin": "220101-D-D0360-6995",
+    "duration": 107,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985790/DOD_111985790.mp4",
+        "type": "video/mp4",
+        "height": 828,
+        "width": 1472,
+        "size": 64049840,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985790/DOD_111985790-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 99908411,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985790/DOD_111985790-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 67253817,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985790/DOD_111985790-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 35171697,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985790/DOD_111985790-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 23148855,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985790/DOD_111985790-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 10627570,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985790/DOD_111985790-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 4368984,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023398.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023398/DOD_111985790.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023402": {
+    "id": "video:1023402",
+    "type": "video",
+    "title": "DOW-UAP-PR159, Historical Film of Reported UFOs, Utah, 1952",
+    "description": "This archival footage is a digitization of a 16mm print of Kodachrome color motion-picture film shot on a handheld Bell & Howell Auto Master camera near Tremonton, Utah, on July 2, 1952. U.S. Navy Chief Warrant Officer Delbert C. Newhouse reported observing and filming a group of bright airborne objects and shortly thereafter submitted the footage to the U.S. Air Force. The film later became one of the visual cases reviewed by Project Blue Book, the 1952–1969 U.S. Air Force program that investigated the nature and origin of unidentified flying objects (UFOs). The film’s limited detail and lack of fixed reference points prevented a conclusive resolution. From the 55-second mark onward, the film transitions to unrelated footage appearing to show a demonstration of sewing equipment. The presence of unrelated sewing-equipment footage suggests that the surviving footage may be a composite or reused print, though the available record does not establish how or when the materials came to be combined. As documented in records submitted with the film, contained in this collection under the title DOW-UAP-D102, the footage originally was paired with mountain scenery from Idaho, which is not preserved in this digitization.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:10-04:00",
+    "date": "1952-07-02T00:00:00-04:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:32:54-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023402/DOD_111985807.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023402/dow-uap-pr159-historical-film-reported-ufos-utah-1952",
+    "credit": "Courtesy",
+    "location": {
+      "city": "Tremonton",
+      "state": "Utah",
+      "country": "United States",
+      "state_abbreviation": "UT",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "520702-D-D0360-8575",
+    "duration": 70,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985807/DOD_111985807.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 79818409,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985807/DOD_111985807-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 67413470,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985807/DOD_111985807-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 44475559,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985807/DOD_111985807-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 21658814,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985807/DOD_111985807-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 12443870,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985807/DOD_111985807-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 6144306,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985807/DOD_111985807-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 3651684,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023402.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023402/DOD_111985807.0000001/122x92_q95.jpg",
+      "width": 122,
+      "height": 92
+    }
+  },
+  "1023407": {
+    "id": "video:1023407",
+    "type": "video",
+    "title": "DOW-UAP-PR160, Presentation by Captain Edward J. Ruppelt, 1952",
+    "description": "This audio file records a March 1952 presentation by Captain Edward J. Ruppelt, outlining the U.S. Air Force’s reorganized investigation into unidentified flying objects (UFOs). The presentation previews prospective technical methodologies, such as diffraction-grating photography and radar-scope synchronization, that were subsequently incorporated into Project Blue Book, a U.S. Air Force program active from 1952 to 1969 that investigated the nature and origin of UFOs. Ruppelt explains that out of approximately 800 historical cases reviewed by the Air Force, approximately 20% remained unexplained after technical analysis. These unresolved reports were sourced from credible military personnel, commercial pilots, and other qualified technical observers. He highlights geographic report concentrations around sensitive national security and nuclear weapons installations (including Los Alamos, Albuquerque, and Oak Ridge National Laboratories) and notes recurring anomalous characteristics, including silent high-speed flight and radar detections indicating unconfirmed air speeds between 1,000 and 3,500 miles per hour. Emphasizing that the Air Force found no conclusive evidence regarding the nature or origin of the phenomena, Ruppelt underscores the national security need for a systematic physical data collection effort to better evaluate these sightings.",
+    "keywords": "UAPVIDEOS, AARO091826",
+    "date_published": "2026-09-18T07:15:12-04:00",
+    "date": "1952-03-26T00:00:00-05:00",
+    "category": "B-Roll",
+    "unit_id": "8597",
+    "unit_name": "All Domain Anomaly Resolution Office",
+    "branch": "Civilian",
+    "timestamp": "2026-09-18T07:31:47-04:00",
+    "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023407/DOD_111985823.0000001/2000w_q95.jpg",
+    "url": "https://www.dvidshub.net/video/1023407/dow-uap-pr160-presentation-captain-edward-j-ruppelt-1952",
+    "credit": "Courtesy",
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts",
+      "country": "United States",
+      "state_abbreviation": "MA",
+      "country_abbreviation": "US"
+    },
+    "time_start": 0,
+    "virin": "520326-D-D0360-7741",
+    "duration": 3913,
+    "aspect_ratio": "16:9",
+    "files": [
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985823/DOD_111985823.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 802522487,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985823/DOD_111985823-1920x1080-9000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 1406343332,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985823/DOD_111985823-1920x1080-6000k.mp4",
+        "type": "video/mp4",
+        "height": 1080,
+        "width": 1920,
+        "size": 1085342007,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985823/DOD_111985823-1280x720-3000k.mp4",
+        "type": "video/mp4",
+        "height": 720,
+        "width": 1280,
+        "size": 649679832,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985823/DOD_111985823-1024x576-2000k.mp4",
+        "type": "video/mp4",
+        "height": 576,
+        "width": 1024,
+        "size": 555028854,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985823/DOD_111985823-512x288-1000k.mp4",
+        "type": "video/mp4",
+        "height": 288,
+        "width": 512,
+        "size": 300056103,
+        "bitrate": 0
+      },
+      {
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985823/DOD_111985823-256x144-1000k.mp4",
+        "type": "video/mp4",
+        "height": 144,
+        "width": 256,
+        "size": 154253330,
+        "bitrate": 0
+      }
+    ],
+    "hls_url": "https://api.dvidshub.net/hls/video/1023407.m3u8",
+    "thumbnail": {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023407/DOD_111985823.0000001/122x92_q95.jpg",
       "width": 122,
       "height": 92
     }
