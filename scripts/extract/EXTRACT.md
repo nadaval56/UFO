@@ -18,7 +18,7 @@ in claude.ai/code) for integration.
 The user runs a Hebrew-language mirror of the U.S. Department of War's
 PURSUE landing page (`https://www.war.gov/UFO/`) — a release of 158
 declassified UAP-related files. The site lives at
-`https://nadaval56.github.io/UFO/`, source at `github.com/nadaval56/UFO`.
+`https://pursue.co.il/` (formerly `nadaval56.github.io/UFO/`, which now redirects), source at `github.com/nadaval56/UFO`.
 
 The existing `data/manifest.json` has metadata for every file (title,
 agency, dates, location, English description, Hebrew translation, source

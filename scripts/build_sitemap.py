@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "data" / "manifest.json"
 SITEMAP = ROOT / "sitemap.xml"
 ARCHIVE = ROOT / "archive.html"
-BASE = "https://nadaval56.github.io/UFO"
+BASE = "https://pursue.co.il"
 TODAY = date.today().isoformat()
 
 m = json.loads(MANIFEST.read_text(encoding="utf-8"))

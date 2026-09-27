@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nadaval56.github.io/UFO/sitemap.xml
+Sitemap: https://pursue.co.il/sitemap.xml
