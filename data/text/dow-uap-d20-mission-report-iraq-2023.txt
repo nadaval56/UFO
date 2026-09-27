@@ -1,0 +1,387 @@
+Misrep undefined-8584059
+
+Narrative
+
+(SHREE-PO-USA-P¥E93 1 1901ZMAR23 -[__1.4a_ _](-14a |FLT), A 2-SHIP OF F-16CM, TOOK
+OFF FROM PRINCE SULTAN AIR BASE (OEPS) ISO OPERATION INHERENT RESOLVE|_1.4a_|
+
+FLT WAS FRAGGED TO CONDUCT DCA IN THE ESSA (2100-0000). MISSION WAS FLOWN AS
+FRAGGED.
+
+~(S/-REL-PO-USA-FVEY) 2007Z-[41.4a_]FLT ENTERED IZ AIRSPACE. NFTR.
+
+—(SHREL-LOU Ste EWES 2058Z -[1.4a ]FLT ENTERED SY AIRSPACE AND CHECKED ONSTA W/
+KINGPIN TO CONDUCT DCA IN THE ESSA.
+
+=—(SHNE}-2302Z -[1.4a |FLT OBSERVED MULTIPLE POSS UAPS. (SEE UAP)
+
+-(SYREL-FO-USA-EVESS 0000Z - FLT CHECKED OFFSTA W/ KINGPIN AND PROCEEDED
+TO RTB (OEPS). NSTR.
+
+~(SHREE- FOS EES -0046Z FLT EXITED IZ AIRSPACE.
+—(S/REL-EO-USrts-E VEY 0148Z -[i4a [FLT LANDED AT OEPS W/ ESD AT 0215Z. NFTR.//
+
+-(S/REETDO) Mission Narrative
+
+Admin
+
+CLASSIFICATION
+
+* Classification: SEGREF
+
+¢ Associated Caveats: NOFORN™
+
+¢ Classification Source (MS or Classification Guide ID): MS
+¢ Declassification Date (YYYYMMDD): 20480401
+
+OPERATION
+¢ Operation: INHERENT RESOLVE
+
+3.5c, FOIA Exemption (b\6
+=f ECRETYNOFORN =
+
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S
+Approved for Release to AARO
+
+10/17/25 001
+
+¢ Domain: AIR
+
+* Operations Center: 609th
+
+¢ Major Command (MAJCOM): AFCENT
+
+¢ Combatant Command (COCOM): USCENTCOM
+
+MSGID
+
+* Report Type: MISREP
+* Originator (Unit or Squadron): 77 EFS
+¢ Submit Date:
+
+MSNID
+
+¢ Tasking Order (ATO): MT
+
+¢ Mission Type: DCA
+
+¢ ATO Mission Number:[__1.4a__|
+
+¢ Country Tasked: US - UNITED STATES
+* Service Tasked: A - AIR FORCE
+
+Poc
+
+POC
+
+¢ Rank: 1LT
+
+° FaulANanaednptions (b)|3), 130b, (b\(6)
+
+* Unit: 77 EFS
+
+¢ Wing: 378 AEW
+
+¢ Phone Number;Foia Exemption [b)(6)
+
+° Email
+
+¢ Service: Air Force
+* Operations Center: 609 CAOC
+
+QC
+¢ Rank: SSgt
+
+° Full Nampey Exemptions (b)(3), 130b, (b)(6)
+
+¢ Unit: Unavailable
+
+* Wing: 378 AEW
+
+¢ Phone Numbese| FOIA Exemption )6)
+
+* Email:|_____3.50, FOIA Exemption (by)
+¢ Service: Air Force
+
+¢ Operations Center: 609 CAOC
+
+3.5c, FOIA Exemption (b)\(6
+
+SEGREFANOFORN™
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 002
+Approved for Release to AARO
+
+APPROVER
+
+¢ Rank: TSgt
+
+¢ FuNasmezkemptions (b\3)) 130b, (b)(6)
+
+¢ Unit: Unavailable
+
+¢ Wing: Other
+
+¢ Phone Number;FOIA Exemption|(b)(6)
+
+° Email:
+¢ Service: Air Force
+
+¢ Operations Center: 609 CAOC
+
+INGEST
+
+¢ Rank;
+
+¢ Full Name:
+
+¢ Unit:
+
+¢ Wing:
+
+¢ Phone Number:
+
+¢ Email:
+
+¢ Service:
+
+¢ Operations Center:
+
+ACEQUIP
+
+ACEQUIP
+
+¢ Aircraft Callsign:
+
+Radar Name or Destination:[1.4a, 1.49]
+
+Radar Software Load or Mission Data: 8070 / MMC 7.3
+Radar Warning Receiver (RWR) Name or Designator: ALR-56M
+RWR Software Load or Mission Data: 102 / SY0730
+
+¢ MWS Name or Designator:
+
+MWS Software Load or Mission Data:
+
+IRCM Name or Designator:
+
+IRCM Software Load or Mission Data:
+
+ECM Name or Designator: ALQ-184
+
+ECM Software Load or Mission Data: C01856
+
+¢ CMD Name or Designator: ALQ-213
+
+Chaff Designator: RR-180
+
+Num Chaff or Cartridges: 60
+
+Flare Designator: MJU-53, MJU-66
+
+Num Flares: 45
+
+Towed Decoy Name or Designator: ALE-50
+
+3.5c, FOIA Exemption (b}6
+
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 003
+Approved for Release to AARO
+
+* Towed Decoy Software Load or Mission Data: MTP AAS51
+¢ Num Towed Decoys: 2
+
+¢ Type of Radar-Guided AAM: AIM-120
+
+¢ Num Radar-Guided AAM: 2
+
+¢ Type of IR-Guided AAM: AIM-9X
+
+¢ Num IR-Guided AAM: 2
+
+¢ Gun Name or Designator: M61A1
+
+¢ Num Gun Rounds: 510
+
+Air-to-Ground Wpn to Include Num of Each: 14a
+TGT Pod Name or Designator: SNIPER LDP
+
+Additional Avionics: HTS-P R7.85
+
+Data Link: LINK 16
+
+Gentext:
+
+ACEQUIP
+
+¢ Aircraft Callsign:
+
+¢ Radar Name or Destination
+
+¢ Radar Software Load or Mission Data: 8070 / MMC 7.3
+Radar Warning Receiver (RWR) Name or Designator: ALR-56M
+RWR Software Load or Mission Data: 102 / SY0730
+
+¢ MWS Name or Designator:
+
+MWS Software Load or Mission Data:
+
+¢ IRCM Name or Designator:
+
+IRCM Software Load or Mission Data:
+
+ECM Name or Designator: ALQ-184
+
+ECM Software Load or Mission Data: C01856
+
+CMD Name or Designator: ALQ-213
+
+Chaff Designator: RR-180
+
+Num Chaff or Cartridges: 60
+
+Flare Designator: MJU-53, MJU-66
+
+Num Flares: 45
+
+Towed Decoy Name or Designator: ALE-50
+
+Towed Decoy Software Load or Mission Data: MTP AA51
+¢ Num Towed Decoys: 2
+
+¢ Type of Radar-Guided AAM: AIM-120
+
+¢ Num Radar-Guided AAM: 2
+
+¢ Type of IR-Guided AAM: AIM-9X
+
+¢ Num IR-Guided AAM: 2
+
+¢ Gun Name or Designator: M61A1
+
+¢ Num Gun Rounds: 510
+
+Air-to-Ground Wpn to Include Num of Each: 1.4a
+TGT Pod Name or Designator: SNIPER LDP
+
+3.5¢, FOIA Exemption (b\6)
+
+SECRET MOEOR =
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 004
+Approved for Release to AARO
+
+¢ Additional Avionics: HTS-P R7.85
+¢ Data Link: LINK 16
+¢ Gentext:
+
+Timeline
+
+Takeoff
+
+¢ Number of Aircraft: 2
+e Asset Type (Aircraft)] 1.42, 1.49 |
+¢ Aircraft Tail Number(s); 1.4, 1.49 |
+
+¢ Takeoff Location (ICAO Code): OEPS
+¢ Takeoff Time DTG: 311901:00ZMAR23
+¢ Mode 3 (IFF Codes): 6266
+
+¢ Gentext/Additional Details: (U) NSTR.
+¢ Mission Canceled:
+
+Landing
+
+¢ Last Land Location (ICAO Code): OEPS
+
+¢ Last Land Time: 010148:00ZAPR23
+
+¢ Last Engine Shutdown Time: 010215:00ZAPR23
+* Total Mission Time: 6 hours 47 minutes
+
+* Gentext/Additional Details: (U) NSTR.
+
+On Station
+
+¢ Time On Station DTG: 312058:00ZMAR23
+° Callsign:| 14a
+
+¢ JTAR Number: -
+
+¢ Killbox (Location): ESSA
+
+* Mission Type: DCA
+
+¢ JTAC Callsign: KINGPIN
+
+¢ Gentext/Additional Details: (U) NSTR.
+
+¢ Did not Arrive On Station:
+
+Off Station
+
+* Time Off Station DTG: 010000:00ZAPR23
+¢ Total Time On Station: 3 hours 2 minutes
+¢ Gentext/Additional Details:
+
+3.5c, FOIA Exemption (b)(6)
+
+=ECREE/MOLORN_.
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 005
+Approved for Release to AARO
+
+UAP
+
+Initial Contact DTG: 312302:05ZMAR23
+
+MDS Type / Asset Types 1.4a, 1.49 |
+
+Tail Numberd 1.4a, 1.49]
+
+Friendly Aircraft Location: 37SGA 131 4al/ 41 4al
+Friendly Aircraft Altitude/Depth: FL265
+Friendly Aircraft Speed: 293
+
+Friendly Aircraft State: N/A
+
+Training Range (If applicable):
+
+Operational Range: NE OF RLZ
+
+UAP Physical State:
+
+Number of UAP Sighted: POSS 10X-20X
+
+UAP Signatures: No
+
+UAP RF Frequency:
+
+UAP RF Duration:
+
+UAP Effects on Persons: (U) NONE.
+
+Full Name:[3.5c, FOIA Exemption (b)6)]
+
+Email:
+Phone Number (VOSIP/S'BE);FOIA Exemption|(b)(6)
+UAP First Seen Location: DATA MASKED
+UAP Altitude, Depth, Velocity, and Trajectory (indicate estimated or measured): FL600+
+
+GENTEXT/UAP
+
+UAP Description (e.g., size, shape, color, markings, recognizable features): (S/NFY STARTING AT
+
+2302:05Z[_1.4a |FLT OBSERVED SEVERAL BRIGHT OBJECTS MANUEVERING QUICKLY
+WEST TO EAST NE OF RLZ[_1.4a_]FLT WOULD OBTAIN POSS UAP ON TARGETING POD (TV
+MODE) FOR APPROX 20S BEFORE OBJECT WOULD BECOME DIM AND DISAPPEAR FROM
+TARGETING POD. NONE OF THE OBJECTS WERE SEEN IN ANY FORMATIONS AS
+PREVIOUSLY SEEN IN PRIOR SORTIES. NFTR.
+
+ANALYST COMMENT: 1.4a_]FLT COMPARED TARGETING POD BETWEEN POSS UAP AND
+STAR. RESULTS WERE DIFFERENT.
+
+3.5c, FOIA Exemption (b){6)
+
+——SECREFIMNOEORN
+
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 006
+
+Approved for Release to AARO

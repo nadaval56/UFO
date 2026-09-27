@@ -1,0 +1,6052 @@
+NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
+
+ROUTING SLIP
+
+MAIL CODE
+
+Approval
+
+Call Me
+
+Concurrence
+
+File
+
+Information
+
+Investigate and Advise
+
+Note and Forward
+
+Note and Rehusn
+
+j Per Request
+
+Per Telephone Conversation
+
+Recommendation
+
+See: Me
+
+Signature
+
+Circulate and Destroy
+
+TEL. NO, (or code) & EXT.
+
+CODE (or other desighation)
+
+NASA FORM 26 APR 69 PREVIOUS EDITIONS MAY BE USED | GPO : 1969 OF —348-365
+
+Mission Operation Report
+No. M-913-65-04
+
+MEMORANDUM June 1, 1965
+
+To : A/Administrator
+
+From : M/Associate Administrator for Manned Space Flight
+
+Subject: Gemini Flight Number Four (GT-4) Additional Flight Activities
+
+Subsequent to the preparation of the GT-4 Mission Operation Report several
+new procedures and items of equipment have progressed to a stage of flight
+readiness. Consequently, three significant additional flight activities are
+now possible and have been included in the mission. These activities are:
+extra vehicular activities (EVA); extra vehicular propulsion; and demonstration
+of rendezvous with the booster second stage. Additional details of these
+flight plan activities are provided in the attached supplement to the basic
+report.
+
+eorge’f. 2 plik
+
+Enclosure:
+MOR No. 913-65-04
+Change |
+
+FOR INTERNAL USE ONLY
+
+M-913-65-04
+ADDITIONAL GT-4 FLIGHT PLAN ACTIVITIES
+
+Three additional special engineering and operational objectives are now
+planned for the first four orbits of the GT-4 Mission:
+
+1. Demonstration of extravehicular activities (EVA) using a 25 foot
+umbilical. Potential future application includes crew transfer, in-
+flight repair, and inspection of orbiting objects.
+
+Demonstration of extravehicular maneuvering using a simple, one-
+man propulsion unit. This device could be used with or without
+a spacecraft tether on future missions.
+
+Demonstration of rendezvous with the booster second stage. This
+activity will provide valuable early information and maneuvering
+procedures necessary to rendezvous with a target vehicle. Flashing
+lights identical to those designed for the Gemini/Agena Vehicle
+have been installed on the booster second stage for this test.
+
+The Flight Plan sequence involves post-launch separation from the launch
+vehicle, then maneuvering to stop the spacecraft separation velocity. The
+
+first two orbits will be flown with the spacecraft at distances less than one
+quarter of a mile from the launch vehicle. Nighttime separation will be
+sufficient to prevent the flashing lights from disturbing the pilot's visual dark
+adaptation. The first orbit will be occupied with operational checks of the
+spacecraft guidance, maneuvering, and environmental control systems. The
+pilots will utilize the second orbit to prepare for the extravehicular activity.
+This procedure involves unstowing and assembling a 25-foot umbilical, the
+emergency oxygen pack, a maneuvering unit, and the cameras. Over Hawaii,
+at daybreak, near the end of the second orbit, the cabin will be depressurized
+and Jim McDivitt will maneuver to within close proximity of the booster. At
+this point, the right hatch will be opened and Ed White will climb out and
+hold on the right forward portion of the spacecraft until McDivitt gives him a
+release command. Upon command, White will push off slowly and reorient
+himself with the hand-held maneuvering unit to face the booster. A 35-mm still
+camera (Zeiss-Contarex) mounted on the maneuvering unit will be used to photo-
+graph the booster and spacecraft with various earth/sky backgrounds. After
+testing his ability to maneuver in a zero gravity environment, White will
+maneuver back toward the spacecraft and ingress. The total time separated
+from the spacecraft will be approximately 10 minutes. He will be inside
+
+with the cabin repressurized by the time the spacecraft passes over Ascension
+Island on the start of the third orbit.
+
+Shortly after passing Ascension, McDivitt will maneuver ahead of the booster
+with 5 feet per second separation velocity. Because this maneuver places the
+spacecraft in a higher altitude and longer period orbit than the booster, it will
+rise above and fall behind the booster. One orbit later, the spacecraft
+
+6/1/65 Page |
+
+M-913-65-04
+
+will trail 16 miles behind the booster. At this point, a spacecraft retardation
+maneuver of 13 feet per second will initiate the visual rendezvous sequence.
+The spacecraft will approach the booster from behind and below. Because of
+unknown variation in the atmospheric density and drag of the slowly tumbling
+booster, the exact approach trajectory cannot be predicted. The flight crew
+will measure elevation angles of the booster and will initiate rendezvous
+maneuvers when the booster is approximately 45 degrees elevation angle above
+the spacecraft. By observing the movement of the booster with respect to the
+star background and with respect to the spacecraft inertial platform display, the
+crew can determine the proper lateral maneuver to null the lateral component
+of velocity thereby resulting in a spacecraft velocity vector which is directly
+toward the booster. After removing the lateral velocity difference, the pilot
+will apply a series of breaking maneuvers with the forward firing thrusters to
+reduce the closing velocity. The flight crew will measure with onboard
+instruments the total maneuvering velocity required for the rendezvous procedure.
+The spacecraft should be back in close proximity of the launch vehicle over
+the Northeast coast of South America at the beginning of the fifth orbit.
+
+After the rendezvous operation is complete, the spacecraft will again separate
+from the booster - this time using a maneuver which will place the Gemini
+
+spacecraft on an orbit with a predicted lifetime of four days.
+
+The EVA suit is the new G4C suit which replaces the G3C suit used so
+
+successfully by the GT-3 flight crew. The G4C suit has the following new
+features:
+
+a. Helmet - incorporation of triple lens shield (visors) for visual, thermal,
+impact, and micrometeorite protection.
+
+Torso -
+
+1. Change to Nomex (HT-1) “Linknet" in restraint layer for increased
+structural strength.
+Incorporation of strain relief zipper in sealing closure.
+Incorporation of redesigned ventilation inlet and outlet fittings with
+automatic locking and redundant sealing features.
+
+4. Replace Nomex (HT-1) coverlayer with integrated thermal and
+micrometeority cover layer.
+
+Gloves - Incorporate new design with increased mobility, abrasion
+resistance and thermal protection.
+
+Bio-connector - Self-alighment, pin protective design.
+
+M-913-65-04
+
+G-4C
+OVERVISOR
+SPACE
+HELMET
+
+G-4C EXTRAVEHICULAR SUIT
+
+THERMAL AND i PRESSURE AND
+MICROMETEOROID H RESTRAINT
+ei LAYERS =| LAYERS
+(6,8 OZ/YD* WHITE) i
+USE: WEAR AND
+SOLAR REFLECTANCE
+
+HT-1_ NYLON
+MICROMETEOROID ABSORBER
+(8 02. W
+
+MULTI YER INSULATION
+(5.5 O2/YD* TOTAL) USE
+THERMAL PROTECTION
+
+7 LAYERS ALUMINIZED
+MYLAR SEPARATED BY
+7 LAYERS UNWOVEN =e
+DACRON SPACERS HT-I NYLON INNER MICROMETEORO!D H W
+STOPPER LAYERS, H 5-3C 6.8 OZ/YD2. 013 INCHES
+(EACH 68 OZ/YD* WHITE) USE: WEAR i G-4C 39.9 OZ/YD‘ 312 INCHES
+AND MICROMETEOROID PROTECTION :
+
+M-913-65-04
+
+Leakage
+
+Proof pressure
+
+02 compatibility
+Ejection envelope
+Cold temperature
+Rapid decompression
+Life cycling
+
+Visor testing
+
+“Oo QAaoa»n7 a
+
+Should the 25-foot long tether fail in some manner, the pilot will be carrying
+a chestpack that has been compatibility qualified with the G4C suit and con-
+sists principally of an emergency oxygen bottle with automatic valving.
+
+It should be emphasized that both the primary and backup flight crews have
+undergone 40 minutes cabin depressurization with the hatches open at a
+simulated altitude of 150,000 feet in the chambers at McDonnell, St. Louis
+during which time they practiced opening and closing the hatches, taking
+pictures, and other actions that will take place during EVA.
+
+The extravehicular maneuvering will be accomplished using a zero g Integral
+Propulsion (ZIP) Unit as shown in Figure 5. This device is handheld and
+accomplishes propulsion by jetting oxygen out through a single forward firing
+nozzle and two aft firing nozzles as selected and aimed by the operator. It
+includes a camera mounted for convenient extravehicular photography.
+
+Mission Operation Report
+No. M-913-65-04
+
+MEMORANDUM May 24, 1965
+
+To : A/Administrator
+
+From : M/Associate Administrator for Manned Space Flight
+
+Subject: Gemini Flight Number Four (GT-4)
+
+GT-4, the fourth in a series of twelve planned Gemini flights is scheduled to
+be launched from Complex 19 at the John F. Kennedy Space Center on or after
+3 June 1965. This will be the second manned Gemini mission and the longest
+ever attempted by a two-man crew. The purpose of the mission is to further
+demonstrate manned space flight for a period of four days.
+
+The nominal launch time is 10 a.m. EDT (1400 GMT). The space vehicle is
+
+to be launched on an azimuth of 72 degrees and the spacecraft will be inserted
+into an initial orbit of 87-161 N.M. at an orbital inclination of 32.5 degrees.
+The 62 revolution mission will have a duration of approximately 97 hours and 50
+minutes. The primary and backup flight crews are of the "new generation," being
+members of the second group of astronauts. James A. McDivitt will be the
+command pilot and Edward H. White, II will be the pilot. Because the duration
+of the flight is one of the most significant aspects of their mission, the post-
+flight activities will involve expanded medical evaluation as compared with
+previous missions, including at least 24 hours aboard the recovery aircraft carrier,
+
+the USS WASP.
+After conducting various orbital maneuvers and the thirteen experiments during the
+
+four-day mission, the spacecraft will reenter and touchdown approximately 400
+miles southwest of Bermuda for a water landing and carrier retrieval.
+
+Yor George f mee
+
+Enclosure
+
+MOR No. M-913-65-04
+
+FOR INTERNAL USE ONLY
+
+FOREWORD
+
+MISSION OPERATION REPORTS are published expressly for the
+use of NASA General Management as required by the Administra-
+tor in NASA Instruction 6-2-10 dated August 15, 1963. The pur-
+pose of these reports is to provide NASA General Management with
+timely, complete and definitive information on flight mission plans
+and results from launchings with Scout class or larger vehicles.
+
+Initial reports are to be prepared and issued for each flight project
+just prior to launch. Following launch, updating reports for each
+mission will be issued to keep General Management currently in-
+formed as provided in NASA Instruction 6-2-10.
+
+Distribution of these reports has been specifically directed by Gen-
+eral Management and they are not available for additional or general
+distribution. The Office of Public Affairs publishes a comprehensive
+series of pre-launch and post-launch reports on NASA flight missions
+which are available for general distribution.
+
+Published and Distributed
+by
+OFFICE OF PROGRAM REPORTS
+OFFICE OF PROGRAMMING
+NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
+Washington, D, C, 20546
+
+M-913-65-04
+GENERAL
+
+Gemini Flight Number Four (GT-4) is the second
+manned orbital flight in the Gemini Program and
+. the fourth flight in a series of twelve planned to
+Re-entry ~ develop long-duration and rendezvous capability,
+capsule ——~ | oe docking techniques, extra-vehicular activities,
+on ~——~oa and controlled reentry. The first three Gemini
+» flights demonstrated: orbital insertion capability;
+Separation point spacecraft structural integrity; and spacecraft
+Oxidizer tank —~ iw. < ris systems performance and crew accommodation
+Equipment bay side |= OOS qualities, respectively. This GT-4 mission is
+F intended to further demonstrate manned space
+flight for a period of four days, the longest
+ever flown by two astronauts. The space vehicle
+is depicted in Figure 1.
+
+Stage I engine
+
+iheust chamber ——_ [roll | MISSION OBJECTIVES
+PRIMARY
+
+e Demonstrate and evaluate the performance of
+the Gemini spacecraft systems for a period
+exceeding four days.
+
+Evaluate the effects of prolonged exposure
+to the space environment on the two-man
+flight crew in preparation for missions of
+longer duration.
+
+SECONDARY
+
+e Demonstrate OAMS capability to perform retro fire
+backup.
+
+Demonstrate the capability of the spacecraft and
+flight crew to make significant in-plane and
+out-of-plane maneuvers.
+Conduct further evaluation of spacecraft
+systems as outlined below:
+Structure and thermal protection
+Environmental Control Systems (ECS)
+*Equipment bay contains . Crew stations
+© Batteries Rare . Guidance and Control System
+pleco cert gocpmealeenl aie . Orbital Attitude and Maneuver System
+e@ Programmer (OAMS)
+
+@ Three-axis reference system (TARS)
+@ Radio guidance system (RGS)
+
+Seam en one Weneiry: isles Execute the following experiments:
+e D-1, Basic Object Photography
+-6, Surface Photography
+8, Radiation in Spacecraft
+9, Simple Navigation
+M-3, In-Flight Exercises
+M-4, In-Flight Phonocardiogram
+M
+
+D
+D
+D
+
+-6, Bone Demineralization
+SC-1, Electrostatic Charge
+
+5/24/65
+
+M-913-65-04
+
+MSC-2, Proton Electron Spectrometer
+MSC-3, Tri-Axis Magnetometer
+MSC-10, Two-Color Earth's Limb Photos
+S-5, Synoptic Terrain Photography
+
+S-6, Synoptic Weather Photography
+
+UNUSUAL TASKS OF THIS MISSION
+
+One of the interesting tasks of this mission is the duration of the flight. It
+
+will be the longest ever to be conducted by a two-man crew. Another highly
+interesting item is that control of the mission for the first time will be from the
+Mission Control Center (MCC) Houston. Some elements of the Mission Control
+Center at Cape Kennedy and the GSFC computing facility will be standing by as
+a backup during the launch phase. The computing facilities at GSFC will also be
+used as a backup to MCC-Houston during the orbital phase. Flight controllers will
+man the MCC in three shifts to give complete round-the-clock coverage of the four-
+day mission. Crew control of reentry will be accomplished by tracking the roll
+needle rather than nulling the down-range and cross-range needles as on GT-3.
+The experiments will, of course, contribute much information for the scientific
+
+and medical communities. The G4C suit which replaces the G3C suit used on
+GT-3 has the following new features: a triple overvisor, a redundant pressure
+closure seal (zipper), and thermal and meteoroid protection integrated in the
+
+outer cover layer. Abort procedures to be utilized by the astronauts in the
+unlikely event it becomes necessary for them to terminate a mission before orbital
+insertion are different from those used in the Mercury program. In that program,
+the fireball that would have been created had a conflagration occurred on the pad,
+would have been large enough to ABORT PROCEDURES
+
+engulf an ejecting astronaut, so
+it was necessary to add an escape
+rocket to lift the entire spacecraft
+
+free of the area. The GLV, on me EMOPRE
+
+the other hand, uses self-igniting
+
+fuels which, upon mixing, create a
+
+fireball small enough so that the
+
+astronauts can eject from the
+
+spacecraft in much the same man- x 5 MIN. 10SEC.
+ner as is done in today's high
+
+performance jet aircraft. This
+
+is called the Mode | abort pro- a
+
+cedure. The three abort modes .
+
+are more fully defined by the ‘ses)
+
+altitude and elapsed time-after- a
+
+launch parameters depicted on
+
+Figure 2.
+
+MODE T - EJECT AFTER SHUTDOWN
+
+MODE TI - SALVO RETROS AFTER SHUTDOWN
+
+5/24/65
+
+M-931-65-04
+LAUNCH VEHICLE DESCRIPTION
+
+The Gemini Launch Vehicle (GLV) has been modified by man-rating an Air Force
+
+Titan II] missile. The GLV has two stages, the first 71 feet long and the second 18
+
+feet long; both stages have a diameter of 10 feet. The gross loaded weight of the
+
+two stages is 337,521 pounds and they both burn storable hypergolic (self-igniting
+
+upon mixture) propellants. First stage thrust is approximately 430,000 pounds at sea
+level. Second stage thrust is approximately 100,000 pounds. The various systems of
+the GLV have been detailed in previous Gemini MOR's and what follows is additional
+information concerning modifications made to GLV-4. The fuel dampener and oxidizer
+standpipe used to suppress longitudinal oscillations have been redesigned. Butt welding
+vice lapped joints have been utilized on the fuel tank conduits to eliminate minute
+cracks. Malfunction Detection System circuitry has been redesigned to provide separate
+indications of the subassembly thrust level and additional insulation has been applied to
+provide increased fire protection. Sixteen T/M readout points have been removed
+
+from the GLV because they are no longer required and one range safety circuit has
+been added to the destruct system interlocking AGE and the GLV motor driven switch
+control. This circuit will prevent switch cycling in the event that both set and reset
+signals are inadvertently applied during checkout.
+
+TABLE |
+PROJECT COST
+(In Millions)
+
+FY 63 FY 64 FY 65 FY 66
+Spacecraft 205. 1 280.5 165.3 122.7
+Launch Vehicle " 79.1 122.7 115.4 88.6
+
+Operational
+Support ol 4.9 15.7 27.7 30.8 , 92.2
+
+Total RD & O 54.8 289.1 418.9 308.4 242. 1 1353.9
+
+This level of funding will provide for twelve Gemini Launch Vehicles, twelve space-
+craft, seven Agena Target Vehicles, six Atlas booster missiles and the operational costs
+of flight testing and the associated Ground Support Equipment.
+
+SPACECRAFT
+
+The spacecraft is 18.75 feet long and its two sections, a reentry module and an adapter
+section will weigh 7799 Ibs. fully loaded with the astronauts onboard. The configuration
+will be the same as was flown on GT-3 except for the following: minor changes have
+been made to switch positions and nomenclature, three additional (total of six) adapter
+
+5/24/65 Page 3
+
+M-913-65-04
+
+batteries will be required, radial thrusting TCA's and burst diaphragms in the "B"
+package that were removed for GT-3 are both installed on GT-4, and will act
+through the Spacecraft Centers of Gravity. An HF antenna has been added to the
+adapter section for orbital use and the HF transciever there has been removed.
+The C-band phase shifter now has its own inverter, the recovery flashing light
+
+can now be turned off during daylight hours, the HF antenna on the cabin section
+has been redesigned, and the adapter S-band transponder in the adapter section has
+been replaced with a C-band transponder which will have a different pulse spacing
+from the one in the spacecraft. In the GT-4 mission S/C, urine will be dumped
+directly overboard from the urine bellows through a shut-off and selector valve, a
+solenoid valve and a heated line. Redundancy is provided by the capability to
+dump urine through the launch cooling heat exchanger (water boiler). The main
+chute disconnect cartridge has been changed from a 22-second time delay to a
+zero second delay and new long-life attitude thrusters have been installed.
+
+EXPERIMENTS
+
+The 13 experiments are depicted and described on the following pages:
+
+1. D-1, Basic Object Photography
+In conducting this experiment, the as- |D-1 BASIC OBJECT
+
+tronauts will employ elaborate photo- PHOTOGRAPHY
+
+optical equipment to investigate the
+technical problems associated with
+observing, evaluating, and photo-
+graphing objects in space. These
+objects include the 2nd stage of
+the launch vehicle and natural
+celestial bodies such as the moon.
+Data from this experiment will be
+used to evaluate the astronauts’
+ability to view and track objects,
+and to maintain object-camera
+orientation by maneuvering the
+spacecraft. Equipment which will
+be used is illustrated in Figure 3.
+
+5/24/65
+
+2. D-6, Surface Photography
+This experiment will investigate
+the technical problems associated
+with an astronaut's ability to
+acquire, track, and photograph
+terrestrial objects from a space-
+craft with more elaborate photo-
+optical equipment than that used
+previously. The astronaut will
+photograph selected series of
+objects during day-side and
+night-side intervals of the flight
+using specified lens-film combi-
+nations. The resulting data will
+be used to evaluate the astronaut's
+ability to maintain object-camera
+orientation by maneuvering the
+spacecraft. Figure 4 shows the
+camera mount installed on the
+spacecraft window.
+
+3. D-8, Radiation in Spacecraft
+Data from this experiment will be
+used to supplement external radi-
+ation measurements in studying
+the dose levels within the space-
+craft resulting from passes through
+regions of varying radiation
+intensity. Two tissue-equivalent,
+current-mode ionization chambers
+will be used to measure the
+variation of absorbed dose-rate
+inside the spacecraft. Five
+small packets containing radia-
+tion detection and measurement
+devices will be placed at
+various locations in the cabin
+
+to ascertain their suitability as
+convenient dosimeters of space
+radiation and measure total
+accumulated dose. Figure 5 shows
+some of the equipment to be used
+for this experiment.
+
+5/24/65
+
+M-913-65-04
+
+D-6 SURFACE PHOTOGRAPHY
+
+D-8 RADIATION IN SPACECRAFT
+
+(PORTABLE
+
+UNIT)
+
+MG5-8095
+
+4, D-9, Simple Navigation
+This experiment is designed to
+develop and test navigation pro-
+cedures which employ a simple
+stadimetric device and a sextant
+to make sightings and measurements
+in space using the horizon and
+stars as references. Data from
+sightings will be used in compu-
+tations to determine orbital
+parameters. These results will
+be compared with actual
+parameters to determine the
+accuracy of the procedures.
+The hand held sextant to be used
+is shown in Figure 6.
+
+5. M-3, In-Flight Exerciser
+
+The purpose of this experiment is
+to assess the astronauts’ capacity
+to perform physical work under
+spacecraft conditions. Monitored
+exercise will be performed by the
+astronauts prior to the flight to
+establish control data. Isotonic
+exercises employing a bungee
+cord and involving the arms and
+legs will be taken prior to and
+after exercising. Pulse rate will
+be monitored continuously. The
+inflight data obtained will be
+compared with the control data
+to determine the capacity for
+work in space. Figure 7 shows
+the manner in which this exercise
+will be performed.
+
+5/24/65
+
+M-913-65-04
+
+D-9 SIMPLE NAVIGATION
+
+HAND HELD SPACE SEXTANT
+MG5-8097
+
+M-3 IN-FLIGHT
+EXERCISER
+
+6. M-4, In-Flight Phonocardiogram
+
+The purpose of this experiment is
+
+to measure the fatigue-stage of an
+astranaut's heart muscle during a
+long-duration flight. A microphone
+will be applied to an astronaut's
+chest wall at the cardiac apex.
+Heart sounds detected during the
+flight will be recorded on an on-
+board biomedical recorder. The
+sound trace will be compared to
+
+the waveform obtained from a
+simultaneous inflight electro-
+cardiogram to determine the time
+interval between electrical
+activation of the heart muscle
+
+and the onset of ventricular
+systrole. Figure 8 illustrates the
+method of installation of the phono-
+cardiogram transducer.
+
+7. M-6, Bone Demineralization
+The purpose of this experiment
+
+is to establish the occurrence
+
+and degree of bone deminerali-
+zation resulting from prolonged
+weightlessness during spaceflight.
+Special X-rays will be taken of
+an astronaut's heel bone and the
+terminal bone of the fifth digit
+of the right hand. Three pre-
+flight and three postflight
+exposures will be taken of these
+two bones and compared to
+determine if any bone deminerali-
+zation has occurred due to the
+space flight. Figure 9 illustrates
+the laboratory procedure which will
+be used for this experiment.
+
+5/24/65
+
+M-913-65-04
+
+M-4 IN-FLIGHT
+PHONOCARDIOGRAM
+
+PROTOTYPE PHONOCARDIOGRAM
+TRANSDUCER AND
+SIGNAL CONDITIONER
+
+GEMINI EXPERIMENT NO.
+
+BONE DEMINERALIZATION
+
+ESTABLISH DEGREE
+PURPOSE OF BONE
+DETERIORATION
+
+EQUIPMENT STANDARD X-RAY
+
+WEIGHT N/A VOLUME N/A
+
+PRE AND POST
+FLIGHT X-RAY
+
+we
+
+PROCEDURE
+
+LOCATION
+
+eS
+MG4-1886
+
+M-913-65-04
+
+8. MSC-1, Electrostatic Charge
+
+Before rendezvous missions are
+
+attempted, an investigation MSC-1
+must be made of the possibility ELECTROSTATIC
+of inadvertent ignition of
+
+pyrotechnics and other detri- CHARGE
+mental effects due to discharge >
+of electrostatic charge potentials
+
+during rendezvous. In this
+
+experiment, an electrostatic-
+
+potential meter, which protrudes
+
+through the wall of the space-
+
+craft adapter assembly, will be
+
+used to detect and measure any
+
+accumulated electrostatic charge
+
+that may be created on the
+
+surface of the spacecraft by
+
+ionization from engine exhaust.
+
+This data will be analyzed to
+
+determine if the charge is adequate
+
+to create a rendezvous hazard. Fig-
+
+ure 10 shows the detector installation.
+
+9. MSC-2, Proton Electron
+Spectrometer
+
+This experiment is designed to
+
+measure the quantity and energy
+
+of protons and electrons present
+
+immediately exterior to the
+
+orbiting spacecraft. This will be
+
+accomplished by means of a PROTON
+
+scintillating-crystal, charged-
+
+particle analyzer mounted on ELECTRON
+the adapter assembly of the nt
+i Data from this SPECTROMETERG
+
+spacecraft.
+
+experiment will be used to
+correlate radiation measure-
+ments made inside the space-
+craft and to predict radiation
+levels on future space missions.
+The proton electron spectrometer
+installation is shown in Figure 11.
+
+5/24/65
+
+M-913-65-04
+
+6 10. MSC-3, Tri-Axis Magnetometer
+In this experiment, the
+direction and magnitude
+of the earth's magnetic
+field with respect to the
+
+spacecraft will be measured. MSC-3 TRI-AXIS 3
+A tri-axis fluxgate magneto- MAGNETOMETER :
+
+meter, mounted in the adapter
+assembly of the spacecraft will
+be used. The equipment installa-
+tion is shown in Figure 12.
+
+11. MSC-10, Two-Color Earth's
+Limb Photos
+The astronaut will obtain photo-
+graphs of the earth's limb using
+a hand-held camera, black and
+white film, and a special filter
+mosaic which will allow each
+picture to be taken partly
+through a red filter and partly
+through a blue filter. After
+the flight, the negative will
+be subjected to careful measure-
+ments, and the resulting data
+will be used in statistical
+analyses to evaluate the limb
+radiance. These studies will
+be used to determine if the
+sun-lit earth's limit can be
+reliably observed in the short-
+visible or near-ultraviolet spectral
+region. The camera to be used for
+this experiment is shown in Figure 13.
+
+MG5-8105
+
+5/24/65
+
+12. S-5, Synoptic Terrain
+Photography
+
+The objective of this experi-
+ment is to obtain high quality
+photographs of selected parts
+
+of the earth's surface. The
+spacecraft will be manually
+oriented from an orbit mode
+attitude to a moderately high
+camera depression angle attitude.
+After a series of photographs
+has been taken, the spacecraft
+will be reoriented to the orbit
+mode attitude. Four spacecraft
+orientation maneuvers will be
+required during which approxi-
+mately 40 pictures will be
+
+taken over areas of the
+
+United States. Figure 14 shows
+one of the photos taken by Gordon
+Cooper which is similar to the
+terrain photographs planned .
+
+13. S-6, Synoptic Weather
+Photography
+The objective of this experi-
+ment is to learn more about
+the earth's weather systems by
+obtaining high quality photo-
+graphs of selected cloud for-
+mations. As in experiment
+S-5, the spacecraft will be
+oriented from an orbit mode
+attitude to a moderately high
+camera depression angle attitude.
+After a series of photographs
+has been taken, the spacecraft
+will be reoriented to the orbit
+mode attitude. Approximately
+10 orientation maneuvers will
+be required during which
+approximately 40 pictures will
+be taken. The photograph shown
+in Figure 15 taken by Gordon
+Cooper is similar to those planned
+on this flight.
+
+5/24/65
+
+M-913-65-04
+
+GEMINI EXPERIMENT NO. S-5
+SYNOPTIC TERRAIN PHOTOGRAPHY
+
+PURPOSE —oBtaIN HIGH QUALITY PHOTOGRAPHS
+OF THE EARTH'S SURFACE
+
+WEIGHT 118. VOLUME 0.036 CU. FT.
+
+PROCEDURE position SPACECRAFT, TAKE
+PICTURES
+
+LOCATION — pressurizeD CABIN
+PHOTOGRAPH OF THE HIMALAYAS IN THE INDIA, NEPAL, TIBET BORDER AREA, TAKEN BY ASTRONAUT
+L. GORDON COOPER, JR., DURING HIS 22-ORBIT MA-9 MISSION.
+
+GEMINI EXPERIMENT NO. S-6
+SYNOPTIC WEATHER PHOTOGRAPHY
+
+Eile PURPOSE ost wich ouauiry croup
+PHOTOGRAPHS
+
+EQUIPMENT 70 Mm CAMERA AND FILM
+WEIGHT 118. VOLUME 0.036 CU. FT.
+Bers" PROCEDURE Position SPACECRAFT AND TAKE
+PHOTOGRAPHS
+
+2) LOCATION pressurizep CABIN
+
+PHOTOGRAPH OF CLOUDS AND THE BURMA WEST COAST, WEST OF RANGOON, TAKEN BY
+ASTRONAUT L. GORDON COOPER, JR., DURING HIS 22-ORBIT MA-9 MISSION. MG4-1767
+
+M-913-65-04
+ASTRONAUTS
+
+The Command Pilot for the GT-4 mission will be James A. McDivitt and the Pilot
+will be Edward H. White, Il. The backup flight crew will consist of Frank Borman
+
+as Command Pilot and James A. Lovell, Jr., as Pilot. Their pictures and biographies
+follow:
+
+FIG. 16
+JAMES A. MCDIVITT
+
+Born in Chicago, Illinois on June 10, 1929. He graduated first in his class from the
+University of Michigan with a B.S. in aeronautical engineering. McDivitt is married
+to the former Patricia A. Hass of Cleveland, Ohio and has three children. McDivitt
+joined the Air Force in 1951 and is an Air Force Major. He was awarded three
+Distinguished Flying Crosses, five Air Medals and the Choo Moo Medal from South
+Korea. He is a graduate of the United States Air Force Experimental Test Pilot
+School and the United States Air Force Aerospace Research pilot course. He served
+at Edwards Air Force Base, California, as an experimental test pilot. McDivitt has
+logged more than 3,000 hours flying time, including 2,500 hours in jet aircraft.
+
+McDivitt was selected as an astronaut by NASA in September 1962. In addition to
+participating in the overall astronaut training program he has had additional specialized
+duties. These duties include monitoring the design and development of the guidance
+and navigation systems for the Gemini and Apollo spacecraft, as well as monitoring
+
+the overall Apollo Command and Service Modules.
+
+EDWARD H. WHITE II
+
+Born in San Antonio, Texas, on November 14, 1930. White received his B.S. from
+the United States Military Academy and his M.S. in aeronautical engineering from
+
+5/24/65 Page 11
+
+M-913-65-04
+
+the University of Michigan. He is married to the former Patricia E. Finegan of
+Washington, D.C. and has two children. White, an Air Force Major, received
+flight training in Florida and Texas, following his graduation from West Point.
+
+He attended the Air Force Test Pilot School at Edwards Air Force Base,
+California, in 1959. White was later assigned to Wright-Patterson Air Force
+Base, Ohio, as an experimental test pilot with the Aeronautical Systems
+Division. In this assignment he made flight tests for research and weapons
+systems development, wrote technical engineering reports, and made recommen-
+dations for improvement in aircraft design and construction. He has logged more
+than 3,600 hours flying time, including more than 2,200 hours in jet aircraft.
+White was named as a member of the astronaut team selected by NASA in
+September 1962.
+
+FRANK BORMAN
+
+Bom in Gary, Indiana on March 14, 1928. He re-
+ceived his B.S. from the United States Military Academy
+and his M.S. in aeronautical engineering from the
+California Institute of Technology. He is married to
+
+the former Susan Bugbee of Tucson, Arizona and has
+
+two sons.
+
+Upon graduation from West Point, Borman, now an Air
+Force Major, chose an Air Force career and received
+his pilot training at Williams Air Force Base, California
+From 1951 to 1956 he served with fighter squadrons in
+the United States and in the Philippines and was an
+instructor of thermodynamics and fluid mechanics at
+the U.S. Military Academy, West Point. He was
+graduated from the USAF Aerospace Research Pilots
+School in 1960 and later served there as an instructor.
+In this capacity he prepared and delivered academic
+lectures and simulator briefings, and flight test brief-
+ings on the theory and practice of spacecraft testing.
+Borman has logged more than 4,400 hours flying time,
+including more than 3,600 hours in jet aircraft.
+Borman was one of the nine astronauts named by NASA
+in September 1962.
+
+JAMES A. LOVELL, JR.
+
+Born in Cleveland, Ohio, on March 25, 1928. He
+received his B.S. from the United States Naval
+Academy. Lovell is married to the former Merilyn
+Gerlach of Milwaukee, Wisconsin and has three
+children.
+
+Lovell, a Navy Lieutenant Commander, received
+flight training following his graduation from
+Annapolis. He served in a number of Naval
+
+5/24/65 Page 12
+
+M-913-65-04
+
+aviator assignments including a three year tour as a test pilot at the Naval Air
+Test Center at Patuxent River, Maryland. His duties there included service as
+program manager for the F4H Weapon System Evaluation. Lovell was graduated
+from the Aviation Safety School of the University of Southern California. He
+served as flight instructor and safety officer with Fighter Squadron 101 at the
+Naval Air Station at Oceana, Virginia. Lovell has logged 3,000 hours flying
+time, including more than 2,000 hours in jet aircraft.
+
+Lovell was selected as an astronaut by NASA in September 1962. In addition to
+participating in the overall astronaut training program, he has been assigned
+special duties. These duties included monitoring design and development of
+recovery and crew life support systems. These include space suits, environmental
+control system and developing techniques for lunar and earth landings and recovery.
+
+TRAJECT ORY
+
+The launch trajectory
+
+for the GT-4 mission
+
+will be similar to that
+flown by GT-3. In-
+sertion will be at the same
+altitude, 87 miles, but
+the first apogee of GT-4
+will be 161 miles. The
+Gemini launch sequence
+is shown in Figure 20.
+
+5:10 CHANGE
+
+3
+3
+
+2:48 START Ils SHUTDOWN
+
+RADIO GUIDANCE ey
+FLIGHT PLAN orca on
+
+si
+So
+
+In addition to the various
+orbital maneuvers to be
+
+performed during the mis- DELAYED MODE 11: SHUTDOWN
+
+sion, as called out in | hay
+Table Il, other activities carina
+t IVITI ETTISIN
+
+will be taking place as 000 : "Te LANDING SEQUENCE
+> 3 MODE
+
+is shown below in Table
+Il, a summarization of
+the Flight Plan. The 0:20 STOP ROLL 072° MODE 1: EJECT
+consumable items loaded .
+onboard the spacecraft 0:10 START ROLL 085
+are shown in Table IV.
+
+aSoCcS——e
+
+. el
+0:00 LIFT OFF
+
+400
+TICAL MILES
+
+5/24/65
+
+MANEUVER
+
+Separation
+
+2A
+
+3B
+
+4
+
+*FOR PACIFIC LANDING
+
+1OFPS
+
+7FPS
+
+12FPS
+
+SFPS
+
+5SFPS
+
+5SFPS
+
+27FPS
+
+AFPS
+
+6FPS
+
+110FPS
+
+HP/HA
+
+AFTER
+MANEUVERS
+87/161 N.M.
+
+91/161 N.M.
+
+94/134 N.M.
+
+93/124 N.M.
+
+45/99
+
++TRANSLATIONAL SYSTEM CHECK
+
+POINT OF | DIRECTION
+APPLICATION | OF THRUST
+
+SECO+2- FWD
+
+2d Apogee FWD
+
+Apogee of FWD
+30th Rev.
+
+Approx. 15min Left
+after 2A
+
+5 min. after
+
+5 min after
+
+TSC #2
+
+Perigee
+
+following 2A
+Apogee of
+45th Rev.
+
+Perigee AFT
+following
+
+62d Rev. AFT
+(or 66th Rev. )*
+
+TRANSLA-
+TIONAL
+THRUSTER
+
+PURPOSE
+
+S/C-Booster Separation
+
+Adjust lifetime (for insertion dispersions.
+Evaluate thruster operation.
+
+Adjust lifetime. Evaluate thruster operation.
+Evaluate thruster operation. Determine visual
+characteristics of thruster plume.
+
+Evaluate thruster operation. Determine visual
+characteristics of thruster plume.
+
+Evaluate thruster operation. Determine visual
+characteristics of thruster plume.
+
+Adjust lifetime. Evaluate 3-axis
+
+application.
+
+Adjust lifetime. Evaluate thruster operation.
+
+Adjust lifetime. Evaluate thruster operation.
+
+Achieve OAMS retrofire. Evaluate thruster
+operation.
+
+VO-S9-EL6-W
+
+M-9 13-65-04
+
+TABLE III
+IN-FLIGHT ACTIVITIES
+
+Time |Revolution
+HRS:MIN | _No. sisienied
+Insertion Checklist
+D-9 Experiment
+Translation Maneuver
+D-6 Experiment
+MSC-1,2,3, and 10 Experiments
+M-3 Experi
+MSC-2 and 3 Experiments
+D-8 Experiment
+D-9 Experiment
+D-1 Experiment
+M-3 Experiment
+S-5 Experiment
+HF Communication Tests
+D-9 Experiment
+S-6 Experiment
+MSC-2 & # Experiments
+D-8 Experiment
+D-8 Experiment
+Experiment
+6 Experiment
+5 Experiment
+6 Experiment
+M-3 Experiment
+MSC-1 Experiment
+Translation Maneuvers
+Translation Maneuvers
+Thruster Failure Check
+Power Down S/C
+S-5 Experiment
+S-& Experiment
+M-3 Experiment
+D-9 Experiment
+MSC-2 & 3 Experiments
+S-6 Experiment
+D-9 Experiment
+Translation Maneuvers
+M-3 Experiment
+Apollo Yaw Orientation
+Power Down S/C
+M-3 Experiment
+D-9 Experiment
+Power Down S/C
+M-3 Experiment
+Pre Retro Checklist, TR-5 Minutes
+Checklist, TR-] Minute Checklist
+Retrofire, Retro Jettison, Post-Retro
+Checklist
+Reentry, Drogue Chute Deploy, Pilot
+Chute Deploy, Main Chute Deploy,
+Two-Point Suspension, Touchdown,
+Post-Landing Checklist
+
+5/24/65 Page 15
+
+_ moe > | ois (neinenn Aan bettie / | — Z
+
+M-913-65-03
+
+TABLE IV
+GT-4 CONSUMABLE LOADINGS
+ITEM QUANTITY REMARKS
+
+Batteries 703 Ibs. based Each battery has a
+ona 2400 A-h 400 A-h capacity
+
+OAMS Propellants
+Odixizer 246 Ibs
+Fuel 164 Ibs
+
+Oxygen
+Primary 52 |bs Egress bottle are also
+
+Secondary 13 Ibs carried if ejection is
+required.
+
+Lithium Hydroxide 97 |bs
+
+Food 1b Ibs
+
+Drinking Water
+Spacecraft 14 Ibs
+Adapter 61 Ibs
+
+RCS Propellants
+Oxidizer 40.4 lbs
+Fuel 31.6 lbs
+
+GEMINI PARACHUTE LANDING SEQUENCE
+
+50,000 FEET HIGH ALTITUDE
+DROGUE CHUTE
+DEPLOYED
+
+LANDING SEQUENCE
+
+At the end of the mission, the parachute soso ee
+landing sequence shown in Figure 21 will
+
+be employed. One item that should be “ : SEPAIATION
+mentioned in this regard is that should the 9,000 Feet — wan cnure
+84-foot main parachute fail to open, the ae
+crew can abandon the spacecraft by eject-
+
+ing and using their personal parachutes to
+
+effect a safe water landing. The latter
+
+sequence would also be employed should 6,70 eet & en
+the spacecraft come in overland instead of : “ees
+the intended water landing. —_— W —
+
+SEAL CLOSED
+
+——— PILOT PARACHUTE
+DEPLOYED
+
+SEA LEVEL —— TOUCHDOWN
+
+~ —— JETTISON CHUTE
+
+5/24/65
+
+M-913-65-03
+MISSION MANAGEMENT RESPONSIBILITY
+
+The Gemini Program is managed by the Gemini Program Director who exercises his
+direction through the Project Manager at the Manned Spacecraft Center. The direc-
+tion of a specific mission is accomplished by a Mission Director acting under the
+cognizance of the Associate Administrator for Manned Space Flight from the time a
+space vehicle is committed to flight test until the end of the Mission Period.
+
+TITLE NAME ORGANIZATION
+
+Program Director (Acting) Dr. G.E. Mueller NASA Headquarters
+Deputy Program Director Mr. W.C. Schneider NASA Headauarters
+Program Manager Mr. C.W. Mathews MSC
+Mission Director Mr. C.C. Kraft MSC
+
+PROGRAM MANAGEMENT
+
+NASA HEADQUARTERS
+Office of Manned Space Flight
+
+PROJECT MANAGE MENT
+Manned Spacecraft Center
+
+TRACKING & DATA
+
+ACQUISITION SPACECRAFT LAUNCH VEHICLE
+
+MSC MSC MSC
+
+GSFC McDonnell Aircraft Co. SSD
+
+ETR Aerospace Corporation
+Martin Company
+Aerojet General
+
+OPERATIONS ORGANIZATION FOR MISSION PERIOD
+
+DOD Mgr for
+
+MISSION DIRECTOR MSF Support
+Staff Operations
+
+Gemini Flight
+
+Ops Rep Gemini
+Requirements Program
+
+Coordinator Manager
+Security
+
+Officer Deputy for Deputy for DOD
+Meteorological. Launch Flight Recovery
+
+Group Operations Operati ons Director
+
+GLV Atlas/Agena Medical Public Flight Recovery
+Launch Launch Director Affairs Crew Support
+Director Director Director Director Officer
+Gemini Flight
+
+S/C Test i- Support
+Conductor Officer
+
+Flight
+‘ontrol
+
+5/24/65
+
+M-913-65-04
+
+TRACKING AND DATA ACQUISITION
+
+The ground support network for GT-4 will be the Gemini Manned Space Flight
+Network (MSFN) illustrated in Figure 22 and tabulated in Table V. There will
+be, however, some minor modifications to the MSFN for the GT-4 mission.
+These changes for the GT-4 flight are primarily in locating the range tracking
+ships in positions most advantageous for the orbits to be flown.
+
+TABLE V - NETWORK REQUIREMENTS FOR GT-4
+
+Tracking Telemetry ade ;
+. - {Gemini launch Cc id
+Radar] Mistram | Acq. aid eae i
+Network adary Mustram | Acq. a vehicle panei sine Manned
+
+Ground Station C | or others as listed FM Links 7 16
+assy | OT others os listed. [Pom Jem) “inks |e [D/A] RSDP* |DCS| Tone] UHF| HE] Sites
+ie |
+
+erritt Island [MILA X
+Cape Kennedy/ |CNV/ GE-Mod III-G X Lx | xe | x! x | xt x] xix X
+Mission Control| MCC
+Patrick AFB _|PAFB ae ee ee ee
+
+Grand Bahamas | GBI
+Grand Turk GTl
+Antigua
+alkaria, Fla.
+Eleuthera Island
+Bermuda
+Canary Island
+T
+Rose Knot Victor
+Coastal Sentry
+Range Tracker T
+Pt Arguello, Cal] CA
+White Sands, NM] WH
+Eglin AFB
+
+MSC, Houston |MCC
+elemetry Aircraft (d)
+
+NOTES:
+
+TEX
+EGL
+
+| xXof fT Xf
+
+Pe ed ee
+ee laa ie ae ee
+a - Record Only c - Remoted to and from the MCC
+
+b - Remoted to MCC d - Three telemetry aircraft in primary recovery area
+* Remote Site Data Process (RSDP)
+
+a
+Hoa
+
+The ground network support facilities include the MCC-Houston, Cape Kennedy
+(CNV), Air Force Eastern Test Range (AFETR) downrange stations, the MSFN,
+and Goddard Space Flight Center (GSFC). Real time tracking and the acqui-
+sition of data for post flight evaluation will be provided by optical and photo-
+graphic systems, MISTRAM, GE Mod III radar, C-band radar, and the Impact
+Predictor (IP) 7094. The network as listed in Table V will monitor spacecraft
+and launch vehicle PCM telemetry. The flight controller-manned stations, as
+shown in Table V will display selected spacecraft data for real-time evaluation
+and transmit these data to the MCC via teletype. The MCC will use both the
+Digital Command System (DCS) for transmitting commands. All the remote sites
+that are flight controller-manned, except for GYM, will have the DCS command
+capability. Tone commands for use by the Range Safety Officer will be used for
+manual fuel cutoff (MFCO), auxiliary second stage cutoff (ASCO), and Destruct.
+
+5/24/65
+
+GT-4
+MANNED SPACE FLIGHT NETWORK
+
+GEMINI
+
+1
+2
+w
+i
+Oo
+i
+B
+
+FIG. 22
+
+M-913-65-04
+
+BACKGROUND
+
+Project Gemini is the stepping stone between the comparatively simple one-man
+
+orbital flights of Project Mercury and the complexities involved in the multi-man
+lunar flights of Project Apollo. As such, Gemini's prime reason for being is to
+
+increase knowledge of man's capabilities in space and in developing operational
+
+techniques to support the Apollo Program. Thus, Gemini's objectives become:
+
+Long-duration flights - up to fourteen days
+Rendezvous and maneuver in space
+
+Docking with a target vehicle
+
+Extra-vehicular activities by the astronauts
+Controlled reentry
+
+Operational training for all flight personnel concerned
+
+To accomplish these objectives, a series of flights have been planned of which
+this GT-4 is the fourth. The first three demonstrated respectively: orbital
+insertion capability, spacecraft structural integrity, and crew accommodation
+qualities. The four-day manned flight will further demonstrate manned space
+flight capabilities for the support of future missions of even longer duration.
+The remaining eight Gemini flights, all of which will be manned by two
+astronauts, are tabulated in Table V| with type of missson and approximate date
+of flight:
+
+TABLE VI
+
+Mission No. Mission Objectives Date
+
+GT-5 Seven-day flight with experiments* Latter 1965
+GTA-6 Radar rendezvous and docking Early 1966
+GT-7 14-day Extra-vehicular activities Early 1966
+GTA-8 Optical rendezvous and docking Early 1966
+GTA-9 Simultaneous countdown and Mid 1966
+rendezvous
+GTA-10 Direct rendezvous Mid 1966
+GTA~11 Apollo-LEM rendezvous simulation Late 1966
+GTA-12 Apollo-LEM abort simulation Early 1967
+
+*Includes rendezvous evaluation pod
+
+The planned end-of-the-mission touchdown point is in the Atlantic Ocean approxi-
+mately 400 miles southwest of Bermuda as is shown in Figure 23. This is the primary
+landing area. The GT-4 mission employs a zone concept for recovery which estab-
+lishes four recovery zones: East Atlantic, West Atlantic, West Pacific and Mid-
+
+Pacific. Each zone consists of a circular area with a radius of 240 nautical miles
+
+in which various ships and planes will be stationed. An aircraft carrier will be sta-
+tioned only in the primary landing area as illustrated in the recovery forces diagram
+
+5/24/65 Page 20
+
+M-913-65-04
+
+GT-4 PRIMARY AND SECONDARY LANDING ZONES,
+RECOVERY SHIP SUPPORT AND CONTINGENCY RESCUE FORCES
+
+@ LAJES
+
+KINDLEY oD
+
+SAN DIEGO? €) 8 © LAS PALMAS OKINAWA ©
+AO
+DD
+
+NY NS
+HICKAM © 7
+
+© KANO
+
+© ASCENSION
+
+PRIMARY ;
+RECOVERY AREA ELISABETHVILLE aaWNRVILLE . © PAGO PAGO
+\ SECONDARY © mauritius S
+
+nr a JANEIRO
+RECOVE RODE JOHANNESBURG ©
+CARRIER x
+DESTROYER
+
+OILER by
+
+CONTINGENCY
+RESCUE FORCES A
+
+FIG. 23
+
+of Figure 24. Other areas in the world along the ground tracks are called contingency
+landing areas. Because these contingency landing areas are world-wide, it has been
+necessary to pre-position certain aircraft with their associated crews, pararescuemen,
+and paramedics so that they will be able to reach the spacecraft in sufficient time to
+render aid to the downed astronauts. These contingency forces have been deployed to
+the bases shown in Figure 23.
+It should be noted that there
+are numerous types of aircraft
+in the launch area and primary
+landing area for telemetry,
+weather reconnaissance, aerial ARS AIRCRAFT PRIMARY RECOVERY ZONE
+photography, and recovery (480 MILES IN DIAMETER)
+Operations. In addition to
+these aircraft there are also
+several helicopters in the pri-
+mary recovery area from the
+aircraft carrier that are carry- Bay amen: Pe Eee oe
+. P , (ELLIPSE - 200 MILES BY
+ing swimmers. These swimmers 40 MILES)
+deploy into the water and
+
+attach an auxiliary flotation
+
+collar to the spacecraft. Launch uss wasp AND
+
+ONE DESTROYER
+area recovery forces are de- AT TOUCHDOWN POINT
+‘ . 3 WASP HELICOPTERS
+picted in Figure 25. | WASP COMMAND
+AIRCRAFT
+1 USAF SSB RELAY AIRCRAFT x ARS AIRCRAFT
+
+FIG. 24
+
+RECOVERY AREA FORCES
+
+5/24/65
+
+M-913-65-04
+
+LAUNCH AREA RECOVERY FORCES
+
+x
+72° re WN”
+
+2 MINESWEEPER OCEAN GOIN IF 9
+
+LANDING FOOTPRINT
+\ USMC ( 27 MILES LONG)
+AMPHIBS
+
+FOUR HELICOPTERS
+TWO PHOTO JETS
+
+5/24/65
+
+NASA ROUTING SLIP
+
+3 ACTION
+NAME (if necessary) Solaciua
+
+CONCURRENCE
+
+Paes
+
+INFORMATION
+INVESTIGATE AND ADVISE
+NOTE AND FORWARD
+NOTE AND RETURN
+
+PER REQUEST
+
+|__| RECOMMENDATION
+|_| SIGNATURE
+
+REPLY FOR SIGNATURE OF:
+
+Ma a ee Fe ee ee es
+oS SLYVM AWA “) Aw
+Sst a
+
+A : pat :
+De. Srrckbn Terns S (Sr0Ay,
+
+[ Je Car vik = He Aen s
+
+fe OC Awited — hin es
+ead g/ 2 /
+
+r
+AW, ota
+
+NASA Form 26 (Rev. Jan. 1963) U.S. GOVERNMENT PRINTING OFFICE : 1963 OF—671645
+
+NASA ROUTING SLIP
+S
+Be
+
+APPROVAL
+
+CONCURRENCE
+
+oy
+= INFORMATION
+
+|_| INVESTIGATE AND ADVISE
+| | NOTE AND FORWARD
+Ga NOTE AND RETURN
+
+PER REQUEST
+RECOMMENDATION
+SEE ME
+
+a
+
+RS
+
+ae
+
+[| stonarune
+
+REPLY FOR SIGNATURE OF: :
+
+REMARKS:
+
+f
+
+t- SC
+
+NASA Form 26 (Rev. Jan. 1963) \ f U.S. GOVERNMENT PRINTING OFFICE : 1963 OF —671845
+
+EXI3 ROUTING SLIP
+
+NAME INITIAL
+. FOSTER
+. COX
+. EATON
+
+. HRABAL
+
+. A. MOKE
+
+. B. NEWMAN
+
+. SMISTAD
+
+. BROCKER
+
+FILE
+
+REMARKS
+
+Pes, Son re
+Dr Toceryn Giec
+
+Satins Cy Of Arfrenncew Sesion Or GT-4
+EXP DebeiGFING. “For aeare= MF 7- é- 5
+
+21t 11
+
+t the air elowe dge on
+
+studied from the ground the hard way and, uh, uh, by betometer (7),
+
+(triangul ation), by trying to determine how high it was, it was
+
+many years before one tind come idea how high the air glow really was,
+
+Lj { I in nobter of seconds Glenn and
+
+und in a moment we willl drdldiente how in & male
+
+seconds how high
+uweay with 40 years of hard work. Again, there
+made there, but the point wis that in a f seconds from
+point you can do a job. Now with the air glow then
+it sort of, I we: * 11 a band we never mean
+‘cetly desipned band Like in the slide or something
+
+So
+
+earth, and this is roughly about 90 kilometers as determined by
+
+Soe
+
+Carpenter and by rocket passing through the mir plow. Uh, this is the air
+
+De
+
+glow edge on that we have heard about this morning uh, it was used in
+
+and so on. Now I just wanted
+
+connection with the (Scxtan) experiments
+
+ft y WReTE
+
+c
+G
+Cu Tine 25,46)
+
+ol where we otland 4 brightness. Now, uh,
+
+head-
+
+a
+
+se
+
+Glenn
+that was
+
+have very much time
+
+Cade. 5S
+
+for it at the moment and... a really the first time you see
+ng like that you don't know whether haze or luminous sort; it
+
+look hazy. Unfortunately, the press and other people kept that term
+istence a Jone time, so long that m= number of astronomers in Europe
+
+st, consisting ol dust particles and so on. Really, what Clenn s4
+
+was mir glow edge on 2 JuminouS layer. Therc may be a Little dust there
+
+Qn
+¥ may have something to say aboul th In 12@ predominate feature
+
+gat
+luminous layer. Now, Carpenter has more time to observe
+ile took the interfcrence filters back up with him, and uh, he was
+
+a5
+
+and he noted it tury it very carefully through the air
+plow the upper the Lower and when it disappenre From that careful
+Liming intormation one was able t in clown the ime of the air
+rlow. Roughly 0O kilometers And this is whut took many many years to
+rround by tiianesulation (2) whieh is very very difficult cause
+ransmission was
+
+had hoped
+
+“Leult to see
+
+some
+
+be able to
+
+White and McDivitt saw
+
+le
+
+there's another point |
+
+reason I think hnuve
+
+ave time to show whal
+
+will do h, some
+
+were able record are
+
+structure in the
+
+one instance, a uh, . .
+
+air glow that they're
+
+been observed betore.
+
+don't know when to fire
+
+Ls
+
+Liar
+
+air @l
+
+Wer some! rc
+
+Maus
+
+ote
+
+Cooper was able to see th
+
+the . . . light, very well.
+
+ere; well, we'll go back to that in a moment.
+
+other designs to show what can be done. If
+
+can be done by extending visual observations
+
+i
+
+these new results, uh, that McDivitt and Whi
+
+very interesting. Uh, first of all, they s
+
+ow and this is the first time
+
++ 6 «© «© « « « « IS Seen some structure in
+
+ooking edge on turns (white)... . This has
+
+It is very hard to observe this with a rocket;
+
+the rocket to do that. They, they observed t
+
+rrr \ Wwe we }
+Lhey observed
+
+meteor
+
+down below them It the first time a meteo
+
+space by an astronau And it was a
+
+I am sure because they saw the
+
+things below
+
+i's atmospherc. They saw when they were over
+
+re
+
+over tS
+
+(southern) Ligh
+
+‘eported by astronauts.
+
+a curtain I thin
+
+or satelites
+
+und Sunrises more
+
+aw
+
+ud
+
+Uh, the let's see
+
+The
+
+we
+
+te
+
+sy
+
+this is reported.
+the
+
+never
+
+you
+into
+
+them
+
+and
+ana
+
+te
+UL y
+
+back a moment to what
+
+uh, saw during a twilight right after sunset.
+
+rs and he observed at twilight, the sun had
+
+cular array
+
+in the blue
+
+book, his blue book, and summarys
+
+described a rather interesting blue band that
+
+you can call Schirra's blues; Uh, .....
+
+do quite well, with blues. He obs
+
+1 4 7 , 1 . oe m
+dark blue. And the word "Light" 4:
+
+Light one doesn't know whether one means the
+
+Wiis Lehter. appears to be
+
+it
+what they stand.
+
+observations were is
+
+and afterwards we are all very consistent.
+
+The f
+
+4
+u
+
+construct this thing. irst time around
+
+when Schirra saw
+
+please idn't quite know
+
+1 not too sure. Uh,
+
+tube becnuse
+
+bLimeless
+
+Same bleehy ror timines as
+
+Laue:
+
+possil one is observing the
+
+Ivy
+
+approx uh, oli, Lrom 10 to 15
+
+yw Like +t It seems to have a maximum
+
+in, ozone you know, is very very
+
+Ne ate kk
+
+to expla
+
+of colors, he describes them very
+
+rved a dar
+
+is a difficult word.
+
+oh
+
+Anyway, we
+
+(reportedly) on to a tape and
+
+ozonisph
+
+kilometer
+
+Rel]
+DEL
+
+te LL
+
+In
+
+that in a moment
+
+Cooper, uh, what Schirra
+He observed, uh, the planet
+just set, a very specta-
+carefully in the report,
+
+blue book too.
+
+three blue bands;
+
+rey
+
+1
+a
+
+true and he able
+
+kK blue, light blue, and
+
+When one says
+
+blue was a lighter hue or
+
+light blue, and one has
+
+from what these
+
+Ly
+
+We had an order to try to
+
+it needed a little correction
+
+what this
+
+we thin
+
+started. Un, we
+
+Sere eave ozonispnere
+
+a
+
+5S hign some-
+
+up to rd,
+around 25 or 20 kilometers.
+
+ultraviolet,
+
+FOOO and
+
+ih, absortion this way
+
+band ¢
+
+some Chainy ke ul And it does s ibtract,
+
+is complete
+
+had a chance to
+
+st+ layer in here within
+
+wed
+a ke
+
+too uround PO kilometers which could add some
+
+wn by the white Light too
+
+yo etd mpd icated.
+
+confirmed by, uh, another
+
+very interesti
+
+Cooper madc
+
+now
+
+| lumi:
+
+thie
+
+at sort
+
+behind
+
+flow,
+
+ing two passes
+Chrough
+
+t
+
+long big path you are getting
+Some Lig
+
+muct) light from the surface of
+
+There's a little
+
+demarkntdiorn
+
+i
+
+demarkation is much mo
+
+daytime, day the @]e
+
+| Belt 12 1
+5577
+
+in ray
+
+4477 atomic oxygen green line of the air glow from the continual we may
+
+have caused people to think that there's something very magic about
+
+green (line). If you are starting the green line certainly you want
+
+to observe the green line ...... . are built very carefully to
+observe (holding) the green line in and uh, would continue (near). But
+ror. +. . . . applications it may not be always wise to subtract the
+(continuim). In other words, while you're dealing with and this is again
+those 4000, 7000. . . . 24% mentioned %%77 is the green line right here
+but there's a strong continuim right along here. A lot of light here;
+this is the light we've been talking about. This visual night (glow)
+visable night glow edge on is is the total. So there's a lot of Light
+there and just... . in the Sextant experiment... . constructively
+critical perhaps the reason why the... . didn't work too well is after
+one is throwing away a lot of light. Uh, this is not as bad as the case of
+
+Cog lights you know. Remember years ago the fog lights were yellow.
+They were light wasters. There is no reason, the only reason why they
+worked well is they were Low down so eventually the yellow... . disappear.
+Rut you don't want to waste any Lipsht. Wowever, White will point out to
+prefer using the @reen Cilter and McDivitt preferred
+irvst to depends a lot your own method
+observation. TT wink to point oul that one has t e very careful
+how one makes . . . . applications of
+other, uh, things, they, you weren't here sterday;
+little bit about it.
+
+h, I think I should... .. sensitiveity it each of the astronauts
+
+starting with Glenn who
+
+Well, I really don't want
+
+on
+there
+I mean sensitivity uh,
+
+Oh, uh, uh, 0. K.
+
+he wasn't able to make the
+
+was able to make
+
+tunity to really
+
+you mean maybe, uh, that
+
+Well, uy, uh, or even
+
+A Aa
+
+fine, alright
+
+orbit magnitude?
+
+- » going back to
+
+Uh, in one case Cooper was
+
+and looked out and he was
+
+him, the sun was directly
+
+any portion of the window
+
+window There is not
+
+Saw.
+
+daytime bub he did dndiendt
+
+side as he dad
+
+dry
+
+bhere's
+
+we Ienow day mit
+
+i" beginning of ub jec
+
+ua s
+
+had
+
+will be a very fine experiment carefully
+
+Well, Glenn didn't a change
+
+because for example,
+
+type of
+
+preLe
+Co
+
+fet niet
+
+Belt (11
+
+trouble getting .
+
+mo
+
+se
+
+to get into that too much for this reason.
+
+planned through the .
+
+same acute observations for example, as Cooper
+
+I don't think Glenn had an oppor-
+
+» and see very much
+
+on the daytime skies but
+
+starlight.
+
+5
+
+» I see what you mean. What was the (landing)
+
+« » « « Jet me continue with that
+
+taking a small, woke up and opened his blind
+
+on the day side. The earth was directly below
+7
+
+behind him. So the earth was not ill ninating
+
+nor was iC illuminating anything that the
+
+primary, secondary... . area...
+
+y #008 situation and he did see
+
+that he was not abile to see as well
+
+und he saw quite well at night. And, again
+
+1
+h
+
+@low but ‘Ticult to measure and here
+
+tive observation of, of its (men) at the
+
+and therefore
+
+10
+
+on board so that during the day » one can look and observe physically
+
+what the day air glow is Now this is very important because here we
+
+have the orbiting... - next year and very important background prob-
+
+lem. Two of the orbiting. . - - Observatories... . are above the
+
+air glow, this air glow. But the day air glow is much higher and uh,
+
+te
+
+s food evidence in the rocket measurements that it's
+higher and it's sort of associated with a. red air glow. And, so here's
+our situation where an astronaut was able to subjectively note the difference
+between day and night in the (sky) i} {cDivitt and White were able to
+see down to {th Sth maniture stars where as the other astronauts
+were not able to sce so well. Again it may be a question of time
+(darkmentation) perhaps not that much more time but uh, ...
+they were getting down to uh, the kinds of sensitivity... . that uh,
+should be possible under, under good conditions of dull atmosphere.
+Uh, should we mention anything (about) the window (pane) and uh, .....
+to hear more about it, the question on did uy, White smear something on
+the window or take something off with his elbow or something. It appeared,
+from what we heard, that he tood something oft’ there has been some
+accumulation (7) them scattering the medium on the window and we took
+it Look at aut | id, they have to 1
+looked, black where he liad rubbed somethi
+‘attered Light . . . . coming in and
+ation of little particles which
+which would get in the light the place where
+
+and again i
+
+; looked. But att all the cockpit inside
+
+looked out through the window uh, there seemed to be a change. In fact,
+
+they have aphotograph of this (spot) * + + + . talk about that. Uh,
+
+they are very uh, they say the astronauts have taken advantages of every
+possible opportunity... . to note something unusual. And he keeps all
+the copies . .. s . Why « « - + » I think we can look a little bit
+
+4
+
+Co the future. I think we all would like to extend the... - range of
+vision and the way to do that is with im ge converters. This may be
+very practical. Uh, if one is dealing with uh, the idea of perhaps using
+a violet lens rather than a blue to vet down to a region that is .....
+many more comments on. You may be getting into a region where the eye
+Is not very sensitive or not sensitive at all, yet it is a very inter-
+esting region to do practical navigation well, there one can use the image
+converter and have the eye become sensitive through an image converter
+to uh, (the near violet). There are many observations that have made
+‘rom rockets that are hard to repeat. Uh, for example, ultraviolet aurora.
+We're not sure this happened but uli, two of these - « »- in a rocket
+and through air and it got saturated and it burns out that it probably
+very stron, ultraviolet aurora over Wallops Island. And fortunately
+(see tometors) worked ami becnuuse they were . . . . to such
+consitivity but the other two were - Well, uh, there was
+le counterpart of this arcn; there was no way of knowing it;
+astronauts might be able to Look around and
+traviolet aurora. ‘They s his aurora in south
+Australia visually. Well, that's the bee: nin; Perhaps with image
+
+converters they might pick up some
+
+ULtmriviolek oo.
+
+made of tnese nebulocities mich may
+
+are ultraviolet nebulocities( n the 1200-1300
+
+region. Apvain one might. have an image converter or cr @ an image
+
+can see
+rumental prot Lem( 2) we don
+
+to achieve
+
+observations were made
+» tell you abou
+astronauts, and Lhey
+Lake a coffee reak while
+shor Colonel
+
+and Colonel]
+
++ choice
+(Actually)
+T don't think there are
+
+Ha, Ha.
+
+The X-rays (?) didn't cause any significant hardships as far as the......
+
+to flight. ‘hey made us get, up whal, 10 minutes earlier.
+
+winee there was only I guess
+ihat's most serious problems and I wanted a milkshake or something
+as soon as I landed and I couldn't have it, Said I couldn't have any
+calcium until, what, (20 hours afterwards?)
+As far as the flight problems
+‘Imat's a pretty safe floor (2?) my heel didn't hurt at all.
+Mine's all healed up.
+Ha, Ha.
+Tt didn't think you had enough shield at the moment
+Ha, Ha.
+
+he uh, phonocardiogram (?) like some of the other senses (?)....
+couple days (?) Not so that we couldn't carry on the mission.
+
+y more bothersome than uny of the other ones.
+
+in, interested in knowing, uh, the......
+
+l’'m really interested in is obher not our motion disturbed
+
+microphone enough so that you heard a lot of
+
+ssurily our heart. Bul we did uh, always
+
+vy
+
+CNS secre (
+
+man on tne saDEe.
+
+he WMS
+ne BAGS
+
+rf
+
+On the biometry tape recorder,
+
+Tney were arranged in such a manner
+
+eram by itself was not recorded on
+
+only recorded on one tupe recorder.
+
+nterested in the man who was awake
+
+ul you weren't ro ing LO try bo gel
+
+one went to sleep, bis biomed tape
+
+Clight profile on the biomed
+
+Do either of you
+
+No, I don't believe so,
+
+14
+
+Jim doesn do it?
+
+There were some <-
+
+throughout the
+
+around, moved my arms and tried to
+
+I only used about half of my first tt
+
+LW
+
+Are there any obher questions on
+
+Oo tne
+
+ZroOup OPs wee. your
+
+redepond Lod by Lhe time
+
+wll hee right now.
+
+reully
+
+this morning
+
+ire
+
+t the - the phonocardio-
+
+both tape recorders. It was
+
+And since we were not necessarily
+
+» because he was moving sround
+
+around to that anyway. Whenever
+
+recorder wis on. Most of the
+
+talk in your sleep?
+
+ep I felt fine. I know I moved
+
+++ more comfortable.
+
+ree slee;
+
+> meaning that calcium
+
+the
+
+wondered
+
+weeks from now we will check it again out of
+
+curiosity. 2 part of the protocol or anything else.
+
+we are just curious to find oul. Now we realize that you
+just been puradiny
+
+the more you jomp around on it. the m > it comes back.
+
+you think you have been jompins more or.....
+
+t
+
+you one thing - I naven't he fair share of ice
+
+ilk,
+
+you taken your last X-rays?
+
+Postflight, about, it's a little over 10 days, it was Supposed to
+lO days and it t ‘dd out to be le, I believe.
+had
+Came down the ‘(Lh right, anc e just did it yesterday morning, so
+about the 25rd day.
+[ think if it is : unction of exercise, and....
+
+s not a direct, function, I mean : is one variable,
+
+that it. would t
+
+down
+
+were when we took our pre-
+especially the first two.
+
+are still 4 or 5 percent down, then we only went down
+
+A ol BL
+
+sensitivity in your method?
+
+pointed out this mornings, it. s on the situation, but
+
+are detinitely within % rcen I we produced it
+many limes : 1 mu than that, but
+varies,
+What was your
+further the experiment. ut after about < { felt that I wasn't
+getting any exercise at 1, and there is limit to how much push-
+do, i rot clearance from Dr. Grady,
+rhout Lhe remai
+preseribed in our medical
+my arms and
+remainder
+
+felt
+
+ipernai
+
+about
+
+when I was
+
+lot of, a fair amount of exercise there.
+
+reach everythir T needed to reach without really....myself all
+
+over the insid
+
+ot
+
+the spacecraft. I managed to get all the food
+
+out which is a - in a lg is a fairly difficult task,
+
+I managed to
+
+it, out without any effort whatsoever, once I got the first one
+
+ca WEY Ss
+
+wouldn't go back into the hole and it, was taped all.....and I didn't
+
+Lo worry abou Bi it. so f just reached back and find
+y 3 .
+
+Be
+
+Vv
+
+just jerked it and pretty
+
+soon the next meal would flop out,
+
+then J would take the f, with no
+
+1e seissors and cut, that one of
+
+effort whatsoever, and I anticipated that I mi
+
+have to turn
+
+around and reach back in there and could do a lot of exercises
+
+CHET ere ee
+ing that we thought might provide exercise just
+
+J ite
+
+didn't so
+
+make it. And I wasn't that - I didn't feel like during
+
+ise sake because we weren't getting all
+
+mECeyp 1
+
+should liave and J justlost the desire
+
+Lhat, but [ aid feel that I
+
+Trea oes
+
+designed was not
+a work heart
+
+the erew with
+
+yourseli
+
+made the comment 40 was k
+
+id 60 warmed me » in t suit more
+
+have been, was kir “ warm most
+
+made me a Little bo
+
+you would
+
+word exerci
+
+good work:
+
+contraptions,
+1, same way
+
+He didn't have a closed loop for himself only, and
+
+another closed loop. We had a closed loop that was closed - but we
+‘€ part of the same mechanical unit, so that anytime the air temp-
+‘ature went up in the suit, : ss of whether Ed added the
+nided tl heal GL Lt Ltt went across the
+SO
+
+sat exchanrer it was « y taking oO much of the heat, s
+
+it essentially it came in a Little higher temperature than it would
+
+have if he wasn't exercising. So, you can notice these small temp-
+
+erature chang
+noise 1 associated with the cold uir through the....
+think probably your noise in your intercom was -
+- was so much more thun that, you probably didn't even notice it
+4S Much as you
+You vet used to it Just like flying 9955 you get somebody in
+here that is not used to the hot muke sitting in there it probably
+
+know what it is and you
+
+was a decreasing
+Just didn't really -
+workload is concerned.
+
+know whe
+
+charve worked on electron and magno-
+meter, we didn't get any performance at all on those three.
+
+», from an instrumentation standpoint, we had - the switches
+were acceptable, even to me, I thought Ed was asleep when we had
+to turn those things on, I had to reach across with this thing we
+
+end on it i . i reach under the switches and flick
+Lhem on and off with it.
+
+id, did you see the
+
+Did you ever yhe the back end, did you get. far enough back
+
+to get to look in deep enough to see it?
+Did you hear it extend?
+
+No. [ extended it the E ait really didn't see it.
+
+unyone 4, ‘wis somethings wrons with
+
+40 seconds.
+Have you got any data back on it yet?
+on the computer,
+ions on Lhose three’
+
+of the photography? The ier and marine
+
+[ would like to say we got some good pictures and I appreciate it.
+
+(here again, it was a pretty straight forward experiment. We didn't
+have any dilficulty with
+['ve wot a couple of questions about the BSS A couple of things
+
+that came up last night. ou said the systematic photo-
+
+graphy across the United States rery 5 seconds, how did you time
+
+that?
+
+wid GOok
+
+one
+
+control
+
+{ think you could get some degree of pictures, but I don't think
+
+that you could get the same set that you got. The set we lostin
+
+Une southern part of Mexico, I believe I did one time when Jim was
+
+asleep, but it was not nearly as long a period and I think it
+
+was only probably about 12 pictures. ‘This is shorter piece, but
+country isn't very long.
+
+Well, were focusing it then Ed.
+
+Yeah, [ just wanted to get it all set up ahead of time, and by the
+
+time we passed there we didn't change it a great deal. But on the
+pass that we made across the United States, it was, I think, most
+precisely held straight down, and we went much longer period of
+Lime and there were controls that were made, and to sit there and
+fiddle with the controller and time yourself and turn the camera
+and take the picture, you can't do it as exact. as you can.
+[ will put that in as a firmative request for my experiment
+all possible, have both pilots on the job.
+"or any of your sequence pictures.
+
+Yea. Those other ones, the target........
+
+fsnd
+
+of your sequence pictures.
+
+ari}
+
+Another one's Target of Opportunities
+
+eeecceeseethe ones that we've got you
+
+don't
+
+ua
+
+Vy
+
+AP ero 22) necessarily pass over 1,
+
+ne
+
+thing they want, to take a picture
+
+take a picture.
+
+You guys certainly have your cyes open
+
+y
+
+4
+
+that volcano shot, that reshot structu
+
+going to give us leage.
+
+Could make a comment just on the £
+
+you
+
+sjaie te w\tsase eve Lee ee
+
+spacecraft,
+
+how long did it take for rates
+
+could a fellow count on maybe pul
+
+gol raves opped I'd say
+
+Whoever
+
+oo get started. There's nothi
+
+muchinery which is practical
+
+a mutter of the metal brent
+
+r
+
+.o remember, Lhoush,
+
+fixed and the
+
+stopped with
+
+per minute
+
+tround, bul
+
+bhing's
+
+if you don't need the controls.....
+
+weren't all straightened out....se++-:
+
+em, know.
+
+you
+
+buy some of those things--
+
+re especially, really
+
+eneral stability of the
+
+you were wait-
+
+for instance, how
+
+ling position in general?
+
+it takes him a couple of days
+
+ne to make them go except that
+
+SV ob tf8 epee
+
+itd the
+
+ret your rates
+
+y
+
+rotating underneath
+
+what ta Want....
+
+J
+
+1 Ue
+
+motion
+
+when y move around
+
+Ou
+
+it moving around
+
+didn't move you really, but ['m sure
+
+quite felt
+so I don't know whether it was that ind of a thing I was feeling
+or whether it was
+
+CHO Bienes acees
+
+1 dor up these motions
+
+| remember you
+
+mintioned; you could
+
+heard, and e motion ol
+
+externally.....1 mean, could you d
+
+4
+1
+
+aware that when he di
+
+when, when J
+-. and that was the
+
+LWwo
+
+ation
+
+‘Cause you're only translating your.......e.e.
+
+seoeoe nieed some pictures, sir.
+
+Do what
+
+Lo describe: but
+
+probably, three quar-
+just in the pitch and
+© take out roll
+
+time I called--I
+
+understant
+could
+
+and to
+
+~eesesome of the (numbers? members?) say
+
+One more quick question:
+
+that you were moving the structure about in a one-side configuration......
+
+be within your work area--
+
+LO
+
+restricted on where you reach,
+
+underneath and behind you especially, but out in
+
+Pront; would've handed me big, I. could've
+
+Fight, CON. once e oe cede ee sees sectionsS......-
+
+Wait, now wait @ minute, we're talking about smaller things right
+
+now.
+
+fen by ten what’ ..eeeeseMoving where? Do what
+
+eouldn't m it an inch recause T wouldn't
+
+how would J ther way il
+
+bitppened——urb beri
+very well get pret.ly close.
+
+I knew where mine was.
+
+shese things are weightless up there but they're not
+
+baskets that fly away, once you gel these things going, you gotta
+
+stop them again, if you started pu: ans
+
+ve fot something
+
+of proport ion, you'
+
+voing, and if it hit wall down
+
+question I'm leaning at: Ls 25s well,
+
+This is the weneral
+
+eee e ULO-
+
+ing to get it..-With the distinction that you can use it
+
+matic tape stabilization..
+
+d have the same probler
+
+YOU
+
+1c SUE.
+
+OULD «eee
+
+ith automatic stabilization you might, would set down in
+
+to) the motion where witl thing you wouldn't...
+
+gun you, probably, would you know, how to find, you've gotta
+
+fat
+
+your Aubomublic stmt
+
+it would
+
+tart firing
+
+second, Hot You tite
+
+than you've got the whole of a box or something that you were hold-
+
+ing when you were down in one corner of it. I'm sure that you would'nt
+
+have engouth stabilization control authority to handle the translation
+of something like that, because you're putting your eng
+
+Well, it depends on his mass. Again you said it's mas
+
+as
+oe
+
+were magnesium bonds or something, then....ees-seevees
+
+Yeah, well [ know what we're talking sbout--we're talking about
+
+building a space station. I'm as anxious to do that
+
+but this isn't quite what we looked into. I appreciate your question;
+
+we certainly have to fact up to it
+
+On-stabilization, uh, suppose you were trying to take off (both pic-
+
+tures) on Gemini, compared to Mercury.....
+
+Would it take you wha
+
+Suppose you try to take one photo picture of the star, say three stars,
+what think your sensitivity in terms of angular accuracy
+
+or Lhree seconas focus, angular-wise,
+
+horizon and......changes Tour degrees
+
+zation, you know,
+counteract the motion
+take stabil
+
+you want Lo compare it with Mercuey stabilizer,
+
+you have to go back and get moment of impulse of the control system,
+
+then apply it to the moment of inertia of the spacecraft, and then
+
+do the same with the Gemini....
+No, in this case he'd be moving a camera.
+Pardon?
+ne camera to cont
+Do you just hold it?
+could take them as l as you could in Mer-
+
+cury, according to how stable they tie
+
+t's quite possible that you could stabilize the spacecraft better
+than you could stabilize the.....
+
+Yeah, can you geé that in the spacecraft......Thank you.
+
+Uh-huh.
+
+I would (use) the spacecraft to stabilize it...to hold it out the
+
+window, kinda hold it out the wondow, you have to, you don't have
+to move the stabilizer.
+The spacecraft is moving, that means that you've gotta, you have to
+move your hand at the, an opposite rate, or the opposite direction,
+he same rate that the spacecraft is moving, I don't think that you
+want to do thut, because you've got. a stabilizer thing in your
+
+you would probably do is brace your
+
+the spacecraft and take the picture, then
+
+spacecraft (blastoff) that has
+ith the minimum
+
+, ndings
+
+ixed attitude stabilized in this manner. J]
+
+Q
+
+t would pro-
+
+{ have the feeling it would be very stable. some of our section
+
+Tg
+
+sitings over there, particularly when we were working on the Apollo
+
+siting, where I was keeping a certuin fixed two stars
+o 3
+
+on a certain
+
+location on my window, und Jim just doing it over there with pulses.....
+
+He Aildn't have the radical on....
+
+lle had the radical on. On, yeah.
+
+ee eeceseses YOU were well within u degree taking a few minutes
+
+of oxygen. You can hold it within a degree or a quarter of a degree.
+
+You can get the exact answer to this if you just analytically....
+
+Do you have the data?
+
+t can't quote it to you off-hand. Lt's not in the
+
+derrees per second,
+
+order
+
+of
+
+hun-
+
+overall impression was thal we were more stable that I thought
+
+we would be when we wanted to stabilize.
+....We've looked at our agenda here, and it's jzot some
+
+in the end, get a good stabilization study going...
+
+‘hat's fine, were there any more questions on the terrain
+
+a j Can a fellow, you know, look at
+
+from
+
+wnat
+
+ne
+
+r
+
+al
+
+questions
+
+photography?
+
+movies and
+
+vs
+
+of terrain.
+
+know there were some pletures
+
+A
+
+showed
+
+Chie
+> yean,
+Most of them are, - ink, blocked, because we have to be over the
+
+water, but, if I'm not mistaken, on the little bit I just caught a
+look, there might be some land bands.
+
+Ih, yes, as @ f fact, you got three or Your, uh, they're
+
+toward the end of that box of 55-millimeter slides. it shows spectular
+
+structures probably, tney weren't Luken outside, they were over
+
+Keia somewhere but they were really nice. Those definitely should
+blown up, also the movies.
+
+We did take a lot of movies of the clouds.
+
+We did just, a couple of times, just turn the thing
+
+going to take movies around us Ot
+
+to get a big structure of the......aren, so I took some over
+
+pacific, on the - up over the northern Pacific between Hawaii
+I
+and the United States, aboul 4, L, x 5 minutes.
+
+We took a lot of ocean movies....
+
+Was there ever any question in your mind as to whether or not you
+
+Wea
+
+were looking at clouds, did you always £et.ce.n.
+
+too ground,
+
+- ar faypth
+and so iortn.
+
+Over North Africa a couple of times we commented on
+although they weren't really dust storms?
+
+weren't sure that was a dust storm, right. Remember I said that
+
+& .eeeeeee, and then we said well maybe not.
+
+wasn't a dust storm as you would see it from an airplane where you
+
+see the wind blowing on or prior to the desert.
+
+We decided it wasn't a dust storm, just a dusty haze.
+
+Over North Africa.
+
+Over North Africa. Over north India there was quite a pronounced
+haze redorded,
+
+i would way you were, far less conscious of it. In fact, a rather
+interesting thing, it's - on one of our first pus over the Cape
+
+{ was looking on talking to the Cape at that time, I told them
+
+aS o
+
+IT could Look down and see the Cape, launch pads, and everything was
+
+quite clear. But in fact, the weather down there was not clear at
+
+all. Some of the fellows were leaving at that time to go back
+llouston, knd the visibility was very, very low. You could see
+iw something and it was all quite.....
+We eould see straight down but, we couldn't sec Che hanzover at
+Another quesbion, did you ever - Gordon Cooper noted the
+was gbutice on his rudio the same time when he
+charge on the ground. fad you did you
+have correlated with being near disturbed weather on the ground?
+is sort of a chance observation if you made it.
+don't. think I did.
+didn't either. We was
+
+wer Pith
+
+Chane
+
+ny that I did
+
+- - - I guess you would call it but you couldn't .
+
+4
+
+4t any rate.
+
+Did you notice the... . with the flash if lightning .
+
+There was an awful lot of lit tninge . .
+
+sure was, South Americn and
+
+Any more coverage on the water photor raphy?
+
+on atmospheric phenomena . . . Did you feel as hough you would
+
+have time to study them instrumentully? I mean from the time that they come
+
+into view until they pass out of view? Did you go through the exercise
+
+with the instrument — let's say a hand-held spectrometer or.
+
+I phrase the question?
+
+but I'm not sure of the
+duration that your studies require.
+
+That's my problem — I was trying to get some [cel as to the duration
+
+uu had some thi
+
+phenomensa » + Where you'd fly along in regard
+
+was tind you'd suy O. K., mt 5 minutes after eleven
+
+ode pe
+
+trometer study und then you'd set the thing up and
+
+you would sbturt 7 ~ bs 2 something where you
+
+reported
+
+In Looking nd
+
+‘ind them
+
+llow about something in the sense of a
+
+without advanced warning.
+
+I would think you'd have on the order
+
+study it if you have your (equipment )
+
+look at it you've got to aim the spac
+
+Aiming the spacecraft at it
+
+you can track right on « point.
+
+your left, you could maneuver the
+
+pointing at it as it went by.
+
+About how many
+
+~ fe mr ©
+or course ;
+
+That's about 80
+
+2c Ondas.
+
+That's 80 seconds,
+
+rout
+
+hat's right. For the (normnl) alt
+
+YOu Cay PLeure
+
+whole
+
+(answe
+
+ste
+
+we
+
+nici
+
+SpAC
+
+things like that just don't
+
+target of opportunity? You see it
+
+of a minute or 80 seconds maybe to
+
+already mileaged if you wanted to
+
+If you've got a field to do
+
+you say a thunderstorm, off to
+
+say,
+
+ecraft around there and
+
+just keep
+
+miles would 60 secons — 80
+
+ce
+
+various Ss
+
+altitudes on just
+
+down below
+
+Vor it if you'd take a look at
+
+looked for an objec e ground,
+
+pieces in to ms 1 a& sequence camera —
+& real movie camera — as soon as they put the pieces in and in-
+extra [frames so it is in such a movie camera, I think you can get
+exactly how long you can see. So if you know how much re-
+as using your Instrumentation is concerned, you
+‘tly whether you can or what kind of measurements you can make.
+Then you can also theoretically figure it out, boo.
+big problem is to identify the object. . . If you're looking for a
+
+‘le object, a certain thunderstorm or the northeast corner of the
+
+Red Sea or something, that means that you don't — you're not going to be
+
+able to pick it up and aim the spacecraft at it 40° below the horizon.
+
+You.re going to have to wait awhile. You're probably not eg g& to get it
+
+picked out 'til later, so that your time on the target is going to be less.
+
+course, you know the range is chaning very rapidly. That thing
+
+le f
+
+slow you — say it's right below your track. When you first see out of
+ringg to be roushly °00 miles sway and if you pass over
+
+runge is essentially doubling. If
+interested in something that requires anything like a constant
+
+rid ; aye 1 ] { 1 tho 4 Nata . 2A tam that ras
+I don't know exactly how you'd do that. fhis is a problem that you—
+questio
+
+targets of opportunity. Let's take the airglow for 4 moment
+
+s the night airglow, the twilight glow, and the day glow. Now
+
+there are ni . . . of day glow. That would take (perhaps a) second
+
+exposure, and you know where to look the next time around, and (you can do
+that forever. )
+
+The twilight QO
+
+airylow might take 1LO seconds
+
+d the night sirglow you would want maybe 4) minutes. Now how do you feel
+nubout if that were programmed in with proper spectographs? Either hand-
+held or on the capsule. How do you (cel about it? Taking a one-second
+exposure of the dayglow, a 10-second exposure of the twilight glow, and
+
+1
+
+i 44-minute exposure of the nightglow. You're moving
+
+she phenomena are pretty much the same during that period.
+
+One seeond's no problem for us. our minutes, you might have to be
+blurry.
+
+[ think you could probubly, if you trie , you could probably
+
+LO-Becond . . 1 6 « «
+
+our minutes—
+
+Wold i se the spectograph can . e time to permit a fair
+
+Loo.
+on the—
+huve been mble to tak twilight, day, and
+Glink,
+one did fet the spectoermuph because the thing was able to
+is direction even hh it did wobble a little bit.
+
+i-minute one, I'll tell you
+
+You'd have to be spacecraft-modern. You could get the rates down low
+
+and you could—
+
+You could certainly hold it within a half a degree. But now your
+
+You'd have half-deerec tones within the spacecraft . . . (I
+
+would do it).
+
+Phat's all right. You can build in a certain amount of smear (so you can
+
+vet a very good day).
+Wait a second — Let me ask you another thing. What is the airglow that
+
+you're looking at now.  llow will you look at this? Where abouts is it
+
+ng to be?
+
+Well, it will be at the horizon, or a degree or two above it.
+
+LT know, but you scc, you're looking at — the horizon behind you is gone
+
+donw — by very fast. The airglow is essentinlly — if you're looking at a
+
+different piece of the airglow — nob the horizon at a certain spot. Now
+
+are you going to Jook behind you mand took at continually changing airgLlow
+
+Jook in Pront of you und see -onbinually changing airglow or are you
+
+in viewpoint and try to pick up a piece
+
+bo try snd ‘Look oub at
+
+adeylow mand
+Matti m very good question. [ would say one would
+pay Lhe Lrilegribed uspeet it's moviry".
+
+should also try the other experiment.
+
+‘an that I didn't think of your experiment,
+
+Ae) compl mine
+
+that means that if your flight path is this way, you've got to aim the
+spacecraft over here and then you've got to track it along like this.
+
+It would scem to me that it's easier to just put it some place and hold
+
+MM- hmm.
+
+And especially from the pilot's standpoint when you've got a gunsite or
+
+something like maintain that spacecraft essentially wings
+
+1
+
+level with . . and : 1i@ pitch uttitude's proper, you don't have to
+
+4
+
+worry about the translation across
+
+t
+
+is a question on both 5 and 6. In terms of pre-warned subjects, like
+
+- « these storms, und this sort of thing. A lot of
+pre-warned subjects. ‘To your eye, how Var below the horizon could you
+
+feel you could pick up say a weather phenomenon. Now you're not looking
+
+through the atmosphere at something in the atmosphere. Do you feel you
+
+- oS | . “ 7 - oe ey
+could see say 10 below the horizon? Can you come up with some estimate
+
+there. you're pointed head essentially try the plane towards it so
+ur window.
+
+shis depend upon what the phenomenon was—
+
+L000 miles on the : > — it's make it
+"OO miles 1 the side — J > able lo see that at 10° bel he horizon.
+
+Lhunderstorms, | think probably 20 or
+
+that we were Looking
+
+helow the food plmea te for omall ob=
+
+eaves When have bo identifying Tea-
+
+tures near maybe if we're going to art for something like
+
+the —
+
+(could be a cloud)
+
+ry c - oO : . 1 . > — 7 4 —"
+—the Red Sea... - 3O below the horizon, I think you could probably
+
+start picking it up. This is below the
+
+apparcnt horizon. This is below
+
+ne local horizontal.
+Right.
+
+As to water and land you say clouds, perhaps
+
+about the same, or maybe further up?
+A little further up.
+
+Further up.
+tell the difference between a storm and
+
+just a sheaf that's so far
+
+tell if i's just) a sheaf of clouds or is it honestl
+
+rther out there, O below the horizon - when you're
+
+don't know the differenee. One degre ther side
+miles sO if’ you pet right down below
+eovers a couple miles. if you set too
+really not confining 1 point out there.—
+
+4
+
+i ¢ O + 1 *
+up Tor say 30 ar 20° below the horizon
+rood place ‘ive a man a value on to set up?
+
+woiLlLd be (e:
+
+would be
+
+Belt 15
+
+wheal you're ‘Looking, at.
+
+Well you see we 4%. game between giving you enough time
+
+ret on it so you're on it when you get there and at the same time not
+
+so far that it's wasting time.
+
+hen you tell me where to
+
+Really to me you're not wasting time at he
+
+start even if you start me way out. To tell you the truth, I want to
+
+start looking as soon as I-
+
+Ox Ks
+
+if you're just going to sive one time—
+
+rea
+
+['ll tell you all this though,
+
+That's no food.
+
+time would you Like, now? I was talking—
+
+re going to give them multiple times, you know, start early
+
+just continue out, but if you're just going to give one time, then
+Fo | ‘ ‘ ’ S 2 3
+
+O
+
+gay 90.
+
+ge
+
+Or 20° maybe, but no closer to the horizon.
+yoe,
+
+From the earth's horizon. That's about 45 half the horizontal, or
+
+wr like that.
+
+auboul a intnute
+enrly enough Lo
+
+pickin round.
+
+- « « your real key, though is the first time you Look at it
+it's pretty hard to find it. As soon as you've gone by it once, maybe
+
+missed it once, the next time you come through, you can give it up there
+
+at 10° if you want. You know exactly what you're looking for and you
+
+know what's coming before and you vo right up to it and geta...
+
+Cause you're snying about 40 to do that or 45 down from the horizon for
+terrain and perhaps a Little further up for weather. ... . 10° further
+up tor weather on a first-on 0 chunce basis target of opportunity.
+
+I just wanted to ask you that in your — part IT of this — under the great
+and under the terrial — what is the ground altitude that you took 4
+
+shots with the pitch down — I don't know if both of you were up or not.
+You pitched down and you fired a thruster as a preliminary to the experi-
+ment on the rediacal Light to see how much the thruster flame would and
+could interfere with the target. I was just wondering what you actually
+observed. on the «. s s is & »
+
+Any brightness of the thruster and so forth und if it could have any
+offect on the target. T haven't low a photograph yet.
+
+Well 1 something Like, you'd better really «et over there and look for
+them because they're poing to turn out balck and your polaroid probably
+isn't going to print them.
+
+that's probably why we haven't seen them.
+
+black-and-white roll, aren't
+
+roll.
+
+mn 4
+
+Phe document oul on the bape and | think that's probably the part
+
+Uhe tape. . .
+
+I believe it's in the book there, Tim.
+
+Do you recall how they came out? You could see . « light or...
+Oh, no. No. It's in the same ball park, but the diagonal light that we
+saw muybe once or twice. You looked like you saw it once, and... .
+You did see it once.
+
+Well, we thought we did from what we'd been briefed up to.
+
+Did you draw a picture of it yesterday?
+
+Yeah.
+
+T could comment. We talked quite a bit about this after the GI-3 flight
+and I know Gus and John both had quite a bit to say about it if you want
+
+to check the notes on it.
+
+You mean on the—
+
+On the bright thrusters, yeah.
+
+Wait a second. I think they may have been talking a lot about the re-entry
+control system.
+
+No. No.
+
+Do you know whut caused you to sec it? Was it reflected off the space-
+
+craft or was it an aurn of glow somewhere around—
+
+A. glow from behind.
+
+You're just seeing that section of the glow that comes your way.
+is it primary or secondary «low. Was it particles schemselves .. .-
+Light, or you think reflections off the particles that were round?
+
+r don't think you could tell. It was so dim, you couldn't tell.
+
+Did you discuss yesterdnuy particles of space and . . . 6 6 2 6 ew ee
+
+cussed yesterday particles of spe junk?
+
+ve
+
+fes we did, do you have any particular question?
+
+would like to have the information later though.
+
+as your question?
+
+aboul the amount ol’ junk you had about tli space-
+
+ecralt and also the amount in the spacecraft?
+
+4
+
+were outside the spacecrai't., whether you could
+
+icular the
+
+spacecraltv:
+
+n you were outside
+
+urine, you
+
+of
+
+difference
+
+are going
+
+zOoing but you can see them come f by the window
+
+and they look like they are going off spherically, from what you can
+
+see. Now maybe they are not going out the back, but I doubt that.
+
+Did you see them at any other time? Glenn mentioned that he had
+
+1 biga
+
+seen Lhnem, ice crystals, they weren't associated with such situa-
+wo by every once in so while.
+know, | think that Lhese are associated with
+spacecraft.
+
+Ne Cx
+
+Yes, we've mot s water cooler and Lhe water sepurator and the suit
+loop pumps in the water and the evuporator, and there are things
+soing overboard.
+
+think that it might be pretty that they're from the space-
+They are going away generally.
+oint that Jim made, and [ think I've made it clear, but
+iey were actually woing small end forward, actually,
+were going front end forward quite a bit,
+and you
+
+vtorward and the stream-
+
+reduced Ylow wrea t cause 4a stream-
+
+it as a yaw refer-
+
+roiling
+
+you
+
+Lies
+
+WES
+
+would Look
+
+ney we re
+
+were going,
+
+come on the
+
+linantly on
+
+forward.
+
+Lhey were
+
+“lwiys
+
+flowing with you, and it
+
+on the spaucecratt, one dumped
+
+let’, side. ‘The one on
+
+window and they would
+
+see them out both win-
+
+4
+
+u dumped from the
+
+- you know you
+
+Lhis way.
+whole flight was -
+a perfectly
+
+black
+
+these
+
+coordinated
+
+ione on
+
+r visual.
+
+something like that on our flight - on our
+i't follow it exactly. We were getting
+information from the ground on when to do certain things. We were
+essentially doing that.
+hen we were comings over Carla, m hurricane, and the
+hurricane nume, gpive accounts of the extensive cloud areas,
+[lL was unfortunate at that time though; there were no characteristic
+‘louds that characterized a tropical storm. [here was just a big
+strueture of cloud mass, we took some pictures of it. ‘They don't
+ive you the circulation that you would like to see, but they
+
+tell you ‘his is what we did on the ground tracking too, they
+
+to pick up certain targets le did, we picked
+
+We did the game actually with vetting into the anomaly. We had
+
+requested position versus altitude. We had to change time and run
+
+4
+
+ours down a Little bit.
+a matter of fact, we fot orbit tracked up there which we couldn't
+deal with our own selves becnuuse the orbit track
+shit alonz it and we could independently know at a
+
+when we were coming over an object of interest on the ground.
+
+you experience any difficulty in operation of
+
+whether we had one
+When we = 7 brought Lhe camera back ir
+WS SOD, OT GHOWG... ciecere
+
+some Lime later.
+
+pome time later, bu e don't 14 hether we sg gimmied around
+
+spacecraft or whether it was my big fat handed glove I turned
+
+the wheel and actually turned it about - you have to turn it this
+
+way to find out what you turned it to and I am afraid - of course
+
+f held it this way and IT could have done that with the hand on the
+clock. Lhis might be once source ol error which would have been
+Lhe operation of it. Another one though, that we had prior
+time thal continuous taking pictures, the inside shutter
+doesn't back - doesn't open - so you drop the front shutter all
+you want and you get a black frame und we got quite a weries of black
+frames on the film. But this may be a mechanical problem that we
+nad, as Lar as operating the camera, the mounting of the camera on
+the gun itself, made it difficult to operate. ‘ithe same thing, if
+a camera that was 4 foot wide and one and one-half foot
+long it would be harder to operste.
+lL realize that. I noticed that in one of your shots from the space-
+
+you had a white smear in the print. Now, is thet one you
+
+xperionced also during your tLraining period’
+he white smenr, bobieve is the piclure Jim took of the window,
+
+window.
+
+3 Paya y
+relerring
+
+Yes, the one you took right right lront. nose straight into Jim's
+window. Is this the one with the white symetrical streak all the
+jay across the window.
+
+heres wee 2? Prameg.
+
+oe rr
+
+On e€4cn one of them.
+
+back across the film, about 90 degrees.
+
+a pretty, the same width all the way across,
+-Imet. tle-down strap.
+difYerent exposure on both sides.
+icular too, because the exposure goes all the way
+is not within the frame itseli é there is a peculiarity there.
+black frame, the people have looked at it and
+
+problem, [ft is an exposure
+
+are invest
+
+imayze of some type with
+
+shooting at about POO feet, fl wouldn't be black,
+
+You ore
+There would be an image Lhere you could bring it out.
+
+1s about
+
+500 that you would h:
+underexposed something you Can S@@....sees
+I think so.
+
+Our measured success of that camera hasn't been high.
+
+I'm afraid every time we used it, it failed.
+
+OF course, we are getting a lot of these things, but when we go to
+Lrace them down, we can't really tie them down.
+
+[ can tie down about 3 times for you. When the film in the
+
+altitude chamber in exactly that mode, the shutter doesn't fall,
+
+That is, the mirror in the back doesn't fall.
+handle on that one and he discovered the reason for
+eamera back al. McDonnell right now.
+had on the
+had on the flight and they are looking at it to see
+Lhere were any of those kind of event frames, that they found.
+one
+that they found in the altitude chamber was a bent
+know how it jot bent, they don't know what
+they are going to look at this camera to to see
+Here were if those kinds ol frames apparent.
+think whal. is also i ing t4) me. IT remember looking in
+idm and it, ike i Film [ saw has a jot of sequence.
+two rolls together.
+Oubl Che sequence.
+i could Look at the roll of the original sequence and I think we
+eould almost, tell, if had uw camera Lailure or we had an exposure
+
+Cailure. because th xpos » failure, you had it, from then on
+
+4
+t
+
+there
+
+hace
+Nese,
+
+fairly ood
+
+Lwo
+
+or
+
+frame,
+
+re
+
+Ol
+
+them
+
+random
+
+on
+
+blac
+
+sometime
+
+somet
+
+almost
+
+every frame.
+
+mber of frames that
+
+them -
+were 2
+
+failure in
+
+eriments
+
+area
+
+that were probably outcast
+the insides were dirty.
+'t agree with that. There was a definite flow of particles
+the outside,
+id you get the glove outside,
+ink that may have - -
+Glove wasn't put out, it went out by itself.
+say for sure that anyone hit it, but there is something
+inless you see i it ‘ver dawned on me
+some periods of Lime where lid was asleep and I
+have much 9, SO J Tooled around with what things do in
+cet conservation of energy until you
+4
+
+release an object and push it off in a certain directi on, it continued
+
+to ricochet around the spacecraft until it catches onto a lever or
+wedged in something, but it. doesn't seem like when you drop
+S@round it goes boom, boom, boom,
+Like that, li. keeps going - If you take
+
+o
+
+LUNere iY in 4 TOOK
+
+link,
+
+fan in our suit loop, and you could feel that inlet
+
+underneath the instrument panel, and I really shouldn't be
+
+much air going through there because you only blowing just
+
+mounted juat above
+
+with all
+it of air from the cabin and mixing it with mostly
+and it just so happened that I noticed the parti-
+he sSspacecratt tended to flow down and you could
+
+streamline fell throuh my leg und this metal was
+
+{ f 4
+
+Lhal, but up against the lat panel so that the......
+
+Belt. LT 1
+and the Spacecraft tended to pull down to here the redefinite streamline
+down through my legs and this metal was mounted just above that, but up
+against a flat panel so that the ballad of the panel is here and the metal
+
+is mounted up in here. And I watched that thing start into motion.
+
+Really, I'd just touch it and it would start loffing. It would loff over
+
+like this and bounce up like this. And it went on for — one time I timed
+
+it for over 20 minutes and other times for as long as 30 minutes — and
+
+the only thing that ever stopped it from this continuous motion — this loffing
+back and forth — was a piece of gawkroll that we had glued on underneath
+
+it and every once in a while it had an edge on it like a nickel or a dime
+where it essentially came off like this and every once in a while I'm
+
+sure that that edge got stuck in the gawkroll, but it never, ever stopped
+unless it got stuck in the gawkroll. And the same kind of thing could
+
+have happened to the glove. It might have been put in motion in the
+spacecraft and then just I wasn't looking*at it AND it could have been
+ricocheting around inside the spacecraft for 4 long time and it finally
+
+went off.
+
+The same thing applies to your strap. ......e4..
+[ think what you ought as far as a flowout of spacechart is concerned,
+there's a tremendous example of it in the first part of the film.
+
+on:my helmet tied-on strap. It's definitely taking exactly the path of
+the flow — comes up, foes out, and arches over, and if you recall, the
+glove came out and followed exactly that path. It came up and out,
+arched over, and went right out the right side of the spacecraft over the
+
+top of’ the...
+
+It continued right on out.
+
+You can see there was a fair amount of sun in and out of the cockpit.
+Quite a bit.
+
+You could see all the dust particles. You can count the streamline on the
+way out. Maybe we'll have a touch on these last two experiments and then
+come back if there — just to make we touch on all the... .. . the
+radiation experiment inside the cabin. Is there any comment or question
+that... .. . . that this was the little ball.
+
+Right. Ed White, why don't you comment on that?
+
+Yeah, this is a fairly straightforward experiment in which I'm sure the
+people responsible that are familiar with it. It was a measuring device
+in which we measured the spacecraft radiations for l-minute periods of
+time at 6 different spots of the spacecraft and this we did at prescribed
+
+times during the flight. A very straightforward experiment.
+
+That's all the background (up to) this morning. Are there any questions
+
+about it? The last one was the Hangdella Sexon experiment. ......
+We covered this in great, great detail yesterday, and I don't .
+
+Did anybody brief on that experiment? I think it would be better if
+y'all asked questions on it because if we went through it, it would take
+about three hours. Does anybody have any questions about it?
+
+No, I think we got a very good thorough field for it yesterday when we
+went through it in detail.
+
+That leaves the visual observations.
+
+Yes.
+
+And I know you went through that yesterday and I listened carfully.
+
+That's right. We won't have to —
+
+Belt 17 3
+
+And I personally asked Glen, Cochran, Schirra, and Cooper if they say a
+
+meteor and they all said negative.
+And then you both said you saw a meteor.
+No, a falling star. Ha Ha.
+I think there's a difference between what we say and what we were expected.
+Co see as far as meteors are concerned.
+Are you talking about micro-,eteorites striking the—
+No, I'm talking about meteors in the atmosphere.
+Below. O. K. Below we saw them.
+Little ones.
+Ah, little ones.
+Yes. Now, one of the obvious situations is that you said you said a 7th
+magnitude star. So probably your visual sensitivity was better than
+another observation. The window was better or something. Is that it?
+Did you make a count of the number of the—
+Wait a minute. What are files you use success?
+Well, if you have poor visual sensitivity, then the number of meteors
+observable drops off very quickly with the sensitivity of the eyes.
+You see, 1Oth magnitude, you could see a lot more meteors in the atmosphere
+than you can if you... .. . 2nd magnitude. And the question arises
+How many do I exceed
+
+- end order of meteors.
+
+mr
+
+hey were 2nd order meteors and —
+
+They were quite bright.
+
+Oo. K. You saw only bright ones. About how many did you see?
+
+About how often did you see any? Could you have made a cout of them and
+said, "Let's look at meteors for awhile"?
+
+Yes, we could have.
+
+Could you have sat down there and counted them all off as you say them and
+
+give them relative attention?
+
+You see, I hesitate to give you a number because I think that if we did,
+
+you'd tend to come to the wrong conclusion because we weren't looking out
+of the windows at night all the time.
+
+Quite often we had things to do inside and we turned the lights up and
+never even looked out... -...
+
+Oh, you weren't dark enough, is that it?
+
+No, we already were looking out. We were attempting to look out and we
+couldn't see out because we had the lights way up and, first, we were
+working at the window, and secondly, if we were we couldn't have seen. 50
+if we give you @ number, make sure that you don't say that, O. K., we say
+15 meteors in four days and therefore they're going to see... . . and
+that's not right.
+
+No. O. K. But because. —
+
+If you want a number, I saw probably between 10 and 20, but again I
+wasn't looking out all the time.
+
+No, so you really weren't looking for a meteor, right?
+
+No, we sure weren't.
+
+And you have to remember, also they occur in a rather uninteresting place.
+
+Belt 17 5
+They don't occur up in the heavens, they occur down below you. This is the
+area that you spend a great deal of time looking at in the night. You're
+looking up at the stars.
+We came to the conclusion that you looked at the ground in the daytime,
+you looked at the horizon starting at night, and if you were looking some-
+where else, you really didn't see much. You find out that sky, in the
+daytime you don't see anything—
+I was just curious whether it would be worthwhile to spend a little bit
+of time Looking sort of at the ground close to the horizon and trying to
+count meteors in terms of finding out what —
+I'm sure we could.
+Getting a count on.
+
+It occurred quite low down..... .. +. « You looked down at 50° and
+
+there'd be meteors; at 45° there'd be meteors. Obviously well below you.
+
+Did they look any different from shooting stars from a balloon?
+
+The thing that I noticed about them is that they were short and I think
+this is probably because you're looking at them from above and the angle-—
+the Length of them — of short, and you're seeing them as they come down
+through the atmosphere from above and so you see a line that's lonly that
+long from above. Up there it's only that long, and then when you look at
+them from down below you see them come all the way down and they appear to
+
+They're probably microscopic. The random slope direction.
+
+Sometimes they're real little tiny short ones and—
+
+And I think the short ones would more be an indication that they were very
+dim ones, because the dimmer the meteor, the shorter the trail.
+
+Well that seems reasonable.
+
+Belt 17
+But what you're looking at right here then if it was dark.
+To tell you the truth, I think what's more important is the angle that
+you're looking at them at.
+Well anyway, we did see a lot of them. And they're not difficult to see.
+And I don't think we were looking at anything that approaches a 7th magni-
+tude meteor.
+
+You see we could see—
+
+Well, I was just curious whether this was the reason why the—
+
+- . «. « Much brighter than that. I didn’t see any real dim ones. As
+a matter of fact, since we weren't looking for them, you know, we wouldn't
+have seen them. You look up there and you say "I wonder what magnitude
+star I can see" and you look around and you say "0. K., I know that's a
+4rd magnitude and that's a fifth and then I see that one over there is
+dimmer than the fifth and that one's evan dimmer so that
+eventually you come to the conclusion that maybe you can see 7th magnitude
+
+. . . I saw those because I was looking for them and I could come
+
+to that conclusion, but I never looked out at them to see how dim a meteorite
+I was only seeing the ones that I was attracted to while I was looking
+for something else.
+So that might be a nice thing to (ask) ......... . . on the next
+Well, if you looked out for them, you probably could see & lot dimmer ones.
+
+Dr. s+ ee oe we ew heh 6ENC VAL Question or something?
+
+Do you remember on your consumption of oxygen...
+
+You shouldn't ask. That's a hard one for me to answer. I know what the
+flow into the suit was and—
+
+Look, somebody might have given you the .....,
+
+I don't believe that you could get that figure because you see it was an
+open roof system and—
+
+What's not used goes right on. In fact, not only that, it comes in at a
+fixed rate and it goes right over the sides.
+
+You can't get that when you're fueling.
+
+Did you come across any unusual problem outside the vehicle that you didn't
+expect?
+
+Here's one you may not want to comment on. Do you have any comments to
+make in regard to the capability of putting man aboard and hide inside the
+vehicle, the satellite without actually..... a #
+
+Doing what?
+
+Putting a man aboard... .
+
+You mean go over and take a look. + © © » « « « Sure. That's one of the
+reasons we're doing this.
+
+You think it's perfect.
+
+Pull up along side of it and go over and take a look at it.
+
+(You don't foresec any unusual problems, do you?)
+
+the tumbling (mold)?
+Excuse me?
+Even if it's in the tumbling mold?
+
+You're going to use some good Judgment about what you do as far as going
+
+Belt 17 8
+it's the same kind of problem we have associated with the
+
+booster. We spend quite a bit of time ahead of time trying to determine
+exactly how much of the tumbling booster we could plan to go up and take a
+look at and we finally came to the conclusion that it was up to the pilot's
+good judgment to approach the booster using his own judgment on it. There
+just wasn't a way to put a handle on it — well it's tumbling so many de-
+grees and out of plane and you can go or you can't go. I think if you see
+it, you'll know whether you can or you cantt.
+Is the problems connected with the difficulties in closing the hatch
+unidentified?
+They're working on those, I think. I'm not sure that they completely
+completed the case.
+I was asked to find out whether we have some lubricants in the very close
+cauldrons was contributed?
+I think that kind of information should come from the systems people who
+have done a lot of work on it.
+wes, DT CHAK ww we & HR eo WEG ee
+Are there any other general questions?
+Yes, I have one. In your effort to photograph specific objects on the
+ground, what kind of siting devices —.did you use optical siting? Did
+you try at any time to use the refiex viewing arrangement of the 55 mm?
+uh siting device?
+For siting?
+
+yes.
+
+We looked out through it but it was mounted in such a manner that you
+
+couldn't do any more than look out.
+
+You conldn't aim at a particular point and correct for—
+
+No, because it amounted to looking over this way and then controlling the
+
+spacecraft back that way.
+
+In addition to that, you had up and down, which is worse.
+
+A reduced .
+
+That's the reason I asked the question. I wondered if you had used that
+particular thing and whether it was useful.
+
+You could see what you were looking at, yes, but, controlling a space-
+craft, no. I think you could have made a little near — actually got around
+to that part of it... . . you did the first time. But if you wanted
+
+to take a picture of s specific object, and one person was controlling
+
+the spacecraft and the other person was going to take the picture, he
+could take the pictures when he saw them in the viewer. . 2 « » CONtrOL
+the spacecraft too it would be a —
+
+One other point is how accurately do you think you can point a photo-system
+with the optical site?
+
+Certainly with + a half a degree.
+
+Plus or minus half a degree.
+
+Probably less than that. Maybe on the order of @ quarter.
+
+Do you have a picture of the site again?
+
+No, we don't.
+
+There's a difference between the open bars on the site.
+
+Do you havt to go
+
+No, I don't.
+
+I can give you a better answer if you come and ask me in a day or two
+
+There's , Visual observations.
+
+Excuse me. Let me answer one more.
+
+Have you seen the tracking film?
+
+or
+
+Look at that — You could Probably. ., , - putting a grid on & screen.
+I could show you what I was using as the targe. You could —
+
+- feel the view that you got — that you're looking at.
+
+Knowing the field you know, I'm sure you could calculate exactly what you
+
+can do.
+Exactly what you can do.
+
+That's the second thing 7 want to ask Dr. White about — comments of fields
+Of view. You went outside the spacecraft and then you had a wider field
+
+or view.
+Yeah,
+
+How would you describe the difference in field of view in terms of your
+visual sensibilj ty in looking at the Lemo. Any problems about that?
+
+Oh, golly.
+
+It's like looking out the bathroom window versus looking out the front
+windo, out . tetvur window, which is i goings to a movie theatre where
+
+space plate quite adequate?
+buon your head to see
+
+the whole horizon? Did you fing any differences
+
+Alone the
+
+You can see the curvature in the horizon when you're just Looking out
+window of the spacecraft. And then when you're looking out there you
+
+O. K. then, you could compare one part of the horizon to another to look
+
+for variations.
+
+In daylight.
+
+Yes.
+
+You could see a great deal of the horizon out the window. .
+
+Did it look all the same — uniform — or did you find any variations?
+
+No, I didn't. It looked just the same — like three more pieces of dough .
+
+Nhat about stars in the daytime?
+
+I didn't see any outside. And I didn't specifically try to chaff myself
+
+to do that.
+
+- scattered light...
+It was very bright out there and I even looked in the shaded areas which
+weren't shaded deed shade but behind the door, places like that. Were
+
+Cooper and Schirra in the daytime? Saw a dayrlow.
+
+Belt 18
+
+ceeeee COP Shade, behind the door, places like that,
+Were Cooper and Schirra in the daytime?
+Sort of date-low.
+Could you see that also?
+What did they describe as the basis?
+They......-the sky had a brightness to it.....above them.
+And when Cooper woke up, he was mostly in the daytime. He (noticed)
+out on the window he knew it was daytime right away.
+
+«es»Ha Ha Ha.
+
+I could tell by up and downe.scesesecs
+I tell ya, I wouldn't be uh I would hesitate that there was actually
+phenomena Like day glow because it might be uh....You could 1liik out
+
+the window and whether you're at night or in the daytime. But it
+
+may (not) have anything to do with what's out there. It might not
+
+have anything to do with the spacecraft.
+You've got two windows, anyhow. You can tell whether you're.....e..
+
+There's more to it than that. You know you've got a big long nose
+
+sticking out. on that spacecraft; and if the
+that nose, you know darn well it's based on it. Also the light on
+the nose is reflected back into the windows gives you a light. And
+
+there's a lot of things outside that window that give light to your
+
+eyes. We found that there was a flim on (the cone?) that gave
+
+to your eyes, There are so many thines around there that would
+give you a clue, You could indeed be placed out into a.....if you
+tllk that same spacecraft and I knew there wasn't anything outside,
+no dayglow, just nothing but an absolutely black sky up there, shining
+light on the spacecraft, I would get the impression that I was in
+the daytime. I hesitate to lead you down the wrong path.....
+Did you see stars in the daytime from inside the spacecraft?
+At sunset and sunrise that you couldn't when you shaded both one's
+sides. Here again it's the same kind of problem. We had something
+on the windows; we had the bright. nose of.the spacecraft, the sun
+was shining on the spacecraft anyplace it eventually came into the
+windows.....ein the form of money. And I, once or twice when we
+were in free drift, I could see something bright up in the sky. I
+couldn't tell you whether it was 2 planet or whether it was a star
+or anything. But you've got a Lot of light coming into the space-
+craft on the day side from the sun....doesn't have anything to do
+with what's out there, It ; to do with the fact that you've got
+a lot of nose sticking out, you've vot a lot) of window, there was
+something on the window, nnd even if there wasn't anything on the
+window, the light comes in the window from the sun and is reflected
+
+around inside the spacecraft. You've got sources of light just all
+
+over the place.
+
+It follows, then, if you switch that, I mean the next time is terical
+and the next time was great.........-.that if you could get out in
+the spacecraft at night,....e0.
+
+You'd see a lot more. You say it's "great" because you saw 7th
+
+magnitude stars, but Ed and I both proved that we could see more
+
+stars flying in an airplane at 40,000 feet here on earth than we
+
+could up there,
+
+But then if you want to look at the diagolectric example, which is
+geometrically extended object--you're looking through this little
+narrow angle restriction whereas if you'd gone outside you could see
+this elongated phenomenon with ease--the same with looking at meteors....
+You're making some conclusions right now that we're not--haven't made--
+nor making.
+
+Well I'm trying to get your impression as to whether--
+
+And I'm not sure before when you were talking about the dayglow
+
+of what, conclusion you drew from what I said. Are you trying to
+
+imply that there's a difference between a night sky and a day sky
+
+whieh are obviously........or between the sky and the ground in the
+daytime?
+
+['m trying to find out how well your seeing conditions were compared
+
+Lo the Mercury crew's,
+
+Uhehuh.
+
+And the implication that I get. is that the implication is the same
+condition in the daytime with terrical, probably because of the
+
+the spacecraft is shaped and multiple scattered light.
+
+ink you're drawing improper conclusions.
+
+I don't see why you say that the seeing conditions in the daytime
+were extremely poor.
+
+In terms of visual accuity, for looking, for example, at stars,--
+Well, how about for turning down and looking at objects on the
+ground.
+
+Now that's visual accuity, also.
+
+Yes.
+
+And | thought it was outstanding.
+
+Looking at bright objects, you see. Where you don't have a high
+contrast required.
+
+You mean on the ground they're bright, yes.
+
+Then there is a high contrast required on the ground. If you're
+looking out at a star, you know, you've got a bright star against
+black sky. That's pretty high contrast. The same thing looking
+down at the ground, You're looking at a white road going across
+a dark field. You can see those things.
+
+Yes, but the only problem here is that you're looking through a
+haze or a seattered layer of light......scattering into the space-
+eraft. or on the window. For instance, the case if there's no
+seattered (frost) on the spacecraft. When that disappears at
+
+night you can see directly through the window and your visual
+
+sensitivity goes up to a maximum of (photographication).
+
+Which obviously must have happened because of the way things were.
+Let me tell you what I think. I think there are so many things
+
+involved in spacecraft weometry, the windows, the layer on the
+
+Belt 18
+
+windows, the light coming through, that I couldn't tell you whether
+there's anything that if I looked up above I could see an image, or
+not. But I think that possibly, if we could find a long black
+
+tube and a window with no film on it and some way of closing off
+all the light inside the spacecraft, I feel that maybe I could look
+up and IT could have seen the black sky (and the stars).
+
+Yeah, we didn't have that, so I wouldn't draw that conclusion from
+what. I saw up there, All I can say is that you couldn't see up
+
+and see the stars in the daylight because of all these other
+reasons. Now if you eliminate other reasons, I think probably you
+could. I wouldn't) say for sure that that's right. The point that
+interests you when you're talking about accuity, is to look down
+
+on the ground and you can see very small objects in the daylight.
+
+So that with one is (resolution) and the other one is sensitivity
+
+to different light levels. And I'm talking about light levels from
+Gemini, in terms of having a niosy background.
+
+[I want you to be careful of the conclusion that you made. You've
+got three things that you're obviously trying to make conclusions
+out of, and I want) to be sure that. you didn't make some of your own
+
+conclusions out ol them, Out of this Mercury, they have Mercury,
+
+and you're going to compare Mercury and Gemini observations and you
+
+took the inside-the-spacecraft observations and said at night it
+
+was reat in the daytime it was lousy. Well, in the daytime
+
+[ didn't t'eel it was lousy. I don't) know what standard you're com-
+
+paring it agains You're comparing it against Mercury. I think
+very careful in drawing that conclusion,
+
+here's another area that. you want to make conclusions on
+
+Belt 18 5
+and that's vision outside the spacecraft, and I (can) make a comparison
+between those two and I have already; but you can see clearer from
+outside the spacecraft. And I was quite surprised at this because
+
+three visors on: one of them was a left-hand visor which
+
+high on optical properties and one of them which is a sun
+visor which is probably pretLly good optically with a gold coating
+on it) and then a flexiglassa which is very high in optical qualities.
+And I felt as far as vision was concerned, J] could see better out-
+side the spacecraft and I'd love to be able to make some further
+visual testing out and I think we probably well do this--take the
+visors up, this type of work, later on. So you're comparing three
+different things and I think we can definitely tell you some con-
+clusions between inside and outside as far as Gemini is concerned.
+I'd be very careful against saying that the vision out of Mercury
+was worse or better with respect to what we could see out of Gemini
+in the day. At night we were able to see and compare high magnitudes
+
+down to what we felt was 7th order magnitude stars.
+
+(The only thing that)bothers me just a little bit is you saying because
+
+Gordo said he could — he woke up in the daylight — pointed at the sky, he
+could tell whether it was day or night, and therefore it was an airglow.
+Now I could wake up and tell whether it was day or night, too, but it
+wasn't because there was any airglow. It was because I had sun in the
+spacecraft. And I think.......
+
+Gordo also SAW. -nceveccsevecceseccvsvessesein the daylight. So that's the
+
+second indication.
+
+Eelt 18 6
+Yeah, this is a unique situation. He happened to be in a situation where
+the earth was beneath and the sun was behind him and there was no light-
+ning scattered into his window or anything or at least apparently there
+wasn't anything. He didn't feel there was any and that he had a good
+opportunity. There's only one datum .....
+Two were there when they have poor days.
+Shade on the windows.
+You know the stars are there; there's no question that they're up there
+and if we make the conditions right we can see them.
+Couple times I did see stars or planets or something in the daylight. I
+couldn't tell you what they were, what magnitude they were at all. AlL I
+could tell you is that as we drifted around some random positions I could
+see some sorts of light coming through the window.
+
+I think the point that we tried to make also is we have been working on
+
+Apollo and we know that stars and measurement of stars in the daytime and
+
+the lighting conditions are very important. And on a routine operation
+in this matter, the stars weren't there. This is the observation that I
+felt I made and I think we've both been working in (guidance). I think
+this is what Jim was driving at also. I was looking for them in the day-
+time because I wanted to see them out there in the daytime; I didn't want
+to see them itn a cloud (Apollo? ). But they weren't there to the extent
+that I would like to have seen.
+
+As a matter of fact, that was one of the real surprises we had. They just
+
+uren't out there. At least they weren't out there in the configuration
+
+You see a passing star of a lst or 2nd magnitude out there, that's not
+
+going to do you a bit of good as far as anything but saying "O, look, I
+
+Belt 18
+
+see one" because you don't have any idea what it is certainly can't get
+
+into measurement.
+Results of this..... Maybe we can give Dr. (Ritch) a chance.
+Did he have any questions?
+
+I was curious as to what the difference is between sunset and sunrise.
+
+Well, particularly with respect to the shape of the sun and how much does
+it spread out in lattitude. Is it different for night and day?
+
+We sort of concluded that the sunrise was prettier than the— no the sunset
+was prettier than the sunrise. The sunrise seems to be to my way of think-
+ing was more white and blue. But the sunset was many colors. A lot of
+red. It is red and blue. They were much prettier. I don't know why
+because we've got some movies with us.
+
+Actually we do have some movies that we tried to vary on some of them the
+aperture and I think we've got, at least at certain times during the film-
+ing, we've got a fairly true representation of what's up there.The colors
+in the pictures really do look right and, in fact, I was pretty happy with
+them. There are certain parts in there that give you pretty close to the
+impression that we got, and I think these will also show you that the
+sunset Is a little more spectacular than the sunrise. Now there is one
+thing that certainly is different in the sunrise. When the sum comes, it
+really comes up with such a much higher rate and it just booms right up and
+bang it's light and a big ball of fire from the sun comes up. Now when it
+goes down, though, it's the reverse, and it kind of dies out slowly and you
+can maybe sit there and enjoy and absorb the colors a little more. Maybe
+
+that's the reason.... that the sunset is a little prettier.
+
+Belt 18
+Is the sunset more billiant than the sunrise?
+Yes.
+Contrast-wise?
+Right.
+How about the elongation?
+Wait a second. When you say it's really
+That was brightness.
+Sunrise is more brilliant.
+Sunrise is more brilliant. Up it comes.
+See it's dark and then the next thing it's light. It's really light.
+Sunset seems to take longer and the gradation-
+And more color.
+More colorful.
+What about the elongation and latitude? Is there a difference in sunset and ..
+
+Does the sun squash down elliptical?
+
+No. It doesn't move. It goes so... You-know... It takes about 4 seconds
+
+to reverse the whole thing there and it's so bright, you don't notice it
+squashing Did you?
+
+No, I didn't. No, I've seen a lot of peculiar sunsets and moonsets; the
+sun and moon have ears on them and things like that-
+
+It's all due to the thick amount of atmosphere that you're going in.
+
+It all goes pretty quickly and I didn't notice that the sun came up in
+any different shape was set, but it may have.
+
+You know, one thing on the films when you see them, the bottom part looks
+
+like the reflection or something, either in the lens or - I don't think
+
+Belt 18 9
+it's in the processing - must be in the lens under the film. The - down
+
+at the bottom part kind of duplicates and lets magnitude look on top and
+
+that's really not fair. It doesn't reflect down and what you see is only
+
+on top.
+Did you see any difference between moonsets and moonrises?
+No, I didn't.
+Did you see any (classing) . of the moon?
+The elongation that you see?
+No. I didn't. I didn't notice any.
+I thought the interesting thing, too, about the moon is that clarity - that
+you see it's quite clear when you look at it here, but also it just looked
+like a little silver globule going down. It just goes right down. You
+have no scanning or anything associated with it.
+
+either.
+That's right, it goes right down. And also, your viewing of the stars
+beyond my comment on this earlier doing this. It doesn't obscure your
+viewing - the moon being up there doesn't particularly bother you as far
+as the (stars?)
+Then you could always tell where the horizon was because of the stars
+which you know appeared.
+And then the airglow.
+Could you also tell from the stars? sort of a supplemental picture
+
+of the horizon from the stars?
+
+a
+
+Some little (Supplemental
+
+the horizon’?
+
+watched @ certain star, you could tell when it went below
+the horizon. You just can't look out there and say, "0. K., that's the
+horizon." It depends on the stars. Now, you can look out there and
+say, "O. K., now, that's the horizon; not because of the stars."
+Because of the lack of the stars and also the air glow.
+And also thunderstorms on the horizon ......... (of the Lark?)
+proves that you can get it (pictures?). But you never can say that-
+and I never would ever say that I could take a pencil and draw a very
+
+find Line and say that's the horizon at night. As a matter of fact,
+
+in the daytime, either.
+Did you get the point that Edward made about the moon, though, that
+when you look at it from even far and high, you can see all these stars.
+You see the moon; but you don't see just the light of the moon. You
+see a lot of glow around it. ...And from on earth. But up in orbit
+[ didn't see any glow around it. I saw the light--I saw the moon.
+Right next to it was dark.
+There's nothing around it. It's sharp.
+sharp rim here on earth--You see, if the moon were
+here and was that. big around I'd tend to see glow around here.
+Ever when the moon is in (venus?) You do at. times.
+That, depends on the humidity on a clear night.
+
+Normally when the moon's out on a clear night, you have a lot of haze
+
+and stuff around it. (that's not there?..air? which you'd expect
+
+when you're out of the atmosphere. You know, we received a picture
+
+he mail which iff you jus having been on a space flight, I think
+
+Belt 19 *
+
+means a little more to me....now that, I think about it.
+Expecially as you at, it now and the artist has taken these thir
+
+and he's put them in very clearly on a stark black background--and
+
+you know and you say, "Gee, isn't that artificial looking?" But that's
+
+not artificial looking. That's the way it really does look. The
+moon's up there on a stark black background (and the other artists
+should [paint] like that.) i'd like to ask Colonel White what color
+was his (watch) (blush)
+Just silvery white...... --l suppose.
+CWeG-0a be ¥ee DEs., Hore}! <x
+[ take it you would not have any trouble finding the sun if you were
+Lo try orienting at some angle with respect to this......
+You wouldn't have to do too much searching if you wanted to line up
+with the sun in order to.....
+No, No. You can generally tell where it is by 1¢ brightness, The
+same holds true with an (open landing).
+You can find it on the way in. It's easier if you've pot an attitude
+reference with inertial references working and you just go up there
+and swoop xcross tthe sky and you can find it. But if you've got to
+fet Upess
+You've got to go find it without any references (out in the space-
+fwuess if you get on the horizon and get all set and then
+a piteh rate or something you can go find it But when you're
+drifting freely, and you don't know which way is down, you simply end
+
+looking up at the sky and you don't know how to get to the local
+
+thtL there and your plane here and you're
+
+Belt 19
+
+sure until you start looking for it like this and you can search
+around for a lone time,
+You can search a long time...
+And never get back down to the horizon, but if you establish (a
+per rate) well you can get there. ‘The big thing is how much fuel
+you've got. to expend,
+You #et right on the horizon and pick up......Milky Way well it can
+help you...well you can get there. The big thing is how much fuel
+you've got. to expend. You get right on the horizon and DLCK Wiis
+Milky Way, well it can help you.
+Dr. (Ayer), I think we're setting close to time to go home here
+In regard to your (meter) provram (in your notes that you made in
+the auditorium) could you make any recommendations as to the new
+make-up of that meter program?
+
+I think Ed and I have a common recommendation that we don't fly many
+
+more flights in GMT and elapse time at the same time. We've got a
+
+one real problem to kinda sort all this stuff out, and I think we
+
+ought to ly these things in alloted times...I think that's the one
+
+single recommendation we'd make that stands head and shoulders above
+
+ull other ones, ‘Trying to correlate the time is very tough.
+
+Beyond that, would you say that you could make recommendations as
+
+to make-up of the...books?
+
+[ thought the books were outstanding, and I think that make-up modifies
+white as the way we ought to go at them.
+
+outstanding, too, and, of course, Ed and I designed
+
+Belt 19
+‘judiced. lla Ha Ha j a5 4 matter of fact,
+
+planner over in the spacecraft center. You roll
+
+three times during flight--You roll (when you come down to) liftup
+
+from the launch bases which you have never looked at and about
+20 hours later we rolled around for 20 hours--I never even got it
+to 20 (here)
+Just part of re-entry we rolled it, around some more and then gave
+ip 7O hours.
+(We milked some stuff on it). Storm books are real good. Excuse
+me see these books. We have a book like this. To do any
+real time flight planning, you have to have access to the--every-
+thing--all at once, and you don't want to have to get every some-
+hing on a roller when you've got to roll through it like this. If
+you want, to know what's going to happen in 95 hours, you just open
+the book up and turn over to 95 hours. Then if you want to compare
+that with say 40 hours--you want to have a comparison there, you
+can't fo this on a roller film. Unless you've got some quick access,
+a way of getting that our like you had your own sort of a meteor
+microfilm,
+Did you take notes on your book, sir?
+id, i think one thing that we did decide on is 1at the
+that we have in our flight plan here are--neither one
+Lhem are exactly riyht The early part of the mission highly
+expanded; the latter part. was washed down a little. I think we have
+
+six hours per page in the latter stage and we have an hour per page
+
+Belt 19
+three hours per page or some-
+thing like that would give us more room to write the notes.
+Has that book been reproduced?
+
+Yes, it has. ‘There are copies for everyone.
+Let me ask you one here. Do you think you could hold half a degree
+
+night horizon with the radical?
+sure. Just it he t f the air glow layer and you'd have
+no trouble
+
+You wouldn't need a filter, or anything.
+
+Io. You don't want to make the air go away or any dimmer. And the
+
+difficult) as it is and it's adequate to use at night.
+
+then you could take pictures, otherwise.
+
+were you going to do when you held this?
+
+The s 9 point is down, and fortunately, it was a camera now
+desivned by Spacecraft. ; a flush-mounted camera for GT5 and
+diagonnally, push down the right window, so the camera is looking
+
+So the spacecraft is on over at an angle like this.
+
+hegatellite camera is what I'm saying. So while the point
+
+way it's certainly designed.
+The experimentor will go
+,, so this has nothing to
+
+time it did.
+
+the radical you could
+
+HOE Qi ears wracaravemnexave f.
+
+points.
+
+['d like to get your feeling on calcium balance coming up on the
+seven.....what do you think how it will affect your post-flight.
+
+I don't know how it's going to affect your postflight, but I know
+it's voing to be a real problem. You've just got a lot of things
+to do. There are a lot of things that can't be done until two
+weeks before the flight. [f you pet involved in the bit data--
+gathering exercises before the flisht, I think that it could indeed
+jeopardize the whole flight. This is my personal opinion. I sort
+
+of thought that some of the medical examinations that we had should
+
+hk
+
+be moved buck earlier. We had a big medical examination at FITA and
+that's one of those few days we got. a lot of other things that
+should be taking place and I can't. see that my physical condition
+changed in the last week. Except maybe I got sleepier. But I just
+
+feel that when you put all these things into the last couple weeks,
+
+you really--the guys that are flying the flight--have got to get
+
+ready and there's almost an infinite amount of work to do. You just
+ean't. do it : and it you take time for data-gathering exercises,
+sort of | that it. jeopardizes the suecess of the whole flight.
+You think you could--another quest-ion--Do you think if you had a
+ieht window with a swizzle stick arrangement for
+link could telescope sites could lock onto have
+‘Lier piteh than you could with a rigid mounted camera
+Leh window.
+
+[king about a control of the mounting for the camera.
+
+pitch; a contro) of the mount and the pitch.
+
+Belt 19
+
+jocket-socket. type of junkhead or something.
+
+and socket, but pitch.....for holding a piteh atti-
+
+Oh, for the air glow.
+
+For the air glow, yes.
+
+This would be for one minute photosrraphing.
+
+ror minutes
+some of them may be up to PP minutes,
+Wow. ['d hate to be a
+You mechanize it with a low-speed electronic drive and a rheostat-
+type drive on it.
+No, Manually. A manual swivel. Let's do sound effects for the good
+Yeah,....Elroy T. V.'s charging, you're not going to have more than
+20 minutes exposure of night air.
+Ha Ha Ha We're safe there, aren't we, Ha Ha Ha
+A swivel stick here in the right. coming out; you have authority
+Laken on a different one,
+harry, did you talk to them about the Northern Lights below the
+southern lights
+| tried to.
+
+xcellent, excellent.
+
+st covered a few little things and I surely would like to hear
+your comments about the um I would love to, Venus.
+
+lly impressed with the planet Venus up there
+
+pictures of it it. did come out with about
+
+Sight.
+
+and much more large as far as I was concerned and bright in magni-
+
+tude than anything I've seen looking from the ground,
+(Mercury ) proved very, very pretty.
+
+bet you caught a photograph, too.
+
+mah, just........you know snd you've just--
+feah, the colors on those things,
+The colors that we took on the ground weren't too graphic.
+Did youvjever see--
+Black.
+Was there anything else?
+Black actually looked beautiful and this is the way the sky looks.....
+The sky's black, but it's a beautiful black background. But that
+doesn't come out on the picture.
+Was the radical any good in the day?
+
+sistas) would be brighter than it is.
+
+About twice as bright.
+
+the sround.
+
+[f you can't see it the cause, that's the big thing here.
+y
+
+You could see it i the land,
+
+You could see it on the land and the water. It was fine. But
+when you cross the crosscloud, I think we ought to have two ring
+
+of bri«chtness,
+
+You know rizht now it's very bright and just the next beat tannicals
+
+Look very and then : ao gradation of dims.
+
+the dim #radation is excellent.
+[ think we need u Little variation of brightness,
+
+Did you find any difference in the two windows? Did you see any
+
+ventigral difference in those two windows?
+
+We couldn't change places. Ha Ha Ila
+
+see I looked in mine, he looked in his, and there wasn't any way
+in the world that we could--
+
+You could't get near enough to start a ration?
+
+No. No, You really can't,
+
+Independent. of your ration. You're pretty safe to check your radi-
+eal brightness against the bright cloud right on the earth.
+
+You know on a bright day like this,
+
+Shoot, they said it was checked against the snowbank.
+
+You can't bank there. You're in trouble,
+
+Unless there's A@....ceeccceces
+
+A couple of times I was looking for it.
+
+Those were dirty St. Louis Snowbanks. (snowguns? Ha Ha Ha
+
+QO. K., I think......the more you want to say. If you'll wrap it
+up. I think between this morning and Jim and Ed's comments this
+
+eFNOON we Can extract everythinp we present.......
+
+like to say something. The way it looks right now, you have 11
+experiments and everyone of them is a total success, There is no
+indication that there's anything, any anomaly and there's no indi-
+‘ation thal. there will be any anomaly, Just a quick look.........
+Certainly nothing operational, I mean it's not OpEratToOnalwyws sews
+There's nothing at all Now you've got a couple of equipment pro-
+
+blema, but x “dd ihat ‘m tolls. It. was perfect as far as
+
+p206
+
+Notes from the De-Briefing transcript (—p f ped a
+
+Meteors:
+
+Both MeDivitt and White mestioned seeing a number of meteors below
+them: "We saw quite a few fall and burn up below our altitude. They were about
+one-half to one-third as high as we were when they were consumed, ‘e newer
+saw one above us," short and swift’)
+As the accompanying plots of numbers of meteors against the months of they
+year shows the smoun& of meteor activity in early dune is at e rather low
+#Fig. 1(Roach's plot of Olivier data from Smithsonian Contrib. to Astrophys.JNe
+level, be#inning to rise very shortly after that towards « peak in August.
+on the average from to altitude
+Regardless of their brightness/meteors appear mx 40 and 60 miles/in the earth's
+atmosphere, Bright meteors are seen to reach about 40 miles, whereas imeigikx
+targze fireballs may still be seen as low as 2 miles or SO.
+The average height thoughout the path is greater for fainter meteors and
+for thos of high velocities, Actually the bright objects are larger and hence
+
+travel further before they are consumed, often traveling for several hundred
+
+miles before they are consumed.
+Planets
+
+The pilots remarked that"the planets are so clear and bright,"and later
+that "gall the sunsets had the planet in it," They have in fact recorded Venus
+in the }origon bands on one of their sunset pictures, At that date Venus bat
+was still close to the sun being (angular distance’? )Sup.conj.Apr.11) about 15deg.
+
+east of the sun (eve. star). On the color print S-65~34771 the image of Venus
+
+can be distictly seen emid the horizon bands.
+
+Z2o0diacal Licht
+
+Taexaxiommgx Mc Divitt and White were taking 16 mm, movies wecnombiowe
+
+before one"capsule dawn" when they noiced the zodiacal light and described
+
+it ms thus, "it was a shaft of light and s long time before the sun came up."
+the ground observers can note the cone Yof light in the eastern sky or
+e
+sky after the sun has set and gone down about 18 deg. ( about and hour
+after sunset or an hour before sunrise.) Pilots at 40,000 feet can follow it for
+
+a longer span since they are sway from disturbing c
+
+Condition of the Windows:
+
+% ‘ 4 ; a to «2 ths Fal t t = Be “Curvy
+The G mini optical window is quite superior to the Mercury
+
+$ +} } Siw wrt iAnwsa are spopere on da one
+the less the pilots note that"both their windows ere fogey3;" an t
+
+my h4t head eeve ac lentally ist Ss window
+noint during EVA White rubbed sleeve accidentally on Jinés
+
+smudging it —probably partially remvang the siiicon iim,
+
+IEASURE REL STATIC CHARGE
+
+TAPE PLYBACK BLOOD PRESSURE (P)
+3-1, 4-1 UPDATES
+
+EGRESS PREPARATION
+UNSTOW AND ATTACH
+UMBILICAL
+Y FITTINGS
+EMER 05 FACK
+MANEUVER UNIT
+CAMERA
+
+ALIGN PLATFORM
+
+NULL REL VEL
+
+LOOD PRESSURE (C) COMM
+CHECK
+
+GO/NO/ GO )FOR EVA
+
+DEPRESSURIZATION
+
+IN PRIMARY O05 PRESS
+
+¥ F “a~avten= £ F
+MANUAL HEATER (850 -
+
+CLOSE WITH BOOSTER
+
+DCh AT CL
+UPEN AAICH
+ANT)
+
+Pi
+
+C TAA 1p
+OI ANU UI
+
+INGRESS S/C
+CLOSE HATCH
+REPRESSURIZE
+
+SEPARATION AV ~5 FT/SEC
+
+COMPLETE INGRESS
+CHECKLIST
+
+ITIATE TERMINAL REND PHAS
+
+MEASURE AV REQ'D
+
+CLOSE WITH BOOSTER
+PHOTOGRAPHS DURING APPROACH
+
+INCREASE SEPARATION WITH
+BOOSTER PRIOR TO DARKNESS
+
+MANEUVER UPDATE
+
+ALIGN PLATFORM
+
+CLOSING AV ~13 FT/SEC
+
+1 PLATFORM
+
+MONTTOR BOOSTER ELEV
+
+MANEUVER UPDATE
+
+ALIGN PLATFORM
+
+SEPARATION AV ~5 FT/SEC
+
+SEXTANT BOOSTER/STAR
+OBSERVATION
+
+FLASHING EXGHT EVAL.
+
+NOMINAL GT-4 TRANSLATIONAL MANEUVERS
+
+HP/HA
+Point of After Direction Translational
+Application WW Maneuvers of Thrust Thruster Purpose
+
+SECO +30 5 Posigrade Aft S/C-Booster Separation
+5 86/153 Retrograde Aft Station-Keep on Booster
+
+Beginning of
+3rd Rev (3:33) 88/154 Posigrade Fwd S/C = Separation
+
+99 min. later 82/153 Retrograde Aft Rendezvous Maneuver
+(5:12): Sth Rev (Start intercept
+
+76 min. later 86/150 Posigrade Various Terminal Phase/Braking
+(6:28) 5th Rev
+
+106 min, later 93/150 Posigrade Aft Orbital Lifetime Adjust -<«5 days
+(8:14) 6th Rev 4
+
+15th or 16th Rev **adqjust lifetime - 4 days
+30th Rev Various Adjust lifetime - 3 days
+45th Rev Adjust lifetime - 2 days
+
+62nd Rev : +110 E Achieve OAMS Retrofire
+(or 66th Rev™)
+
+“" Lifetime Adjustments will be minimum required
+“ For Pacific landing
++ If available
+
+LAUNCH
+SECO+30 S/C SEP~5 FT/SEC
+YAW 180° NULL REL VEL~5 FT/SEC (340 FT SEP)
+INSERTION CHECKLIST 2-1 UPDATE
+
+ALIGN PLATFORM
+
+CNTL MODE CK COMM. CHECK
+
+DUMP LAUNCH DAY URINE BAGS
+SUIT INTEGRITY CHECK
+
+CHECK-ACC BIAS
+
+NULL REL VEL
+WITH BOOSTER
+
+RADIATOR - FLOW
+
+GO/NO GO FOR 2-1 BLOOD PRESSURE (PILOT)
+
+UNSTOW “CAMERAS
+
+CLOSE WITH BOC TER
+ESTABLISH FORMATION FLIGHT PROCEDURE
+EOk EVA PASS BASED ON BOOSTER ANGULAR
+
+pee Oarv.trdvb morn ered col a lyase Guad
+- oy ref
+
+bn Rat
+
+Rawg Qa Mes CA QAR | ‘arvi OAS OTL
+
+[ t.a20 A Av
+
+or ‘fac. 6 6 nx!
+BE pith this
+
+SRW’ ‘nsitaganil
+Ache “a Wn -
+en Sia soot,
+
+ph ph he
+Ax wth ln
+
+a
+
+eer
+
+a Zz.
+
+6 a Y West BC tof P/ §>-
+
+Vota |
+_phade of Q ints po Pode Ma = Sb 59777 _
+
+Awe ave oC SS A~R a ae ne sc
+
+|] Qn — pXin Lone.
+
+aie. Ajrmny vx AA fis WR crfac
+
+ra TWO Gide tn Roe os a bi |
+
+ao hs ‘ ps g—
+
+ae? qa Pinte wn 40
+hese a _te AV: ie f
+
+ps tee trl Ada
+
+Witerie.
+
+Put. Ah Wo vast, 0-237
+
+| ones
+ba Kawger Zt in vt pprrhee —_
+flat BUA he Och 3 iti AED pop
+ae rer sy or
+I ie he 0 NR
+
+bp 5 ad Fenba-
+
+ee -
+
+Ast Frere Dre ATi nk
+
+. j i ~ 1
+
+be — 1 Tia ata’ - X: fu f
+
+And ——— nate eae
+
+ae ccieal
+
+REMARKS:
+
+NASA Form 26 (Rev. Jan. 1963) U.S. GOVERNMENT PRINTING OFFICE ; 1963 OF —671845
+
+be OPTIONAL. FORM NO. 10 5010-107
+MAY 1962 EDITION
+* GSA GEN. REG. NO. 27
+
+UNITED STATES GOVERNMENT
+
+Memorandum
+
+SM/Manned Space Science DATE? | 22 JUL 1965
+M-C MGS 1352.2
+
+MG/Deputy Director, Gemini Program
+
+SUBJECT: Technical Analysis of Gemini (GT-4) Photography
+
+i
+
+The attached TWX on the subject matter from Willis Foster to
+Robert Piland on July 16, 1965, has been coordinated by Mr. Liccardi
+of my office and Dr. Gill of your office. I believe that this TWX
+
+satisfies the request of your letter to me of July 16, 1965 on the
+same subject.
+
+I do not anticipate any problems in your office receiving the S-5
+70MM film, however, should you encounter any difficulties my office
+will prepare additional authorization that may be deemed necessary
+
+to expedite this matter.
+
+William C. neider
+
+Dr. J. Gill
+
+Buy U.S. Savings Bonds Regularly on the Payroll Savings Plan
+
+NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
+WASHINGTON, D.C. 20546
+
+IN REPLY REFER TO:
+
+Jean
+
+e
+
+2clence an
+fc 3
+
+of Manned Space
+be flown on the
+
+flights:
+Title:
+
+Principal Inves
+
+o U
+
+Sponsoring
+
+St juart
+
+manned
+
+associ:
+ion for you
+stokes, Manned
+
+e numbe it U
+
+cordance wi
+1 Pera t Lou’
+rranted a
+emini
+
+Pec
+
+nental results
+
+Furi
+Pol Le
+
+your
+rdinator ir:
+
+l times.
+
+construction and integration of your
+be brought to satisfactory completior
+experiment, along with those of the
+on the attached may serve to
+
+We hope that the planning of t and the
+
+addition to th
+Program.
+
+Sincerely yours,
+
+llomer E ewell
+Associ > Administrator
+
+for Spa Science & Application
+
+Lxperimenters
+
+OPTIONAL FORM NO. 10 pee 3010-107
+MAY 162 ESITION -
+GSA GEN. REG. NO, 27
+
+UNITED STATES GOVERNMENT
+
+Memorandum
+
+SM/Manned Space Science DATE. =
+M-C MGS 1352.2
+
+MG/Deputy Director, Gemini Prog
+SUBJECT: Technical Analysis of Gemini (GT-4) Photography
+
+The attached TWX on the subject matter from Willis Foster to
+
+Robert Piland on July 16, 1965, has been coordinated by Mr. Liccardi
+of my office and Dr. Gill of your office. I believe that this TWX
+satisfies the request of your letter to me of July 16, 1965 on the
+same subject.
+
+I do not anticipate any problems in your office receiving the S-5
+7OMM film, however, should you encounter any difficulties my office
+
+will prepare additional authorization that may be deemed necessary
+to expedite this matter.
+
+William C. Schneider
+
+ce: Dee Je Cill
+
+Buy U.S. Savings Bonds Regularly on the Payroll Savings Plan
+
+oe
+
+NAME OF AGENCY — PRECEDENCE /
+Ne é ACTION:
+
+P info. PRIORITY UNCLASSIFIED
+NASA HEADQUARTERS TYPE OF MESSAGE CLASSIFICATION
+
+La
+Al
+ECOUNTING CLASSIFICATION val SINGLE [_] soox STANRAGE TOGA Th eee mata
+[_] mutti-appress GSA REGULATION 2-Ix-301.00
+14-304
+
+TELEGRAPHIC MESSAGE
+
+THIS BLOCK FOR USE OF COMMUNICATIONS UNIT
+
+OFFICIAL BUSINESS
+U. S. GOVERNMENT
+
+MESSAGE TO BE TRANSMITTED (Use double spacing and all capital letters) THIS COL. FOR AGENCY USE
+
+MR. ROBERT 0. PILAND
+
+DR. PAUL LOWMAN, GODDARD SPACE FLIGHT CENTER,
+
+» MARYLAND
+MR. LEO CHILDS, CODE ET22, MANNED SPACECRAFT CENTER
+HOUSTON, TEXAS
+
+TT IS REQUESTED THAT YOU AUTHORIZE THE APPROPRIATE AUTHORITIES AT
+MSC TO RELEASE THE ORIGINAL FILM OF SPOOL 3 OF MAGAZINE 8 (WHICH
+COVERS THE SOUTHWESTERN U.S.) TO MR. LEO CHILDS, MSC, FOR 2 TO 3
+DAYS. MR. CHILDS WILL CARRY IT TO DATA CORPORATION, DAYTON, OHIO
+
+MICROSENSTTOMETER.
+FOR MEASUREMENT ON THEIR MiCROSErsTOmeree< THE PURPOSE OF THESE
+
+START MESSAGE ADDRESS HERE
+
+MEASUREMENTS IS TO DETERMINE THE TRUE RESOLUTION OF THE 8-5 70 mm
+PHOTOGRAPHY ON GT-4. WE REFER TO A TELEPHONE CONVERSATION BETWEEN
+
+EMORY HARRIS OF YOUR OFFICE AND ANTHONY LICCARDI, OMSF, LAST NIGHT.
+
+we
+E4
+2
+Po
+a
+Zz
+Pa
+as
+oO
+fee
+a
+a
+Zz
+a
+
+WHILE MAKING THESRESOLUTION ANALYSIS WE ARE ASKING DATA
+CORPORATION TO MAKE FIVE (5) SETS OF CONTACT PRINTS AND ONE (1)
+DUPLICATE NEGATIVE OF SELECTED FRAMES USING VERY FINE-GRAINED
+MATERTALS WHICH GIVE ALMOST 100% TRANSFER. ‘THESE PRINTS AND FIIM
+WILL BE USED FOR FURTHER ANALYSIS BY AGENCIES IN THE WASHINGTON
+
+AREA.
+
+PAGE NO. NO. OF PAGES
+
+1 2
+
+NAME OF AGENCY © PRECEDENCE
+
+r a ACTION:
+
+me INFO.: h:
+TYPE OF MESSAGE CLASSIFICATION
+
+ath a ata al Rhy [_] sincte [_] soox STANDARD FORM 14 REV. MARCH 15, 1957
+
+[_] MuttLAaopress GSA REGULATION. 2-IX-301.00
+14-304
+
+TELEGRAPHIC MESSAGE
+
+OFFICIAL BUSINESS
+U. S. GOVERNMENT
+
+THIS BLOCK FOR USE OF COMMUNICATIONS UNIT
+
+MESSAGE TO BE TRANSMITTED (Use double spacing and all capital letters) THIS COL. FOR AGENCY USE
+
+PAGE TWO
+
+DR. PAUL LOWMAN PRINCIPAL INVESTIGATOR ON THE S-5 EXPERIMENT HAS
+CONCURRED IN THESE ARRANGEMENTS. IT IS UNDERSTOOD THAT
+
+MR. LEO CHILDS WILL SAFEGUARD THE FILM IN TRANSIT AND AT DATA
+CORPORATION. AT DATA CORPORATION THE CONTACTS ARE
+
+MR. WILLIAM GOROG, CHAIRMAN OF THE BOARD AND MR, ROBERT BOONE,
+
+WE WILL GREATLY APPRECIATE YOUR EXPEDITING OUR OBTAINING THIS
+
+IMPORTANT SCIENTIFIC DATA WHICH CAN BE ACQUIRED FROM THE 8-5
+
+START MESSAGE ADDRESS HERE
+
+7O mn FILM.
+
+WILLIS B. FOSTER
+DIRECTOR
+MANNED SPACE SCIENCE PROGRAMS
+
+wi
+Es
+2
+te
+a
+Zz
+id
+a
+wi
+Oo
+wa
+wa
+wi
+wi
+a
+ps
+k
+oO
+ao
+
+ec: MG/Schneider
+MGS /Liceardi
+SM/Colvocoresses
+
+PAGE NO. NO. OF PAGES
+
+NAME AND TITLE OF ORIGINATOR (Type) Jocely2 he “a ORIGINATOR'S TEL, NO. DATE AND TIME PREPARED
+
+Jocelyn R. Gill 20593 7/16/65 2:00 p.it.
+-_ Chief, Inflight Sciences Smee en
+| certify that this message is Official business, is not personal, and is in the interest of the Government.
+
+(Signature)
+
+* U.S. GOVERNMENT PRINTING OFFICE . 1964 0O—724-475
+
+JUL 14 1965
+
+Dr. Karl G. Henize
+Dearborn Observatory
+Northweetern University
+Evanston, Illinois 60201
+
+Bear Kari:
+
+Thank you so much for your letter of @4 June telling me that you were
+not present at the GT-4 debriefing. I am sorry you could not make it,
+but I am aware that the rescheduling wee most inconvenient. It wes a
+most interesting two-day session with one day for the individual
+experimenters and another day for the general ecientific public.
+
+I am attempting te plan the next Inflight Experimenters meeting to occur
+in juxtaposition with the Selentific Debriefing Sessions in Houston. At
+present, we are hoping for a whole week of meetings in Houston, August 30
+September 3. S6 put this on your calender with the thought thet last-
+minute shifts are still the order of the day in this business.
+
+I went to congratulate you on the fine reports you huve been submitting
+for your 8-13 experiment and especially the document entitled “Definitive
+Plan.” The full documentation of your experiment is very important and
+
+IT em gled to see you are keeping up with that. I want to urge you to
+leok into the final stages of documentation for equipment delivery at
+
+the Cape. Just this week we had a trying experience of a co-experimenter
+arriving with his piece of equipment and McDonnell refusing to accept it.
+Some 4 or 5 pleces of documentation with "stamps," etc. were missing and
+the experimenter had apparently never even heard of these pieces of paper.
+In the orderly assembly of the spacecraft and its equipment much
+documentation has, of course, to be assembled, time-conswaing as it is.
+
+I suggest that you have Mr. Wackerling check very carefully into the
+documentation required for McDonnell to accept a piece of experimental
+
+equipment for an actual flight.in the event that you should make use of
+& Boggess camera. I also plan to have this as an agende item at the next
+Experimenters meeting.
+
+Best of luck with your membership on the Astronomy Subcommittee. You will
+certainly find it educational.
+
+Have a good sumer.
+
+Sincerely yours,
+
+Jocelyn 2. Gul!
+
+Jocelyn R. Gill
+Chief, Inflight Sciences
+Manned Space Science Programs
+
+ce: Dr. Al Boggess, III /GsFc
+Willis B. Foster, SM
+Subject File
+Reading File
+
+SM:JRGill:kby 20593 7/12/65
+
+DEARBORN OBSERVATORY
+NORTHWESTERN UNIVERSITY
+
+EVANSTON, ILLINOIS 60201
+
+SM (JRG:evd)
+
+JUL 1 4 1965
+
+TO: Manned Spacecraft Center
+Chief, Photographic Division, Code bT2
+
+FROM: NASA Headquarters
+Chief, Inflight Sciences
+
+SUBJECT: Request for duplicate movie films and color prints of
+all 70 mm, hand-held pictures
+
+One copy of each of color movie films which include sunsets,
+sunrises, horizon bands, limb of earth and terrain views is re-
+quested to be forwarded to Dr. J.R. Gill, Code SM, NASA Head-
+quarters. Please send these air mail since this material is
+needed soon for preparation of an astrongpical report on GT-4.
+One of the most important films for this purpose is Magazine 9.
+
+fwo sets of color prints of all color still pictures which were
+taken with Hasselblad 70 mm camera (on GT-4) are also requested.
+
+It will be adequate to send these by regular mail, These prints
+pertain mainly to the 8-5 and S-6 Gemini Experiments,
+
+Jocelyn ‘R. Gill
+
+Jocelyn R. Gill
+
+SM (JRG:kby)
+
+Menned Spacecraft Center
+Mr. Robert ©. Piland, Deputy Manager
+Apollo Spacecraft Program Office
+
+Chief, Inflight Sciences Branch
+Manned Space SciencelPrograms
+
+SUBJECT: Request for copies of transcript of voice tape from GT-h
+
+As per our telephone conversation some days ago, the following persons
+will greatly appreciate receipt of copies of subject transcript, viz.
+
+1. Dr. Franklin Roach
+National Bureau of Standards
+Bureau of Central Radio Propagation
+Boulder, Colorado
+
+Mr, Laurence Dunkelman
+Institute for Defense Analyses
+4OO Army-Navy Drive
+
+Arlington, Virginia
+
+Mrs. Winifred Cameron
+
+Code 641
+
+Goddard Space Flight Center
+Greenbelt, Maryland
+
+Dr. J. R. Gill
+
+Code SM
+
+NASA Headquarters
+Washington, D.C. 20546
+
+lyn Ri. Gill
+
+Jocely
+
+Jocelyn R. Gill
+
+MGS/Mr. Liccardi
+SM Reading Files 9M File: Sci. debriefing GT-4 file
+
+CONCURRENCES: sv: JRGilL: kby 20593 T/L [65 OFFICIAL FILE COPY
+
+OFFICE CODE & 2 Le be ESP a + Se
+
+SIGNATURE p> }.. 2-222 2 -| pee eMC ieee nk SO Ne = ete
+
+U.S, GOVERNMENT PRINTING OFFICE 16—-77210-1
+
+Dr. Rlisabeth Roemer
+U.S. Navel Observatory
+Flagstaff Station
+Plagstaff, Arizona
+
+Dear Pat:
+
+Thank you so very much for responding to my request for comet photogrephs
+and ephemerides 20 that I could apprise the GT-. astronauts on this subject.
+I do not know how you managed to assemble this material and send it to me
+50 promptly. The timing wee perfect -- it arrived just in time so I could
+forward the comet photographs along with seme other information I was
+mailing to them.
+
+Hope the western weather cleared sufficiently so that your trip was not
+difficult from that atandpoint.
+
+Thanks agein for your contribution to the Gf-4 mission.
+Best regards,
+Sincerely yours,
+Jocelyn R. Gill
+
+Chief, Inflight Sciences Branch
+Manned Space Science Programs
+
+ec: SM Files
+
+' nr
+aw) fy)
+
+at
+
+sMyJRODLL: kby 20593 6/7/65
+
+JUN 17 1965
+
+Dr. Elisabeth Roemer
+U.S. Naval Gbservatory
+
+Flagstaff Station
+Flagstaff, Arizona
+Dear Pat:
+
+Thank you so very much for responding to my request for comet photographs
+and ephemerides so that I could apprise the G?-4 astronauts on this subject.
+
+I do not imow how you managed to assemble this material and send it to me
+so promptly. ‘The timing was perfect -- it arrived just in time so I could
+forward the comet photographs along with some other information I was
+mailing to them.
+
+Hope the western weather cleared sufficiently so that your trip wes not
+difficult from that standpoint.
+
+Thanks again fer your contribution to the Gf-4 mission.
+Best regards,
+Sincerely yours,
+
+Joeelyn R. Gill
+Chief, Inflight Sciences Branch
+Manned Space Science Programs
+
+ec: §M Files
+
+SM:JRGill:kby 20593 6/7/65
+
+6M (JRGrkby)
+
+Dr. Elisabeth Roemer
+U.8. Neval Observatory
+Plagetaff Station
+Plagetaff, Arizona
+Dear Pat:
+
+Thank you so very much for responding to my request for comet photographs
+and ephencrides so that I could apprise the Gf-4 astronaute on this subject.
+I do not know how you managed to assemble this material and send it to me
+so promptly. The timing was perfect -- it orrived just in time so I could
+forward the comet photographs along with scme other information I was
+mailing to them.
+
+Hope the western weather cleared sufficientiy eo that your trip wae sot
+aifficult from thet ctandpoint.
+
+fhenks again for your contribution to the GT-4 mission.
+Best regards,
+
+Sincerely yours,
+
+Joctiyn BR. Gill
+Chief, Inflight Sciences Branch
+Manned Spece Scienze Programs
+
+SM:JRGill:kby 20593 6/7/65
+
+NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
+WASHINGTON, D. C. 20546
+
+IN REPLY REFERTO: SM=(JRG:kby)
+
+Dear
+
+We are enclosing lists of Gemini photographs for Missions IV
+through VIII which you requested. These include the numbers
+that Creative Arts* can utilize in filling orders. The
+Gemini IV material can be ordered by the magazine, spool,
+
+and frame numbers.(Example: Gemini IV, Magazine 16, Spool 5,
+Frame 31). The Gemini V, VI, VII, and VIII material can be
+ordered by the "HC" number (Example: 65-HC~701).
+
+Note that the column "GET" signifies ground elapsed time and
+can be converted to GMT, which is Greenwich Mean Time.
+
+We hope this information will answer your needs. Thank you
+for your interest in the Gemini photographs.
+
+Sincerely yours,
+
+Jocelyn R. Gill
+Manned Flight Experiments Office
+
+Ene losures:
+Lists of Gemini IV, V, VI,
+VII, VIII photographs
+
+Creative Arts
+Attn: Mr. Tinsley
+814 H Street, N.W,.
+Washington, D.C.

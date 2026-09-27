@@ -1,0 +1,430 @@
+6/1/22, 11:23 AM Record Preview
+Document View XML USCENTCOM Chief of Staff
+Declassified-on—20-March-2026
+IIR - Intelligence Information Report O° %H Close
+~~ Core Metadata
+iR NUMBER: 3024(i
+COLLECTOR COLLECTOR NAME COLLECTOR NUMBER
+AFSOC A20X - MOTHERSHIP 6600
+OVERALL CLASSIFICATION: ease
+PRIMARY KEY 50005165458
+VERSION NUMBER 1
+ORIGINATING SYSTEM NAME
+ORIGINATING SYSTEM ID
+LAST MODIFICATION SYSTEM:
+CREATE DATE 2022-04-277 13:29:17,651Z
+LAST CHANGE DATE 2022-04-27T 13:18:21.087040000+00:00
+MESSAGE FROM ADDRESS: GER VASHINGTON DC//AFSOC HURLBURT FLD FL/AFSOC//
+DTG 271329ZAPR22
+DATE 2022-04-27Z
+TITLE: = 1.4¢ Multiple Unidentified Aerial Phenomenon
+Observed Maneuvering Erratically and In Formation Over Gulf of Oman During AC-130 Gunship
+Live Fire Training on 8 September 2021 - Attachment
+SUMMARY: = On 8 September 2021 a USSOF AC-130 Gunship observed approximately 25 instances of UAPs
+while conducting a live fire exercise in the Gulf of Oman, The UAPs were observed as cold
+orbs flying at lower altitudes between 250 to 1300 MPH in different formations as well as
+maneuvering aggressively. UAPs also appeared to react to the aircraft firing its main
+cannon,
+TARGET:
+Country:
+Non State Entity:
+TOPICS:
+Portion Mark:
+NIPF FMCC
+TECH
+IFCACC IFC1508
+IFC220L
+IFC150A
+KEYWORD
+
+NHSB Bit com MDR 26-0049 to MDR 26-0061 i = oved for Release to AARO 03/26/26 000001
+
+6/1/22, 11:23 AM
+UR DOK:
+
+REQUIREMENT NUMBER:
+
+SOURCE:
+
+(SHNF) Source had direct access to
+the reported information via the co
+nduct of official duties,
+
+Source was aware information woul
+d be provided to the US governmen
+t.
+
+GR INITIAL OBSERVATION. On 8 September 2021 a United States Special Operations
+Forces (USSOF) AC-130 Gunship was conducting live fire training the Gulf of Oman in the
+vicinity of (IVO) //MGRS: 40REN6&_4413{_4d/ during period of darkness, The AC-130 first
+observed Unidentified Aerial Phenomenon (UAPs) when the aircraft dropped a
+water-activated flare to use as a mock target. The AC-130 entered an orbit around the
+flare and the Combat Systems Officer (CSO) conducted collateral scans with the aircraft's
+Electro OpticalMnfrared (EO/IR) sensor IVO the flare. When the CSO slewed the sensor in
+IR mode back to the flare they observed two approximately four-foot diameter cold orbs
+between 0 to 20 feet above the surface of the water stationary over the flare for
+approximately 15 seconds. After those 15 seconds passed, the CSO pulled the trigger
+firing the aircraft's 105mm cannon. Immediately upon pulling the trigger, during the
+slight delay between trigger pull and the cannon's recoil, the CSO observed the pair of
+UAPs rapidly fly away from the flare and out of the sensor feed without changing
+
+altitude,
+
+MERE susSEQUENT OBSERVATIONS. The AC-130 crew observed approximately 25 instances of
+UAPs viewed in IR as coki orbs in both white-is-hot an black-is-hot mode during the
+
+sortie. Two UAPs were observed flying in a loose but coordinated formation increasing and
+decreasing altitude like a wave while maneuvering around, over, and under each other in a
+manner similar to how dolphins playfully swim in a pod. (SOURCE COMMENT: They [The UAPs]
+knew they were flying together), UAPs were also separately observed flying in a formation
+
+of three and separately observed flying erratically and maneuvering aggressively. The
+
+attached videos depict a smoothly slewing EO/IR sensor or a stationary EO/IR sensor with
+multiple UAPs darting around the sensor feed. The AC-130's crew attempted to save
+
+entirety of the EO/IR footage of the UAP observations but the aircraft's Digital Video
+
+Recorder (DVR) inexplicably failed and the video data became corrupted.
+
+ESTIMATED SPEED. The CSO calculated the UAP’s approximate speeds using the
+aircraft's TACTOOL and clocked their maximum observed maneuvering speed at 1300 miles per
+hour (MPH) and the UAPs minimum observed maneuvering speed at 250 MPH. No means of
+propulsion were observed,
+
+i) 1.4¢ js the tag line for AFSOC personnel conducting | 140 | Ac
+debriefin
+
+(US This IIR was coordinated with USDAO Muscat and SOCCENT J2X without comment.
+(U) Source A is available for recontact about information in this report.
+
+(Uh Geographic coordinates were derived from AC-130 sensor feed GPS data,
+
+(U. equests concerning foreign disclosure and release of the information contained
+in should be sent to the AFSOC FDO a
+
+Include the justification, serial number, subject line of the report and the proposed
+
+request in the initial correspondence.
+
+(V/A |1R Evaluations and Source Directed Requirements regarding this report are
+highly encouraged to assist in assessing collection efforts and requirements. Evaluations
+and Source Directed Requirements can be created using
+
+Any questions concerning this report should be
+
+USCENTCOM MDR 26-0049 to MDR 26-0061 Approved for Release to AARO 03/26/26 000002
+a
+
+6/1/22, 11:23 AM Record Preview
+
+any final product or brief the IIR information was utilized, USCENTCOM Chief of Staff
+
+FULL MESSAGE TEXT: R2 22 Declassified on: 20 March 2026
+FR 10 DC/IAFSOC HURLBURT FLD FL/AFSOC//
+TO HS BOLLING AFB DC
+
+AFSOC HURLBURT FLD FL
+AMC INTEL CEN SCOTT AFB IL
+AMEMBASSY MUSCAT
+CDR AOG FT GEORGE G MEADE MD
+CDR FORSCOM DCS G2 ANALYSIS DIV FT BRAGG NC
+CDR FORSCOM DCS G2 OPS DIV FT BRAGG NC
+CDR JSOC FT BRAGG NC
+CDR SOTF FT BRAGG NC
+CDR USCENTCOM MACDILL AFB FL
+CDR USSOCOM MACDILLAFB FL
+CDR USTRANSCOM INTEL CELL SCOTT AFB IL
+CDRINSCOMACO FT GEORGE G MEADE MD
+CDRINSCOM FT BELVOIR VA
+CDRINSCOMIOC FT BELVOIR VA
+CDRNGIC CHARLOTTESVILLE VA
+6.2(d) | NASHINGTON DC
+CJCS NMCC WASHINGTON DC
+CJSOTF
+CMO513THMIBDE FT GORDON GA
+CNO WASHINGTON DC
+COMJSOC FT BRAGG NC
+COMSOCCENT INTEL MACDILL AFB FL
+COMSOCCENT J2 MACDILL AFB FL
+COMSOCCENT J3 MACDILL AFB FL
+COMSOCCENT J5 MACDILL AFB FL
+COMSOCCENT TASK FORCE MACDILLAFB FL
+CSG SOCOM MACDILLAFB FL
+DAAMHS WASHINGTON DC
+DCDR USCENTCOM MACDILL AFB FL
+DEFENSE JIOC WASHINGTON DC
+DEPT OF HOMELAND SECURITY WASHINGTON DC
+DEPT OF STATE WASHINGTON DC
+DIA WASHINGTON DC
+DIRMSIC REOSTONE ARSENAL AL
+DIRNCMI FT DETRICK MD
+DIRNSA FT GEORGE G MEADE MD
+DIRNSA FT MEADE MD
+DNI WASHINGTON DC
+FBI WASHINGTON DC
+FORSCOM ACE FT MCPHERSON GA
+HQ AFOSI QUANTICO VA
+HQ AFSOC A2 HURLBURT FLD FL
+HQ AFSOC A3 HURLBURT FLD FL
+HQ AFSOC HURLBURT FLD FL
+HQ AFSOC INTEL HURLBURT FLD FL
+HQ ICE INTEL WASHINGTON DC
+HQ INSCOM G2X FT BELVOIR VA
+HQ USCENTCOM MACDILL AFB FL
+HQ USSOCOM MACDILL AFB FL
+HQDAAOC G2 INTEL WATCH DAMI FIW WASHINGTON DC
+
+USCENTCOM MDR 26-0049 to MDR 26-0081 Ap prthe tdp te aaSd 1b MGA SHING TON DC 03/26/26 000003
+
+6/1/22, 11:23 AM Record Preview
+
+HQDA DIR G2X WASHINGTON DC 7 ae
+JAC MOLESWORTH RAF MOLESWORTH UK USCENTCOM
+JAC MOLESWORTH UK Declassified on: 20 M
+JICCENT MACDILL AFB FL
+
+JOINT STAFF WASHINGTON DC
+
+JPRA FT BELVOIR VA
+
+JWAC DAHLGREN VA
+
+NASIC WRIGHT PATTERSON AFB OH
+
+NCTC WASHINGTON DC
+
+NGA WASHINGTON DC
+
+NGIC INTEL OPS CHARLOTTESVILLE VA
+
+NGIC SRD FT GEORGE G MEADE MD
+
+ONI WASHINGTON DC
+
+PENTAGON WASHINGTON DC
+
+USASOC INTEL CTR FT BRAGG NC
+
+USCENTCOM CCJ2 MACDILLAFB FL
+
+USCENTCOM CCJ3 MACDILLAFB FL
+
+USCENTCOM JOC MACDILL AFB FL
+
+USSOCOM J2 INTEL MACDILL AFB FL
+
+USSOCOM J3 OPERATIONS DIRECTORATE MACDILL AFB FL
+
+USSOCOM J5 STRATEGY PLANS AND POLICY MACDILL AFB FL
+
+USSOCOM JTF DEPLOYED
+
+USSOCOM SOFM MACDILL AFB FL
+
+USSTRATCOM INTEL DIRECTORATE OFFUTT AFB
+INFORRERWASHINGTON DC
+
+CIA WASHINGTON DC
+
+SEG R-ETHNOFORN
+
+QQQQ
+
+SERIAL: ( 1.4c
+
+DATE OF PUBLICATION: 2713292 APR 22.
+
+US Air Force
+INFORMATION REPORT, NOT FINALLY EVALUATED INTELLIGENCE
+
+COUNTRY OR N ~(U).
+
+SUBJECT: (SNF 1.4¢ | Multiple
+Unidentified Aerial Phenomenon Observed Maneuvering Erratically and
+
+In Formation Over Gulf of Oman During AC-130 Gunship Live Fire
+
+Training on 8 September 2021 - Attachment
+
+DATE OF INFORMATION: (U) 08 SEP 2021.
+
+CUTOFF: (U) 08 Sep 2021,
+
+SUMMARY: (SHNF) On 8 September 2021 a USSOF AC-130 Gunship observed
+approximately 25 instances of UAPs while conducting a live fire
+
+exercise in the Gulf of Oman, The UAPs were observed as cold orbs
+
+flying at lower altitudes between 250 to 1300 MPH in different
+
+formations as well as maneuvering aggressively. UAPs also appeared to
+
+react to the aircraft firing its main cannon.
+
+SOURCE NUMBER A: (U/
+
+: ource had direct access to the reported
+information via the conduct of official duties. Source was aware
+information would be provided to the US government.
+
+ING: (U) THIS INFORMATION REPORT, NOT FINALLY EVALUATED
+
+USCENTCOM MDR 26-0049 to MDR 26-0051 Approved tor Sa to
+
+3.5¢,(b)(6)
+
+03/26/26 000004
+
+6/1/22, 11:23 AM Record Preview
+INTELLIGENCE, REPORT CLASSIFIED SECRET/NOFORN, = : ed MG Richard A.
+USCENTCOM Chiet of Staff
+passin INITIAL OBSERVATION. On 8 September 2021 a United States!ass (ed on 20 Varch
+Special Operations Forces (USSOF) AC-130 Gunship was conducting live
+fire training the Gulf of Oman in the vicinity of (VO) //MGRS:
+40REN68] 4a) 31.4d/ during period of darkness, The AC-130 first
+observed Unidentified Aerial Phenomenon (UAPs) when the aircraft
+dropped a water-activated flare to use as a mock target, The AC-130
+entered an orbit around the flare and the Combat Systems Officer
+(CSO) conducted collateral scans with the aircraft's Electro
+Opticalinfrared (EO/IR) sensor IVO the flare, When the CSO slewed
+the sensor in IR mode back to the flare they observed two
+approximately four-foot diameter cold orbs between 0 to 20 feet above
+the surface of the water stationary over the flare for approximately
+15 seconds, After those 15 seconds passed, the CSO pulled the trigger
+firing the aircraft's 105mm cannon. Immediately upon pulling the
+trigger, during the slight delay between trigger pull and the
+cannon's recoil, the CSO observed the pair of UAPs rapidly fly away
+from the flare and out of the sensor feed without changing altitude.
+oR OBSERVATIONS. The AC-130 crew observed
+approx 25 instances of UAPs viewed in IR as coki orbs in both
+white-is-hot an black-is-hot mode during the sortie, Two UAPs were
+observed flying in a loose but coordinated formation increasing and
+decreasing altitude like a wave while maneuvering around, over, and
+under each other in a manner similar to how dolphins playfully swim
+in a pod, (SOURCE COMMENT: They [The UAPs] knew they were flying
+together). UAPs were also separately observed flying in a formation
+of three and separately observed flying erratically and maneuvering
+aggressively. The attached videos depict a smoothly slewing EO/IR
+sensor or a stationary EO/IR sensor with multiple UAPs darting around
+the sensor feed. The AC-130's crew attempted to save entirety of the
+EO/IR footage of the UAP observations but the aircraft's Digital
+Video Recorder (DVR) inexplicably failed and the video data became
+corrupted,
+ESTIMATED SPEED. The CSO calculated the UAP’s approximate
+
+s using the aircrafts TACTOOL and clocked their maximum
+observed maneuvering speed at 1300 miles per hour (MPH) and the UAPs
+minimum observed maneuvering speed at 250 MPH, No means of propulsion
+were observed,
+ome lao 1. (Field Comment) (S/NF)|_ ss t.4c___is the tag line
+
+rsonnel conducting! 1.4¢ deb
+
+: nn This IIR was coordinated with USDAO | a and SOCCENT
+J2X without comment,
+3. (U) Source A is available for recontact about information in this
+report.
+4, (UME Geographic coordinates were derived from AC-130 sensor
+feed GPS data.
+§, (U/ Requests concerning foreign disclosure and release of
+the ition contained in this rt shouki be sent to the AFSOC
+FDO a Include the justification,
+serial number, subject line of the report and the proposed request in
+the initial correspondence.
+6. (U/ \IR Evaluations and Source Directed Requirements
+regarding this report are highly encouraged to assist in assessing
+collection efforts and requirements, Evaluations and Source Directed
+
+USCENTCOM MDR 26-0049 fo MDR 26-0061 Aupronel Gr Malecss ee MARGe” e
+
+03/26/26 000005
+
+6/1/22, 11:23 AM
+agrison
+
+IR information was utilized.
+
+ATTACHMENTS: (VU) To follow - 1 ATTACHMENTS,
+
+1. Video, 8 September 2021 UAPsIRBEJ, Powerpoint containg six
+embedded videos of 8 September 2021 UAPs captured via AC-130
+
+(SEGRET/ANOFORN),
+
+TOPIC: (U) FMCC; TECH,
+
+FUNCTIONAL CODE: (U) IFC 1508; IFC2Z0L; IFC150A,
+REQUIREMENT: (U) NTRI2Z00AJ002421.
+
+MGT CODE: (U) BG: BK; RD: DF; DG.
+
+INSTR: (U)U.S.NO, 7
+JOINT REP: (U) None.
+
+DATE OF ACQUISITION: (U/W) 20220407; USA, Cannon AFB, New Mexico
+Direct all questions to AFSOC A2H, Hurlburt Field FL
+or TSVOIPG 5¢, (5/6) or email to
+
+WARNING TO THis Is AN INFORMATION REPORT, NOT FINALLY EVALUATED
+INTELLIGENCE REPORT CLASSIFIED SECRET//NOFORN,
+DISSEMINATION
+
+Defense; Federal Aviation Administration (FAA); National Aeronautics
+
+and Space Administration (NASA); US Air Force: US Army: US Marine
+Corps; US Navy.
+
+U.S, MISSION: (U) None,
+
+MILITARY: (U) Air Force: CENTCOM; SOCOM: Navy: Army: Marine Corms.
+
+STATE/LOCAL: (U) None,
+LASSIFICATION====s==s=s==cesssseseese=:
+
+ae ON: 50X1-HUM
+
+#0000
+COLLECTION MANAGEMENT CODE: BG
+
+BK
+
+RD
+
+DF
+
+DG
+U.S. CITIZEN: U.S, NO
+
+Classification Instruction
+REPORTER:
+1.4¢
+~ Extended Metadata
+
+PUBLIC NOTE:
+INTERNAL NOTES:
+BE NUMBER:
+
+LATERAL CHPIIBR 6-049 to MOR 26-0081 Approved for Release to AARO 03/28/26 000006
+es 67
+
+6/1/22, 11:23 AM
+
+USCENTCOM MDR 26-0049 to MDR 26-0061
+IC, (D)(6
+
+Latitude
+
+Record Preview
+
+Longitude
+
+Approved for Release to AARO
+
+Declassified by MG Richard A.
+USCENTCOM Chief of Staff
+Declassified on: 20 March 2026 |
+
+03/26/26 000007
+
+7

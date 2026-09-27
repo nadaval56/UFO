@@ -347,7 +347,11 @@
 
     // English OCR collapsible — contains both the excerpt and the full text.
     // Show the wrap if either field exists; show each inner sub-section by data.
-    const hasEn = !!(f.text_preview_en || f.text_en);
+    // The full OCR lives in its own file (data/text/*.txt, see
+    // scripts/split_fulltext.py) so the manifest stays small; fetch it only
+    // when the reader opens this section. Inline text_en is still honoured.
+    const hasFull = !!(f.text_en || f.text_en_path);
+    const hasEn = !!(f.text_preview_en || hasFull);
     el.ocrEnWrap.hidden = !hasEn;
     if (f.text_preview_en) {
       el.ocrEnSection.hidden = false;
@@ -355,11 +359,27 @@
     } else {
       el.ocrEnSection.hidden = true;
     }
+    el.ocrFullSection.hidden = !hasFull;
     if (f.text_en) {
-      el.ocrFullSection.hidden = false;
       el.ocrFullBody.textContent = f.text_en;
-    } else {
-      el.ocrFullSection.hidden = true;
+    } else if (f.text_en_path) {
+      let loaded = false;
+      const load = async () => {
+        if (loaded || !el.ocrEnWrap.open) return;
+        loaded = true;
+        el.ocrFullBody.textContent = "טוען…";
+        try {
+          const res = await fetch(f.text_en_path);
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          el.ocrFullBody.textContent = await res.text();
+        } catch (err) {
+          loaded = false;   // allow a retry on the next open
+          el.ocrFullBody.textContent = "טעינת הטקסט המלא נכשלה. נסו לסגור ולפתוח שוב.";
+          console.warn("full OCR text unavailable", err);
+        }
+      };
+      el.ocrEnWrap.addEventListener("toggle", load);
+      load();   // in case the section is already open
     }
   }
 

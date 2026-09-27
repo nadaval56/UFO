@@ -1,0 +1,479 @@
+Misrep 9381202
+
+Narrative
+
+(elo alnididdestaa each)
+
+AT 0217Z, TOOK OFF FROM AT 0229Z, [14a HANDED OVER
+
+FROM THE[_14a___ PROCEEDED TO FRAGGED TASKING TO SUPPORT DATA MASKED.
+
+AT 0217Z, [44a WAS 7-LINED TO SUPPORT DATA MASKED. [14a DID NOT ARRIVE
+ONSTATION AT 38S MB 48[1.4a|861.4a|(SEE ON/OFF-STATION 1).
+
+AT 0355Z,[ 14a JWAS 7-LINED TO SUPPORT DATA MASKED. [44a |ARRIVED ON-STATION AT
+0431Z, CHECKED IN WITH DATA MASKED, AND PERFORMED FMV/SIGINT COLLECTION AT
+37S FU 81[1.4al06[1.4a|(SEE ISR 2).
+
+AT 0539Z, | 14a |WAS 7-LINED TO SUPPORT DATA MASKED. [14a JARRIVED ON-STATION AT
+0805Z, CHECKED IN WITH DATA MASKED, AND PERFORMED FMV/SIGINT COLLECTION AT
+38S MB 48)1,4a|86[1.4a|(SEE ISR 3).
+
+AT 2153Z,[ 14a OBSERVED AN UNIDENTIFIED AERIAL PHENOMENON AT 37D ST 69{1 4a]
+07[14a\(SEE UAP 1).
+
+AT 1933Z,[ 14a JRETURNED TO BASE. AT 2254Z, [14a HANDED BACK TO THE AT 2319Z,
+[44a LANDED AT FULL MOTION VIDEO WAS EXPLOITED BY
+
+SALE IetDO)-Mivoiond
+
+( SS Raa iterated yet)
+AT 0217Z, TOOK OFF FROM AT 0229Z, [14a HANDED OVER
+FROM THE[_14a__ [PROCEEDED TO FRAGGED TASKING TO SUPPORT DATA MASKED.
+
+AT 0217Z, [44a WAS 7-LINED TO SUPPORT DATA MASKED. [14a DID NOT ARRIVE
+ONSTATION AT 38S MB 48[4.4a|861.4a|(SEE ON/OFF-STATION 1).
+
+AT 0355Z,[ 14a JWAS 7-LINED TO SUPPORT DATA MASKED. [44a JARRIVED ON-STATION AT
+0431Z, CHECKED IN WITH DATA MASKED, AND PERFORMED FMV/SIGINT COLLECTION AT
+37S FU 81[1.4al06[1.4a|(SEE ISR 2).
+
+AT 0539Z,[ 1.4a |WAS 7-LINED TO SUPPORT DATA MASKED. | 14.4a |ARRIVED ON-STATION AT
+
+3.5c, (b)(6
+
+USCENTCOM MDR 25-0072 eae Soa 06/02/2025 000001
+
+Approved for Release to AARO =&@8-@eayie
+
+0805Z, CHECKED IN WITH DATA MASKED, AND PERFORMED FMV/SIGINT COLLECTION AT
+38S MB 48/1 4al86/1.4al(SEE ISR 3).
+
+AT 1933Z, [44a JRETURNED TO BASE. AT 2254Z,[ 14a HANDED BACK TO THE[ 74a JAT 23192,
+[44a LANDED AT[44a_JFULL MOTION VIDEO WAS EXPLOITED BY
+
+Admin
+
+CLASSIFICATION
+
+¢ Classification: SS@Reah
+
+¢ Associated Caveats: M@E@Rau
+
+¢ Classification Source (MS or Classification Guide ID): MS
+* Declassification Date (YYYYMMDD): 20481109
+
+OPERATION
+
+¢ Operation: INHERENT RESOLVE
+¢ Domain: AIR
+¢ Operations Center: 609th
+
+¢ Major Command (MAJCOM):
+¢ Combatant Command (COCOM): USCENTCOM
+
+MSGID
+
+¢ Report Type: MISREP
+
+* Originator (Unit or Squadron):
+¢ Submit Date:
+
+MSNID
+
+¢ Tasking Order (ATO):
+
+¢ Mission Type: ISR
+
+¢ ATO Mission Number:
+
+¢ Country Tasked: US - UNITED STATES
+¢ Service Tasked: A - AIR FORCE
+
+Poc
+3.5c. (b\(6
+USCENTCOM MDR 25-0072 SRS eoron 06/02/2025 000002
+
+Approved for Release to AARO -ahmt@bleheysiatylien
+
+¢ Aircraft Tail Number(s):
+
+¢ Takeoff Location (ICAO Code):
+¢ Takeoff Time DTG: 090217:00ZNOV23
+* Mode 3 (IFF Codes):
+
+¢ Gentext/Additional Details:
+
+¢ Mission Canceled:
+
+Landing
+
+¢ Last Land Location (ICAO Code):
+¢ Last Land Time:
+
+¢ Last Engine Shutdown Time: 1.4a
+¢ Total Mission Time: 1.4a
+
+¢ Gentext/Additional Details:
+
+On Station
+
+¢ Time On Station DTG:
+
+* Callsign:[ 14a sid
+
+¢ JTAR Number: -
+
+¢ Killbox (Location): -
+
+¢ Mission Type: ISR
+
+¢ JTAC Callsign:
+¢ Gentext/Additional Details:
+
+¢ Did not Arrive On Station: On
+
+Off Station
+
+¢ Time Off Station DTG:
+¢ Total Time On Station:
+¢ Gentext/Additional Details:
+
+On Station
+
+¢ Time On Station DTG: 09043 1:00ZNOV23
+
+° Callsign: [14a
+¢ JTAR Number: -
+
+¢ Killbox (Location): -
+¢ Mission Type: ISR
+
+¢ JTAC Callsign:
+¢ Gentext/Additional Details:
+
+¢ Did not Arrive On Station:
+
+3.5c, (b)(6
+
+USCENTCOM MDR 25-0072 Rone 06/02/2025 000005
+
+Approved for Release to AARO maint aehtiiateiem
+
+Off Station
+
+¢ Time Off Station DTG: 090554:00ZNOV23
+¢ Total Time On Station: | hour 23 minutes
+¢ Gentext/Additional Details:
+
+ISR
+
+Time-on Station DTG: 09043 1:00ZNOV23
+
+Time-off Station DTG: 090554:00ZNOV23
+
+Aircraft Callsign:
+
+Msn Type:
+
+Primary Sensor: FMV
+
+Sensors Available:
+
+Tasking Type: Dynamic
+
+Tasking or Request Number (JTAR#, AEM#, PRI#, or TIC#): DATA MASKED
+BE Number (if NTISR): -
+
+Tasked Start Point: 37S FU 81/1.4a|06(1.4a]
+
+Activity Description: TARGET DEVELOPMENT
+
+FMV or Image File Name (if NTISR): -
+
+EEIs Observed: Yes
+
+Number of EEIs: 1
+
+Global Campaign Plan: GCP - VEO (violent extremist group)
+
+GENTEXT/ISR
+
+© Gentext: GECREE Rb Oa Geeiiakas
+UPON ARRIVAL TO THE SP AT 0431Z, [14a JOBSERVED NO EEI RELATED ACTIVITY. AT
+
+0528Z, IT WAS 1X VEHICLE PARKED E OF COI WAS ASSESSED AS A PROB IMINT MATCH TO
+VOI. AT 0539Z, [44a RECEIVED A NEW TASKING. | 4.4a JIREMAINED ONTGT UNTIL PUSHING
+TO NEW COORDS AT 05542.
+
+(ESD ETUDE TOGA ES
+
+ISR ASSET UTILIZATION
+
+¢ Supported Unit:
+
+¢ Supported Operation: INHERENT RESOLVE
+¢ Precoord Time: -
+
+¢ Precoord Effectiveness: SATISFACTORY
+
+WEATHER
+
+¢ Weather: (UNCLASSIFIED)
+
+3.5c, (b)(6
+
+USCENTCOM MDR 25-0072 Bae Saas 06/02/2025 000006
+
+Approved for Release to AARO smulestealhtenlltelben
+
+CLEAR WX
+(UNCLASSIFIED)
+
+EFFECTIVENESS
+
+Tasker:
+Intel Gap Filled?: Yes
+Gentext: (UNCLASSIFIED)
+
+SATISFACTORY
+(UNCLASSIFIED)
+
+On Station
+
+Time On Station DTG: 090805:00ZNOV23
+Callsign:
+
+JTAR Number: -
+
+Killbox (Location): -
+
+Mission Type: ISR
+
+JTAC Callsign:
+Gentext/Additional Details:
+
+Did not Arrive On Station:
+
+Off Station
+
+Time Off Station DTG: 091933:00ZNOV23
+Total Time On Station: 11 hours 28 minutes
+Gentext/Additional Details:
+
+ISR
+
+Time-on Station DTG: 090805:00ZNOV23
+Time-off Station DTG: 091933:00ZNOV23
+
+Aircraft Callsign:
+
+Msn Type:
+
+Primary Sensor: FMV
+
+Sensors Available:
+
+Tasking Type: Dynamic
+
+Tasking or Request Number (JTAR#, AEM#, PRI#, or TIC#): DATA MASKED
+BE Number (if NTISR): -
+
+Tasked Start Point: 38S MB 48[1.4a|86{1.4a|
+Activity Description: TARGET DEVELOPMENT
+FMV or Image File Name (if NTISR): -
+
+EEIs Observed: Yes
+
+3.5c, (b)(6
+
+USCENTCOM MDR 25-0072 BESS Sore
+
+Approved for Release to AARO s=ia@ie:@xaie:
+
+06/02/2025 000007
+
+¢ Number of EEIs: 2
+¢ Global Campaign Plan: GCP - VEO (violent extremist group)
+
+GENTEXT/ISR
+
+* Gentext: 2S eee eee
+UPON ARRIVAL TO THE BUILDING AT 0805Z, | 4.4a JOBSERVED 1X WHITE SUV WITH A
+
+REAR MOUNTED TIRE, ASSESSED TO BE PROB VOI WAS PARK ON THE N SIDE. 1X ADM
+ASSESSED TO BE PROB POI WAS INTERNAL TO THE BUILDING. ASSESSMENT, SLANT AND
+DISPOSITION DERIVED FROM [ 1.4a |S2. FROM 0805Z - 1552Z, | 1.4a |CONDUCTED A 6X STOP
+FOLLOW ON PROB VOI AND POI REULTING IN EEI RELATED ACTIVITY. DURING STOP 2, AT
+0926Z, PROB POI AND 1X ADM EXITED THE S SIDE OF RESIDENCE AND ENTERED THE
+FRONT LEFT AND RIGHT OF THE PROB VOI. AT 0939Z, [14a |RECIVIED A PROB MATCH TO
+THE 1X ADM WHO EXITED THE S SIDE OF THE RESIDENCE AND ENTERED THE FRONT
+RIGHT OF THE PROB VOI. UPON LOST OF PID, |4.4a JRESET BACK TO f.4dAT 1632Z AND
+OBSERVED NO EEI RELATED ACTIVITY. AT 1719Z, 2X PREV OBSERVED ADMS WAS
+ASSESSED TO BE POSS IMINT MATCH TO POI AND PROB TO POI. AT 1933Z, [ 1.4a |RTB
+WITHOUT ADDITIONAL EEI TO REPORT.
+
+ioieselaceihiimienitiealsitinteiabsciachis)
+
+ISR ASSET UTILIZATION
+
+¢ Supported Unit:
+¢ Supported Operation: INHERENT RESOLVE
+
+¢ Precoord Time: -
+¢ Precoord Effectiveness: SATISFACTORY
+
+WEATHER
+
+¢ Weather: (UNCLASSIFIED)
+CLEAR WX
+(UNCLASSIFIED)
+
+EFFECTIVENESS
+
+¢ Tasker:
+¢ Intel Gap Filled?: Yes
+¢ Gentext: (UNCLASSIFIED)
+
+SATISFACTORY
+(UNCLASSIFIED)
+
+UAP
+
+USCENTCOM MDR 25-0072 SeeRE aero 06/02/2025 000008
+
+Approved for Release to AARO -ahmt@blekGobebiateis
+
+¢ Initial Contact DTG: 092153:00ZNOV23
+
+¢ UAP Event Type: UAP Incident
+
+¢ UAP Maneuverability Observations: NONE
+
+¢ UAP Response to Observer Actions: NO
+
+¢ MDS Type / Asset Type:
+
+¢ Tail Number:
+
+¢ Friendly Aircraft Location: 37S ET 34/1.4a|09[1.4al
+
+¢ Friendly Aircraft Altitude/Depth:
+
+¢ Friendly Aircraft Trajectory: SOUTHEAST
+
+¢ Observer Assessment of UAP: Benign
+
+¢ Friendly Aircraft Speed:
+
+¢ Observation Interrogation of UAP (yes/no; if yes list sensor(s) and returns):: NO
+¢ Third-party Observers and/or Reporters: NONE
+
+¢ Friendly Aircraft State:
+
+¢ Training Range (If applicable):
+
+¢ Operational Range:
+
+¢ UAP Physical State: Solid
+
+umber of UAP Sighted:
+
+AP Propulsion Means: UNK
+
+AP Payload:
+
+AP Under Intelligent Control (yes/no; if yes, describe): NO
+AP Signatures:
+
+¢ UAP Advanced Capabilities And/Or Materials (yes/no; if yes, describe): YES, TRAVELED
+~424KN CONSISTANTLY FOR AT LEAST 7MINS IN THE SHAPE OF A BOUNCY BALL.
+¢ UAP RF Frequency: NONE
+
+¢ UAP RF Duration: N/A
+
+UAP Event Serial Number: 092153ZNOV2023-CENTCOM
+UAP Effects on Persons: NO
+
+¢ UAP Objects/Material Recovered (yes/no; if yes, describe): NO
+UAP Effects on Equipment: NONE
+
+¢ Full Name:
+
+¢ Rank/Grade:
+
+* Email:
+
+¢ Phone Number (VOSIP/STE):
+
+¢ Observer Engagement of UAP (yes/no; if yes, describe): NO
+¢ First Coordinate: 37DST691.4a] 7/1.4al
+
+¢ First Seen Radius: 5
+
+¢ Last Accuracy: Estimated
+
+¢ Last Coordinate: 37SFT28(1 4a] 3[1.4a]
+
+e Last Seen Radius: 10
+
+¢ Kinetic Altitude Accuracy: Estimated
+
+¢ Kinetic Altitude: 170
+
+* Kinetic Depth Accuracy: Estimated
+
+Zz
+
+e
+G eaec
+
+3.5c, (b)(6
+
+USCENTCOM MDR 25-0072 CaS aS ore! 06/02/2025 000009
+
+Approved for Release to AARO snfateblehoyiiatyie
+
+Kinetic Depth:
+
+Kinetic Velocity Accuracy: Estimated
+
+Kinetic Velocity: 424KN
+
+Kinetic Trajectory Accuracy: Estimated
+
+Kinetic Trajectory:
+
+UAP Date of DoD Acquisition: 092153:00ZNOV23
+
+UAP Reaction to Observation, Interrogation, Engagement (yes/no; if yes, describe): NO
+UAP Anomalous Characteristics/ Behaviors: N/A
+
+First Accuracy: Estimated
+
+Call Sign:
+
+UAP First Seen Location:
+
+UAP Last Seen Location:
+
+UAP Altitude, Depth, Velocity, and Trajectory (indicate estimated or measured):
+
+GENTEXT/UAP
+
+* UAP Description (e.g., size, shape, color, markings, recognizable features): SHOWED AS
+
+¢ Gentext (UAP Event Description): GEGREEENOEORRS
+WHILE RTB AT 2153Z,| 4.44 |JOBSERVED 1X PROB HC UAP SHAPED AS A BOUNCY BALL
+
+COME FROM THE SOUTH AT NEAR CO-ALT. | 4.4a ]OBSERVED THE PROB UAP DROP
+ALTITUDE AND SAFELY PASS THEIR AIRCRAFT WHILE CONSISTANTLY MAINTAINING
+~424KN. AFTER 7MIN OF WATCHING, THE PROB UAP BECAME OUT OF RANGE AND
+CARRIED ON THEIR RTB. NO EMISSIONS CAME FROM THE PROB UAP, UAP WAS NOT
+CONSIDERED A THREAT TO THE AIRCRAFT OR PUBLIC SAFETY, AND THE UAP HAD NO
+EFFECTS ON THE AIRCREW.
+
+3.5c, (b)(6
+USCENTCOM MDR 25-0072 SPOR ere 06/02/2025 000010
+
+Approved for Release to AARO min@ies@yayien

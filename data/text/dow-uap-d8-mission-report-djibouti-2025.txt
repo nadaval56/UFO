@@ -1,0 +1,8 @@
+GENTEXT/UAP
+
+¢ UAP Description (e.g., size, shape, color, markings, recognizable features): @@@GRB2= Ramee
+hoe AT | 653 Z, 1.4(a) | OBS 2X ROUND WHITE HOT UAPS
+DYNAMIC SOUTH AT APPROX 240NM/HOUR IVO 35SQT3423692957.
+
+¢ Gentext (UAP Event Description): G@@RBRROnS Sree) AT 1653Z,
+1.4(a) | OBS 2X UAPS DYNAMIC SOUTH AT APPROX 240NM/HOUR IVO 35SQT3423692957.

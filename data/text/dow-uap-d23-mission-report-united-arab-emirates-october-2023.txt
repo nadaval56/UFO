@@ -1,0 +1,566 @@
+Misrep undefined-9319618
+
+Narrative
+
+(GROREEAMOROREG
+
+GEORERRtintetserei) ATOOISZ,[ 14a [TOOK OFF FROM AL DHAFRA
+(OMAM).
+
+GPCR ER Beware yPy) AT 0030Z, HANDED OVER FROM THE LRE.
+
+CRCRE RETO CUT vey) AT 0145Z,| 14a | RECEIVED A PROFESSIONAL GUARD CALL.
+SEE GUARD CALL LINE 1.
+
+(GEOREEint Os Grteshie) FROM 0150Z TO 2019Z,! 14a |COLLECTED SIGINT VIA
+AIRHANDLER.
+
+(GEOReereae) AT ()155Z,/ 14a |WAS ON STATION IN SRO TRACK IRISH
+SICKLE.
+
+(GhieilihdiibealiGeebiiiha FROM 0155Z TO 1837Z,| 14a |CONDUCTED IMINT ISO OP
+SPARTAN SHIELD (OP[______14a_—S——=sd| SEE ISR. LINE 1.
+
+nenmmmeenene) AT 0241Z,| 1.42 |OBSERVED 1X UAP. SEE UAP LINE 1.
+(GBORBEHNOHORM AT 03227,| 14a [OBSERVED 1X UAP. SEE UAP LINE 2.
+(GEER AT 18377, | 1.42 |WAS CLEARED TO RTB.
+(GECREEHRResereEy) AT 19127, | 14a | WAS OFF STATION.
+
+(GEER ae ssGeeN) AT 2019Z,| 14a HANDED BACK TO THE LRE.
+(GEGREEMRaikOss Greeti) AT 2058Z,| 14a [LANDED AT OMAM. FMV WAS EXPLOITED
+
+BY DGS-2.
+(SEGRETEARMORGP)
+
+(GAREEEDO) Mission Narrative
+
+SEP GEeRy
+USCENTCOM MDR 25-0104 Approved for Release to AARO - P33 @""tsuppies 09/12/25 000001
+
+Admin
+
+CLASSIFICATION
+
+° Classification: S2@RET
+
+* Associated Caveats: N@BRO@RM
+
+¢ Classification Source (MS or Classification Guide ID): MULTIPLE SOURCES
+* Declassification Date (YYYYMMDD): 20481025
+
+OPERATION
+
+* Operation: OP SPARTAN SHIELD
+
+¢ Domain: AIR
+
+* Operations Center: 609th
+
+* Major Command (MAJCQM): ACC
+
+* Combatant Command (COCOM): USCENTCOM
+
+MSGID
+
+* Report Type: MISREP
+¢ Originator (Unit or Squadron); SOATKS
+* Submit Date:
+
+MSNID
+
+* Tasking Order (ATO): UR
+
+¢ Mission Type: ISR
+
+¢ ATO Mission Number:
+
+* Country Tasked: US - UNITED STATES
+¢ Service Tasked: A - AIR FORCE
+
+Poc
+
+POC
+* Rank: AIC
+
+* Full Name3|5c,(b)(3), 130b, (b)(6)
+
+* Unit: 50TH ATKS
+
+© Wing: 432 AEW
+
+¢ Phone Number: [_ 3.5c.iby6)_|
+
++ Email:
+
+3.5c, (by(6
+
+SSERSINOPORR
+USCENTCOM MDR 25-0104 Approved for Release to AARO S3@@@===upples
+
+09/12/25 000002
+
+¢ Service: Air Force
+* Operations Center: 609 CAOC
+
+OC
+¢ Rank: Ctr
+
+° Full Name:| 3.5¢, (b}(6) |
+
+* Unit: PAROC
+
+* Wing: Other
+
+* Phone Number:[_ 3.5c,(by(6)_|
+
+*Email:{ 3. Seb)
+
+¢ Service: Air Force
+¢ Operations Center: Other
+
+APPROVER
+
+¢ Rank: SrA
+
+¢ Full Namesc, (b)(3), 130b, (b\6)
+
+* Unit: ISRD/ACF/UnitSupport
+
+* Wing: Other
+
+* Phone Number:| 3.5, (6y(6) |
+
+* Emaik{ 3.5. (by)
+¢ Service: Air Force
+
+¢ Operations Center: 609 CAOC
+
+INGEST
+
+* Rank:
+
+¢ Full Name:
+
+¢ Unit:
+
+* Wing:
+
+* Phone Number:
+
+¢ Email:
+
+* Service:
+
+* Operations Center:
+
+ACEQUIP
+
+ACEQUIP
+e Aircraft Callsign:| 14a
+
+* Radar Name or Destination: -
+
+SSR ASM
+USCENTCOM MDR 25-0104 Approved for Release to AARO S8@@@stteepphes 09/12/25 000003
+
+Radar Software Load or Mission Data: -
+Radar Warning Receiver (RWR) Name or Designator: -
+RWR Software Load or Mission Data: -
+
+e MWS Name or Designator: -
+
+MWS Software Load or Mission Data: -
+IRCM Name or Designator: -
+
+IRCM Software Load or Mission Data: -
+
+ECM Name or Designator: -
+
+ECM Software Load or Mission Data: -
+
+* CMD Name or Designator: -
+
+Chaff Designator: -
+
+Num Chaff or Cartridges: -
+
+Flare Designator: -
+
+Num Flares: 0
+
+Towed Decoy Name or Designator: -
+
+Towed Decoy Software Load or Mission Data: -
+Num Towed Decoys: -
+
+Type of Radar-Guided AAM: -
+
+Num Radar-Guided AAM: -
+
+Type of IR-Guided AAM: -
+
+Num IR-Guided AAM: -
+
+Gun Name or Designator: -
+
+Num Gun Rounds: -
+
+Air-to-Ground Wpn to Include Num of Each: -
+TGT Pod Name or Designator: ANDAS1
+Additional Avionics: AH\GMESH
+
+Data Link: -
+
+Gentext:
+
+Timeline
+
+Takeoff
+Callsign ize]
+
+Numbher of Aircraft: 1
+
+Asset Type (Aircraft):
+
+Aircraft Tail Number(s):
+Takeoff Location (ICAO Code): OMAM
+Takeoff Time DTG: 240015:00ZOCT23
+Mode 3 (IFF Codes):
+Gentext/Additional Details:
+
+Mission Canceled:
+
+| 3.5¢, (b}(6}
+
+CSSREEMSreR
+USCENTCOM MDR 25-0104 Approved for Release to AARO -®@@G""=3=appies 09/12/25 000004
+
+Landing
+
+* Last Land Location (ICAO Code}: OMAM
+
+* Last Land Time: 242058:00ZOCT23
+
+¢ Last Engine Shutdown Time: 242108:00ZOCT23
+* Total Mission Time: 20 hours 43 minutes
+
+* Gentext/Additional Details:
+
+On Station
+
+¢ Time On Station DTG: 240155:00Z0CT23
+* Callsign:
+
+¢ JTAR Number: -
+
+* Killbox (Location): -
+
+* Mission Type: ISR
+
+¢ JTAC Callsign: -
+
+* Gentext/Additional Details:
+
+¢ Did not Arrive On Station:
+
+Off Station
+
+* Time Off Station DTG: 241912:00ZO0CT23
+* Total Time On Station: 17 hours 17 minutes
+¢ Gentext/Additional Details:
+
+ISR
+
+SSCREDVAOT SRN
+USCENTCOM MDR 25-0104 Approved for Release to AARO -® 3 ==" 2 =appes 09/12/25 000005
+
+GENTEXT/ASR
+* Gentext:39REP FROM 0155Z TO 1837Z,[—t.4a_—_|CONDUCTED IMINT
+
+SUPPORTING NAVCENT ISO OP SPARTAN SHIELD [VO 40RBP54i4ab a 4a]
+
+PLEASE REFERENCE THE FOLLOWING LINK FOR POST MISSION ISR PRODUCTS45c, (by)
+
+3.5c, (b)(6)
+
+ISR ASSET UTILIZATION
+
+¢ Supported Unit: NAVCENT
+
+* Supported Operation: OP SPARTAN SHIELD (OP[__ 14a
+¢ Precoord Time: 154 MINUTES
+
+* Precoord Effectiveness: SATISFACTORY
+
+WEATHER
+* Weather: (@isiy) WEATHER WAS NOT A FACTOR
+
+EFFECTIVENESS
+
+* Tasker:
+* Intel Gap Filled?: No
+* Gentext:
+
+GUARDCALL
+
+* GUARDCALL DTG: 240145:00ZOCT23
+
++ Aircraft Callsign:
+
+* Ground Station Callsign: IRANIAN_AIR_ DEFENSE
+* Aircraft Location: 40RBPOO.4aP 71.4al
+
+¢ Aircraft Heading: 031M
+
+* Aircraft Altitude: FL230
+
+¢ Aircraft Airspeed: 1S8KIAS
+
+* Number of Calls Noted from the Same Agency: |
+
+* Guardcall Tone: Professional
+
+GENTEXT/GUARDCALL
+
+° Gentext: isi) ATO145Z,[— 4a SS «J RECEIVED 1X GUARD CALL FROM
+IRANIAN AIR DEFENSE STATING "MAINTAIN SAFE DISTANCE FROM BORDER". CALL WAS
+
+PROFESSIONAL. |_1.4a JRESPONDED "THIS IS A COALITION AIRCRAFT CONDUCTING
+ROUTINE OPERATIONS IN INTERNATIONAL AIRSPACE". AT 0145Z, THE CALLS FROM
+
+PSEA REN
+USCENTCOM MDR 25-0104 Approved for Release to AARO - S@@@=szappies 09/12/25 000006
+
+IRANIAN AIR DEFENSE CEASED,
+
+UAP
+
+Initial Contact DTG: 240241 :00ZOCT23
+
+UAP Event Type: UAP Incident
+
+UAP Maneuverability Observations: NONE
+
+UAP Response to Observer Actions: UNK
+
+MDS Type / Asset Type: UNK
+
+Tail Number:
+
+Friendly Aircraft Location: 39RYJ9Qi.4a4%1 4a]
+
+Friendly Aircraft Altitude/Depth: FL243
+
+Friendly Aircraft Trajectory: 280 DEGREES
+
+Observer Assessment of UAP: Benign
+
+Friendly Aircraft Speed: 162 KTAS
+
+Observation Interrogation of UAP (yes/no; if yes list sensor(s) and returns):: UNK
+Third-party Observers and/or Reporters: UNK
+
+Friendly Aircraft State:
+
+Training Range (If applicable): UNK
+
+Operational Range: UNK
+
+* UAP Physical State: Solid
+
+* Number of UAP Sighted:
+
+¢ UAP Propulsion Means: UNK
+
+¢ UAP Payload:
+
+* UAP Under Intelligent Control (yes/no; if yes, describe): NO
+¢ UAP Signatures: THERMAL SHOWED COLD
+
+¢ UAP Advanced Capabilities And/Or Materials (yes/no; if yes, describe): UNK
+* UAP RF Frequency: UNK
+
+¢ UAP RF Duration: UNK
+
+¢ UAP Event Serial Number; UNK
+
+*« UAP Effects on Persons: NO
+
+* UAP Objects/Material Recovered (yes/no; if yes, describe}: UNK
+UAP Effects on Equipment; UNK.
+
+Full Name:
+
+Rank/Grade:
+
+¢ Email:
+
+Phone Number (VOSIP/STE):
+
+Observer Engagement of UAP (yes/no; if yes, describe): NO
+First Coordinate: 39RYJ7411 4al741.4al
+
+First Seen Radius: 5
+
+Last Accuracy: Estimated
+
+Last Coordinate: 39RYJ7414al/ 41 4al
+
+Last Seen Radius: 5
+
+*
+
+D3 se tbygy
+
+SzSREEMMereRM
+USCENTCOM MDR 25-0104 Approved for Release to AARO - @@@G==iteappies 09/12/25 000007
+
+Kinetic Altitude Accuracy: Estimated
+
+Kinetic Altitude: UNK
+
+Kinetic Depth Accuracy: Estimated
+
+Kinetic Depth; UNK
+
+Kinetic Velocity Accuracy: Estimated
+
+Kinetic Velocity: 320 MPH
+
+Kinetic Trajectory Accuracy: Estimated
+
+Kinetic Trajectory: UNK
+
+UAP Date of DoD Acquisition: 240241:00ZOCT23
+
+UAP Reaction to Observation, Interrogation, Engagement (yes/no; if yes, describe): UNK
+UAP Anomalous Characteristics/ Behaviors: UNK
+
+First Accuracy: Estimated
+
+UAP First Seen Location:
+
+UAP Last Seen Location:
+
+UAP Altitude, Depth, Velocity, and Trajectory (indicate estimated or measured):
+
+GENTEXT/UAP
+
+¢ UAP Description (e.g., size, shape, color, markings, recognizable features): UNK
+* Gentext (UAP Event Description): @@8AT 0241Z,[ 1.4a JOBSERVED 1X UAP IVO
+39RXK641. 426 Si 4a]
+
+UAP
+
+* Initial Contact DTG: 240322:00ZOCT23
+
+UAP Event Type: UAP Incident
+
+UAP Maneuverability Observations: NONE
+UAP Response to Observer Actions: UNK.
+MDS Type / Asset Type: UNK
+
+Tail Number:
+
+Friendly Aircraft Location: 39RXK681 4a6 {1.4al
+Friendly Aircraft Altitude/Depth: FL243
+Friendly Aircraft Trajectory: 280 DEGREES
+Observer Assessment of UAP: Benign
+
+Friendly Aircraft Speed: 162 KTAS
+Observation Interrogation of UAP (yes/no; if yes list sensor(s) and returns):: UNK
+Third-party Observers and/or Reporters: UNK
+Friendly Aircraft State:
+
+Training Range (If applicable): UNK
+Operational Range: UNK
+
+UAP Physical State: Solid
+
+¢ Number of UAP Sighted:
+
+3.5¢,{b)(6)
+
+SEGRE SRA
+USCENTCOM MDR 25-0104 Approved for Release to AARO S®@@G==s=appies 09/12/25 000008
+
+¢ UAP Propulsion Means; UNK
+
+* UAP Payload:
+
+* UAP Under Intelligent Control (yes/no; if yes, describe): NO
+
+¢ UAP Signatures: UNK
+
+* UAP Advanced Capabilities And/Or Materials (yes/no; if yes, describe): UNK
+¢ UAP RF Frequency: UNK
+
+¢ UAP RF Duration: UNK
+
+* UAP Event Serial Number: UNK
+
+» UAP Effects on Persons: NO
+
+¢ UAP Objects/Material Recovered (yes/no; if yes, describe}; UNK
+* UAP Effects on Equipment: UNK
+
+Full Name:
+
+Rank/Grade:
+
+e¢ Email:
+
+Phone Number (VOSIP/STE):
+
+Observer Engagement of UAP (yes/no; if yes, describe): NO
+First Coordinate: 39RXL60i1.4al2J1.4al
+
+First Seen Radius: 5
+
+Last Accuracy: Estimated
+
+Last Coordinate: 39RXL6M1.aa2Ji.4al
+
+Last Seen Radius: $
+
+Kinetic Altitude Accuracy: Estimated
+
+Kinetic Altitude: UNK
+
+Kinetic Depth Accuracy: Estimated
+
+Kinetic Depth: UNK
+
+Kinetic Velocity Accuracy: Estimated
+
+Kinetic Velocity: 440 MPH
+
+Kinetic Trajectory Accuracy: Estimated
+
+Kinetic Trajectory: UNK
+
+UAP Date of DoD Acquisition: 240322:00ZOCT23
+
+UAP Reaction ta Observation, Interrogation, Engagement (yes/no; if yes, describe}; UNK
+UAP Anomalous Characteristics/ Bebaviors: UNK
+
+First Accuracy: Estimated
+
+Call Sign
+
+UAP First Seen Location:
+
+UAP Last Seen Location:
+
+UAP Altitude, Depth, Velocity, and Trajectory (indicate estimated or measured):
+
+GENTEXT/UAP
+
+* UAP Description (e.g., size, shape, color, markings, recognizable features): UNK
++ Gentext (UAP Event Description) =<) AT 0322Z,[ 1.44 |OBSERVED 1X UAP IVO
+39RXK6Gi dab T1.4a]
+
+3.5¢, {(by6
+
+BEEBE RSBORY
+USCENTCOM MDR 25-0104 Approved for Release to AARO -®@@G==3=EppeS 09/12/25 000009

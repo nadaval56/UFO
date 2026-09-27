@@ -1,0 +1,315 @@
+Misrep 8799515
+
+Narrative
+
+(b)(1)1.4a, (b)(1)1.4¢
+
+Admin
+
+CLASSIFICATION
+¢ Classification: GSe@Ra
+
+* Associated Caveats: (RET
+* Classification Source (MS or Classification Guide ID): 9 Ei
+* Declassification Date (YYYYMMDD): 20480603
+
+OPERATION
+
+¢ Operation:
+
+¢ Domain:
+
+* Operations Center: QM
+
+¢ Major Command (MAJCOM): AFCENT
+
+¢ Combatant Command (COCOM):
+
+MSGID
+
+¢ Report Type: MISREP
+* Originator (Unit or Squadron): DORE
+¢ Submit Date (Auto-generated):
+
+MSNID
+
+Tasking Order (ATO):
+
+Mission Type: (OY@RRE)
+
+ATO Mission Number:
+
+Country Tasked: US - UNITED STATES
+Service Tasked: A - AIR FORCE
+
+Poc
+
+POC
+
+Rank:
+Full Name:
+Uni: al
+
+Wing: (oy). (Ne) TOUS
+Phone Number:
+
+Ena] TT © mail.smil.mil
+
+Service: Air Force
+
+Operations Center:
+
+b) (6), (b)(3) 10 U-S.C.§130
+
+OC
+
+Rank:
+
+Full Name:
+
+Unit: ll
+
+Wins lil
+
+Phone Number:
+EAI i sii.
+
+Service: Air Force
+
+Operations Center:
+
+APPROVER
+
+Rank:
+
+Full Name
+Unit
+
+Wing:
+
+Phone Number:
+Muerte b) (6), (b)(3) 10 U.S.C.§130b .smil.mil
+
+Service: Air Force
+
+Operations Center:
+
+(b) (6), (b)(3) 10 U.S.C.§ 130]
+
+INGEST
+
+¢ Rank:
+
+Full Name:
+
+¢ Unit:
+
+¢ Wing:
+
+Phone Number:
+Email:
+
+Service:
+Operations Center:
+
+ACEQUIP
+
+ACEQUIP
+
+¢ Aircraft Callsign: QQ)
+
+Radar Name or Destination:
+
+Radar Software Load or Mission Data:
+Radar Warning Receiver (RWR) Name or Designator:
+RWR Software Load or Mission Data:
+¢ MWS Name or Designator:
+
+MWS Software Load or Mission Data:
+IRCM Name or Designator:
+
+IRCM Software Load or Mission Data:
+¢ ECM Name or Designator:
+
+ECM Software Load or Mission Data:
+¢ CMD Name or Designator:
+
+Chaff Designator:
+
+Num Chaff or Cartridges:
+
+Flare Designator:
+
+¢ Num Flares:
+
+‘ OCR
+ee
+PS
+
+¢ Type of Radar-Guided AAM:
+
+¢ Num Radar-Guided AAM:
+
+¢ Type of IR-Guided AAM:
+
+¢ Num IR-Guided AAM:
+
+¢ Gun Name or Designator:
+
+¢ Num Gun Rounds:
+
+¢ Air-to-Ground Wpn to Include Num of Each: Q/@)WZZ)
+
+* TGT Pod Name or Designator iii
+¢ Additional Avionics: RQ) RRE)
+
+¢ Data Link:
+¢ Gentext:
+
+Timeline
+
+Takeoff
+
+° Callsign: (SIE)
+
+¢ Number of Aircraft:
+
+° Asset Type (Aircraft) iii
+
+¢ Aircraft Tail Number(s):
+
+* Takeoff Location (ICAO Code) iii
+
+¢ Takeoff Time DTG: (QYG@)WZE)
+
+¢ Mode 3 (IFF Codes):
+
+¢ Gentext/Additional Details: GEGRES/ REPOS ste Es WEATHER WAS (NOT) A FACTOR
+(EXPLAIN WHY IF IT WAS)
+
+¢ Mission Canceled:
+
+Landing
+
+¢ Last Land Location (ICAO Code):
+¢ Last Land Time: (@@WZz)
+¢ Last Engine Shutdown Time:
+¢ Total Mission Time: (QS) WZ)
+¢ Gentext/Additional Details:
+
+ISR
+
+Time-on Station DTG: (QY@)WE)
+
+Time-off Station DTG: (WE)
+Aircraft Callsign: QE)
+Msn Type:
+Primary Sensor: (Q@ WE)
+Sensors Available: (Q]@)WRE)
+Tasking Type:
+Tasking or Request Number (JTAR#, AEM#, PRI#, or TIC#): -
+BE Number (if NTISR): -
+
+Tasked Start Point: (Q}@ RE)
+
+Activity Description: ISR
+
+FMV or Image File Name (if NTISR): -
+
+EEIs Observed:
+
+Number of EEIs:
+
+(b)(1)1.4a
+
+¢ Global Campaign Plan:
+
+Killbox (Location):
+
+Mission Type:
+JTAC Callsign:
+Gentext/Additional Details:
+Did not Arrive On Station:
+
+Off Station
+
+Time Off Station DTG: (QYQWRE)
+Total Time On Station: (S/@R2)
+Gentext/Additional Details:
+
+UAP
+
+Initial Contact DTC}
+UAP Event Type: (Q)@RRZE)
+
+UAP Maneuverability Observations:
+UAP Response to Observer Actions:
+
+MDS Type / Asset Type ii
+Tail Number: QI@iR
+
+Friendly Aircraft Location; iii
+Friendly Aircraft Altitude/Depth:
+Friendly Aircraft Trajectory:
+
+Observer Assessment of UAP:
+
+Friendly Aircraft Speed:
+
+Observation Interrogation of UAP (yes/no; if yes list sensor(s) and returns)::
+Third-party Observers and/or Reporters:
+Friendly Aircraft State:
+
+Training Range (If applicable):
+
+Operational Range:
+
+UAP First Seen Location:
+UAP Last Seen Location iin
+
+UAP Altitude, Depth, Velocity, and Trajectory (indicate estimated or measured):
+UAP Physical State:
+
+umber of UAP Sighted:
+
+AP Propulsion Means:
+
+AP Payload:
+
+AP Under Intelligent Control (yes/no; if yes, describe):
+
+AP Signatures:
+
+AP Advanced Capabilities And/Or Materials (yes/no; if yes, describe): NO
+AP RF Frequency:
+
+AP RF Duration:
+
+AP Event Serial Number: -
+
+Zz
+
+Geeaeaceace_acd
+
+¢ UAP Effects on Persons:
+
+¢ UAP Objects/Material Recovered (yes/no; if yes, describe):
+¢ UAP Effects on Equipment:
+
+¢ Full Name:
+
+¢ Rank/Grade:
+
+¢ Email:
+
+¢ Phone Number (VOSIP/STE):
+
+GENTEXT/UAP
+
+¢ UAP Description (e.g., size, shape, color, markings, recognizable features): 4X UAP OBSERVED
+FLYING IN fj FOV. CLOUD COVERAGE OBSTRUCTED [jj FROM FOLLOWING AND
+GETTING A CLEAR VISUAL. (SEE ISR 1).
+
+¢ Gentext (UAP Event Description): AT APPROX 1736Z 4 UAP WERE OBSERVED BENEATH
+(RA 1X UAP OBSERVED AT 17:36:22, 2X UAP OBSERVED SIDE BY SIDE AT 17:36:30, AND 1X
+UAP OBSERVED AT 17:36:49.

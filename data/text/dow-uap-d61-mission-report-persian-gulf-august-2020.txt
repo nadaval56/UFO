@@ -1,0 +1,418 @@
+Dedassified by MG Richard A, Harrison
+USCENTCOM Chief of Staff
+Dedassified on 22 January 2026
+
+Misrep 4685903
+
+Narrative
+
+(Gali) AT 2307Z{ 1.4a |TOOK OFF FROM OKAS. AT 2320Z,[_1.4a HANDED OVER FROM THE
+LRE. FROM 0003Z TO 1917Z,|_1.4a | COLLECTED SIGINT VIA AIRHANDLER. FROM 0041Z TO
+1840Z[ 14a SUPPORTED NAVCENT TO OPERATION| 14a] VO ARABIAN
+GULF, STRAIT OF HORMUZ AND GULF OF OMAN. SEE ISR LINE 1. AT 0532Z,[14a |
+RECEIVED A GUARD CALL. SEE GUARDCALL LINE 1. AT 1527Z,[4.4a |] OBSERVED 1X UNK
+FORMATION. SEE OBSERVATION LINE 1. AT 1840Z,[ 1.42 |WAS CLEARED TO RTB. AT 1944Z,
+[-1.4a JHANDED BACK TO THE LRE. AT 2012Z,| 14a [LANDED AT OKAS. FMV WAS
+EXPLOITED BY DGS1. 21 MISSION HOURS, 17.9 IMINT HOURS, | IMINT TASKING
+PROSECUTED, 19.2 SIGINT HOURS, 1 SIGINT TASKING PROSECUTED, 2 TOTAL TASKINGS
+PROSECUTED
+
+Admin
+
+CLASSIFICATION
+
+* Classification: aa
+
+¢ Associated Caveats: aaa
+
+* Classification Source (MS or Classification Guide ID): MULTIPLE SOURCES
+¢ Declassification Date (YYYYMMDD): 20450301
+
+OPERATION
+
+¢ Operation: 1.4a
+
+¢ Domain: AIR
+
+* Operations Center: 609th
+
+* Major Command (MAJCOM): ACC
+
+« Combatant Command (COCOM): USCENTCOM
+
+MSGID
+
+* Report Type: MISREP
+¢ Originator (Unit or Squadron): 482ATKS
+* Submit Date (Auto-generated):
+
+MSNID
+
+3.5c, (b)(6
+
+———SSSSSSSSEI
+USCENTCOM MDR 26-0019 Approved for Release to AARO 01/26/26 001
+
++ Tasking Order (ATO)| 1.43
+
+* Mission Type: AREC
+
+* ATO Mission Number] 14a _|
+
+» Country Tasked: US - UNITED STATES
+* Service Tasked: A - AIR FORCE
+
+Poe
+
+POC
+
+* Rank: Ist Lt
+
+Full Nanwesb, (b)(3), 130b, (b)(6)
+
+Unit; 482ATKS
+
+Wing: 432 AEW
+
+Phone Number:[__3.5c, (5)(6) _|
+
+* Email:
+Service: Air Force
+
+Operations Center: 609 CAOC
+
+OC
+* Rank: Ctr
+¢ Full Name:|  3.5c, (b)(6)
+
+Unit: 12AF, Det 3, PAROC
+
+« Wing: Other
+
+Phone Number;[ _3.5c, (6) _|
+
++ Email:
+
+* Service: Air Force
+Operations Center: Other
+
+APPROVER
+
+* Rank: Ist Lt
+
+Full Namesfo, (b)(3), 130, (b)(5)
+
+Unit: 609th AOC
+
+« Wing: Other
+
+* Phone Number] ___3.5c,(by6)_|
+
+-Emails{ asc oye)
+« Service: Air Force
+
+Operations Center: 609 CAOC
+
+*
+
+INGEST
+
+a ee iar el
+USCENTCOM MDR 26-0019 Approved for Release to AARO 01/26/26 002
+
+» Rank:
+
+* Full Name:
+
+* Unit:
+
+* Wing:
+
+¢ Phone Number:
+
+« Email:
+
+* Service:
+
+* Operations Center:
+
+ACEQUIP
+
+ACEQUIP
+Aircraft Calisign:[44a__—|
+
+Radar Name or Destination: -
+
+Radar Software Load or Mission Data: -
+Radar Warning Receiver (RWR) Name or Designator: -
+RWR Software Load or Mission Data: -
+
+MWS Name or Designator: -
+
+MWS Software Lead or Mission Data: -
+
+IRCM Name or Designator: -
+
+IRCM Software Load or Mission Data: -
+
+ECM Name or Designator: -
+
+ECM Software Load or Mission Data: -
+
+CMD Name or Designator;: -
+
+Chaff Designator: -
+
+Num Chaff or Cartridges: -
+
+Flare Designator: -
+
+Num Fiares: -
+
+Towed Decoy Name or Designator: -
+
+Towed Decoy Software Load or Mission Data: -
+Num Towed Decoys: -
+
+Type of Radar-Guided AAM: -
+
+Num Radar-Guided AAM: -
+
+Type of IR-Guided AAM: -
+
+Num [R-Guided AAM: -
+
+Gun Name or Designator: -
+
+Num Gun Rounds: -
+
+Air-to-Ground Wpn to Inclnde Num of Each: 1.4(a)
+TGT Pod Name or Designator: ANDAS4
+Additional Avionics: AH_GMESH
+
+Data Link: -
+
+e
+
+°
+
+*
+
+e
+
+*
+
+*
+
+cs
+
+USCENTCOM MDR 26-0019 Approved for Release to AARO
+
+01/26/26 003
+
+Genfext: -
+
+Timeline
+
+Landing
+
+Last Land Location (ICAO Code): OKAS
+
+Last Land Time: 272012:00ZAUG20
+
+Last Engine Shutdown Time: 272022:00ZAUG20
+Total Mission Time: 21 hours 5 minutes
+Gentext/Additional Details: -
+
+Takeoff
+
+Callsign:[____i4a__|
+
+Number of Aircraft: |
+
+Asset Type carer Lise taal
+Aircraft Tail Number(s):
+Takeoff Location (ICAO Code): OKAS
+Takeoff Time DTG: 262307:00ZAUG20
+Mode 3 (IFF Codes): -
+
+Gentext/Additional Details: -
+Mission Canceled:
+
+On Station
+
+Time On Station DTG: 262320:00ZAUG20
+Callsign:|_—14a___—is
+
+JTAR Number: -
+
+Killbox (Location): -
+
+Mission Type: AREC
+
+JTAC Callsign: -
+
+Gentext/Additional Details: -
+
+Did not Arrive On Station:
+
+ISR
+
+*
+
+Time-on Station DTG: 270041 :002AUG20
+Time-off Station DTG: 271840:00ZAUG20
+Aircraft Callsign] i4a__—|
+
+Msn Type: AREC
+
+Primary Sensor: ANDAS4
+
+USCENTCOM MDR 26-0019
+
+ny
+Approved for Release to AARO
+
+01/26/26 004
+
+« Sensors Available: AH\GMESH
+* Tasking Type: PLANNED
+
+* Tasking or Request Number (JTAR#, AEM#, PRI#, or TIC#): -
+
+* BE Number (if NTISR): -
+* Tasked Start Point: 39RUN46h 4 81,4al
+* Activity Description: ISR
+« FMV or Image File Name (if NTISR): -
+
+GENTEXTASR
+* Gentext: MM t4a— [COORDINATED WI
+
+[TH NAVCENT 24 HOURS PRIOR
+
+TO TAKE OFF. PRECOORD WAS SATISFACTORY. AT woe [a ARRIVED ON STATION ISO
+
+NAVCENT TO OPERATION aa_—_—*|TO CHARA
+
+TERIZE IRIN\IRGCN VESSELS,
+
+UAS ACTIVITY, ACTIVITY OUTSIDE OF PORTS, AND TO ESTABLISH PATTERN OF LIFE.
+FROM 0041Z TO 18402Z,[1.4a |] CONDUCTED SCANS IAW THE TARGET DECK IN THE
+ARABIAN GULF (AG), AT 0532Z,[1.4a RECEIVED A GUARID CALL. SEE GUARDCALL LINE 1.
+
+AT 0611Z,[4.4a ]OBSERVED ONE SMALL VESSEL DOCKED
+
+AT GREATER TUNB NAVAL PORT
+
+IVO 40RCQ3 AT 1527Z[_1.4a JOBSERVED 1X UNK| FORMATION. SEE OBSERVATION
+LINE 1. AT 1742Z,[ 1.4a ]OBSERVED 1X PROB NASER WAP BESIDES AN M\T VESSEL IVO
+
+39RUN4GzL4all BOTH VESSELS WERE DEAD IN WATER
+
+(DIW) IVO GRIDS.
+
+ADDITIONALLY, 2X ADULT MALES (ADMS) WERE OBSERVED ON THE REAR DECK OF THE
+PROB NASER WAP. AT 0700Z,[.1.4a JOBSERVED 1X POSS IL-76 CANDID AT ABU MUSA
+
+ISLAND AFLD IVO 40RCPO4faab3.4a] AT 1840Z,["44a ] WAS
+RETURNED TO BASE (RTB).
+
+ISR ASSET UTILIZATION
+« Supported Unit: NAVCENT
+
+* Supported Operation: OPERATION ita
+
+* Precoord Time: 24 HOURS
+¢ Precoord Effectiveness: SATISFACTORY
+
+WEATHER
+
+CLEARED OFF TASKING AND
+
+* Weather: LIGHT CLOUD COVERAGE PREVENTED CONTINUOUS TRACKING OF UAP
+
+EVENT
+
+EFFECTIVENESS
+
+¢ Tasker:
+* Intel Gap Filled?: No
+* Gentext: -
+
+| 3.56, (b)(6}
+
+USCENTCOM MDR 26-0019 Approved for Release to AARO 01/26/26 005
+
+Off Station
+
+Time Off Station DTG: 271944:00ZAUG20
+Total Time On Station: 20 hours 24 minutes
+
+GUARDCALL
+
+cd
+
+GUARDCALL DTG: 270532:00ZAUG20
+
+Aircraft Callsign:[| 14a _|
+
+Ground Station Callsign: IRANIAN AIR DEFENSE
+Aircraft Location: 40ORCP7{1,4a 1.4
+
+Aircraft Heading: 018 M
+
+Aircraft Altitude: FLI50
+
+Aircraft Airspeed: -
+
+Number of Calls Noted from the Same Agency: 1
+Guardcall Tone: PROFESSIONAL
+
+GENTEXT/GUARDCALL
+
+Gentext: MEE) AT 0532Z,[1.4a ]WAS HAILED ON GUARD[_1.4g_|FREQ BY IRANIAN AIR
+
+DEFENSE. ORDERS GIVEN: STANDARD CALL [44a |GAVE A STANDARD RESPONSE. NO
+MISSION IMPACTS
+
+OBSERVATION
+
+°
+
+e
+
+>
+
+Observation DTG: 271527:00ZAUG20
+
+Aircraft Callsign:
+
+Aircraft Location: 39RVM341.4ab 41 al
+
+Aircraft Heading: -
+
+Aircraft Altitude: -
+
+Aircraft Airspeed: -
+
+Relative Bearing or Clock Position: -
+
+Range: -
+
+Killbox & Keypad: -
+
+Observed Activity Location: 39RVM8
+Observed Activity Description: FORMATION OF UNK FLYING OBJECTS
+Method of Observation:[ 44a [SENSOR
+
+GENTEXT/OBSERVATION
+
+Gentext: (S/REE) FROM 1527Z TO 1529Z,[4.4a OBSERVED A FORMATION OF FLYING
+
+OBJECTS TRAVELING NE-NW ALONG THE COAST IVO 39RVM8 (aaa WAS
+TRACKING THIS FORMATION FOR APPROXIMATELY 2 MINUTES BEFORE PID WAS LOST IN
+
+3.5¢, (bX6
+(aS Sa
+
+USCENTCOM MDR 26-0019 Approved for Release to AARO 01/26/26 006

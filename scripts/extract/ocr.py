@@ -140,7 +140,9 @@ def main() -> int:
         # Resume: skip only if BOTH fields already present. text_preview_en
         # alone is from an older run that capped at 3 pages — redo to get
         # full text_en. (Per-page OCR cache still applies, so this is cheap.)
-        if entry.get("text_en") and entry.get("text_preview_en"):
+        # In the published manifest the full text has been moved out to
+        # data/text/ by scripts/split_fulltext.py, leaving text_en_path.
+        if (entry.get("text_en") or entry.get("text_en_path")) and entry.get("text_preview_en"):
             continue
         cjson = class_dir / f"{eid}.json"
         if not cjson.exists():

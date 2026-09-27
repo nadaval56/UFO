@@ -1,0 +1,322 @@
+Misrep 7468013
+Narrative
+a AT 06142, TOOK OFF LATE FROM[_1.4g_]|DUE TO WEATHER AT
+
+THE LRE. AT 0624Z,[ 14a_JHANDED OVER FROM THE LRE. FROM 0640Z TO 0005Z,[_14a_|
+COLLECTED SIGINT VIA AIRHANDLER VERSION 2. FROM 1054Z TO 2100Z,
+SUPPORTED OP[___1.4a___ |IVO 38SMD38{1.4a54i.4a] ISO MAG (SEE ISR 1). (S//REL) AT
+2026Z[_14a_]WAS SCANNING POI IVO 38SMD38i4a54i4al AND PERIODICALLY OBSERVED
+UAPS FLYING SPORATICALLY WITHIN THE TARGET AREA OF 92AS. ACCORDING TO THE
+{4a, 14gMTS, THE UAPs WERE TRAVELLING AT VARIOUS SPEEDS BETWEEN 80-180 MPH. WE
+WERE UNABLE TO DETERMINE ALTITUDE. THE SIZE OF THE UAPs WERE APPROXIMATELY
+1-2 METERS. THE UAPs DID NOT HINDER THE MISSION. (SEE OBS 1) AT 2100Z,[_1.4a_|WAS
+CLEARED TO RTB. AT 0014Z,[_14a_JHANDED BACK TO THE LRE.AT 0039Z, CDR74 LANDED
+AT OKAS. FMV WAS EXPLOITED BY DGS 1.
+
+Admin
+
+CLASSIFICATION
+
+* Classification 3
+
+¢ Associated Caveats: I
+
+* Classification Source (MS or Classification Guide ID): MULTIPLE SOURCES
+* Declassification Date (YY YYMMDD): 20470506
+
+OPERATION
+
+* Operation: INHERENT RESOLVE
+
+* Domain: AIR
+
+* Operations Center: 609th
+
+* Major Command (MAJCOM): ACC
+
+* Combatant Command (COCOM): USCENTCOM
+
+MSGID
+
+* Report Type: MISREP
+¢ Originator (Unit or Squadron): 196 ATKS
+* Submit Date (Auto-generated):
+
+USCENTCOM MDR 26-0084 to 26-0095 Approved for Release to AARO - FOUQ / PA applies 06/30/26 031
+
+MSNID
+
+* Tasking Order (ATO): AA
+
+* Mission Type: RECONNAISSANCE
+
+* ATO Mission Number:
+
+¢ Country Tasked: US - UNITED STATES
+* Service Tasked: A - AIR FORCE
+
+Poc
+
+POC
+* Rank: TSet
+
+* Unit: 163 ATK W
+
+* Wing: 163 AW
+
+¢ Service: Air Force
+* Operations Center: Other
+
+OC
+
+* Rank: Ctr
+
+* Unit: 15AF, Det 1, PAROC
+
+* Wing: Other
+
+¢ Phone Number: _3.5c, (b)(6)_|
+
+* Service: Air Force
+¢ Operations Center: Other
+
+APPROVER
+
+¢ Rank: SSgt
+
+* Unit: ISRD
+
+* Wing: 379 AEW
+
+* Service: Air Force
+* Operations Center: 609 CAOC
+
+USCENTCOM MDR 26-0084 to 26-0095 Approved for Release to AARO - FOUQ / PA applies 06/30/26 032
+
+INGEST
+
+* Rank:
+
+* Full Name:
+
+* Unit:
+
+* Wing:
+
+* Phone Number:
+
+* Email:
+
+* Service:
+Operations Center:
+
+ACEQUIP
+
+ACEQUIP
+Aircraft Callsign:
+
+¢ Radar Name or Destination:
+
+Radar Software Load or Mission Data:
+
+* Radar Warning Receiver (RWR) Name or Designator:
+* RWR Software Load or Mission Data:
+
+* MWS Name or Designator:
+
+« MWS Software Load or Mission Data:
+
+¢ IRCM Name or Designator:
+
+* IRCM Software Load or Mission Data:
+
+* ECM Name or Designator:
+
+* ECM Software Load or Mission Data:
+
+* CMD Name or Designator:
+
+¢ Chaff Designator:
+
+¢ Num Chaff or Cartridges:
+
+¢ Flare Designator:
+
+* Num Flares:
+
+* Towed Decoy Name or Designator:
+
+* Towed Decoy Software Load or Mission Data:
+* Num Towed Decoys:
+
+¢ Type of Radar-Guided AAM:
+
+* Num Radar-Guided AAM:
+
+* Type of IR-Guided AAM:
+
+* Num IR-Guided AAM:
+
+¢« Gun Name or Designator:
+
+* Num Gun Rounds:
+
+* Air-to-Ground Wpn to Include Num of Each:
+* TGT Pod Name or Designator: ANDAS4
+
+* Additional Avionics: AHv2
+
+USCENTCOM MDR 26-0084 to 26-0095 Approved for Release to AARO - FOUQ / PA applies
+
+* Data Link:
+* Gentext:
+
+Timeline
+
+Takeoff
+
+* Number of Aircraft:/ 4b
+
++ Asset Type (Aircraft):[1.4a, 4.49]
+
+* Aircraft Tail Number(s):
+
+¢ Takeoff Location (ICAO Code):{_ 1.49 |
+
+* Takeoff Time DTG: 050614:00ZMAY22
+
+* Mode 3 (IFF Codes): 2232
+
++ Gentext/Additional Details: IEE [14a ]DELAYED TAKEOFF DUE TO WX AT THE
+LRE.
+
+* Mission Canceled:
+
+On Station
+
+Time On Station DTG: 050624:00ZMAY22
+Callsign:| 44a
+
+JTAR Number:
+
+Killbox (Location): 91AS5
+
+Mission Type: RECONNAISSANCE
+
+JTAC Callsign:
+
+Gentext/Additional Details:
+
+Did not Arrive On Station:
+
+Off Station
+
+* Time Off Station DTG: 060014:007MAY22
+* Total Time On Station: 17 hours 50 minutes
+* Gentext/Additional Details:
+
+Landing
+
+* Last Land Location (ICAO Code):
+
+* Last Land Time: 060039:00ZMAY22
+
+¢ Last Engine Shutdown Time: 060049:00ZMAY22
+* Total Mission Time: 18 hours 25 minutes
+
+* Gentext/Additional Details:
+
+USCENTCOM MDR 26-0084 to 26-0095 Approved for Release to AARO - FOUQ / PA applies 06/30/26 034
+
+ISR
+
+* Time-on Station DTG: 051054:00ZMAY22
+* Time-off Station DTG: 052100:00ZMAY22
+* Aircraft Callsign:
+
+¢ Msn Type: RECON
+
+¢ Primary Sensor: ANDAS4
+
+* Sensors Available: AHv2
+
+* Tasking Type: Planned
+
+¢ Tasking or Request Number (JTAR#, AEM#, PRI#, or TIC#):| 1.42 |
+« BE Number (if NTISR):
+
+* Tasked Start Point: 38SMD38[i 4a 4i1,4al
+
+* Activity Description: ISR
+
+¢ FMV or Image File Name (if NTISR):
+
+¢ EEIs Observed:
+
+* Number of EEIs:
+
+GENTEXT/ISR
+
+* Gentext: MN) 14a] COORDINATED WITH MAG 409 MINUTES PRIOR TO
+TAKE OFF. PRE-COORDINATION WAS SATISFACTORY DUE TO THE SUPPORTED UNIT
+
+PROVIDING ADEQUATE MISSION INFORMATION. AT 1054Z,[ 14a_|ARRIVED ON OP
+PHANTOM FLEX ISO MAG AND CONDUCTED FMV AND SI. AT 2100Z,[_14a_]WAS CLEARED
+OFF STATION AND RETURNED TO BASE.
+
+ISR ASSET UTILIZATION
+
+* Supported Unit: MAG
+
+¢ Supported Operation: OP| 14a
+* Precoord Time: 409 MINUTES
+
+* Precoord Effectiveness: SATISFACTORY
+
+WEATHER
+* Weather: (U) WEATHER WAS NOT A FACTOR.
+
+EFFECTIVENESS
+« Tasker:
+* Intel Gap Filled?: Yes
+* Gentext:
+OBSERVATION
+—SSSS
+
+USCENTCOM MDR 26-0084 to 26-0095 Approved for Release to AARO - FOUQ / PA applies 06/30/26 035
+
+Observation DTG: 052026:00ZMAY22
+
+Aircraft Location: 38S MD 41[1,4a)441.4al
+Aircraft Heading: -75
+
+Aircraft Altitude: FL200
+
+Aircraft Airspeed: 100 KIAS
+
+Relative Bearing or Clock Position:
+Range: 4.98NM
+
+Killbox & Keypad: 91AS
+
+Observed Activity Location: 38SMD381.4a541.4al
+Observed Activity Description: UAS
+Method of Observation: FMV
+
+EEIs Observed:
+
+Number of EEIs:
+
+GENTEXT/OBSERVATION
+
+- Gentext: I) AT 2026Z[_14a_|WAS SCANNING POI IVO 38SMD3814a54i7, 4a] AND
+PERIODICALLY OBSERVED UAPS FLYING SPORATICALLY WITHIN THE TARGET AREA OF
+92AS. ACCORDING TO THE} 4a, 14g MTS, THE UAPs WERE TRAVELLING AT VARIOUS SPEEDS
+BETWEEN 80-180 MPH. WE WERE UNABLE TO DETERMINE ALTITUDE. THE SIZE OF THE
+UAPs WERE APPROXIMATELY 1-2 METERS. THE UAPs DID NOT HINDER THE MISSION.
+
+WEATHER
+
+* Weather:
+
+USCENTCOM MDR 26-0084 to 26-0095 Approved for Release to AARO - FOUQ / PA applies 06/30/26 036
