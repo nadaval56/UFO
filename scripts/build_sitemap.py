@@ -154,3 +154,105 @@ archive = f"""<!DOCTYPE html>
 """
 ARCHIVE.write_text(archive, encoding="utf-8")
 print(f"Wrote {ARCHIVE} with {len(files)} document links")
+
+
+# --------------------------------------------------------------------------
+# feed.xml — RSS of the newest documents, so readers and aggregators can
+# follow new releases without polling the site.
+# --------------------------------------------------------------------------
+from email.utils import format_datetime  # noqa: E402
+from datetime import datetime, timezone  # noqa: E402
+
+FEED = ROOT / "feed.xml"
+FEED_ITEMS = 60
+
+
+def rfc822(iso):
+    try:
+        return format_datetime(datetime.fromisoformat(iso).replace(hour=12, tzinfo=timezone.utc))
+    except (TypeError, ValueError):
+        return format_datetime(datetime.now(timezone.utc))
+
+
+newest = sorted((f for f in files if f.get("id")),
+                key=lambda f: (iso_release(f.get("release_date")) or "", f["id"]),
+                reverse=True)[:FEED_ITEMS]
+items = []
+for f in newest:
+    title = f.get("title_he") or f.get("title") or f["id"]
+    desc = f.get("summary_he") or f.get("narrative_he") or ""
+    rel = f"מהדורה {f.get('release_no')}" if f.get("release_no") else ""
+    link = f"{BASE}/{doc_path(f['id'])}"
+    items.append(
+        "    <item>\n"
+        f"      <title>{esc(title)}</title>\n"
+        f"      <link>{esc(link)}</link>\n"
+        f'      <guid isPermaLink="true">{esc(link)}</guid>\n'
+        f"      <pubDate>{rfc822(iso_release(f.get('release_date')) or latest)}</pubDate>\n"
+        + (f"      <category>{esc(rel)}</category>\n" if rel else "")
+        + (f"      <category>{esc(f.get('agency_he') or f.get('agency'))}</category>\n"
+           if (f.get("agency_he") or f.get("agency")) else "")
+        + f"      <description>{esc(desc[:600])}</description>\n"
+        "    </item>")
+
+feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>עב"מים — כל מה שהותר לפרסום</title>
+    <link>{BASE}/</link>
+    <atom:link href="{BASE}/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>מסמכים חדשים בארכיון ה-UAP המתורגם לעברית — מראה קהילתית של war.gov/UFO.</description>
+    <language>he</language>
+    <lastBuildDate>{rfc822(latest)}</lastBuildDate>
+{chr(10).join(items)}
+  </channel>
+</rss>
+"""
+FEED.write_text(feed, encoding="utf-8")
+print(f"Wrote {FEED} with {len(items)} items")
+
+
+# --------------------------------------------------------------------------
+# llms.txt — a plain-language map of the site for AI search engines
+# (https://llmstxt.org). Counts are derived, so it never goes stale.
+# --------------------------------------------------------------------------
+LLMS = ROOT / "llms.txt"
+rel_lines = []
+for r in m.get("releases", []):
+    rel_lines.append(f"- Release {r.get('release_no')} — {iso_release(r.get('date')) or r.get('date')}: "
+                     f"{r.get('count')} files — {BASE}/archive.html#{r.get('release')}")
+agencies = sorted({f.get("agency") for f in files if f.get("agency")})
+llms = f"""# עב"מים — PURSUE Hebrew Mirror (pursue.co.il)
+
+> An unofficial, community-made Hebrew translation of the U.S. Department of War's
+> PURSUE archive (Presidential Unsealing and Reporting System for UAP Encounters),
+> originally published at https://www.war.gov/UFO/. It mirrors all {len(files)} declassified
+> UAP/UFO files released so far, each with a Hebrew title, a faithful Hebrew translation
+> of war.gov's official description, and — for scanned documents — page previews and a
+> Hebrew translation of the OCR text. Source material is a U.S. government work in the
+> public domain (17 U.S.C. § 105). Not affiliated with the U.S. government.
+
+Each document has its own page at {BASE}/doc/<id>.html with the Hebrew and original
+English descriptions, metadata (agency, release, incident date and location) and a link
+to the original file on war.gov. When citing a document, cite war.gov as the source and
+this site as the Hebrew translation.
+
+## Index
+- [Full static index of all documents, by release]({BASE}/archive.html)
+- [Searchable, filterable archive browser]({BASE}/)
+- [Sitemap]({BASE}/sitemap.xml)
+- [RSS feed of the newest documents]({BASE}/feed.xml)
+- [All metadata as JSON]({BASE}/data/manifest.json)
+
+## Releases
+{chr(10).join(rel_lines)}
+
+## Agencies
+{", ".join(agencies)}
+
+## Source
+- Original archive (English): https://www.war.gov/UFO/
+- Code for this mirror: https://github.com/nadaval56/UFO
+"""
+LLMS.write_text(llms, encoding="utf-8")
+print(f"Wrote {LLMS}")
