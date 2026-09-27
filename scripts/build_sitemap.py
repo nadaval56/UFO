@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Build sitemap.xml and archive.html from data/manifest.json.
+"""Build the static pages, sitemap.xml and archive.html from data/manifest.json.
 
-Two static artifacts, both regenerated after any manifest change and
-committed to the repo root:
+Three static artifacts, all regenerated after any manifest change and
+committed:
 
-  sitemap.xml   the landing page plus every file detail page.
+  doc/*.html    one pre-rendered page per document (build_static_pages.py).
+  sitemap.xml   the landing page plus every document page.
   archive.html  a plain, JS-free index of every document, each a real link.
 
 archive.html exists because the browser on index.html is built entirely in
@@ -13,9 +14,12 @@ a crawler that does not execute JS sees none of the 375 documents. This page
 is the crawlable spine — and it works for readers with JS off too.
 """
 import json
+import sys
 from pathlib import Path
-from urllib.parse import quote
 from datetime import date
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from build_static_pages import build as build_static_pages, doc_path  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "data" / "manifest.json"
@@ -24,6 +28,7 @@ ARCHIVE = ROOT / "archive.html"
 BASE = "https://pursue.co.il"
 TODAY = date.today().isoformat()
 
+build_static_pages()
 m = json.loads(MANIFEST.read_text(encoding="utf-8"))
 files = m.get("files", [])
 
@@ -36,7 +41,7 @@ for f in files:
     fid = f.get("id")
     if not fid:
         continue
-    url = f"{BASE}/file.html?id={quote(fid, safe='-_')}"
+    url = f"{BASE}/{doc_path(fid)}"
     entries.append((url, "0.7", "monthly"))
 
 lines = ['<?xml version="1.0" encoding="UTF-8"?>',
@@ -83,7 +88,7 @@ for rel in sorted(by_release, reverse=True):
             continue
         title = f.get("title_he") or f.get("title") or f.get("filename") or fid
         agency = f.get("agency_he") or f.get("agency") or ""
-        href = f"file.html?id={quote(fid, safe='-_')}"
+        href = doc_path(fid)
         rows.append(f'    <li><a href="{esc(href)}">{esc(title)}</a>'
                     + (f' <span class="a-agency">{esc(agency)}</span>' if agency else "")
                     + "</li>")

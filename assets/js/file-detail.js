@@ -85,9 +85,19 @@
     })[c]);
   }
 
+  // Static document pages (doc/*.html, scripts/build_static_pages.py) carry
+  // their id in a meta tag; the legacy file.html?id=… route uses the query.
+  const STATIC_ID = (document.querySelector('meta[name="doc-id"]') || {}).content || null;
+
   function getQueryId() {
+    if (STATIC_ID) return STATIC_ID;
     const params = new URLSearchParams(window.location.search);
     return params.get("id");
+  }
+
+  // Must match page_name() in scripts/build_static_pages.py.
+  function docPath(id) {
+    return "doc/" + String(id).replace(/[^A-Za-z0-9._-]+/g, "_").replace(/^_+|_+$/g, "") + ".html";
   }
 
   function formatBytes(bytes) {
@@ -160,6 +170,13 @@
       return;
     }
 
+    // file.html?id=… is the old route: send it to the document's own page,
+    // keeping any #page-N gallery anchor. replace() keeps history clean.
+    if (!STATIC_ID) {
+      window.location.replace(new URL(docPath(file.id), window.location.href).href + window.location.hash);
+      return;
+    }
+
     state.file = file;
     // Prefer curated preview_pages (visually interesting). If empty, fall back
     // to preview_pages_fallback (first non-blank pages of the document).
@@ -202,7 +219,7 @@
     const titleHe = f.title_he || f.title || f.filename || "מסמך";
     document.title = `${titleHe} — עב"מים`;
 
-    const pageUrl = `https://pursue.co.il/file.html?id=${encodeURIComponent(f.id)}`;
+    const pageUrl = `https://pursue.co.il/${docPath(f.id)}`;
     const desc = (f.summary_he || f.narrative_he || `פרטי מסמך מארכיון ה-UAP — ${titleHe}`)
       .replace(/\s+/g, " ").slice(0, 280);
 
@@ -248,10 +265,13 @@
     if (firstPreview && firstPreview.path) {
       ld.image = "https://pursue.co.il/" + firstPreview.path;
     }
-    const ldNode = document.createElement("script");
-    ldNode.type = "application/ld+json";
-    ldNode.textContent = JSON.stringify(ld, (k, v) => (v === undefined ? undefined : v));
-    document.head.appendChild(ldNode);
+    // Static pages already ship this JSON-LD in their HTML; don't add a twin.
+    if (!document.querySelector('script[type="application/ld+json"]')) {
+      const ldNode = document.createElement("script");
+      ldNode.type = "application/ld+json";
+      ldNode.textContent = JSON.stringify(ld, (k, v) => (v === undefined ? undefined : v));
+      document.head.appendChild(ldNode);
+    }
 
     // כותרת
     el.eyebrow.textContent = f.agency_he || f.agency || "מסמך";
