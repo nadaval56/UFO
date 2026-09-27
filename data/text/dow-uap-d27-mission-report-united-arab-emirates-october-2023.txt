@@ -1,0 +1,418 @@
+Misrep undefined-10055709
+
+Narrative
+eo ee een
+
+AT 2100Z, (OWE TOOK OFF FROM OMAM VIA SLR. Qi@JE PROCEEDED TO
+FRAGGED TASKING.
+
+AT 18222, (QIQMEE WAS 7-LINED. DID NOT ARRIVE ON-STATION DUE TO WX RTB (SEE
+ON/OFF STATION 1).
+
+AT 2256Z, QIGIES CONDUCTED A NON-INTERFERENCE BASIS TASKING (SEE NIB 1).
+AT 0444Z, CONDUCTED A NON-INTERFERENCE BASIS TASKING (SEE NIB 2).
+AT 0457Z, DURING RTB DETECTED 1X UAP (SEE UAP 1).
+
+AT 0405Z, RETURNED TO BASE. AT 0713Z, CONDUCTED SLR AND LANDED AT
+OMAM. 10:13 MISSION HOURS.
+
+HiGiseRielagaaaes
+
+diet Mission Narrative
+
+Admin
+
+CLASSIFICATION
+
+¢ Classification: haga
+
+* Associated Caveats: @R@RON
+
+¢ Classification Source (MS or Classification Guide ID): MS
+¢ Declassification Date (YYYYMMDD): 20490606
+
+OPERATION
+
+¢ Operation: ENDURING SENTINEL
+¢ Domain: AIR
+¢ Operations Center: 609th
+
+5c, FOIA Exemption (b)(6
+
+Se
+USCENTCOM MDR 25-0100 thru 25-0103 / JS-250710-TM8S 10/28/25 001
+Approved for Release to AARO
+
+Rank: SrA
+
+Ful Names 30b, (b)(6)
+
+Unit: Unavailable
+
+Wing: 379 AEW
+
+Phone Numbese/FOiA Exemption (b)(6)
+
+Email:
+
+Service: Air Force
+Operations Center: 609 CAOC
+
+INGEST
+
+¢ Rank:
+
+Full Name:
+
+¢ Unit:
+
+¢ Wing:
+
+Phone Number:
+Email:
+
+Service:
+Operations Center:
+
+ACEQUIP
+
+ACEQUIP
+
+¢ Aircraft Callsign i
+
+Radar Name or Destination:
+
+Radar Software Load or Mission Data:
+Radar Warning Receiver (RWR) Name or Designator:
+RWR Software Load or Mission Data:
+
+¢ MWS Name or Designator:
+
+MWS Software Load or Mission Data:
+
+IRCM Name or Designator:
+
+IRCM Software Load or Mission Data:
+
+ECM Name or Designator:
+
+ECM Software Load or Mission Data:
+
+CMD Name or Designator:
+
+Chaff Designator:
+
+Num Chaff or Cartridges:
+
+Flare Designator:
+
+Num Flares:
+
+Towed Decoy Name or Designator:
+
+Towed Decoy Software Load or Mission Data:
+
+3.5c, FOIA Exemption (b)(6
+
+Seed
+USCENTCOM MDR 25-0100 thru 25-0103 / JS-250710-TM8S 10/28/25 003
+Approved for Release to AARO
+
+¢ Num Towed Decoys:
+
+¢ Type of Radar-Guided AAM:
+
+¢ Num Radar-Guided AAM:
+
+¢ Type of IR-Guided AAM:
+
+¢ Num IR-Guided AAM:
+
+¢ Gun Name or Designator:
+
+¢ Num Gun Rounds:
+
+¢ Air-to-Ground Wpn to Include Num of Each:
+TGT Pod Name or Designator: AN/DAS-1
+Additional Avionics: AH/GMESH/SF
+Data Link: LINK 16
+
+Gentext:
+
+Timeline
+
+Takeoff
+° Callsign: (O(OWE
+
+¢ Number of Aircraft: |
+
+¢ Asset Type (Aircraff)3J1.4a, (b)(1)1.4g
+
+¢ Aircraft Tail Numben(s)e.4a, (6)(1)1.49
+
+¢ Takeoff Location (ICAO Code): OMAM
+¢ Takeoff Time DTG: 062100:00ZJUN24
+¢ Mode 3 (IFF Codes): 34563
+
+¢ Gentext/Additional Details:
+
+¢ Mission Canceled:
+
+Landing
+
+¢ Last Land Location ICAO Code): OMAM
+
+¢ Last Land Time: 070713:00ZJUN24
+
+¢ Last Engine Shutdown Time: 070723:00ZJUN24
+¢ Total Mission Time: 10 hours 13 minutes
+
+¢ Gentext/Additional Details:
+
+On Station
+
+¢ Time On Station DTG:
+* Callsign: (}OWE
+¢ JTAR Number: -
+
+¢ Killbox (Location): -
+
+¢ Mission Type: ISR
+
+3.5c, FOIA Exemption (b)(6
+
+aS Saas
+USCENTCOM MDR 25-0100 thru 25-0103 / JS-250710-TM8S 10/28/25 004
+Approved for Release to AARO
+
+¢ JTAC Callsign: ITC
+
+* Gentext/Additional Details: (a
+AT 1822Z, WAS 7-LINED. DID NOT ARRIVE ON-STATION DUE TO WX RTB AT 0405Z.
+
+GEC GitatseS
+
+¢ Did not Arrive On Station: On
+
+Off Station
+
+¢ Time Off Station DTG:
+¢ Total Time On Station:
+¢ Gentext/Additional Details:
+
+NIB
+
+Earliest Time Intelligence of Value: 062256:00ZJUN24
+
+Latest Time Intelligence of Value: 062330:00ZJUN24
+
+NIB ID: -
+
+ISR Support or Effect: FMV
+
+Target Name:
+
+Location of Interest (LOD: -
+
+Location (MGRS): 40RGM&6\(1)1 kaj) ha
+
+Requested Classification of Reports: GRE RD@nS era
+
+Dissemination POCs or Common File: -
+
+° EEIs: GieieeiiiGuieiteleati
+
+A. BEGIN SCANS AT 75NM WEST, NORTH, AND EAST OF SP FOR DHOWS TRANSITING IN
+THE DIRECTION OF SP
+
+B. PROVIDE SITREP WITH FLAG STATUS, FLAG, OR NO FLAG VISIBLE AND COUNTRY OF
+FLAG (IF POSSIBLE), COORDINATES AND OBSERVED ACTIVITY.
+
+C. CALL OUT ANY IDENTIFIABLE EQUIPMENT, COMMS EQUIPMENT, PERSONS WEAPONS,
+CARGO ON BOARD TO INCLUDE CANCAS COVERED ITEMS
+
+SS See
+
+GENTEXT/NIB
+
+* Gentext: GBGRDRRDOnS Say
+UPON ARRIVAL TO SP AT 2256Z, IQS OBSERVED NO PERSONNEL OR VEHICLE ACTIVITY.
+
+BETWEEN 2257Z-2330Z, BIQISS CONDUCTED SCANS IVO THE SP AND PROVIDED CALLS ON
+ANY DHOW ACTIVITY. ITC INTENT MET.
+
+Ge re res ae er reel)
+
+UAP
+¢ Initial Contact DTG: 070457:00ZJUN24
+
+3.5c, FOIA Exemption (b)(6
+
+GPG Se one
+USCENTCOM MDR 25-0100 thru 25-0103 / JS-250710-TM8S 10/28/25 005
+Approved for Release to AARO
+
+UAP Event Type: UAP Incident
+UAP Maneuverability Observations: FLYING STRAIGHT JUST OVER THE WATER AT SPEED
+
+OF 140KNOTS
+
+UAP Response to Observer Actions: NO CHANGE
+
+MDS Type / Asset Tygye31.4a, (b)(1)1.49
+
+Tail Numbey!)1.4a, (6)(1)1.4g
+
+Friendly Aircraft Location: 4(0RFM@O\(14d\1y1 ha
+
+Friendly Aircraft Altitude/Depth: 23,999FT
+
+Friendly Aircraft Trajectory: 294
+
+Observer Assessment of UAP: Benign
+
+Friendly Aircraft Speed: 163 KNOTS
+
+Observation Interrogation of UAP (yes/no; if yes list sensor(s) and returns):: NO
+Third-party Observers and/or Reporters: -
+
+Friendly Aircraft State:
+
+Training Range (If applicable): N/A
+
+Operational Range: -
+
+UAP Physical State: Solid
+
+umber of UAP Sighted:
+
+AP Propulsion Means: UNKNOWN
+
+AP Payload:
+
+AP Under Intelligent Control (yes/no; if yes, describe):
+AP Signatures: -
+
+AP Advanced Capabilities And/Or Materials (yes/no; if yes, describe): NO
+AP RF Frequency: -
+
+AP RF Duration: -
+
+AP Event Serial Number: 060457ZJUN2024-CENTCOM
+AP Effects on Persons: NO
+
+AP Objects/Material Recovered (yes/no; if yes, describe): NO
+AP Effects on Equipment: -
+
+Full Namee| FOIA Exemptions (b)(3), 130b, (5)(6)
+
+Rank/Grade: E-4
+
+Email:
+
+Phone Number (VOSIP/SEE OIA Exemptidn (b)(6)
+
+Observer Engagement of UAP (yes/no; if yes, describe): NO
+First Coordinate: 40RFM46\(1)1. 4@\(1y1 ha
+
+First Seen Radius:
+
+Last Accuracy: Estimated
+
+Last Coordinate: 40QFM9@\(1)1.4a\(1)1.Ha
+
+Last Seen Radius: 5
+
+Kinetic Altitude Accuracy: Estimated
+
+Kinetic Altitude: -
+
+Kinetic Depth Accuracy: Estimated
+
+Kinetic Depth: -
+
+Zz
+
+Geeeeqacdaeaec ee
+
+3.5c, FOIA Exemption (b)(6
+Na ee
+
+USCENTCOM MDR 25-0100 thru 25-0103 / JS-250710-TM8S 10/28/25 006
+
+Approved for Release to AARO
+
+Kinetic Velocity Accuracy: Estimated
+
+Kinetic Velocity: 140 KNOTS
+
+Kinetic Trajectory Accuracy: Estimated
+
+Kinetic Trajectory: -
+
+UAP Date of DoD Acquisition: 070457:00ZJUN24
+
+UAP Reaction to Observation, Interrogation, Engagement (yes/no; if yes, describe): NO
+UAP Anomalous Characteristics/ Behaviors:
+
+First Accuracy: Precise
+
+Call Sign:
+
+UAP First Seen Location:
+
+UAP Last Seen Location:
+
+UAP Altitude, Depth, Velocity, and Trajectory (indicate estimated or measured):
+
+GENTEXT/UAP
+
+¢ UAP Description (e.g., size, shape, color, markings, recognizable features): BB@GREP=OROR
+GLOWING HOT SPHERICAL UNIDENTIFIED OBJECT WITH A VERTICAL UNWAVERING
+CYLINDRICAL POLE/BAR ATTACHED ON THE BOTTOM OF THE OBJECT POSS REFLECTION
+FROM THE OBJECT IN THE WATER, MOVING AT 140KNOTS
+
+uae ssi es na Sa
+
+* Gentext (UAP Event Description): GBGRia@@Ra
+DURING RTB AT 0457Z, (Eanes OBSERVED 1X UAP WHILE TRANSITING OVER
+
+40RFM46\4)1. 48) HBLYING AT AN ALTITUDE OF 23,999FT MSL AND SPEED OF 163KTS.
+BESREE eae ats
+
+NIB
+
+Earliest Time Intelligence of Value: 070444:00ZJUN24
+
+Latest Time Intelligence of Value: 070548:00ZJUN24
+
+NIB ID: -
+
+ISR Support or Effect: FMV
+
+Target Name:
+
+Location of Interest (LOD: -
+
+Location (MGRS): 40RFM48\(1)1.4@)(1)1 ha
+
+Requested Classification of Reports: SS@RBS Rane =a
+
+Dissemination POCs or Common File: -
+
+* EEIs: G22 eee eee
+
+A. BEGIN SCANS AT 75NM WEST, NORTH, AND EAST OF SP FOR DHOWS TRANSITING IN
+THE DIRECTION OF SP
+
+B. PROVIDE SITREP WITH FLAG STATUS, FLAG, OR NO FLAG VISIBLE AND COUNTRY OF
+FLAG (IF POSSIBLE), COORDINATES AND OBSERVED ACTIVITY.
+
+C. CALL OUT ANY IDENTIFIABLE EQUIPMENT, COMMS EQUIPMENT, PERSONS WEAPONS,
+CARGO ON BOARD TO INCLUDE CANCAS COVERED ITEMS
+
+3.5c, FOIA Exemption (b)(6
+
+SaaS aan
+USCENTCOM MDR 25-0100 thru 25-0103 / JS-250710-TM8S 10/28/25 007
+Approved for Release to AARO

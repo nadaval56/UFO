@@ -1,0 +1,63 @@
+ease fn nat use the rate
+ek ats “pone e and
+
+Seay
+; |
+Range Fouler Debrief Form : Jereliate conte file manually
+
+Please complete this form to the best of your ability. If you do not have the requested information,
+please leave the field blank. If there was more than one “group,” please report each on a separate
+form for data collection purposes. You should receive a response within 5 business days.
+
+Last Name, First Name Rank Squadron SIPR Email Adoress Crew Position
+
+0-2 482 ATKS Pilot
+
+This information is for contact only. SPEAR sanitizes all reports of identifying information.
+Absolutely no identifying information for aircrew or squadron will be recorded for analysis.
+
+08/31/20 Dusk ISR No
+Date (mm/dd/yy) —s Time of detection —- Day /Nignt Side No. Buno Mission Description (CAS, BFM, etc) LFE?
+(hh:mm:ss 2)
+(b)(1}1. 44 18000 Yes
+Contact Working Area Contact Latitute N/S Contact Longitude EW Contact Altitude — Altitude Wind Dir at Wind
+(Ex: W-72 7A) (DD:MM:SS) (OD:MM:SS) (Ex: 22000) Constant? Contact Alt Speed
+
+From
+Please attempt to determine a Lat / Long for the contact at initial detection. We recommend q ,
+using JMPS to reference the sensor-derived bearing and range relative to the buliseye you had Was the contact moving? Yes
+in use. if that method is not available, any reasonable derivation of location will work, but please
+be as Specific as possible and make a note in the comments section. These locations may be
+
+uSed to cue other means of tracking. Me poki ie 150/230
+Radar Equipped: Other AIM-9x_ Self-Track: [ ] Please check all that apply:
+Stable Trackfile?: ATFLIR Autotrack: [| Round: [ral Moving Paris: L |
+# of Contacts in Group’: ' Tally Achieved: [| Suet z Metallic: z=
+; : Balloon-shaped: Markings:
+EA Indications (Check ail that apply): thine ater! O
+
+[| [| [| [| | Other Shape:[v’| Opaque: [|
+
+Lett False Other/ i ye:
+ae Identifier Trackfiles Ambiguous Apparent Propulsion / | Reflective: [|
+
+Please use the fieid below to describe the contact and any interaction in your own words with as much
+detail as possible. Please be sure to include any detail not RIGENY in questions above.
+
+MGRS Grid of initial contact: 39RWL26@)1)1. AB 4da |
+Saw the initial object fly through the screen and started tracking it. Initial object was surpassed by another
+
+object of same size and shape but much higher speed. At one point during tracking the objects, there were
+three on the screen at the same time moving amongst each other.
+
+Don't use the purple "submit" button! Save this form with filename “Date_Squadron_RF.pdf" and email
+
+ffol SSeS) ~———SSC~C~CSCS™YAIS in thle: baal) | Fr troubleshooting, call[_3.5c, (oye) _|
+
+Thank you for your time. Please ensure all display tapes are ripped for the entire time of interaction and
+saved as a.wmv (Example: 4 May VFA-106 HUD.wmv). Squadron intel personnel shall upload those files
+to the repository located at this link.
+
+[ 3c, (bye) ] SSS
+
+USCENTCOM MDR 26-0028 Approved for Release to AARO - FOUQ/ PA applies 03/16/26 000001

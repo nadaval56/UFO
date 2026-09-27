@@ -1,0 +1,103 @@
+Range Fouler Reporting
+
+Please complete this form to the best of your ability. If you do n
+please leave the field blank. {f there was more than one "group
+form for data collection purposes. You should receive a response
+
+Last Name, First Name Rank Squadron
+0-3 172 ATKS
+
+icp Please-do not use the purple 7
+submit" button above... Save and
+/email the complete file manually
+
+{see below).
+
+Lie
+
+Form >
+
+ot have the requested information,
+
+' please report each on a separate
+within 5 business days.
+
+Crew Position
+
+Other
+
+SIPR Emait Address
+
+This information is for contact only. SPEAR sanitizes all reports of identifying information.
+Absolutely no identifying information for aircrew or squadron will be recorded for analysis.
+
+09/04/20 21:09:00 Night ISR
+Date (mm/dd/yy) ~—s Time of detection Day / Night Side No. Bune Mission Description (CAS, BFM, etc) LFE?
+{hh:mm:ss Z)
+N E 23819
+Contact Working Area Contact Latrtute NS Contact Longitude EW = Contact Altitude = —Affitude Wind Dir at Wind
+(Ex: W-72 1A) {DD:MM:S5} {DD'MM:SS) {Ex; 22000) Constant? Contact Att Speed
+(From)
+Please attempt to determine a Lat/Long for the contact at initia! detection. We recommend
+using JMPS to reference the sensor-denved beanng and range relative mo the bullseye you had Was the contact moving? Yes
+in use, If that method is nof available, any reasonable derivation of location wil! work, but please
+be as specific as possible and make a note in the comments section. These jocations may be sage
+used to cue ather means of tracking. PeschonSpeed: = 46979 7
+
+Radar Equipped: AIM-9x_ Self-Track: [ |
+Stable Trackfile?: ATFLIR Autotrack: [ ]
+
+# of Contacts in "Group": 1
+EA Indications (Check ail that apply):
+
+[] [1] [|
+
+ECM . Letter Other!
+Are identifier Ambiguous
+
+Tally Achieved:
+
+L
+
+False
+Trackfiles
+
+(Ex. 090/15)
+
+Please check all that apply:
+
+Round: Moving Parts: [|
+
+Square: CJ Metallic: [|
+Balioon-sheped: [|_| Markings: [|
+Wings/Airtrame:[_] Transtucent: |
+Other Shape:[_ | Opaque: [ ]
+Apparent Propulsion. _| Reflective: [|
+
+Please use the field below to describe the contact and any interaction in your own words with as much
+detail as possible. Please be sure to include any detail not included in questions above.
+
+Contact at 21:09z to 21:17z 04SEP2020. MGRS location 38P LT 7thay1.ha@hc)1.4¢ estimated lat/long
+
+[ mtyt4a——_—=sS.: While at 23,819 HAT over the Gulf of Aden we tracked a round, cold object
+in IR traveling 168 degrees at 277 mph. It made a few abrupt directional changes during the 8 minute
+contact. Our sensor was aimed -39 degrees below our altitude with a slant range of 6.17NM and ground
+range of 8.81KM. The IR sensor was set to black hot and the object in question was a bright white.
+
+Don't use the purple "submit" button! Save this form with filename “Date_Squadron_RF.pdf" and email
+
+it to (Also in the global).
+
+For troubleshooting, calf
+
+Thank you for your time. Please ensure ail display tapes are npped for the entire time of interaction and
+saved as a .wmv (Example: 4 May VFA-106 HUD.wmv). Squadron intel personnei shail upload those files
+
+to the repository located at _ this link.
+| 5c, by)
+
+USCENTCOM 26-0028
+
+Approved for Release to AARO - FOUG-/ PA applies
+
+03/16/26 000001

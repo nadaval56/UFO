@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+# Raw English OCR, loaded on demand by the detail pages — not pages in their
+# own right. data/manifest.json must stay crawlable: the pages render from it.
+Disallow: /data/text/
 
 Sitemap: https://pursue.co.il/sitemap.xml

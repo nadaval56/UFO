@@ -1,0 +1,520 @@
+Misrep undefined-7561279
+
+Narrative
+
+“(S/R AT 1355Z,[1.4a TOOK OFF FROM SIGONELLA AIRBASE (LICZ).
+AT 14242, HANDED OVER FROM THE LRE.
+
+FROM 1507Z TO 0906Z, COLLECTED SIGINT VIA AIRHANDLER.
+AT 1551Z,[_1.4a WAS ON STATION IN SRO TRACK (41EMD).
+
+FROM 1938Z TO 0230Z,| 1.4a | CONDUCTED IMINT ISO 603 AOC\OP HUMMER SICKLE IVO
+41EMD IVO EASTERN MEDITERRANEAN. SEE ISR LINE 1.
+
+AT 2147Z,[ 44a |WAS REACTED TO BY 1-3 ACFT, INCLUDING 1X POSS RFAF SU-30. SEE
+REACTION LINE 1.
+
+AT 0117Z, ONE POSSIBLE SMALL UAP WAS OBSERVED. SEE UAP LINE 1.
+
+AT 0011ZJ[_1.4a ]OBSERVED ONE PROBABLE SU-27/35 LANDING IVO AL ASSAD AFLD. SEE
+OBS LINE 1.
+
+AT 0230Z, WAS CLEARED TO RTB.
+
+AT 0616Z, WAS OFF STATION.
+
+AT 0934Z, HANDED BACK TO THE LRE.
+
+AT 1025Z, LANDED AT LRCT. FMV WAS EXPLOITED BY DGS-IN AND DGS4
+(SAREE SC} Mission Narrative
+
+Admin
+
+CLASSIFICATION
+
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 001
+
+Approved for Release to AARO
+
+¢ Classification: SEGRE?
+
+¢ Associated Caveats: RE=FO-6 St VE
+
+* Classification Source (MS or Classification Guide ID): MULTIPLE SOURCES
+¢ Declassification Date (YYYYMMDD): 20470529
+
+OPERATION
+
+¢ Operation: 1.4a
+
+¢ Domain: AIR
+
+¢ Operations Center: 603rd
+
+¢ Major Command (MAJCOM): ACC
+
+¢ Combatant Command (COCOM): USEUCOM
+
+MSGID
+
+¢ Report Type: MISREP
+* Originator (Unit or Squadron): SOATKS
+¢ Submit Date:
+
+MSNID
+
+¢ Tasking Order (ATO): E149
+
+* Mission Type: ISR
+
+¢ ATO Mission Number:[1.4a |
+
+¢ Country Tasked: US - UNITED STATES
+¢ Service Tasked: A - AIR FORCE
+
+Poc
+
+POC
+
+¢ Rank: AIC
+
+¢ Fut Namezfemptions (b)(3), 130b, (b)(6)
+¢ Unit: 50 ATKS
+
+¢ Wing: 432 AEW
+
+¢ Phone Number: FOiA Exemption] (b\(6)
+° Email
+
+¢ Service: Air Force
+
+¢ Operations Center: 609 CAOC
+
+QC
+SRCRET RED TOUS PE
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 002
+
+Approved for Release to AARO
+
+¢ Rank: Ctr
+
+- Full Namej6c, FOIA Exemption ©)
+
+* Unit: 12 AF PAROC
+
+¢ Wing: Other
+
+* Phone Number;FOla Exemption {b)(6)
+
+° Email{___ 3.50, FOIA Exemption (bye)
+¢ Service: Air Force
+
+¢ Operations Center: Other
+
+APPROVER
+
+¢ Rank: SSgt
+
+© Full Namedia Exemptions (b(3), 13cb, (6x6)
+
+¢ Unit: Unavailable
+
+¢ Wing: Other
+
+¢ Phone NumberdiA Exemptipn (b)(6)
+
+* Emajl:|______3.5c, FOIA Exemption (b(6)_—
+* Service: Air Force
+
+¢ Operations Center: 603 AOC
+
+INGEST
+
+¢ Rank:
+
+¢ Full Name:
+
+° Unit:
+
+* Wing:
+
+¢ Phone Number:
+
+¢ Email:
+
+¢ Service:
+
+¢ Operations Center:
+
+ACEQUIP
+
+ACEQUIP
+¢ Aircraft Callsign:[| 14a |
+
+¢ Radar Name or Destination: -
+
+¢ Radar Software Load or Mission Data: -
+
+¢ Radar Warning Receiver (RWR) Name or Designator: -
+¢ RWR Software Load or Mission Data: -
+
+¢ MWS Name or Designator: -
+
+* MWS Software Load or Mission Data: -
+
+3.5c, FOIA Exemption (b)(6)
+
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 003
+Approved for Release to AARO
+
+IRCM Name or Designator: -
+
+IRCM Software Load or Mission Data: -
+ECM Name or Designator: -
+
+ECM Software Load or Mission Data: -
+CMD Name or Designator: -
+
+Chaff Designator: -
+
+Num Chaff or Cartridges: -
+
+Flare Designator: -
+
+Num Flares: -
+
+Towed Decoy Name or Designator: -
+Towed Decoy Software Load or Mission Data: -
+¢ Num Towed Decoys: -
+
+¢ Type of Radar-Guided AAM: -
+
+¢ Num Radar-Guided AAM: -
+
+¢ Type of IR-Guided AAM: -
+
+¢ Num IR-Guided AAM: -
+
+¢ Gun Name or Designator: -
+
+¢ Num Gun Rounds: -
+
+Air-to-Ground Wpn to Include Num of Each: -
+TGT Pod Name or Designator: ANDAS4
+Additional Avionics: AH\SAR
+
+Data Link: -
+
+Gentext:
+
+Timeline
+
+Takeoff
+
+° Callsign| 14a __ |
+
+¢ Number of Aircraft: 1
+
+* Asset Type (Aircraft)
+
+¢ Aircraft Tail Number(s):
+
+¢ Takeoff Location (ICAO Code): LICZ
+
+¢ Takeoff Time DTG: 291355:00ZMAY22
+* Mode 3 (IFF Codes):
+
+¢ Gentext/Additional Details:
+
+¢ Mission Canceled:
+
+Landing
+
+¢ Last Land Location (ICAO Code): LICZ
+¢ Last Land Time: 301025:00ZMAY22
+
+3.5c, FOIA Exemption (b)(6)
+
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 004
+Approved for Release to AARO
+
+—=SECRET/RED TO US45 TVE LT
+
+¢ Last Engine Shutdown Time: 301035:00ZMAY22
+¢ Total Mission Time: 20 hours 30 minutes
+¢ Gentext/Additional Details:
+
+On Station
+
+¢ Time On Station DTG: 291551:00ZMAY22
+e Callsign:| 14a _|
+
+¢ JTAR Number: -
+
+¢ Killbox (Location): -
+
+¢ Mission Type: XREC
+
+¢ JTAC Callsign: -
+
+¢ Gentext/Additional Details:
+
+¢ Did not Arrive On Station:
+
+Off Station
+
+¢ Time Off Station DTG: 300616:00ZMAY22
+¢ Total Time On Station: 14 hours 25 minutes
+¢ Gentext/Additional Details:
+
+ISR
+
+¢ Time-on Station DTG: 291938:00ZMAY22
+* Time-off Station DTG: 300230:00ZMAY22
+
+¢ Aircraft Callsign] 14a __|
+
+* Msn Type: TARGET DEV
+
+asking Type: PLA
+
+¢ Tasking or Request Number (JTAR#, AEM#, PRI#, or TIC#): -
+¢ BE Number (if NTISR): -
+
+¢ Tasked Start Point: 36SXD70(4ab 31 4al
+
+¢ Activity Description: ISR
+
+¢ FMV or Image File Name (if NTISR): -
+
+¢ EEIs Observed: Yes
+
+¢ Number of EEIs: 10
+
+GENTEXT/ISR
+
+° Gentext: (S/REBAT 1551Z, [1.4a ENTERED THEIR SRO TRACK INTO OP AREA 41EMD. AT
+1551Z,[_ 14a |JCONDUCTED TARGET DEVELOPMENT ON OP[____1.4a___|ISO. 603 AOC
+IVO 41EMD. FROM 1938Z TO 0230Z,[44a ]COLLECTED ON 39X TGTS: SYRIAN NAVY OPS
+
+3.5c, FOIA Exemption (b)(6
+
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 005
+Approved for Release to AARO
+
+—=SECRETIREE TO US4, TVE
+
+AREA (36SXD70-4ab 14a), SYRIAN NAVY OPS AREA (36SYD3%1.4a54{1-4a), SYRIAN NAVY OPS
+AREA (36SYE37[.4a I[14a), SYRIAN NAVY OPS AREA (36SXE6414a4 0[,-4al, SYRIAN NAVY OPS
+AREA (36SXD70f4a53{1.4a), OPIR ISRAEL-LEBANON-SYRIA REGION DSA 2 E4YY
+(36SYD44(4ahdL4a), OPIR ISRAEL-LEBANON-SYRIA REGION DSA 2 E4YY
+(36SXD33[,4ah414a), OPIR ISRAEL-LEBANON-SYRIA REGION DSA 2 E4YY
+(36SXA3414ak If, 4a], OPIR ISRAEL-LEBANON-SYRIA REGION DSA 2 E4YY (36S YA52[14a8 41 4al ,
+OPIR ISRAEL-LEBANON-SYRIA REGION DSA 2 E4YY (36SYD46[.4H 64a), OSIC LATAKIA
+NAVAL MON DSA (36SYE21[.4al/ 74al, OSIC LATAKIA NAVAL MON DSA (36SYD24[4ab {14ab,
+OSIC LATAKIA NAVAL MON DSA (36SYD6414ab4{.4a), OSIC LATAKIA NAVAL MON DSA
+(36SYE6 I[4al/ 4a), OSIC LATAKIA NAVAL MON DSA (36SYE21[14a/ 54a), BASSEL AL ASSAD
+INTL AFLD (36SYE67[L4a2 If4al), 0426WRO135 (37SBT48{.4a9 74a), TARTUS NAVAL BASE
+(36SYD624a6 74a), BEIRUT ARMY BKS FAKRIDINE (36SYC29[.4ab I[4a), JUNIYAH ARMY
+BKS SARBA (36SYC41[1.4a641.4al, RUMYAH PRISON (36SYC3%L4ab414a), BEIRUT MILITARY
+FACILITY KARANTINA (36SYC3414ab31.4al, BAMLKAH SIGINT FACILITY (36SYD721,4a6 41 4a),
+BEIRUT POSSIBLE TERRORIST CNO FACILITY (36SYC324a48[1 4a), IBN HANI COASTAL
+DEFENSE SITE (36SYE4414a4 1[14a), BATRAH CD SITE (36SYE64(4a23[1 4a), TARTUS NAVAL
+MSL SPT FAC (36SYD64{,4al/a4ab, AL LADHIQIYAH ARMY BKS SE STAMO (36S YE 65[L4al
+30[1.4al, 0426CA 1058 (37S BV 27[4a)05[1.4al, AYN ASH SHARIQIYAH CD BDE HQ (37S BV 341.4al
+14f4a), ADIMAH COASTAL DEFENSE SITE SOUTHWEST (36SYD64.4a021 4a), AR RAWDAH
+COASTAL OBSERVATION POST (36SYD63f4a8d14al, ASH SHAMIYAH CD SITE
+
+(36SYE53[424 74a), ABU AFSAH CD SITE (36SYD644ab 84a), AL LADHIQIYAH SYRIAN
+NAVAL HEADQUARTER (36SYE5414aB614a), TALL SUKAS CD SITE (36SYE65tL4all 04a),
+LATAKIA SCHOOL 81 (36SYE53[{4aB4{4a), AND JABLAH NAVAL ACADEMY
+(36SYE65iL4all [14a], LOOKING FOR RFN SURFACE AND SUBSURFACE ROUTES, MUNITION
+HANDLING, AND PERSONNEL MOVEMENT. AT 1745Z, OBSERVED 1X SLAVA HEADING
+EAST IVO 35SPU354a)9%1 4a] WHILE TRANSITING TO SP. AT 1808Z, 1X PROBABLE GORSHKOV
+FFG HEADING EAST IVO 36STD29f4al 1-4al WHILE TRANSITING TO SP. AT 2104Z,[_1.4a |
+OBSERVED A GENERATOR OR POSS RADAR DISH IVO 36SYE674a? I[4a} AT 2120Z, 1X A-50U
+MAINSTAY D AND 2X IL-38 OBSERVED PARKED IVO 36SYE68{L4a2-41.4al AT 0006Z, ONE
+PROBABLE IL-76 OBSERVED ACTIVE IVO 36SYE6S{4aP2t 4a. AT 0011Z, ONE PROBABLE
+SU-27/35 OBSERVED LANDING IVO 36SYE68i4a2Y14a] AT 0029Z, ONE PROBABLE SU-27/35
+WAS OBSERVED TAKING OFF TO THE SOUTH. AT 0344Z, ONE PROBABLE GORSHKOV FFG,
+HULL 461 HEADED EAST IVO 36SUD7414al2 41.42] AT 0405Z ONE PROBABLE UDALOY I DD,
+HULL 626 HEADED EAST IVO 36STC84{4aP 44a] AT 0411Z ONE PROBABLE SLAVA CG, HULL
+055 HEADED EAST IVO 36STD79{4all 4a] AT 0530Z, 1X PROBABLE UDALOY 1 DD, HULL 564
+HEADED WEST IVO 35SMU20{14all S4al AT 0230Z,[4.4a }WAS CLEARED OFF TASKING AND
+RETURNED TO BASE (RTB).
+
+ISR ASSET UTILIZATION
+¢ Supported Unit: 603 AOC
+
+¢ Supported Operation: of t4a
+
+¢ Precoord Time: -
+
+3.5c, FOIA Exemption (bX6)
+
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 006
+Approved for Release to AARO
+
+¢ Precoord Effectiveness: -
+
+WEATHER
+¢ Weather: <S4252) WAS NOT A FACTOR
+
+EFFECTIVENESS
+
+¢ Tasker:
+¢ Intel Gap Filled?: No
+¢ Gentext:
+
+REACTION
+
+Initial Contact DTG: 292147:00ZMAY22
+Friendly Aircraft Location: 37S BV 34{7 4a] 14[1 4al
+Friendly Aircraft Heading: 300
+
+Friendly Aircraft Altitude: FL243
+Friendly Aircraft Airspeed: 148KIAS
+
+# of Enemy Aircraft: 2
+
+Enemy Aircraft Type: SU-30
+
+Enemy Aircraft Nationality: RUSSIAN
+Source of ID: NTIG
+
+Enemy Aircraft Location: 1.4a
+Enemy Aircraft Heading: 270
+
+Enemy Aircraft Altitude: FL 190
+
+Enemy Aircraft Airspeed: -
+
+Description of Enemy Formation: -
+ESM (Yes, No): No
+
+Countermeasures Employed: NONE
+
+RSLTREACTION
+
+¢ REACTION DTG:
+
+¢ Num AA Weapons Employed:
+
+¢ Num Enemy Aircraft Engaged:
+¢ Friendly Weapons Employed:
+
+¢ Num Enemy Aircraft Damaged:
+¢ Num Enemy Aircraft Destroyed:
+¢ Enemy Weapons Employed:
+
+¢ Results Observed:
+
+3.5c, FOIA Exemption (b)(6)
+
+SEGRE REETOCUS TT.
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 007
+Approved for Release to AARO
+
+GENTEXT/REACTION
+
+° Gentext:<S42%) AT 2147Z,[_1.4a ]WAS REACTED TO BY 1-3 ACFT, INCLUDING 1X POSS
+RFAF SU-30, THAT GOT APPROXIMATELY 5NM FROM THE ACFT APPROACHED
+WESTWARD FROM THE SYRIAN COAST, FLEW DIRECTLY UNDER[_14a_]ORBIT (FL190, VS
+FL243) FOR APPROXIMATELY 2 MIN, FLEW SOUTH FOR ABOUT 10NM, AND THEN
+RETURNED WEST. THERE WAS NO IMPACT TO THE MISSION. THEN CONTINUED
+MISSION AS PLANNED.|[1.4a ]DID NOT VISUALLY ACQUIRE THE REPORTED ACFT.
+
+WEATHER
+* Weather: (U) WEATHER WAS NOT A FACTOR.
+
+UAP
+
+Initial Contact DTG: 300117:00ZMAY22
+
+° MDS Type / Asset Type:[1.4a, 1.4g]
+
+Tail Number:
+
+Friendly Aircraft Location: 36SXD9%_4a) {4a
+Friendly Aircraft Altitude/Depth: FL240
+Friendly Aircraft Speed: 142 KIAS
+
+Friendly Aircraft State: -
+
+Training Range (If applicable): -
+
+Operational Range: -
+
+UAP Physical State: -
+
+Number of UAP Sighted: 1
+
+UAP Signatures: No
+
+¢ UAP RF Frequency: -
+
+¢ UAP RF Duration: -
+
+UAP Effects on Persons:
+
+Full Name:
+
+Email:
+
+Phone Number (VOSIP/STE):
+
+UAP First Seen Location: 37SBV28[1 4all Y1_4al
+UAP Altitude, Depth, Velocity, and Trajectory (indicate estimated or measured): -
+
+GENTEXT/UAP
+
+* UAP Description (e.g., size, shape, color, markings, recognizable features): (S/RES)[__ 14a __|
+[ 1.4a_]OBSERVED A UAP AT 0117Z FLY NORTH TO NORTH EAST AND FOLLOWED AS LONG
+AS POSSIBLE.[4.4a |SCREENER COULD NOT GET A POSITIVE ID ON THE UAP.
+
+OBSERVATION
+3.5c, FOIA Exemption (b)(6
+OG OO ne
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 008
+
+Approved for Release to AARO
+
+¢ Observation DTG: 300011:00ZMAY22
+
+¢ Aircraft Callsign:[_ 14a _|
+
+¢ Aircraft Location: 36S YE6414a241 4al
+
+¢ Aircraft Heading: -
+
+¢ Aircraft Altitude: -
+
+¢ Aircraft Airspeed: -
+
+¢ Relative Bearing or Clock Position: -
+
+¢ Range: -
+
+¢ Killbox & Keypad: -
+
+¢ Observed Activity Location: 36S YE68{4aP 2 4al
+¢ Observed Activity Description: ONE PROBABLE SU-27/35 OBSERVED LANDING
+¢ Method of Observation: FMV
+
+¢ EEIs Observed: No
+
+¢ Number of EEIs:
+
+GENTEXT/OBSERVATION
+
+° Gentext: (S/REb}AT 0011Z,[ 1.4a | OBSERVED ONE PROBABLE SU-27/35 LANDING IVO
+36S YE68i.4a22[1 4a)
+
+WEATHER
+¢ Weather: <S522=-WEATHER WAS NOT A FACTOR.
+
+3.5¢, FOIA Exemption (bX6)
+
+SECRETREP TOUS Tn
+MDR 25-0094 thru MDR 25-0099 / JS-250710-TM8S 10/17/25 009
+Approved for Release to AARO

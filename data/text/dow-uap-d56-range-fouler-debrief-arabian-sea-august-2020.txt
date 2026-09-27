@@ -1,0 +1,70 @@
+i 2 Please do nat Sonia pia hig —
+ESREHNOrRO: 6, "submit" button above... Save and
+
+Range Fouler Debrief Form ~“email the complete file manually
+
+(see below).
+
+Please complete this form to the best of your ability. If you do not have the requested information,
+please leave the field blank. If there was more than one "group," please report each on a separate
+form for data collection purposes. You should receive a response within 5 business days.
+
+Last Name, First Name Rank Squadron SIPR Email Address Crew Position
+
+0-3 HSM-73 Pilot
+
+This information is for contact only. SPEAR sanitizes all reports of identifying information.
+Absolutely no identifying information for aircrew or squadron will be recorded for analysis.
+
+08/24/20 00:04:30 Night 705 168122 ssc No
+Date (mm/dd/yy) —- Time of detection Day / Night Side No. Buno Mission Description (CAS, BEM. etc) LFE?
+(hh:mm:ss Z)
+21440 21440 Yes 310
+Contact Werking Area Contact Latitute N/S Contact Longitude EAV Contact Altitude Altitude Wind Dir at Uind
+(Ex: W-72 1A} (DD:MM:SS) (DD:MM:SS) (Ex: 22000) Constant? Contact Alt Speed
+(From)
+
+Please attempt to determine a Lat / Long for the contact at initial detection. We recommend
+
+using JMPS to reference the sensor-derived bearing and range relative to the bullseye you had Was the contact moving? Yes
+in use. if that method is not available, any reasanable derivation of location will work, but please
+
+be as specific as possible and make a note in the comments section. These locations may be
+
+used fo cue other means of tracking. rien aia 27 0/UNK
+
+Radar Equipped: Other AIM-9x Seif-Track: [| Please check all that apply:
+Stable Trackfile?: No ATFLIR Autotrack: [| Round: Moving Parts:[_|
+# of Contacts in "Group": 3 Tally Achieved: [ ] Square: : Metallic: =
+Balloon-shaped: Markings:
+
+EA Indications (Check aif that apply): Wings/Airtrame:| | tie Cl
+
+L | i [| L] Other Shape[_| Opaque: ci
+
+ECM Letter False Other/ A t Propulsion: Reflective:
+
+Arc {dentifier Trackfiles Ambiguous Sere erm L ial O
+Please use the field below fo describe the contact and any interaction in your own words with as much
+detail as possible. Please be sure to include any detail not included in questions above.
+
+ee 3x possible unidentified small air contacts while conducting routine operations in the
+Nort Arabian Sea. Negative ES, radar track, and IFF track. Distance to contact was unknown. Speed of
+
+contact was unknown. Precise course of contact was unknown, but appeared to be on a westerly heading.
+No interaction took place between|—_1.4a_jand the unknown air contacts. Initially observed 1x
+unknown air contact and tracked it before losing sight as it went behind a cloud. When contact on the
+unknown air contact was regained, 2x additional unknown air contacts were seen due east of the location of
+the initial contact. All 3x unknown air contacts appeared to maintain their relative course, speed, and
+altitude.
+
+Don't use the purple “submit” button! Save this form with filename “Date_Squadron_RF.pdf" and email
+
+itt] we ________] Also in he gioba))| For troubleshooting, call oe)
+Thank you for your time. Please ensure all display tapes are ripped for the entire time of interaction and
+saved as a .wmv (Example: 4 May VFA-106 HUD.wmv). Squadron intel personnel shall upload those files
+
+fo fhe repository located at this link.
+BEES eS aa
+
+USCENTCOM MDR 26-0038 to 26-0046 Approved for Release to AARO 03/27/26 000001
