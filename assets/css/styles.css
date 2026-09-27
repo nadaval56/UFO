@@ -1825,3 +1825,14 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   .file-footer-actions .btn { text-align: center; justify-content: center; }
 }
 
+
+/* Related documents on each static document page (build_static_pages.py). */
+.related-list { list-style: none; margin: 0; padding: 0; }
+.related-list li {
+  padding: 8px 0;
+  border-block-end: 1px solid var(--border);
+  font-size: 0.92rem;
+  overflow-wrap: anywhere;
+}
+.related-list li:last-child { border-block-end: 0; }
+.related-list .related-meta { color: var(--text-dim); font-size: 0.76rem; margin-inline-start: 8px; }

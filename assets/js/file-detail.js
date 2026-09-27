@@ -153,18 +153,26 @@
       return;
     }
 
-    let manifest;
-    try {
-      const res = await fetch(MANIFEST_URL, { cache: "no-cache" });
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      manifest = await res.json();
-    } catch (err) {
-      console.error("manifest load failed", err);
-      showError("טעינת המאניפסט נכשלה: " + err.message);
-      return;
+    // Static pages embed their own record, so they never download the
+    // multi-megabyte manifest just to wire up the gallery and player.
+    let file = null;
+    const embedded = document.getElementById("doc-data");
+    if (embedded) {
+      try { file = JSON.parse(embedded.textContent); } catch (err) { file = null; }
     }
-
-    const file = (manifest.files || []).find((f) => f.id === id);
+    if (!file) {
+      let manifest;
+      try {
+        const res = await fetch(MANIFEST_URL, { cache: "no-cache" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        manifest = await res.json();
+      } catch (err) {
+        console.error("manifest load failed", err);
+        showError("טעינת המאניפסט נכשלה: " + err.message);
+        return;
+      }
+      file = (manifest.files || []).find((f) => f.id === id);
+    }
     if (!file) {
       showError(`לא נמצא קובץ עם המזהה: ${id}`);
       return;

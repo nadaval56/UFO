@@ -120,7 +120,22 @@ class Page:
         self.s = self.s[: m.start()] + new + self.s[m.end():]
 
 
-def render(template: str, f: dict) -> str:
+def related_for(f: dict, files: list[dict], n: int = 8) -> list[dict]:
+    """Neighbours by document code within the same release and agency (so a
+    DIRD page links to the DIRDs around it), topped up from the same release."""
+    same = sorted((x for x in files if x.get("release") == f.get("release")
+                   and x.get("agency") == f.get("agency")), key=lambda x: x["id"])
+    i = next((k for k, x in enumerate(same) if x["id"] == f["id"]), 0)
+    around = same[max(0, i - n // 2): i] + same[i + 1: i + 1 + n]
+    out = around[:n]
+    if len(out) < n:
+        seen = {x["id"] for x in out} | {f["id"]}
+        out += [x for x in files if x.get("release") == f.get("release")
+                and x["id"] not in seen][: n - len(out)]
+    return out
+
+
+def render(template: str, f: dict, files: list[dict] | None = None) -> str:
     p = Page(template)
     title_he = f.get("title_he") or f.get("title") or f.get("filename") or "מסמך"
     url = f"{BASE}/{doc_path(f['id'])}"
@@ -138,6 +153,7 @@ def render(template: str, f: dict) -> str:
     p.s = re.sub(r"<title>.*?</title>", f"<title>{esc(full_title)}</title>", p.s, count=1)
     p.head_attr(r'<meta name="description"[^>]*>', "content", desc)
     p.head_attr(r'<link rel="canonical"[^>]*>', "href", url)
+    p.s = re.sub(r'\s*<!-- Legacy route:.*?-->\s*<meta name="robots"[^>]*>', "", p.s, count=1, flags=re.S)
     p.head_attr(r'<meta property="og:title"[^>]*>', "content", full_title)
     p.head_attr(r'<meta property="og:description"[^>]*>', "content", desc)
     p.head_attr(r'<meta property="og:url"[^>]*>', "content", url)
@@ -169,8 +185,26 @@ def render(template: str, f: dict) -> str:
     if first and first.get("path"):
         ld["image"] = f"{BASE}/{first['path']}"
     ld = {k: v for k, v in ld.items() if v is not None}
-    ld_json = json.dumps(ld, ensure_ascii=False).replace("</", "<\\/")
-    p.s = p.s.replace("</head>", f'  <script type="application/ld+json">{ld_json}</script>\n</head>', 1)
+    crumbs = {
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "הארכיון", "item": f"{BASE}/"},
+            {"@type": "ListItem", "position": 2, "name": f"מהדורה {f.get('release_no') or ''}".strip(),
+             "item": f"{BASE}/archive.html#{f.get('release') or ''}"},
+            {"@type": "ListItem", "position": 3, "name": title_he, "item": url},
+        ],
+    }
+
+    def script_json(obj) -> str:
+        return json.dumps(obj, ensure_ascii=False).replace("</", "<\\/")
+
+    # The page's own record, so file-detail.js needn't fetch the manifest.
+    record = {k: v for k, v in f.items() if k != "text_en"}
+    p.s = p.s.replace(
+        "</head>",
+        f'  <script type="application/ld+json">{script_json(ld)}</script>\n'
+        f'  <script type="application/ld+json">{script_json(crumbs)}</script>\n'
+        f'  <script type="application/json" id="doc-data">{script_json(record)}</script>\n</head>', 1)
 
     # ---- body ----
     p.hide("file-loading")
@@ -223,6 +257,18 @@ def render(template: str, f: dict) -> str:
         if f.get("text_preview_en"):
             p.show("ocr-en-section")
             p.inner("ocr-en-body", paragraphs(f["text_preview_en"]))
+    rel_docs = related_for(f, files or [])
+    if rel_docs:
+        items = "".join(
+            f'<li><a href="{esc(doc_path(r["id"]))}">{esc(r.get("title_he") or r.get("title") or r["id"])}</a>'
+            f'<span class="related-meta">{esc(r.get("agency_he") or r.get("agency") or "")}</span></li>'
+            for r in rel_docs)
+        block = (
+            '<section class="text-block" aria-label="מסמכים קשורים">\n'
+            '          <header class="text-block-head"><p class="text-block-label mono">'
+            f'// עוד מ{esc("מהדורה " + f["release_no"]) if f.get("release_no") else "הארכיון"}</p></header>\n'
+            f'          <ul class="related-list">{items}</ul>\n        </section>\n\n        ')
+        p.s = p.s.replace("<!-- footer פעולות -->", block + "<!-- footer פעולות -->", 1)
     return p.s
 
 
@@ -240,7 +286,7 @@ def build() -> int:
         if name in seen:
             raise SystemExit(f"page-name collision: {f['id']!r} and {seen[name]!r} -> {name}")
         seen[name] = f["id"]
-        (OUT_DIR / name).write_text(render(template, f), encoding="utf-8")
+        (OUT_DIR / name).write_text(render(template, f, m["files"]), encoding="utf-8")
     print(f"Wrote {len(seen)} static document pages to {OUT_DIR.relative_to(ROOT)}/")
     return len(seen)
 

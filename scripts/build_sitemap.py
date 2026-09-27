@@ -32,24 +32,36 @@ build_static_pages()
 m = json.loads(MANIFEST.read_text(encoding="utf-8"))
 files = m.get("files", [])
 
+def iso_release(d):
+    """release_date is Israeli D/M/YY ('18/9/26') -> '2026-09-18'."""
+    try:
+        day, mon, yr = (int(x) for x in str(d).split("/"))
+        return f"{2000 + yr if yr < 100 else yr:04d}-{mon:02d}-{day:02d}"
+    except (TypeError, ValueError):
+        return None
+
+
+# lastmod must mean something: a document changes when its release lands,
+# and the index pages when the newest release does. Stamping every URL with
+# today's date on each rebuild teaches Google to ignore lastmod altogether.
+latest = max((iso_release(f.get("release_date")) or "" for f in files), default="") or TODAY
 entries = [
-    (f"{BASE}/", "1.0", "weekly"),
-    (f"{BASE}/index.html", "1.0", "weekly"),
-    (f"{BASE}/archive.html", "0.9", "weekly"),
+    (f"{BASE}/", "1.0", "weekly", latest),
+    (f"{BASE}/archive.html", "0.9", "weekly", latest),
 ]
 for f in files:
     fid = f.get("id")
     if not fid:
         continue
     url = f"{BASE}/{doc_path(fid)}"
-    entries.append((url, "0.7", "monthly"))
+    entries.append((url, "0.7", "monthly", iso_release(f.get("release_date")) or latest))
 
 lines = ['<?xml version="1.0" encoding="UTF-8"?>',
          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-for url, priority, freq in entries:
+for url, priority, freq, lastmod in entries:
     lines.append("  <url>")
     lines.append(f"    <loc>{url}</loc>")
-    lines.append(f"    <lastmod>{TODAY}</lastmod>")
+    lines.append(f"    <lastmod>{lastmod}</lastmod>")
     lines.append(f"    <changefreq>{freq}</changefreq>")
     lines.append(f"    <priority>{priority}</priority>")
     lines.append("  </url>")
