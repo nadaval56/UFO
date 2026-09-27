@@ -38,6 +38,9 @@
     pagination: document.getElementById("pagination"),
     countNum: document.getElementById("file-count-num"),
     tabs: document.getElementById("release-tabs"),
+    tabsToggle: document.getElementById("release-tabs-toggle"),
+    tabsToggleCurrent: document.getElementById("release-tabs-toggle-current"),
+    tabsToggleCount: document.getElementById("release-tabs-toggle-count"),
     releaseTitle: document.getElementById("release-title"),
     releaseEyebrow: document.getElementById("release-eyebrow"),
     latestReleaseDate: document.getElementById("latest-release-date"),
@@ -303,8 +306,9 @@
 
   /* ------------------------- mobile filter collapse ------------------------- */
   // `release` is deliberately excluded from the count: picking a release is
-  // done from the tab strip, which stays visible and shows its own active
-  // state, so counting it here would report the same thing twice.
+  // done from the tab strip, whose active release stays visible (on mobile,
+  // on the strip's own collapsed toggle), so counting it here would report
+  // the same thing twice.
   const COUNTED_FILTERS = ["agency", "incidentDate", "incidentLocation", "type", "search"];
 
   function activeFilterCount() {
@@ -340,6 +344,37 @@
       setFiltersExpanded(el.filtersToggle.getAttribute("aria-expanded") !== "true");
     });
     mobile.addEventListener("change", syncToBreakpoint);
+  }
+
+  /* ------------------------- mobile release-tab collapse ------------------------- */
+  // Below 640px the tabs stack one per row, and with six releases the strip
+  // alone is taller than a phone screen. Fold it behind one control that
+  // always names the active release, so the choice is never hidden.
+  const TABS_MOBILE = window.matchMedia("(max-width: 640px)");
+
+  function setTabsExpanded(open) {
+    if (!el.tabsToggle || !el.tabs) return;
+    el.tabsToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    el.tabs.classList.toggle("is-collapsed", !open);
+  }
+
+  function updateTabsToggle() {
+    if (!el.tabsToggle) return;
+    const key = state.filters.release || "";
+    const r = releaseList().find((x) => x.key === key);
+    if (el.tabsToggleCurrent) el.tabsToggleCurrent.textContent = r ? releaseLabel(r.no) : "כל המהדורות";
+    if (el.tabsToggleCount) el.tabsToggleCount.textContent = String(r ? r.count : state.files.length);
+  }
+
+  function initTabsCollapse() {
+    if (!el.tabsToggle || !el.tabs) return;
+    // Above the breakpoint the CSS ignores .is-collapsed; below it, start closed.
+    const sync = () => setTabsExpanded(!TABS_MOBILE.matches);
+    sync();
+    el.tabsToggle.addEventListener("click", () => {
+      setTabsExpanded(el.tabsToggle.getAttribute("aria-expanded") !== "true");
+    });
+    TABS_MOBILE.addEventListener("change", sync);
   }
 
   // The directive section used to name four agencies by hand. That list was
@@ -422,12 +457,18 @@
     el.tabs.innerHTML = html.join("");
 
     el.tabs.querySelectorAll("[data-release]").forEach((b) => {
-      b.addEventListener("click", () => setRelease(b.dataset.release));
+      b.addEventListener("click", () => {
+        setRelease(b.dataset.release);
+        // On mobile a pick closes the list, like a native dropdown.
+        if (TABS_MOBILE.matches) setTabsExpanded(false);
+      });
     });
+    updateTabsToggle();
   }
 
   function updateTabActive() {
     if (!el.tabs) return;
+    updateTabsToggle();
     const active = state.filters.release || "";
     el.tabs.querySelectorAll("[data-release]").forEach((b) => {
       const on = b.dataset.release === active;
@@ -495,6 +536,7 @@
     // it earlier left a shared ?type=... link collapsed with an active badge
     // and no visible controls.
     initFilterCollapse();
+    initTabsCollapse();
     bindEvents();
     apply();
   }

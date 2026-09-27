@@ -827,6 +827,46 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
     width: 100%;
     justify-content: space-between;
   }
+  /* Six stacked tabs are taller than a phone screen, so the strip folds
+     behind one control that always shows the active release. */
+  .release-tabs-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 14px 16px;
+    background: var(--bg-elev-1);
+    border: 1px solid var(--accent);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: start;
+  }
+  .release-tabs-toggle-current { color: var(--accent-strong); font-weight: 700; }
+  .release-tabs-toggle-count {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 1px 8px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    border-radius: 999px;
+  }
+  .release-tabs-toggle-chevron {
+    margin-inline-start: auto;
+    transition: transform 140ms ease;
+  }
+  .release-tabs-toggle[aria-expanded="true"] .release-tabs-toggle-chevron {
+    transform: rotate(180deg);
+  }
+  /* Scoped to this breakpoint, so a JS failure can't strand the tabs. */
+  .release-tabs.is-collapsed { display: none; }
+}
+/* min-width rather than a bare display:none, for the same source-order
+   reason as .filters-toggle below. */
+@media (min-width: 641px) {
+  .release-tabs-toggle { display: none; }
 }
 
 /* Mobile: the filter row is 464px of controls before any document is
