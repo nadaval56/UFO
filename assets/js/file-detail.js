@@ -202,7 +202,7 @@
     const titleHe = f.title_he || f.title || f.filename || "מסמך";
     document.title = `${titleHe} — עב"מים`;
 
-    const pageUrl = `https://nadaval56.github.io/UFO/file.html?id=${encodeURIComponent(f.id)}`;
+    const pageUrl = `https://pursue.co.il/file.html?id=${encodeURIComponent(f.id)}`;
     const desc = (f.summary_he || f.narrative_he || `פרטי מסמך מארכיון ה-UAP — ${titleHe}`)
       .replace(/\s+/g, " ").slice(0, 280);
 
@@ -237,7 +237,7 @@
       isPartOf: {
         "@type": "Collection",
         name: 'עב"מים — כל מה שהותר לפרסום',
-        url: "https://nadaval56.github.io/UFO/",
+        url: "https://pursue.co.il/",
       },
       publisher: { "@type": "Organization", name: "U.S. Department of War" },
     };
@@ -246,7 +246,7 @@
     if (f.incident_location_he) ld.contentLocation = { "@type": "Place", name: f.incident_location_he };
     const firstPreview = (f.preview_pages || f.preview_pages_fallback || [])[0];
     if (firstPreview && firstPreview.path) {
-      ld.image = "https://nadaval56.github.io/UFO/" + firstPreview.path;
+      ld.image = "https://pursue.co.il/" + firstPreview.path;
     }
     const ldNode = document.createElement("script");
     ldNode.type = "application/ld+json";
