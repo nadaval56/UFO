@@ -280,7 +280,14 @@
         <!-- הודעה על מהדורה שפורסמה וטרם שוקפה — נבנית מ-data/pending.json -->
         <div id="pending-release" class="pending-release" hidden></div>
 
-        <!-- לשוניות מהדורות — משוכפל מבנה הטאבים של האתר המקורי -->
+        <!-- לשוניות מהדורות — משוכפל מבנה הטאבים של האתר המקורי.
+             במובייל מתקפלות מאחורי כפתור אחד שמציג את המהדורה הנבחרת. -->
+        <button id="release-tabs-toggle" class="release-tabs-toggle" type="button"
+                aria-expanded="true" aria-controls="release-tabs">
+          <span id="release-tabs-toggle-current" class="release-tabs-toggle-current">כל המהדורות</span>
+          <span id="release-tabs-toggle-count" class="release-tabs-toggle-count mono"></span>
+          <span class="release-tabs-toggle-chevron" aria-hidden="true">▾</span>
+        </button>
         <nav id="release-tabs" class="release-tabs" role="tablist" aria-label="בחירת מהדורה">
           <!-- לשוניות נבנות דינמית מ-manifest.json ע"י file-browser.js -->
         </nav>
