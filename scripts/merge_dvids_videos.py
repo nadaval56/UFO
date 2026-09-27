@@ -75,16 +75,25 @@ def main():
     total_vid = sum(1 for f in manifest["files"] if f.get("type") == "vid")
 
     for f in manifest["files"]:
-        if f.get("type") != "vid":
+        # Audio rows are included too: DVIDS publishes some recordings (e.g.
+        # DOW-UAP-PR160) as a still-frame MP4 that plays in the same player.
+        # Most older audio (NASA tapes) is not on DVIDS, so an unmatched
+        # audio row is simply skipped rather than reported as a miss.
+        is_aud = f.get("type") == "aud"
+        if f.get("type") != "vid" and not is_aud:
             continue
         src = f.get("source_url") or ""
         if "#" not in src:
+            if is_aud:
+                continue
             missed.append(f.get("id"))
             continue
         anchor = src.split("#", 1)[1]
         k = anchor_key(anchor)
         rec = by_key.get(k)
         if not rec:
+            if is_aud:
+                continue
             missed.append(f"{f.get('id')} ({k})")
             continue
 
@@ -113,7 +122,7 @@ def main():
         applied += 1
 
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"applied: {applied}/{total_vid}")
+    print(f"applied: {applied} (vid + matched aud) | vid rows: {total_vid}")
     if missed:
         print(f"missed: {missed}")
 
