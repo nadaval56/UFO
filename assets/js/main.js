@@ -1,4 +1,4 @@
-/* main.js — small UI helpers (smooth-anchor scroll offset, year, etc.).
+/* main.js - small UI helpers (smooth-anchor scroll offset, year, etc.).
    File browser logic lives in file-browser.js. */
 (function () {
   "use strict";
@@ -24,7 +24,7 @@
   });
 
   // Mobile: the ten source-bundle buttons are folded behind one control.
-  // Collapse only when the mobile breakpoint is actually active — on desktop
+  // Collapse only when the mobile breakpoint is actually active - on desktop
   // the CSS ignores .is-collapsed, but leaving the class off keeps the DOM
   // honest and means a resize into mobile starts closed rather than open.
   const dlToggle = document.getElementById("release-downloads-toggle");

@@ -2,7 +2,7 @@
    file-detail.js
    Loads manifest.json, finds entry by ?id=..., renders the
    standalone file detail page (gallery + metadata + texts).
-   No dependencies — vanilla JS.
+   No dependencies - vanilla JS.
    ============================================================ */
 
 (function () {
@@ -101,7 +101,7 @@
   }
 
   function formatBytes(bytes) {
-    if (bytes == null || isNaN(bytes)) return "—";
+    if (bytes == null || isNaN(bytes)) return "-";
     if (bytes < 1024) return bytes + " B";
     if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + " KB";
     if (bytes < 1024 * 1024 * 1024) return (bytes / (1024 * 1024)).toFixed(1) + " MB";
@@ -110,7 +110,7 @@
 
   function typeLabel(t) {
     const map = { pdf: "PDF", img: "תמונה", vid: "וידאו", doc: "מסמך", txt: "טקסט" };
-    return map[t] || (t ? t.toUpperCase() : "—");
+    return map[t] || (t ? t.toUpperCase() : "-");
   }
 
   /** For image files whose source_url points straight at an image, return that
@@ -134,7 +134,7 @@
   };
 
   function kindLabelHe(k) {
-    return KIND_LABEL_HE[k] || k || "—";
+    return KIND_LABEL_HE[k] || k || "-";
   }
 
   function showError(msg) {
@@ -200,7 +200,7 @@
       state.previewsAreFallback = true;
     } else if (directImageUrl(file)) {
       // Standalone image files (type "img", e.g. the NASA STS-80 stills) have
-      // no extracted PDF pages — the file itself is the preview. Show it straight
+      // no extracted PDF pages - the file itself is the preview. Show it straight
       // from its source URL (the viewer's browser can reach war.gov).
       state.previews = [{ page: 1, kind: "photo", path: directImageUrl(file) }];
       state.previewsAreFallback = false;
@@ -241,7 +241,7 @@
     }
     setAttr('link[rel="canonical"]', "href", pageUrl);
     // meta[name=description] drives the search snippet, and was the one tag
-    // not being updated — all 375 pages shared the generic placeholder.
+    // not being updated - all 375 pages shared the generic placeholder.
     setAttr('meta[name="description"]', "content", desc);
     setAttr('meta[property="og:title"]', "content", `${titleHe} | עב"מים`);
     setAttr('meta[property="og:description"]', "content", desc);
@@ -296,22 +296,22 @@
     }
 
     // מטא-דאטה
-    el.metaAgency.textContent = f.agency_he || f.agency || "—";
+    el.metaAgency.textContent = f.agency_he || f.agency || "-";
     el.metaType.textContent = typeLabel(f.type);
     el.metaRelease.textContent = f.release_no
       ? `מהדורה ${f.release_no}${f.release_date ? " · " + f.release_date : ""}`
-      : (f.release_date || "—");
+      : (f.release_date || "-");
     el.metaIncidentDate.textContent = f.incident_date_display || f.incident_date || "N/A";
     el.metaIncidentLoc.textContent = f.incident_location_he || f.incident_location || "N/A";
-    el.metaPages.textContent = f.page_count != null ? String(f.page_count) : "—";
+    el.metaPages.textContent = f.page_count != null ? String(f.page_count) : "-";
     el.metaSize.textContent = formatBytes(f.size_bytes);
-    el.metaKinds.textContent = (f.content_kinds || []).map(kindLabelHe).join(" · ") || "—";
+    el.metaKinds.textContent = (f.content_kinds || []).map(kindLabelHe).join(" · ") || "-";
 
     // קישור הורדה
     setupDownload(el.metaDownload, f);
     setupDownload(el.metaDownload2, f);
 
-    // נגן וידאו — לקבצי וידאו עם media_url
+    // נגן וידאו - לקבצי וידאו עם media_url
     if (f.media_url && el.mediaPlayer) {
       el.mediaPlayer.hidden = false;
       el.gallery.hidden = true;
@@ -361,7 +361,7 @@
       el.summarySection.hidden = true;
     }
 
-    // OCR — תרגום עברי (prefer full text_he; fall back to 3000-char text_preview_he)
+    // OCR - תרגום עברי (prefer full text_he; fall back to 3000-char text_preview_he)
     const heFull = f.text_he;
     const heExcerpt = f.text_preview_he;
     const heText = heFull || heExcerpt;
@@ -377,7 +377,7 @@
       el.ocrHeSection.hidden = true;
     }
 
-    // English OCR collapsible — contains both the excerpt and the full text.
+    // English OCR collapsible - contains both the excerpt and the full text.
     // Show the wrap if either field exists; show each inner sub-section by data.
     // The full OCR lives in its own file (data/text/*.txt, see
     // scripts/split_fulltext.py) so the manifest stays small; fetch it only
@@ -444,7 +444,7 @@
   /* ------------------------- gallery ------------------------- */
 
   function formatDuration(secs) {
-    if (secs == null || !Number.isFinite(secs)) return "—";
+    if (secs == null || !Number.isFinite(secs)) return "-";
     const m = Math.floor(secs / 60);
     const s = Math.floor(secs % 60);
     return `${m}:${String(s).padStart(2, "0")}`;
@@ -510,7 +510,7 @@
     state.galleryIdx = ((idx % n) + n) % n;
     const p = state.previews[state.galleryIdx];
     el.galleryImage.src = p.path;
-    el.galleryImage.alt = `תצוגה מקדימה — עמוד ${p.page} (${kindLabelHe(p.kind)})`;
+    el.galleryImage.alt = `תצוגה מקדימה - עמוד ${p.page} (${kindLabelHe(p.kind)})`;
     el.galleryCounter.textContent = `${state.galleryIdx + 1} / ${n} · עמוד ${p.page}`;
     el.galleryKind.textContent = kindLabelHe(p.kind);
 
