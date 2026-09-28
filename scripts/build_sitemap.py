@@ -111,14 +111,14 @@ archive = f"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>אינדקס מלא — כל {len(files)} המסמכים — עב"מים</title>
+<title>אינדקס מלא: כל {len(files)} המסמכים | עב"מים</title>
 <meta name="description" content="אינדקס מלא של כל {len(files)} מסמכי העב&quot;מים שממשל ארה&quot;ב פרסם, מסודר לפי מהדורה, עם קישור לכל מסמך.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="{BASE}/archive.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="אינדקס מלא — כל {len(files)} המסמכים">
+<meta property="og:title" content="אינדקס מלא: כל {len(files)} המסמכים">
 <meta property="og:url" content="{BASE}/archive.html">
 <meta property="og:locale" content="he_IL">
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -201,10 +201,10 @@ for f in newest:
 feed = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>עב"מים — כל מה שהותר לפרסום</title>
+    <title>עב"מים: כל מה שהותר לפרסום</title>
     <link>{BASE}/</link>
     <atom:link href="{BASE}/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>מסמכים חדשים בארכיון ה-UAP המתורגם לעברית — מראה קהילתית של war.gov/UFO.</description>
+    <description>מסמכים חדשים בארכיון ה-UAP המתורגם לעברית. מראה קהילתית של war.gov/UFO.</description>
     <language>he</language>
     <lastBuildDate>{rfc822(latest)}</lastBuildDate>
 {chr(10).join(items)}

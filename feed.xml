@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>עב"מים — כל מה שהותר לפרסום</title>
+    <title>עב"מים: כל מה שהותר לפרסום</title>
     <link>https://pursue.co.il/</link>
     <atom:link href="https://pursue.co.il/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>מסמכים חדשים בארכיון ה-UAP המתורגם לעברית — מראה קהילתית של war.gov/UFO.</description>
+    <description>מסמכים חדשים בארכיון ה-UAP המתורגם לעברית. מראה קהילתית של war.gov/UFO.</description>
     <language>he</language>
     <lastBuildDate>Fri, 18 Sep 2026 12:00:00 +0000</lastBuildDate>
     <item>
