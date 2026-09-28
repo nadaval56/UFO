@@ -11,7 +11,7 @@ committed:
 archive.html exists because the browser on index.html is built entirely in
 JavaScript: with scripts off there are no file cards and no links at all, so
 a crawler that does not execute JS sees none of the 375 documents. This page
-is the crawlable spine — and it works for readers with JS off too.
+is the crawlable spine - and it works for readers with JS off too.
 """
 import json
 import sys
@@ -72,7 +72,7 @@ print(f"Wrote {SITEMAP} with {len(entries)} URLs")
 
 
 # --------------------------------------------------------------------------
-# archive.html — static, no JavaScript, one real link per document
+# archive.html - static, no JavaScript, one real link per document
 # --------------------------------------------------------------------------
 
 def esc(v):
@@ -144,7 +144,7 @@ archive = f"""<!DOCTYPE html>
 <body>
 <div class="a-wrap">
   <h1>אינדקס מלא של הארכיון</h1>
-  <p class="a-lead">כל {len(files)} המסמכים, מסודרים לפי מהדורה. עמוד סטטי ללא JavaScript —
+  <p class="a-lead">כל {len(files)} המסמכים, מסודרים לפי מהדורה. עמוד סטטי ללא JavaScript -
   <a href="index.html">לדפדפן עם חיפוש וסינון</a>.</p>
 {chr(10).join(rows)}
   <p class="a-lead" style="margin-top:40px">
@@ -160,7 +160,7 @@ print(f"Wrote {ARCHIVE} with {len(files)} document links")
 
 
 # --------------------------------------------------------------------------
-# feed.xml — RSS of the newest documents, so readers and aggregators can
+# feed.xml - RSS of the newest documents, so readers and aggregators can
 # follow new releases without polling the site.
 # --------------------------------------------------------------------------
 from email.utils import format_datetime  # noqa: E402
@@ -216,22 +216,22 @@ print(f"Wrote {FEED} with {len(items)} items")
 
 
 # --------------------------------------------------------------------------
-# llms.txt — a plain-language map of the site for AI search engines
+# llms.txt - a plain-language map of the site for AI search engines
 # (https://llmstxt.org). Counts are derived, so it never goes stale.
 # --------------------------------------------------------------------------
 LLMS = ROOT / "llms.txt"
 rel_lines = []
 for r in m.get("releases", []):
-    rel_lines.append(f"- Release {r.get('release_no')} — {iso_release(r.get('date')) or r.get('date')}: "
-                     f"{r.get('count')} files — {BASE}/archive.html#{r.get('release')}")
+    rel_lines.append(f"- Release {r.get('release_no')} - {iso_release(r.get('date')) or r.get('date')}: "
+                     f"{r.get('count')} files - {BASE}/archive.html#{r.get('release')}")
 agencies = sorted({f.get("agency") for f in files if f.get("agency")})
-llms = f"""# עב"מים — PURSUE Hebrew Mirror (pursue.co.il)
+llms = f"""# עב"מים - PURSUE Hebrew Mirror (pursue.co.il)
 
 > An unofficial, community-made Hebrew translation of the U.S. Department of War's
 > PURSUE archive (Presidential Unsealing and Reporting System for UAP Encounters),
 > originally published at https://www.war.gov/UFO/. It mirrors all {len(files)} declassified
 > UAP/UFO files released so far, each with a Hebrew title, a faithful Hebrew translation
-> of war.gov's official description, and — for scanned documents — page previews and a
+> of war.gov's official description, and - for scanned documents - page previews and a
 > Hebrew translation of the OCR text. Source material is a U.S. government work in the
 > public domain (17 U.S.C. § 105). Not affiliated with the U.S. government.
 

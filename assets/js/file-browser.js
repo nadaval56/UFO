@@ -3,7 +3,7 @@
    Drives the archive browser across every PURSUE release: loads
    manifest.json, renders cards, handles pagination, filters, and search.
    Cards link to each document's static page, doc/<id>.html.
-   No dependencies — vanilla JS.
+   No dependencies - vanilla JS.
    ============================================================ */
 
 (function () {
@@ -62,15 +62,15 @@
 
   function typeLabel(t) {
     const map = { pdf: "PDF", img: "תמונה", vid: "וידאו", doc: "מסמך", txt: "טקסט" };
-    return map[t] || (t ? t.toUpperCase() : "—");
+    return map[t] || (t ? t.toUpperCase() : "-");
   }
 
   function fileTitleHe(f) {
-    return f.title_he || f.title || f.filename || "—";
+    return f.title_he || f.title || f.filename || "-";
   }
 
   function agencyDisplayHe(f) {
-    return f.agency_he || f.agency || "—";
+    return f.agency_he || f.agency || "-";
   }
 
   /** First sentence of a Hebrew narrative, capped at maxChars. */
@@ -98,7 +98,7 @@
     const n = (f.narrative_he || "").trim();
     if (!n) return f.title || f.filename || "(ללא כותרת)";
 
-    const dashIdx = n.indexOf(" — ");
+    const dashIdx = n.indexOf(" - ");
     if (dashIdx >= 4 && dashIdx <= 80) {
       // If the first segment is a short date / context (< 20 chars), expand
       // through the next phrase so the headline carries real meaning.
@@ -122,11 +122,11 @@
     return trimmed + "…";
   }
 
-  /** True if the given value is N/A / לא ידוע / blank — shouldn't render. */
+  /** True if the given value is N/A / לא ידוע / blank - shouldn't render. */
   function isBlank(v) {
     if (v == null) return true;
     const s = String(v).trim().toLowerCase();
-    return s === "" || s === "n/a" || s === "—" || s === "-" || s === "לא ידוע" || s === "לא רלוונטי";
+    return s === "" || s === "n/a" || s === "-" || s === "לא ידוע" || s === "לא רלוונטי";
   }
 
   /** Card blurb: the rest of narrative_he after the headline is removed. */
@@ -137,7 +137,7 @@
     // truncated headlines still consume their matched prefix from n.
     const clean = (headline || "").replace(/…$/, "").trim();
     if (clean && n.startsWith(clean)) {
-      const rest = n.slice(clean.length).replace(/^\s*[—\-,;.]\s*/, "").trim();
+      const rest = n.slice(clean.length).replace(/^\s*[-,;.]\s*/, "").trim();
       if (rest) return narrativeBlurb(rest, 220);
     }
     return narrativeBlurb(n, 220);
@@ -197,7 +197,7 @@
     writeHash();
   }
 
-  // Hebrew month names for the eyebrow line — release_date is Israeli DD/MM/YY.
+  // Hebrew month names for the eyebrow line - release_date is Israeli DD/MM/YY.
   const MONTHS_HE = ["ינואר", "פברואר", "מרץ", "אפריל", "מאי", "יוני", "יולי",
                      "אוגוסט", "ספטמבר", "אוקטובר", "נובמבר", "דצמבר"];
 
@@ -212,7 +212,7 @@
     return { day, month, year };
   }
 
-  // "8 במאי, 22 במאי, 12 ביוני ו-10 ביולי 2026" — the year is stated once when
+  // "8 במאי, 22 במאי, 12 ביוני ו-10 ביולי 2026" - the year is stated once when
   // every release shares it, and the last item gets the conjunction, the way
   // the hand-written heading used to read.
   function releaseDatesLine(rels) {
@@ -227,7 +227,7 @@
     return parts.slice(0, -1).join(", ") + " ו-" + parts[parts.length - 1];
   }
 
-  // The section heading used to name the releases by hand ("מהדורות 01–04"),
+  // The section heading used to name the releases by hand ("מהדורות 01-04"),
   // which silently went stale every time a tranche landed. Derive it instead.
   function renderReleaseHeader() {
     const rels = releaseList();
@@ -236,8 +236,8 @@
 
     if (el.releaseTitle) {
       el.releaseTitle.textContent = rels.length > 1
-        ? `ארכיון המסמכים — מהדורות ${first}–${last}`
-        : `ארכיון המסמכים — ${releaseLabel(first)}`;
+        ? `ארכיון המסמכים - מהדורות ${first}-${last}`
+        : `ארכיון המסמכים - ${releaseLabel(first)}`;
     }
     if (el.releaseEyebrow) {
       const dates = releaseDatesLine(rels);
@@ -282,7 +282,7 @@
         </p>
         ${r.headline_he ? `<p class="pending-release-body">${escapeHtml(r.headline_he)}</p>` : ""}
         <p class="pending-release-foot">
-          החומרים טרם שוקפו לעברית — war.gov חוסם סריקה משרתים, והרענון מתבצע ידנית מהדפדפן.
+          החומרים טרם שוקפו לעברית - war.gov חוסם סריקה משרתים, והרענון מתבצע ידנית מהדפדפן.
           ${r.announcement_url ? `<a href="${escapeHtml(r.announcement_url)}" target="_blank" rel="noopener">ההודעה הרשמית ↗</a>` : ""}
         </p>
         ${renderPendingBundles(r)}
@@ -334,7 +334,7 @@
 
     function syncToBreakpoint() {
       // Above the breakpoint the CSS ignores .is-collapsed entirely. Below it,
-      // start closed — unless a filter is already active (a deep link), in
+      // start closed - unless a filter is already active (a deep link), in
       // which case hiding the controls that caused it would be baffling.
       setFiltersExpanded(!mobile.matches || activeFilterCount() > 0);
     }
@@ -395,7 +395,7 @@
     if (!rows.length) return;
 
     // war.gov's agency values have a long tail of one-file entries with long
-    // Hebrew names — showing all eleven at once is taller than the four
+    // Hebrew names - showing all eleven at once is taller than the four
     // hardcoded rows this replaces. Lead with the substantial ones and put
     // the rest behind a chip, so nothing is hidden permanently.
     const LEAD = 6;
@@ -499,7 +499,7 @@
     note.className = "placeholder-banner";
     note.innerHTML = `
       <strong>// המאניפסט ממתין לסריקה</strong>
-      <p>מוצגות ${n} רשומות בלבד. war.gov חוסם בוטים — הסריקה מתבצעת מהדפדפן שלך. הוראות מלאות:
+      <p>מוצגות ${n} רשומות בלבד. war.gov חוסם בוטים - הסריקה מתבצעת מהדפדפן שלך. הוראות מלאות:
       <a href="https://github.com/nadaval56/UFO#איך-מרעננים-את-ה-manifest-חובה-ידנית" target="_blank" rel="noopener">README → איך מרעננים</a>.</p>`;
     const downloads = wrap.querySelector(".release-downloads");
     if (downloads) downloads.parentNode.insertBefore(note, downloads);
@@ -612,7 +612,7 @@
 
   function bindEvents() {
     bindFilter(el.agency, "agency");
-    // Release select drives the same state as the tabs — route through setRelease
+    // Release select drives the same state as the tabs - route through setRelease
     // so the two controls stay visually in sync.
     if (el.releaseSelect) {
       el.releaseSelect.addEventListener("change", () => setRelease(el.releaseSelect.value));

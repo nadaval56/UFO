@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build_static_pages.py — pre-render one static HTML page per document, at
+build_static_pages.py - pre-render one static HTML page per document, at
 doc/<name>.html, from file.html and data/manifest.json.
 
 Why: file.html renders everything in JavaScript from the manifest, so a crawler
@@ -14,7 +14,7 @@ full OCR); it reads the id from <meta name="doc-id">.
 The page file name must match `docPath()` in assets/js/file-detail.js and
 file-browser.js: non [A-Za-z0-9._-] runs become "_", trimmed.
 
-Generated output — never hand-edit doc/*.html. Run via build_sitemap.py (which
+Generated output - never hand-edit doc/*.html. Run via build_sitemap.py (which
 calls this first) after every manifest change.
 """
 from __future__ import annotations
@@ -59,11 +59,11 @@ def paragraphs(text: str) -> str:
 
 def fmt_bytes(n) -> str:
     if n is None:
-        return "—"
+        return "-"
     try:
         n = float(n)
     except (TypeError, ValueError):
-        return "—"
+        return "-"
     for unit, div in (("GB", 1024 ** 3), ("MB", 1024 ** 2), ("KB", 1024)):
         if n >= div:
             return f"{n / div:.{2 if unit == 'GB' else 1}f} {unit}"
@@ -130,18 +130,18 @@ def meta_description(f: dict, title_he: str) -> str:
     """Search snippet: type, document code and agency first, then the most
     specific Hebrew text, cut at a word boundary. summary_he opens with
     war.gov's boilerplate on hundreds of records (every INDOPACOM report, all
-    37 DIRDs), so leading with it made the first ~155 characters — all Google
-    shows — identical across 317 pages. narrative_he is per-document."""
+    37 DIRDs), so leading with it made the first ~155 characters - all Google
+    shows - identical across 317 pages. narrative_he is per-document."""
     body = f.get("narrative_he") or f.get("summary_he") or title_he
     code = DOC_CODE_RE.match(f.get("title") or "")
     head = " · ".join(x for x in (
         " ".join(x for x in (DESC_NOUN.get(f.get("type"), "פריט"), code and code.group(0)) if x),
         f.get("agency_he") or f.get("agency")) if x)
     s = re.sub(r"\s+", " ", f"{head} · {body}").strip()
-    s = re.sub(r"\s*—\s*", ", ", s)  # no em dashes in the search/share snippet
+    s = re.sub("[–—]", "-", s)  # site style: plain hyphen, never en/em dashes
     if len(s) <= DESC_MAX:
         return s
-    return s[: DESC_MAX - 1].rsplit(" ", 1)[0].rstrip(",.;:—-־ ") + "…"
+    return s[: DESC_MAX - 1].rsplit(" ", 1)[0].rstrip(",.;:-־ ") + "…"
 
 
 def related_for(f: dict, files: list[dict], n: int = 8) -> list[dict]:
@@ -241,15 +241,15 @@ def render(template: str, f: dict, files: list[dict] | None = None) -> str:
         p.hide("file-filename")
 
     rel = (f"מהדורה {f['release_no']}" + (f" · {f['release_date']}" if f.get("release_date") else "")
-           if f.get("release_no") else (f.get("release_date") or "—"))
-    p.inner("meta-agency", esc(f.get("agency_he") or f.get("agency") or "—"))
-    p.inner("meta-type", esc(TYPE_LABEL.get(f.get("type"), (f.get("type") or "—").upper())))
+           if f.get("release_no") else (f.get("release_date") or "-"))
+    p.inner("meta-agency", esc(f.get("agency_he") or f.get("agency") or "-"))
+    p.inner("meta-type", esc(TYPE_LABEL.get(f.get("type"), (f.get("type") or "-").upper())))
     p.inner("meta-release", esc(rel))
     p.inner("meta-incident-date", esc(f.get("incident_date_display") or f.get("incident_date") or "N/A"))
     p.inner("meta-incident-loc", esc(f.get("incident_location_he") or f.get("incident_location") or "N/A"))
-    p.inner("meta-pages", esc(f["page_count"]) if f.get("page_count") is not None else "—")
+    p.inner("meta-pages", esc(f["page_count"]) if f.get("page_count") is not None else "-")
     p.inner("meta-size", esc(fmt_bytes(f.get("size_bytes"))))
-    p.inner("meta-kinds", esc(" · ".join(KIND_LABEL_HE.get(k, k) for k in f.get("content_kinds") or []) or "—"))
+    p.inner("meta-kinds", esc(" · ".join(KIND_LABEL_HE.get(k, k) for k in f.get("content_kinds") or []) or "-"))
     for dl in ("meta-download", "meta-download-2"):
         if f.get("source_url"):
             p.attr(dl, "href", f["source_url"])
@@ -259,7 +259,7 @@ def render(template: str, f: dict, files: list[dict] | None = None) -> str:
     if first and first.get("path") and not f.get("media_url"):
         p.show("gallery")
         p.attr("gallery-image", "src", first["path"])
-        p.attr("gallery-image", "alt", f"{title_he} — עמוד {first.get('page', 1)}")
+        p.attr("gallery-image", "alt", f"{title_he} - עמוד {first.get('page', 1)}")
 
     if f.get("narrative_he"):
         p.show("narrative-section")

@@ -1,10 +1,10 @@
-# עב"מים — PURSUE Hebrew Mirror (pursue.co.il)
+# עב"מים - PURSUE Hebrew Mirror (pursue.co.il)
 
 > An unofficial, community-made Hebrew translation of the U.S. Department of War's
 > PURSUE archive (Presidential Unsealing and Reporting System for UAP Encounters),
 > originally published at https://www.war.gov/UFO/. It mirrors all 450 declassified
 > UAP/UFO files released so far, each with a Hebrew title, a faithful Hebrew translation
-> of war.gov's official description, and — for scanned documents — page previews and a
+> of war.gov's official description, and - for scanned documents - page previews and a
 > Hebrew translation of the OCR text. Source material is a U.S. government work in the
 > public domain (17 U.S.C. § 105). Not affiliated with the U.S. government.
 
@@ -21,12 +21,12 @@ this site as the Hebrew translation.
 - [All metadata as JSON](https://pursue.co.il/data/manifest.json)
 
 ## Releases
-- Release 01 — 2026-05-08: 158 files — https://pursue.co.il/archive.html#release_01
-- Release 02 — 2026-05-22: 64 files — https://pursue.co.il/archive.html#release_02
-- Release 03 — 2026-06-12: 72 files — https://pursue.co.il/archive.html#release_03
-- Release 04 — 2026-07-10: 40 files — https://pursue.co.il/archive.html#release_04
-- Release 05 — 2026-08-07: 41 files — https://pursue.co.il/archive.html#release_05
-- Release 06 — 2026-09-18: 75 files — https://pursue.co.il/archive.html#release_06
+- Release 01 - 2026-05-08: 158 files - https://pursue.co.il/archive.html#release_01
+- Release 02 - 2026-05-22: 64 files - https://pursue.co.il/archive.html#release_02
+- Release 03 - 2026-06-12: 72 files - https://pursue.co.il/archive.html#release_03
+- Release 04 - 2026-07-10: 40 files - https://pursue.co.il/archive.html#release_04
+- Release 05 - 2026-08-07: 41 files - https://pursue.co.il/archive.html#release_05
+- Release 06 - 2026-09-18: 75 files - https://pursue.co.il/archive.html#release_06
 
 ## Agencies
 CIA, Central Intelligence Agency, Department of Energy, Department of State, Department of War, Executive Office of the President, FBI, Intelligence Community Agency, Local Law Enforcement, NASA, Office of the Director of National Intelligence, U.S. Government

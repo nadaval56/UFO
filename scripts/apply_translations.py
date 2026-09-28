@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-apply_translations.py — adds Hebrew translations to data/manifest.json.
+apply_translations.py - adds Hebrew translations to data/manifest.json.
 
 Translations live as Python data here, written by a human (Claude Code
 session) against the English text scraped from war.gov. Re-running this
@@ -127,11 +127,11 @@ def translate_title(title: str, agency: str, location: str | None) -> str | None
     if not title:
         return None
 
-    # File codes — leave as-is (they're useful identifiers)
+    # File codes - leave as-is (they're useful identifiers)
     if re.match(r"^\d+_", title) or title.startswith("65_HS1"):
         return None
 
-    # FBI Photo BNN — simple pattern
+    # FBI Photo BNN - simple pattern
     m = re.match(r"^FBI Photo (B\d+)$", title)
     if m:
         return f"תמונת FBI {m.group(1)}"
@@ -150,7 +150,7 @@ def translate_title(title: str, agency: str, location: str | None) -> str | None
         rest_he = translate_title_tail(m.group(2))
         return f"DOW-UAP-{ident}, {rest_he}"
 
-    # Apollo / Skylab / etc. — fall through to per-title overrides below
+    # Apollo / Skylab / etc. - fall through to per-title overrides below
     return TITLE_HE.get(title)
 
 
@@ -201,13 +201,13 @@ TITLE_HE: dict[str, str] = {
 }
 
 # ---------------------------------------------------------------------------
-# Summary translations — the top templates that recur across many entries.
+# Summary translations - the top templates that recur across many entries.
 # Matched by the first 120 characters of English text (covers 100/158 entries).
 # Remaining 34 unique summaries are added in a follow-up pass.
 # ---------------------------------------------------------------------------
 
 SUMMARY_TEMPLATES: list[tuple[str, str]] = [
-    # FBI Photo template (32x) — boilerplate for monochrome UAP image submissions.
+    # FBI Photo template (32x) - boilerplate for monochrome UAP image submissions.
     (
         "The Federal Bureau of Investigation (FBI) submitted a report of an unidentified anomalous phenomenon (UAP) to the All-do",
         "הלשכה הפדרלית לחקירות (FBI) הגישה למשרד פתרון תופעות כל-תחומיות (AARO) דיווח על "
@@ -225,10 +225,10 @@ SUMMARY_TEMPLATES: list[tuple[str, str]] = [
     # Mission Report template (29x)
     (
         "This document is a Mission Report (MISREP), a standardized reporting form the U.S. Military uses to record the circumsta",
-        "מסמך זה הוא דו\"ח משימה (MISREP) — טופס דיווח סטנדרטי שבו עושה הצבא האמריקאי שימוש כדי "
+        "מסמך זה הוא דו\"ח משימה (MISREP) - טופס דיווח סטנדרטי שבו עושה הצבא האמריקאי שימוש כדי "
         "לתעד את נסיבותיו של אירוע מבצעי. דו\"ח זה מתאר תצפית של תופעה אווירית חריגה (UAP) על "
-        "ידי כוח של ארה\"ב או של בעל ברית. הוא כולל את פרטי האירוע — תאריך, שעה, מיקום, כוח "
-        "מדווח, תיאור התופעה ופעולות שבוצעו — בהתאם להליכי הדיווח הסטנדרטיים. בוצעו השמטות כדי "
+        "ידי כוח של ארה\"ב או של בעל ברית. הוא כולל את פרטי האירוע - תאריך, שעה, מיקום, כוח "
+        "מדווח, תיאור התופעה ופעולות שבוצעו - בהתאם להליכי הדיווח הסטנדרטיים. בוצעו השמטות כדי "
         "להגן על זהות עדי ראייה, מיקומי מתקנים ממשלתיים, או מידע פוטנציאלית רגיש על אתרים "
         "צבאיים שאינם קשורים ל-UAP. לא בוצעו השמטות בקבצים שפורסמו תחת הנחיית הנשיא טראמפ בנוגע "
         "למידע על טבעם או קיומם של מפגשים שדווחו כ-UAP או תופעות נלוות."
@@ -244,23 +244,23 @@ SUMMARY_TEMPLATES: list[tuple[str, str]] = [
         "עם השמטות נוספות ועם דפים חסרים. כאן מובא תיק החקירה השלם, ובו מספר דפים שסיווגם הוסר "
         "לאחרונה ורק עם השמטות מינוריות."
     ),
-    # CENTCOM UAP variant 1 (11x) — "(UAP)" parenthetical
+    # CENTCOM UAP variant 1 (11x) - "(UAP)" parenthetical
     (
         "The United States Central Command submitted a report of an unidentified anomalous phenomenon (UAP) to the All-domain Ano",
         "פיקוד מרכז של ארצות הברית (CENTCOM) הגיש למשרד פתרון תופעות כל-תחומיות (AARO) דיווח "
         "על תופעה אווירית חריגה בלתי מזוהה (UAP). הדיווח כולל את פרטי האירוע: תאריך, שעה, "
-        "מיקום, כוח מדווח, תיאור התופעה ופעולות שבוצעו בעקבותיה — בהתאם להליכי הדיווח "
+        "מיקום, כוח מדווח, תיאור התופעה ופעולות שבוצעו בעקבותיה - בהתאם להליכי הדיווח "
         "הסטנדרטיים. בוצעו השמטות כדי להגן על זהות עדי ראייה, מיקומי מתקנים ממשלתיים, או מידע "
         "פוטנציאלית רגיש על אתרים צבאיים שאינם קשורים ל-UAP. לא בוצעו השמטות בקבצים שפורסמו "
         "תחת הנחיית הנשיא טראמפ בנוגע למידע על טבעם או קיומם של מפגשים שדווחו כ-UAP או תופעות "
         "נלוות."
     ),
-    # CENTCOM UAP variant 2 (10x) — without "(UAP)" parenthetical
+    # CENTCOM UAP variant 2 (10x) - without "(UAP)" parenthetical
     (
         "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly R",
         "פיקוד מרכז של ארצות הברית (CENTCOM) הגיש למשרד פתרון תופעות כל-תחומיות (AARO) דיווח "
         "על תופעה אווירית חריגה בלתי מזוהה. הדיווח כולל את פרטי האירוע: תאריך, שעה, מיקום, כוח "
-        "מדווח, תיאור התופעה ופעולות שבוצעו בעקבותיה — בהתאם להליכי הדיווח הסטנדרטיים. בוצעו "
+        "מדווח, תיאור התופעה ופעולות שבוצעו בעקבותיה - בהתאם להליכי הדיווח הסטנדרטיים. בוצעו "
         "השמטות כדי להגן על זהות עדי ראייה, מיקומי מתקנים ממשלתיים, או מידע פוטנציאלית רגיש על "
         "אתרים צבאיים שאינם קשורים ל-UAP. לא בוצעו השמטות בקבצים שפורסמו תחת הנחיית הנשיא טראמפ "
         "בנוגע למידע על טבעם או קיומם של מפגשים שדווחו כ-UAP או תופעות נלוות."
@@ -270,7 +270,7 @@ SUMMARY_TEMPLATES: list[tuple[str, str]] = [
         "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anom",
         "פיקוד אינדו-פסיפיק של ארצות הברית (INDOPACOM) הגיש למשרד פתרון תופעות כל-תחומיות "
         "(AARO) דיווח על תופעה אווירית חריגה בלתי מזוהה. הדיווח כולל את פרטי האירוע: תאריך, "
-        "שעה, מיקום, כוח מדווח, תיאור התופעה ופעולות שבוצעו בעקבותיה — בהתאם להליכי הדיווח "
+        "שעה, מיקום, כוח מדווח, תיאור התופעה ופעולות שבוצעו בעקבותיה - בהתאם להליכי הדיווח "
         "הסטנדרטיים. בוצעו השמטות כדי להגן על זהות עדי ראייה, מיקומי מתקנים ממשלתיים, או מידע "
         "פוטנציאלית רגיש על אתרים צבאיים שאינם קשורים ל-UAP. לא בוצעו השמטות בקבצים שפורסמו "
         "תחת הנחיית הנשיא טראמפ בנוגע למידע על טבעם או קיומם של מפגשים שדווחו כ-UAP או תופעות "
@@ -303,7 +303,7 @@ SUMMARY_TEMPLATES: list[tuple[str, str]] = [
     # Incident summaries with checklist (3x)
     (
         "Each of these incident summaries includes a \"Check-List - Unidentified Flying Objects\" that contains details about the i",
-        "כל אחד מסיכומי האירועים הללו כולל \"רשימת תיוג — עצמים מעופפים בלתי מזוהים\" המכילה "
+        "כל אחד מסיכומי האירועים הללו כולל \"רשימת תיוג - עצמים מעופפים בלתי מזוהים\" המכילה "
         "פרטים על האירוע: תאריך, שעה, מיקום, כיוון, מהירות, צורה, צבע, וצופים. רשימות התיוג "
         "מולאו על פי הוראות הדיווח של חיל האוויר משנת 1948, והן חלק מתיק החקירה ההיסטורי "
         "של דיווחי UFO."
@@ -311,7 +311,7 @@ SUMMARY_TEMPLATES: list[tuple[str, str]] = [
     # Range Fouler Debrief Form (2x)
     (
         "This document is a Range Fouler Debrief Form, a standardized reporting form the U.S. Navy uses to record the circumstanc",
-        "מסמך זה הוא טופס תחקור Range Fouler — טופס דיווח סטנדרטי שבו עושה הצי האמריקאי "
+        "מסמך זה הוא טופס תחקור Range Fouler - טופס דיווח סטנדרטי שבו עושה הצי האמריקאי "
         "שימוש לתיעוד נסיבותיו של אירוע שבו עצם בלתי מזוהה הפריע לתרגיל ירי או ניסוי בטווח "
         "ימי. הטופס כולל את פרטי האירוע: תאריך, שעה, מיקום, כוח מדווח, תיאור התופעה ופעולות "
         "שננקטו. בוצעו השמטות כדי להגן על זהות עדי ראייה ומידע מבצעי רגיש."
@@ -319,7 +319,7 @@ SUMMARY_TEMPLATES: list[tuple[str, str]] = [
     # Range Fouler Reporting Form (2x)
     (
         "This document is a Range Fouler Reporting Form, a standardized reporting form the U.S. Navy uses to record the circumsta",
-        "מסמך זה הוא טופס דיווח Range Fouler — טופס דיווח סטנדרטי שבו עושה הצי האמריקאי שימוש "
+        "מסמך זה הוא טופס דיווח Range Fouler - טופס דיווח סטנדרטי שבו עושה הצי האמריקאי שימוש "
         "לתיעוד נסיבותיו של אירוע שבו עצם בלתי מזוהה הפריע לתרגיל ירי או ניסוי בטווח ימי. "
         "הטופס כולל את פרטי האירוע: תאריך, שעה, מיקום, כוח מדווח, תיאור התופעה ופעולות "
         "שננקטו. בוצעו השמטות כדי להגן על זהות עדי ראייה ומידע מבצעי רגיש."
@@ -327,7 +327,7 @@ SUMMARY_TEMPLATES: list[tuple[str, str]] = [
     # Range Fouler Debrief (2x)
     (
         "This document is a Range Fouler Debrief, a standardized reporting form the U.S. Navy uses to record the circumstances su",
-        "מסמך זה הוא תחקור Range Fouler — טופס דיווח סטנדרטי שבו עושה הצי האמריקאי שימוש "
+        "מסמך זה הוא תחקור Range Fouler - טופס דיווח סטנדרטי שבו עושה הצי האמריקאי שימוש "
         "לתיעוד נסיבותיו של אירוע שבו עצם בלתי מזוהה הפריע לתרגיל ירי או ניסוי בטווח ימי. "
         "התחקור כולל את פרטי האירוע: תאריך, שעה, מיקום, כוח מדווח, תיאור התופעה ופעולות "
         "שננקטו. בוצעו השמטות כדי להגן על זהות עדי ראייה ומידע מבצעי רגיש."
@@ -358,7 +358,7 @@ def apply_summary(en: str) -> str | None:
 
 
 # ---------------------------------------------------------------------------
-# Unique one-off summaries — full English text → faithful Hebrew translation.
+# Unique one-off summaries - full English text → faithful Hebrew translation.
 # Each appears once in the manifest; matched by exact full-text equality.
 # ---------------------------------------------------------------------------
 
@@ -373,7 +373,7 @@ UNIQUE_SUMMARIES_HE: dict[str, str] = {
         "תיק זה מכיל דו\"ח עצמאי על UFO שנכתב על ידי האגודה הצרפתית COMETA (פורסם בעבר במגזין הצרפתי VDS ב-1999), המפרט את תוצאות מחקר שערך המכון ללימודים מתקדמים בהגנה לאומית. בתיק כלול גם מכתב מאת קרול רוזין, שבו היא מציינת כי שימשה כדוברתו של פון בראון בשנים האחרונות לחייו. בוצעו השמטות כדי להגן על זהות עדי ראייה, מיקומי מתקנים ממשלתיים, או מידע פוטנציאלית רגיש על אתרים צבאיים שאינם קשורים ל-UAP. לא בוצעו השמטות בקבצים שפורסמו תחת הנחיית הנשיא טראמפ בנוגע למידע על טבעם או קיומם של מפגשים שדווחו כ-UAP או תופעות נלוות.",
 
     "Gemini 7 was the tenth crewed American spaceflight. This document is a transcript of communications between the flight crew, Astronauts James “Jim” Lovell and Frank Borman, and the Manned Flight Center (now known as Johnson Space Center) in Houston, Texas. The transcript begins with Borman’s report of a “bogey,” contemporary nomenclature for an unknown aircraft, as well as a debris field. Borman described the debris field as consisting of “very, very many […] hundreds of little particles.” He estimated the particles’ distance from the spacecraft to be four miles. Lovell described observing a “brilliant body in the sun against a black background with trillions of particles on it.”This document also includes handwritten notes documenting the encounter, annotated with the phrase “UFO Sighting by Borman” in the top right corner.":
-        "ג'מיני 7 הייתה טיסת החלל האנושית האמריקאית העשירית. מסמך זה הוא תמליל של תקשורת בין צוות הטיסה — האסטרונאוטים ג'יימס \"ג'ים\" לאוול ופרנק בורמן — לבין מרכז הטיסה האנושית (כיום מרכז ג'ונסון לחקר החלל) בהיוסטון, טקסס. התמליל פותח בדיווחו של בורמן על \"bogey\" — כינוי תקופתי לכלי טיס בלתי מזוהה — וכן על שדה פסולת. בורמן תיאר את שדה הפסולת כמכיל \"מאוד מאוד הרבה […] מאות חלקיקים קטנים\". הוא העריך את מרחקם של החלקיקים מהחללית בכארבעה מיילים. לאוול תיאר כי חזה ב\"גוף זוהר באור השמש על רקע שחור, עם טריליוני חלקיקים עליו\". מסמך זה כולל גם הערות בכתב יד המתעדות את המפגש, ובפינתן הימנית-עליונה רשום \"תצפית UFO על ידי בורמן\".",
+        "ג'מיני 7 הייתה טיסת החלל האנושית האמריקאית העשירית. מסמך זה הוא תמליל של תקשורת בין צוות הטיסה - האסטרונאוטים ג'יימס \"ג'ים\" לאוול ופרנק בורמן - לבין מרכז הטיסה האנושית (כיום מרכז ג'ונסון לחקר החלל) בהיוסטון, טקסס. התמליל פותח בדיווחו של בורמן על \"bogey\" - כינוי תקופתי לכלי טיס בלתי מזוהה - וכן על שדה פסולת. בורמן תיאר את שדה הפסולת כמכיל \"מאוד מאוד הרבה […] מאות חלקיקים קטנים\". הוא העריך את מרחקם של החלקיקים מהחללית בכארבעה מיילים. לאוול תיאר כי חזה ב\"גוף זוהר באור השמש על רקע שחור, עם טריליוני חלקיקים עליו\". מסמך זה כולל גם הערות בכתב יד המתעדות את המפגש, ובפינתן הימנית-עליונה רשום \"תצפית UFO על ידי בורמן\".",
 
     "This audio recording contains air to ground communications and the NASA Public Affairs audio feed with commentary, recorded during the flight of the Gemini 7 mission. In this excerpted segment of audio, Astronaut Frank Borman reports to NASA mission control in Houston his sighting of an unidentified object, which he referred to as a \"bogey.\" This sighting occurred on December 5, 1965. The dialogue includes Borman's initial report, as well as additional comments by Astronaut Jim Lovell, Borman's fellow crew member.":
         "הקלטת שמע זו מכילה תקשורת אוויר-קרקע ואת שידור השמע של מחלקת יחסי הציבור של NASA לצד פרשנות, שהוקלטו במהלך משימת ג'מיני 7. בקטע השמע המצוטט, האסטרונאוט פרנק בורמן מדווח לבקרת המשימה של NASA בהיוסטון על תצפית בעצם בלתי מזוהה, אותו כינה \"bogey\". התצפית התרחשה ב-5 בדצמבר 1965. הדיאלוג כולל את דיווחו הראשוני של בורמן, וכן הערות נוספות מצד האסטרונאוט ג'ים לאוול, חברו של בורמן בצוות.",
@@ -394,7 +394,7 @@ UNIQUE_SUMMARIES_HE: dict[str, str] = {
         "מזכר זה, מתאריך 18 ביולי 1963, מטעם הלשכה המנהלית של הנשיא והמועצה הלאומית לאווירונאוטיקה וחלל, נוגע למחשבות על שאלת גזע החוצנים. במזכר נכללים פרטים הנוגעים לתוכניות במקרה שתתגלה תבונה חוצנית, להרחבת הידע המדעי, לאפשרות של חיים על מאדים, ולמדיניות דיפלומטית.",
 
     "This two page memorandum, dated July 28, 1952, relates to increased reports of unidentified flying objects (UFOs). Included in the record are possible explanations of increased sightings, such as technological improvements, historical records of UFOs, and U.S. Air Force opinions on UFOs.":
-        "מזכר בן שני עמודים זה, מתאריך 28 ביולי 1952, נוגע לעלייה במספר הדיווחים על עצמים מעופפים בלתי מזוהים (UFO). ברשומה נכללים הסברים אפשריים לגידול בתצפיות — בהם שיפורים טכנולוגיים, רישומים היסטוריים של UFO, ועמדות חיל האוויר האמריקאי בנושא UFO.",
+        "מזכר בן שני עמודים זה, מתאריך 28 ביולי 1952, נוגע לעלייה במספר הדיווחים על עצמים מעופפים בלתי מזוהים (UFO). ברשומה נכללים הסברים אפשריים לגידול בתצפיות - בהם שיפורים טכנולוגיים, רישומים היסטוריים של UFO, ועמדות חיל האוויר האמריקאי בנושא UFO.",
 
     "An FBI memo from 1958 reporting a UFO sighting by a Detroit man who described a \"circular object with a crystal-type dome,\" and recommending that the information be forwarded to \"proper air force authorities.\"":
         "מזכר של ה-FBI משנת 1958 המדווח על תצפית UFO על ידי תושב דטרויט, שתיאר \"עצם עגול עם כיפה דמוית קריסטל\", וממליץ להעביר את המידע ל\"רשויות חיל אוויר המתאימות\".",
@@ -432,8 +432,8 @@ UNIQUE_SUMMARIES_HE: dict[str, str] = {
     "Apollo 11 was the third crewed mission to the Moon and the first to land Astronauts on the lunar surface. This document is an excerpt from the Apollo 11 Technical Crew Debriefing (Volumes 1 and 2) from July 31, 1969. The document highlights three observations: one, an object on the way out to the Moon; two, flashes of light inside the cabin; and three, a sighting on the return trip of a bright light tentatively assumed by the crew to be a laser.•\tPage 6-33 (Vol. 1). [Lunar Module Pilot for Apollo 11, Buzz Aldrin]: “The first unusual thing that we saw I guess was 1 day out or something pretty close to the moon. It had a sizeable dimension to it, so we put the monocular on it.” The crew speculated that it could have been the S-IVB stage of the Saturn V launch vehicle.•\tPage 6-37 (Vol. 1). [Lunar Module Pilot for Apollo 11, Buzz Aldrin] “The other observation that I made accumulated gradually. I don’t know whether I saw it the first night, but I’m sure I saw it the second night. I was trying to go to sleep with all the lights out. I observed what I thought were little flashes inside the cabin, spaced a couple of minutes apart…”•\tPage 21-1 (Vol. 2). [Lunar Module Pilot for Apollo 11, Buzz Aldrin] “I observed what appeared to be a fairly bright light source which we tentatively ascribed to a possible laser.”":
         "Apollo 11 הייתה המשימה האנושית השלישית לירח והראשונה שהנחיתה אסטרונאוטים על פני הירח. מסמך זה מהווה קטע מתוך התחקור הטכני של צוות Apollo 11 (כרכים 1 ו-2) מ-31 ביולי 1969. המסמך מדגיש שלוש תצפיות: ראשית, עצם בדרך לירח; שנית, הבזקי אור בתוך התא; ושלישית, תצפית בטיסת החזרה באור בהיר שהצוות שיער באופן זמני כי הוא לייזר. • עמ' 6-33 (כרך 1). [טייס המודול הירחי של Apollo 11, באז אולדרין]: \"הדבר הראשון הבלתי שגרתי שראינו היה, לדעתי, יום אחד אחרי השיגור או משהו די קרוב לירח. היה לו ממד נכבד, אז כיוונו עליו את המונוקולר\". הצוות שיער כי ייתכן והיה זה שלב S-IVB של כלי השיגור סטורן V. • עמ' 6-37 (כרך 1). [טייס המודול הירחי של Apollo 11, באז אולדרין]: \"התצפית האחרת שעשיתי הצטברה בהדרגה. אני לא יודע אם ראיתי אותה בלילה הראשון, אבל אני בטוח שראיתי אותה בלילה השני. ניסיתי להירדם כשכל האורות כבויים. ראיתי את מה שחשבתי שהם הבזקים קטנים בתוך התא, במרווחים של כמה דקות זה מזה…\". • עמ' 21-1 (כרך 2). [טייס המודול הירחי של Apollo 11, באז אולדרין]: \"חזיתי במה שנראה כמקור אור בהיר למדי, אותו ייחסנו באופן זמני ללייזר אפשרי\".",
 
-    "Launched on May 14, 1973, Skylab was the United States’ first laboratory in space. From 1973 to 1974, the station was visited by three crews. This document contains excerpts from all three crews to visit the station. In the first excerpt taken from Skylab 1/2 [first crew] Technical Debriefing from June 30, 1973, highlights crew observations of light flashes. The second excerpt taken from Skylab 1/3 Technical Crew Debriefing from October 4, 1973, highlights two observations—a satellite in similar orbit and another object with a “reddish hue to it.” The final excerpt taken from the Skylab 1/4 Technical Crew Debriefing from February 22, 1974, highlights an observation of flashing lights outside Skylab.•\tSkylab 2 crew observation: o\tPage 23-20. [Science Pilot for Skylab 2, Joesph Kerwin] “We saw light flashes. I think all of us saw them. I saw them most often when I was in the sack at night with my eyes closed but awake naturally. They tended to wax and wane in frequency.”•\tSkylab 3 crew observations: o\tPage 7-4. [Science Pilot for Skylab 3, Owen Garriott] “We saw that satellite about a week before splashdown. That was one of the most unusual things that we saw and I guess Jack [Lousma] noticed it looking out the window. This bright reddish object was out there and we tracked it for about 5 or 10 minutes. It was obviously a satellite in a very similar orbit to our own.”o\tPage 20-1. [Science Pilot for Skylab 3, Owen Garriott] “Jack [Lousma] first noticed this rather large red star out the wardroom window. Upon close examination, it was much brighter than Jupiter or any of the other planets. It had a reddish hue to it, even though it was well above the horizon.”•\tSkylab 4 crew observation o\tPage 7-8. [Commander for Skylab 4, Gerald P. Carr] “One other area of unusual events that we reported on the dump tapes was that on occasion we saw some lights flashing outside with very a definite motion relative to ours. We presumed that they were other pieces of Skylab, or possibly other satellites.”":
-        "Skylab, ששוגרה ב-14 במאי 1973, הייתה המעבדה הראשונה של ארצות הברית בחלל. בין השנים 1973 ל-1974 ביקרו בתחנה שלושה צוותים. מסמך זה מכיל קטעים מתוך כל שלושת הצוותים שביקרו בתחנה. הקטע הראשון, מתוך התחקור הטכני של Skylab 1/2 [הצוות הראשון] מ-30 ביוני 1973, מדגיש תצפיות צוות בהבזקי אור. הקטע השני, מתוך התחקור הטכני של צוות Skylab 1/3 מ-4 באוקטובר 1973, מדגיש שתי תצפיות — לוויין במסלול דומה ועצם נוסף בעל \"גוון אדמדם\". הקטע האחרון, מתוך התחקור הטכני של צוות Skylab 1/4 מ-22 בפברואר 1974, מדגיש תצפית באורות מהבהבים מחוץ ל-Skylab. • תצפית צוות Skylab 2: עמ' 23-20. [טייס המדע של Skylab 2, ג'וזף קרווין]: \"ראינו הבזקי אור. אני חושב שכולנו ראינו אותם. ראיתי אותם לרוב כשהייתי במיטה בלילה עם עיניים עצומות אך ער באופן טבעי. הם נטו להופיע ולהיעלם בתדירות משתנה\". • תצפיות צוות Skylab 3: עמ' 7-4. [טייס המדע של Skylab 3, אוון גריוט]: \"ראינו את הלוויין הזה כשבוע לפני נחיתת המים. זה היה אחד הדברים הבלתי שגרתיים ביותר שראינו, ולדעתי ג'ק [לוסמה] שם לב אליו כשהוא הביט מהחלון. העצם האדמדם הבהיר הזה היה שם וביצענו עליו מעקב כ-5 או 10 דקות. ברור שהיה זה לוויין במסלול דומה מאוד לשלנו\". עמ' 20-1. [טייס המדע של Skylab 3, אוון גריוט]: \"ג'ק [לוסמה] שם לב לראשונה לכוכב האדום הגדול-יחסית הזה מחלון חדר האוכל. בבחינה מקרוב, הוא היה בהיר בהרבה מצדק או מכל כוכבי הלכת האחרים. היה לו גוון אדמדם, אף שהיה גבוה מאוד מעל האופק\". • תצפית צוות Skylab 4: עמ' 7-8. [מפקד Skylab 4, ג'רלד פ. קאר]: \"תחום אחר נוסף של אירועים בלתי שגרתיים שדיווחנו עליו בקלטות הפריקה הוא שלעתים ראינו אורות מהבהבים בחוץ עם תנועה מובהקת מאוד יחסית לשלנו. הנחנו כי היו אלה חלקים אחרים של Skylab, או אולי לוויינים אחרים\".",
+    "Launched on May 14, 1973, Skylab was the United States’ first laboratory in space. From 1973 to 1974, the station was visited by three crews. This document contains excerpts from all three crews to visit the station. In the first excerpt taken from Skylab 1/2 [first crew] Technical Debriefing from June 30, 1973, highlights crew observations of light flashes. The second excerpt taken from Skylab 1/3 Technical Crew Debriefing from October 4, 1973, highlights two observations-a satellite in similar orbit and another object with a “reddish hue to it.” The final excerpt taken from the Skylab 1/4 Technical Crew Debriefing from February 22, 1974, highlights an observation of flashing lights outside Skylab.•\tSkylab 2 crew observation: o\tPage 23-20. [Science Pilot for Skylab 2, Joesph Kerwin] “We saw light flashes. I think all of us saw them. I saw them most often when I was in the sack at night with my eyes closed but awake naturally. They tended to wax and wane in frequency.”•\tSkylab 3 crew observations: o\tPage 7-4. [Science Pilot for Skylab 3, Owen Garriott] “We saw that satellite about a week before splashdown. That was one of the most unusual things that we saw and I guess Jack [Lousma] noticed it looking out the window. This bright reddish object was out there and we tracked it for about 5 or 10 minutes. It was obviously a satellite in a very similar orbit to our own.”o\tPage 20-1. [Science Pilot for Skylab 3, Owen Garriott] “Jack [Lousma] first noticed this rather large red star out the wardroom window. Upon close examination, it was much brighter than Jupiter or any of the other planets. It had a reddish hue to it, even though it was well above the horizon.”•\tSkylab 4 crew observation o\tPage 7-8. [Commander for Skylab 4, Gerald P. Carr] “One other area of unusual events that we reported on the dump tapes was that on occasion we saw some lights flashing outside with very a definite motion relative to ours. We presumed that they were other pieces of Skylab, or possibly other satellites.”":
+        "Skylab, ששוגרה ב-14 במאי 1973, הייתה המעבדה הראשונה של ארצות הברית בחלל. בין השנים 1973 ל-1974 ביקרו בתחנה שלושה צוותים. מסמך זה מכיל קטעים מתוך כל שלושת הצוותים שביקרו בתחנה. הקטע הראשון, מתוך התחקור הטכני של Skylab 1/2 [הצוות הראשון] מ-30 ביוני 1973, מדגיש תצפיות צוות בהבזקי אור. הקטע השני, מתוך התחקור הטכני של צוות Skylab 1/3 מ-4 באוקטובר 1973, מדגיש שתי תצפיות - לוויין במסלול דומה ועצם נוסף בעל \"גוון אדמדם\". הקטע האחרון, מתוך התחקור הטכני של צוות Skylab 1/4 מ-22 בפברואר 1974, מדגיש תצפית באורות מהבהבים מחוץ ל-Skylab. • תצפית צוות Skylab 2: עמ' 23-20. [טייס המדע של Skylab 2, ג'וזף קרווין]: \"ראינו הבזקי אור. אני חושב שכולנו ראינו אותם. ראיתי אותם לרוב כשהייתי במיטה בלילה עם עיניים עצומות אך ער באופן טבעי. הם נטו להופיע ולהיעלם בתדירות משתנה\". • תצפיות צוות Skylab 3: עמ' 7-4. [טייס המדע של Skylab 3, אוון גריוט]: \"ראינו את הלוויין הזה כשבוע לפני נחיתת המים. זה היה אחד הדברים הבלתי שגרתיים ביותר שראינו, ולדעתי ג'ק [לוסמה] שם לב אליו כשהוא הביט מהחלון. העצם האדמדם הבהיר הזה היה שם וביצענו עליו מעקב כ-5 או 10 דקות. ברור שהיה זה לוויין במסלול דומה מאוד לשלנו\". עמ' 20-1. [טייס המדע של Skylab 3, אוון גריוט]: \"ג'ק [לוסמה] שם לב לראשונה לכוכב האדום הגדול-יחסית הזה מחלון חדר האוכל. בבחינה מקרוב, הוא היה בהיר בהרבה מצדק או מכל כוכבי הלכת האחרים. היה לו גוון אדמדם, אף שהיה גבוה מאוד מעל האופק\". • תצפית צוות Skylab 4: עמ' 7-8. [מפקד Skylab 4, ג'רלד פ. קאר]: \"תחום אחר נוסף של אירועים בלתי שגרתיים שדיווחנו עליו בקלטות הפריקה הוא שלעתים ראינו אורות מהבהבים בחוץ עם תנועה מובהקת מאוד יחסית לשלנו. הנחנו כי היו אלה חלקים אחרים של Skylab, או אולי לוויינים אחרים\".",
 
     "This archival photograph depicts the lunar surface as viewed from the landing site of Apollo 12. This image features two highlighted areas of interest, labeled “Area 1” and “Area 2,” slightly to the right of the vertical axis of the frame, above the horizon, in which unidentified phenomena are visible.This image has been modified from its original state to assist viewers in identifying specific areas of interest. These highlights are provided for contextual purposes only. Such alterations do not constitute an analytical judgment, investigative conclusion, or factual determination regarding the nature or significance of the subject matter.":
         "צילום ארכיון זה מציג את פני הירח כפי שנראו מאתר הנחיתה של Apollo 12. בתמונה מודגשים שני אזורי עניין, המסומנים \"אזור 1\" ו\"אזור 2\", מעט מימין לציר האנכי של הפריים, מעל האופק, ובהם נראות תופעות בלתי מזוהות. תמונה זו עברה שינוי ממצבה המקורי כדי לסייע לצופים בזיהוי אזורי עניין ספציפיים. הדגשות אלו ניתנות לצורכי הקשר בלבד. שינויים מסוג זה אינם מהווים שיפוט אנליטי, מסקנה חקירתית או קביעת עובדה בנוגע לטבעו או למשמעותו של הנושא.",
@@ -448,7 +448,7 @@ UNIQUE_SUMMARIES_HE: dict[str, str] = {
         "מסמך זה הוא מברק דיפלומטי של מחלקת המדינה האמריקאית מהשגרירות האמריקאית בפורט מורסבי, פפואה גינאה החדשה, אל USCINCPAC (פיקוד אינדו-פסיפיק של ארצות הברית) בהונולולו, הוואי, ב-28 בינואר 1985. במברק מדווח כי השגרירות האמריקאית בפפואה גינאה החדשה קיבלה פנייה משירותי המודיעין של מדינת הארח בנוגע לדיווחים על כלי טיס במהירות וגובה גבוהים במרחב האווירי של פפואה גינאה החדשה בערב 24 בינואר 1985. המברק מתייחס לנציג שירותי המודיעין המקומיים לאורך כולו כ-\"NIO\", כלומר קצין מודיעין לאומי. ה-NIO מסר לאנשי הסגל הדיפלומטי האמריקאי כי תושבים \"נבהלו מהטיסות מעל, מה שהוביל את ראש הממשלה המחוזי לכנס פגישה ציבורית בנושא\". ה-NIO ציין גם כי היו \"דיווחים מגוונים על תופעות אוויריות בלתי מזוהות בליל 24 בינואר, ובהם עצמים נעים במהירות עם אורות, פסי עיבוי ורעש\". ה-NIO העריך את הדיווחים הללו כאמינים על בסיס עדותו של טייס Air Niugini, שאמר כי המכ\"ם שלהם \"קלט כלי טיס הטסים מדרום לצפון בגובה ובמהירות גבוהים\". המברק מסכם בתיאור המידע שמסר ה-NIO כ\"שטחי מאוד\". הוא מבקש גם הבהרה מ-INDOPACOM של ארה\"ב בנוגע לנוכחות או היעדרות של כלי טיס צבאיים אמריקאיים במרחב האווירי של פפואה גינאה החדשה בליל המדובר.",
 
     "This document is a U.S. Department of State diplomatic cable from the U.S. Embassy in Dushanbe, Tajikistan to the Secretary of State in Washington, D.C. on January 31, 1994.On January 27, 1994 one Tajik pilot and three American citizens encountered an UAP flying a 747 jet at 41,000 feet over Kazakhstan.  Object was a bright light of enormous intensity and approached over the horizon to the east at great speed and a much higher altitude.  Several pictures were taken of the craft making 90 degree turns, doing corkscrews and maneuvering in circles a great rates of speed.  Object was reported as resembling a bullet in flight.  Visual estimation of the contrails were at 100,000 feet, which was too high to leave contrails by ordinary aircraft.":
-        "מסמך זה הוא מברק דיפלומטי של מחלקת המדינה האמריקאית מהשגרירות האמריקאית בדושנבה, טג'יקיסטן, אל מזכיר המדינה בוושינגטון הבירה, ב-31 בינואר 1994. ב-27 בינואר 1994 נתקלו טייס טג'יקי אחד ושלושה אזרחים אמריקאים ב-UAP בעת שהטיסו מטוס 747 בגובה 41,000 רגל מעל קזחסטן. העצם היה אור בהיר בעוצמה אדירה, והתקרב מעל האופק במזרח במהירות עצומה ובגובה גבוה בהרבה. צולמו מספר תמונות של הכלי בעודו מבצע פניות של 90 מעלות, סלילים ותמרונים במעגלים במהירויות גבוהות. העצם דווח כדומה לכדור בטיסה. ההערכה הוויזואלית של פסי העיבוי הייתה בגובה 100,000 רגל — גובה רב מדי משאיוכלו כלי טיס רגילים להותיר פסי עיבוי.",
+        "מסמך זה הוא מברק דיפלומטי של מחלקת המדינה האמריקאית מהשגרירות האמריקאית בדושנבה, טג'יקיסטן, אל מזכיר המדינה בוושינגטון הבירה, ב-31 בינואר 1994. ב-27 בינואר 1994 נתקלו טייס טג'יקי אחד ושלושה אזרחים אמריקאים ב-UAP בעת שהטיסו מטוס 747 בגובה 41,000 רגל מעל קזחסטן. העצם היה אור בהיר בעוצמה אדירה, והתקרב מעל האופק במזרח במהירות עצומה ובגובה גבוה בהרבה. צולמו מספר תמונות של הכלי בעודו מבצע פניות של 90 מעלות, סלילים ותמרונים במעגלים במהירויות גבוהות. העצם דווח כדומה לכדור בטיסה. ההערכה הוויזואלית של פסי העיבוי הייתה בגובה 100,000 רגל - גובה רב מדי משאיוכלו כלי טיס רגילים להותיר פסי עיבוי.",
 
     "On October 28-29, there was an incident alleged by the Georgian Foreign Ministry that Russian aircraft had violated Georgian airspace and bombed areas of the Kodori Gorge.  Russians denied any of the claims and said that it could have been UFOs.  Cable authors note that Russians typically engage in the “bold lie” when they wish to conceal actions.":
         "ב-28-29 באוקטובר התרחש אירוע שלגביו טען משרד החוץ הגאורגי כי כלי טיס רוסיים הפרו את המרחב האווירי הגאורגי והפציצו אזורים בגיא קודורי. הרוסים הכחישו את הטענות וטענו כי ייתכן שמדובר היה ב-UFO. כותבי המברק מציינים כי הרוסים נוטים בדרך כלל ל\"שקר נועז\" כשהם מבקשים להסתיר פעולות.",
@@ -465,8 +465,8 @@ UNIQUE_SUMMARIES_HE: dict[str, str] = {
     "Actual site photo with FBI Lab rendered graphic overlay depicting corroborating eyewitness reports from September 2023 of an apparent ellipsoid bronze metallic object materializing out of a bright light in the sky, 130-195 feet in length, and disappearing instantaneously.":
         "תצלום אמיתי של זירה בתוספת שכבת גרפיקה שעיבדה מעבדת ה-FBI, המתארת דיווחי עדי ראייה מאשרים מספטמבר 2023 על עצם מתכתי ארד אליפסואידי לכאורה, באורך 130-195 רגל, אשר התממש מתוך אור בהיר בשמיים ונעלם באופן מיידי.",
 
-    "This document is a summary of statements by seven US PERSONs employed by the federal government who separately reported observing several unidentified anomalous phenomena in the western United States over the course of two days in 2023.  The summary notes the US PERSONS reported four distinct categories of experiences, including observing “orbs launching other orbs” at a distance, observing a large stationary glowing orb at close estimated range, pursuing a large phenomenon near the ground, and observing a large, seemingly transparent phenomenon, reported to being akin to a “translucent kite.” Although there is no technical data directly associated with this report, contextual factors — such as these events sharing features with others reported to the All-domain Anomaly Resolution Office (AARO), the reporters’ credibility, and the potentially anomalous nature of the events themselves — combine to make this report among the most compelling within AARO’s current holdings.":
-        "מסמך זה הוא סיכום של הצהרות מצד שבעה US PERSON המועסקים על ידי הממשל הפדרלי, אשר דיווחו בנפרד על תצפית בכמה תופעות אוויריות חריגות בלתי מזוהות במערב ארצות הברית במהלך יומיים בשנת 2023. הסיכום מציין כי ה-US PERSONS דיווחו על ארבע קטגוריות מובחנות של חוויות, ובהן: תצפית ב\"כדורי אור המשגרים כדורי אור אחרים\" במרחק, תצפית בכדור אור גדול ונייח זוהר בטווח קרוב משוער, רדיפה אחר תופעה גדולה סמוך לקרקע, ותצפית בתופעה גדולה ושקופה לכאורה, שדווחה כדומה ל\"עפיפון שקוף-למחצה\". אף שאין נתונים טכניים הקשורים ישירות לדיווח זה, גורמי הקשר — כגון העובדה שלאירועים הללו יש מאפיינים משותפים עם אחרים שדווחו למשרד פתרון תופעות כל-תחומיות (AARO), אמינותם של המדווחים, וטבעם החריג הפוטנציאלי של האירועים עצמם — משתלבים יחד כדי להפוך דיווח זה לאחד המשכנעים ביותר מבין אלו שבחזקתה הנוכחית של AARO.",
+    "This document is a summary of statements by seven US PERSONs employed by the federal government who separately reported observing several unidentified anomalous phenomena in the western United States over the course of two days in 2023.  The summary notes the US PERSONS reported four distinct categories of experiences, including observing “orbs launching other orbs” at a distance, observing a large stationary glowing orb at close estimated range, pursuing a large phenomenon near the ground, and observing a large, seemingly transparent phenomenon, reported to being akin to a “translucent kite.” Although there is no technical data directly associated with this report, contextual factors - such as these events sharing features with others reported to the All-domain Anomaly Resolution Office (AARO), the reporters’ credibility, and the potentially anomalous nature of the events themselves - combine to make this report among the most compelling within AARO’s current holdings.":
+        "מסמך זה הוא סיכום של הצהרות מצד שבעה US PERSON המועסקים על ידי הממשל הפדרלי, אשר דיווחו בנפרד על תצפית בכמה תופעות אוויריות חריגות בלתי מזוהות במערב ארצות הברית במהלך יומיים בשנת 2023. הסיכום מציין כי ה-US PERSONS דיווחו על ארבע קטגוריות מובחנות של חוויות, ובהן: תצפית ב\"כדורי אור המשגרים כדורי אור אחרים\" במרחק, תצפית בכדור אור גדול ונייח זוהר בטווח קרוב משוער, רדיפה אחר תופעה גדולה סמוך לקרקע, ותצפית בתופעה גדולה ושקופה לכאורה, שדווחה כדומה ל\"עפיפון שקוף-למחצה\". אף שאין נתונים טכניים הקשורים ישירות לדיווח זה, גורמי הקשר - כגון העובדה שלאירועים הללו יש מאפיינים משותפים עם אחרים שדווחו למשרד פתרון תופעות כל-תחומיות (AARO), אמינותם של המדווחים, וטבעם החריג הפוטנציאלי של האירועים עצמם - משתלבים יחד כדי להפוך דיווח זה לאחד המשכנעים ביותר מבין אלו שבחזקתה הנוכחית של AARO.",
 }
 
 
