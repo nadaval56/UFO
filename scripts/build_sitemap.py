@@ -112,7 +112,10 @@ archive = f"""<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>אינדקס מלא — כל {len(files)} המסמכים — עב"מים</title>
-<meta name="description" content="אינדקס מלא של כל {len(files)} המסמכים בארכיון ה-UAP, מסודר לפי מהדורה. ללא JavaScript.">
+<meta name="description" content="אינדקס מלא של כל {len(files)} מסמכי העב&quot;מים שממשל ארה&quot;ב פרסם, מסודר לפי מהדורה, עם קישור לכל מסמך.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="{BASE}/archive.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="אינדקס מלא — כל {len(files)} המסמכים">
