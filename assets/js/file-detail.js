@@ -225,14 +225,14 @@
 
     // עדכון title של הדפדפן + canonical + OG/Twitter לכל קובץ
     const titleHe = f.title_he || f.title || f.filename || "מסמך";
-    document.title = `${titleHe} — עב"מים`;
+    document.title = `${titleHe} | עב"מים`;
 
     const pageUrl = `https://pursue.co.il/${docPath(f.id)}`;
     // Static doc/ pages already carry the description build_static_pages.py
     // wrote (meta_description()); keep it rather than overwrite it here.
     const staticDesc = document.querySelector('meta[name="doc-id"]')
       && document.querySelector('meta[name="description"]')?.getAttribute("content");
-    const desc = staticDesc || (f.narrative_he || f.summary_he || `פרטי מסמך מארכיון ה-UAP — ${titleHe}`)
+    const desc = staticDesc || (f.narrative_he || f.summary_he || `פרטי מסמך מארכיון ה-UAP: ${titleHe}`)
       .replace(/\s+/g, " ").slice(0, 155);
 
     function setAttr(selector, attr, value) {
@@ -243,10 +243,10 @@
     // meta[name=description] drives the search snippet, and was the one tag
     // not being updated — all 375 pages shared the generic placeholder.
     setAttr('meta[name="description"]', "content", desc);
-    setAttr('meta[property="og:title"]', "content", `${titleHe} — עב"מים`);
+    setAttr('meta[property="og:title"]', "content", `${titleHe} | עב"מים`);
     setAttr('meta[property="og:description"]', "content", desc);
     setAttr('meta[property="og:url"]', "content", pageUrl);
-    setAttr('meta[name="twitter:title"]', "content", `${titleHe} — עב"מים`);
+    setAttr('meta[name="twitter:title"]', "content", `${titleHe} | עב"מים`);
     setAttr('meta[name="twitter:description"]', "content", desc);
 
     // Structured data, so the document can surface as more than a blue link.
@@ -265,7 +265,7 @@
       creditText: f.agency_he || f.agency || undefined,
       isPartOf: {
         "@type": "Collection",
-        name: 'עב"מים — כל מה שהותר לפרסום',
+        name: 'עב"מים: כל מה שהותר לפרסום',
         url: "https://pursue.co.il/",
       },
       publisher: { "@type": "Organization", name: "U.S. Department of War" },

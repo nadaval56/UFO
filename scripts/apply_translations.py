@@ -186,13 +186,13 @@ def translate_date_phrase(s: str) -> str:
 TITLE_HE: dict[str, str] = {
     "USPER Statement About UAP Sighting": "הצהרת USPER על תצפית UAP",
     "FBI September 2023 Sighting - Composite Sketch":
-        "תצפית FBI מספטמבר 2023 — סקיצה משולבת",
+        "תצפית FBI מספטמבר 2023 - סקיצה משולבת",
     "FBI September 2023 Sighting - Serial 3":
-        "תצפית FBI מספטמבר 2023 — סריאל 3",
+        "תצפית FBI מספטמבר 2023 - סריאל 3",
     "FBI September 2023 Sighting - Serial 4":
-        "תצפית FBI מספטמבר 2023 — סריאל 4",
+        "תצפית FBI מספטמבר 2023 - סריאל 4",
     "FBI September 2023 Sighting - Serial 5":
-        "תצפית FBI מספטמבר 2023 — סריאל 5",
+        "תצפית FBI מספטמבר 2023 - סריאל 5",
     "Western US Event": "אירוע במערב ארצות הברית",
     "State Department UAP Cable 4, Ashgabat, Turkmenistan, November 5, 2004":
         "מברק UAP של מחלקת המדינה מס' 4, אשגבט, טורקמניסטן, 5 בנובמבר 2004",

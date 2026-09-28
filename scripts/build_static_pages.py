@@ -138,6 +138,7 @@ def meta_description(f: dict, title_he: str) -> str:
         " ".join(x for x in (DESC_NOUN.get(f.get("type"), "פריט"), code and code.group(0)) if x),
         f.get("agency_he") or f.get("agency")) if x)
     s = re.sub(r"\s+", " ", f"{head} · {body}").strip()
+    s = re.sub(r"\s*—\s*", ", ", s)  # no em dashes in the search/share snippet
     if len(s) <= DESC_MAX:
         return s
     return s[: DESC_MAX - 1].rsplit(" ", 1)[0].rstrip(",.;:—-־ ") + "…"
@@ -163,7 +164,7 @@ def render(template: str, f: dict, files: list[dict] | None = None) -> str:
     title_he = f.get("title_he") or f.get("title") or f.get("filename") or "מסמך"
     url = f"{BASE}/{doc_path(f['id'])}"
     desc = meta_description(f, title_he)
-    full_title = f"{title_he} — {SITE}"
+    full_title = f"{title_he} | {SITE}"
 
     # ---- head ----
     # <base href="/"> lets the page live in doc/ while every relative asset,
@@ -195,7 +196,7 @@ def render(template: str, f: dict, files: list[dict] | None = None) -> str:
         "inLanguage": "he", "url": url, "identifier": f["id"],
         "license": "https://www.usa.gov/government-works", "isAccessibleForFree": True,
         "creditText": f.get("agency_he") or f.get("agency"),
-        "isPartOf": {"@type": "Collection", "name": 'עב"מים — כל מה שהותר לפרסום', "url": f"{BASE}/"},
+        "isPartOf": {"@type": "Collection", "name": 'עב"מים: כל מה שהותר לפרסום', "url": f"{BASE}/"},
         "publisher": {"@type": "Organization", "name": "U.S. Department of War"},
     }
     if f.get("source_url"):
