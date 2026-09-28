@@ -228,8 +228,12 @@
     document.title = `${titleHe} — עב"מים`;
 
     const pageUrl = `https://pursue.co.il/${docPath(f.id)}`;
-    const desc = (f.summary_he || f.narrative_he || `פרטי מסמך מארכיון ה-UAP — ${titleHe}`)
-      .replace(/\s+/g, " ").slice(0, 280);
+    // Static doc/ pages already carry the description build_static_pages.py
+    // wrote (meta_description()); keep it rather than overwrite it here.
+    const staticDesc = document.querySelector('meta[name="doc-id"]')
+      && document.querySelector('meta[name="description"]')?.getAttribute("content");
+    const desc = staticDesc || (f.narrative_he || f.summary_he || `פרטי מסמך מארכיון ה-UAP — ${titleHe}`)
+      .replace(/\s+/g, " ").slice(0, 155);
 
     function setAttr(selector, attr, value) {
       const node = document.querySelector(selector);

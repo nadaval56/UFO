@@ -120,6 +120,29 @@ class Page:
         self.s = self.s[: m.start()] + new + self.s[m.end():]
 
 
+# Nouns for the meta description, where "PDF"/"שמע" read badly in a sentence.
+DESC_NOUN = {"pdf": "מסמך", "img": "תמונה", "vid": "סרטון", "aud": "הקלטה"}
+DESC_MAX = 155  # roughly what Google shows before it truncates the snippet
+DOC_CODE_RE = re.compile(r"[A-Z]+-UAP-[A-Z]*\d+")
+
+
+def meta_description(f: dict, title_he: str) -> str:
+    """Search snippet: type, document code and agency first, then the most
+    specific Hebrew text, cut at a word boundary. summary_he opens with
+    war.gov's boilerplate on hundreds of records (every INDOPACOM report, all
+    37 DIRDs), so leading with it made the first ~155 characters — all Google
+    shows — identical across 317 pages. narrative_he is per-document."""
+    body = f.get("narrative_he") or f.get("summary_he") or title_he
+    code = DOC_CODE_RE.match(f.get("title") or "")
+    head = " · ".join(x for x in (
+        " ".join(x for x in (DESC_NOUN.get(f.get("type"), "פריט"), code and code.group(0)) if x),
+        f.get("agency_he") or f.get("agency")) if x)
+    s = re.sub(r"\s+", " ", f"{head} · {body}").strip()
+    if len(s) <= DESC_MAX:
+        return s
+    return s[: DESC_MAX - 1].rsplit(" ", 1)[0].rstrip(",.;:—-־ ") + "…"
+
+
 def related_for(f: dict, files: list[dict], n: int = 8) -> list[dict]:
     """Neighbours by document code within the same release and agency (so a
     DIRD page links to the DIRDs around it), topped up from the same release."""
@@ -139,8 +162,7 @@ def render(template: str, f: dict, files: list[dict] | None = None) -> str:
     p = Page(template)
     title_he = f.get("title_he") or f.get("title") or f.get("filename") or "מסמך"
     url = f"{BASE}/{doc_path(f['id'])}"
-    desc = re.sub(r"\s+", " ", f.get("summary_he") or f.get("narrative_he")
-                  or f"פרטי מסמך מארכיון ה-UAP — {title_he}")[:280]
+    desc = meta_description(f, title_he)
     full_title = f"{title_he} — {SITE}"
 
     # ---- head ----
