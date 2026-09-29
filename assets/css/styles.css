@@ -1236,7 +1236,9 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 .site-footer {
   background: #000003;
   color: var(--text-muted);
-  padding: 56px 0 24px;
+  /* The bottom padding clears the accessibility button (48px, 12px off the
+     bottom edge), which would otherwise sit on the last line of the footer. */
+  padding: 56px 0 72px;
   font-family: var(--font-mono);
 }
 .footer-inner {
