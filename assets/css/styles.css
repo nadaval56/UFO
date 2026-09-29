@@ -1271,6 +1271,13 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 .footer-col ul { list-style: none; padding: 0; margin: 0; }
 .footer-col li { margin-bottom: 8px; font-size: 0.85rem; }
 .footer-glossary li { display: flex; gap: 8px; font-size: 0.82rem; }
+.footer-legal a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer-legal a:hover { color: var(--accent); }
+
 .footer-bottom {
   border-top: 1px solid var(--border);
   padding-top: 20px;
