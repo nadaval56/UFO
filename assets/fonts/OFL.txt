@@ -1,0 +1,14 @@
+The fonts in this directory, Heebo and JetBrains Mono, are Copyright their
+respective authors and are licensed under the SIL Open Font License,
+Version 1.1.
+
+  Heebo:          https://fonts.google.com/specimen/Heebo
+                  (Copyright 2015 The Heebo Project Authors)
+  JetBrains Mono: https://github.com/JetBrains/JetBrainsMono
+                  (Copyright 2020 The JetBrains Mono Project Authors)
+
+The files are the hebrew, latin and latin-ext subsets served by Google Fonts,
+unmodified.
+
+The full text of the SIL Open Font License 1.1 is available at:
+https://openfontlicense.org/open-font-license-official-text/

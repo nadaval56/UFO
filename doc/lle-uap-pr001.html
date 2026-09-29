@@ -30,15 +30,32 @@
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="alternate" type="application/rss+xml" title="עב&quot;מים: מסמכים חדשים" href="https://pursue.co.il/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/a11y.css">
+  <!-- ההעדפות מוחלות לפני הציור הראשון: בלי זה מי שבחר ניגודיות גבוהה
+       רואה את הדף נטען בצבעים הרגילים ואז מתהפך, בכל טעינה. -->
+  <script>
+    try {
+      var _p = localStorage.getItem('privacy:v1');
+      if (!_p || JSON.parse(_p).local !== false) {
+        var _r = document.documentElement, _a = localStorage.getItem('a11y:v1');
+        if (_a) {
+          _a = JSON.parse(_a);
+          if (_a.fs) _r.setAttribute('data-fs', _a.fs);
+          if (_a.mode) _r.classList.add('a11y-' + _a.mode);
+          ['links', 'readable', 'spacing', 'still', 'cursor', 'focus']
+            .forEach(function (k) { if (_a[k]) _r.classList.add('a11y-' + k); });
+        }
+      }
+    } catch (e) { /* מצב פרטי או אחסון חסום: הדף נטען כרגיל */ }
+  </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "LLE-UAP-PR001, דו\"ח UAP בלתי פתור, קולורדו, 2023", "alternateName": "LLE-UAP-PR001, Unresolved UAP Report, Colorado, 2023", "description": "סרטון LLE-UAP-PR001 · רשויות אכיפת חוק מקומיות · שוטר ממשטרה מקומית הגיש למשרד פתרון תופעות כל-תחומיות דיווח על תופעה אווירית חריגה בלתי מזוהה הכולל דקה…", "inLanguage": "he", "url": "https://pursue.co.il/doc/lle-uap-pr001.html", "identifier": "lle-uap-pr001", "license": "https://www.usa.gov/government-works", "isAccessibleForFree": true, "creditText": "רשויות אכיפת חוק מקומיות", "isPartOf": {"@type": "Collection", "name": "עב\"מים: כל מה שהותר לפרסום", "url": "https://pursue.co.il/"}, "publisher": {"@type": "Organization", "name": "U.S. Department of War"}, "sameAs": "https://www.war.gov/UFO/#LLE-UAP-PR001-Unresolved-UAP-Report-Colorado-2023", "temporalCoverage": "October, 2023", "contentLocation": {"@type": "Place", "name": "קולורדו"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "הארכיון", "item": "https://pursue.co.il/"}, {"@type": "ListItem", "position": 2, "name": "מהדורה 06", "item": "https://pursue.co.il/archive.html#release_06"}, {"@type": "ListItem", "position": 3, "name": "LLE-UAP-PR001, דו\"ח UAP בלתי פתור, קולורדו, 2023", "item": "https://pursue.co.il/doc/lle-uap-pr001.html"}]}</script>
   <script type="application/json" id="doc-data">{"id": "lle-uap-pr001", "title": "LLE-UAP-PR001, Unresolved UAP Report, Colorado, 2023", "title_he": "LLE-UAP-PR001, דו\"ח UAP בלתי פתור, קולורדו, 2023", "filename": null, "agency": "Local Law Enforcement", "agency_he": "רשויות אכיפת חוק מקומיות", "type": "vid", "source_url": "https://www.war.gov/UFO/#LLE-UAP-PR001-Unresolved-UAP-Report-Colorado-2023", "release": "release_06", "release_no": "06", "release_date": "18/9/26", "incident_date": "October, 2023", "incident_location": "Colorado", "incident_location_he": "קולורדו", "summary_en": "A local law enforcement officer submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office consisting of 1 minute and 19 seconds of video footage from a commercially available cellular device’s rear-facing camera in October 2023. The reporting officer described the phenomenon as “silent” and as featuring “red, blue, and green flashing lights.” Video Description: AARO digitally altered this footage by blurring the bottom half to obscure information whose release could be reasonably expected to affect the privacy or other protected interest of a U.S. person or commercial entity. 00:00-00:47: The camera pans to track an apparent light source, keeping it generally centered within the frame. 00:48-01:19: The camera increases and decreases its level of magnification several times and continues to pan to track the apparent light source.   AARO Comment: Cellular devices of the type used to capture this footage employ autofocus and other automated image-processing functions that may distort the apparent morphological and kinematic characteristics of distant subjects, particularly at high magnification.\n  Redactions have been made to protect the identity of eyewitnesses, the location of government facilities, or potentially sensitive information about military sites not related to UAP. No redactions have been made to any files released under President Trump's directive concerning information about the nature or existence of any encounter reported as a UAP or related phenomena.", "summary_he": "שוטר ממשטרה מקומית הגיש למשרד פתרון תופעות כל-תחומיות דיווח על תופעה אווירית חריגה בלתי מזוהה הכולל דקה ו-19 שניות של צילומי וידאו מהמצלמה האחורית של מכשיר סלולרי מסחרי זמין באוקטובר 2023. השוטר המדווח תיאר את התופעה כ\"שקטה\" וכבעלת \"אורות מהבהבים אדומים, כחולים וירוקים\". תיאור הווידאו: AARO שינה צילומים אלה באופן דיגיטלי על ידי טשטוש החצי התחתון שלהם, כדי להסתיר מידע שפרסומו עלול באופן סביר לפגוע בפרטיות או באינטרס מוגן אחר של אדם או גוף מסחרי אמריקאי. 00:00-00:47: המצלמה מסתובבת כדי לעקוב אחר מקור אור לכאורה, ושומרת אותו ככלל במרכז המסגרת. 00:48-01:19: המצלמה מגדילה ומקטינה את רמת ההגדלה מספר פעמים וממשיכה להסתובב כדי לעקוב אחר מקור האור לכאורה. הערת AARO: מכשירים סלולריים מהסוג ששימש לצילום זה מפעילים מיקוד אוטומטי ופונקציות עיבוד תמונה אוטומטיות אחרות, העלולות לעוות את המאפיינים המורפולוגיים והקינמטיים הנראים של עצמים מרוחקים, במיוחד בהגדלה גבוהה. בוצעו השמטות כדי להגן על זהות עדי ראייה, מיקומי מתקנים ממשלתיים, או מידע פוטנציאלית רגיש על אתרים צבאיים שאינם קשורים ל-UAP. לא בוצעו השמטות בקבצים שפורסמו תחת הנחיית הנשיא טראמפ בנוגע למידע על טבעם או קיומם של מפגשים שדווחו כ-UAP או תופעות נלוות.", "size_bytes": null, "url_status": null, "_record_id": "record-009", "_url_is_record_page": true, "dvids_id": "1023409", "dvids_url": "https://www.dvidshub.net/video/1023409/lle-uap-pr001-unresolved-uap-report-colorado-2023", "media_url": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985834/DOD_111985834-1280x720-3000k.mp4", "media_url_hq": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985834/DOD_111985834-1920x1080-6000k.mp4", "media_url_lq": "https://d34w7g4gy10iej.cloudfront.net/video/2609/DOD_111985834/DOD_111985834-512x288-1000k.mp4", "poster_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2609/1023409/DOD_111985834.0000001/122x92_q95.jpg", "duration_s": 79, "aspect_ratio": "4:3", "dvids_date": "2023-10-01T00:00:00-04:00"}</script>
 </head>
 <body>
+  <a href="#top" class="skip-link">דלג לתוכן</a>
 
   <!-- כתב ויתור עליון -->
   <div class="top-banner" role="note">
@@ -91,7 +108,7 @@
 
           <!-- נגן וידאו / אודיו (לקבצי וידאו) -->
           <section id="media-player" class="media-player" hidden aria-label="נגן וידאו">
-            <video id="media-video" controls preload="metadata" playsinline crossorigin="anonymous"></video>
+            <video id="media-video" controls preload="none" playsinline crossorigin="anonymous"></video>
             <div class="media-info">
               <span id="media-duration" class="mono">-</span>
               <span id="media-source" class="media-source"></span>
@@ -226,6 +243,8 @@
           <li><a href="https://www.war.gov/UFO/" target="_blank" rel="noopener">מקור רשמי - war.gov/UFO</a></li>
           <li><a href="https://github.com/nadaval56/ufo" target="_blank" rel="noopener">GitHub - קוד הפרויקט</a></li>
           <li><a href="index.html#release">הארכיון</a></li>
+          <li><a href="privacy/">מדיניות פרטיות</a></li>
+          <li><a href="accessibility/">הצהרת נגישות</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -247,5 +266,12 @@
 
   <script src="assets/js/file-detail.js" defer></script>
   <script src="assets/js/brand-anim.js" defer></script>
+  <script>
+    window.PRIVACY_CONFIG = { appPrefixes: ['a11y:'], privacyUrl: '/privacy/' };
+    window.A11Y_CONFIG = { privacyUrl: '/privacy/', accessibilityUrl: '/accessibility/' };
+  </script>
+  <!-- privacy.js תמיד לפני a11y.js: a11y.js שואל אותו אם מותר לשמור -->
+  <script src="assets/js/privacy.js"></script>
+  <script src="assets/js/a11y.js"></script>
 </body>
 </html>

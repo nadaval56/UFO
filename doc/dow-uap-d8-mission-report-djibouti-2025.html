@@ -30,15 +30,32 @@
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="alternate" type="application/rss+xml" title="עב&quot;מים: מסמכים חדשים" href="https://pursue.co.il/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/a11y.css">
+  <!-- ההעדפות מוחלות לפני הציור הראשון: בלי זה מי שבחר ניגודיות גבוהה
+       רואה את הדף נטען בצבעים הרגילים ואז מתהפך, בכל טעינה. -->
+  <script>
+    try {
+      var _p = localStorage.getItem('privacy:v1');
+      if (!_p || JSON.parse(_p).local !== false) {
+        var _r = document.documentElement, _a = localStorage.getItem('a11y:v1');
+        if (_a) {
+          _a = JSON.parse(_a);
+          if (_a.fs) _r.setAttribute('data-fs', _a.fs);
+          if (_a.mode) _r.classList.add('a11y-' + _a.mode);
+          ['links', 'readable', 'spacing', 'still', 'cursor', 'focus']
+            .forEach(function (k) { if (_a[k]) _r.classList.add('a11y-' + k); });
+        }
+      }
+    } catch (e) { /* מצב פרטי או אחסון חסום: הדף נטען כרגיל */ }
+  </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "DOW-UAP-D8, דו\"ח משימה, ג'יבוטי, 2025", "alternateName": "DOW-UAP-D8, Mission Report, Djibouti, 2025", "description": "מסמך DOW-UAP-D8 · משרד המלחמה · ג'יבוטי, 2025 - דו\"ח משימה DOW UAP D8. הקטע המתועד הוא GENTEXT/UAP: \"ב-16:53Z, [המטוס] צפה ב-2 עצמים UAP עגולים…", "inLanguage": "he", "url": "https://pursue.co.il/doc/dow-uap-d8-mission-report-djibouti-2025.html", "identifier": "dow-uap-d8-mission-report-djibouti-2025", "license": "https://www.usa.gov/government-works", "isAccessibleForFree": true, "creditText": "משרד המלחמה", "isPartOf": {"@type": "Collection", "name": "עב\"מים: כל מה שהותר לפרסום", "url": "https://pursue.co.il/"}, "publisher": {"@type": "Organization", "name": "U.S. Department of War"}, "sameAs": "https://www.war.gov/medialink/ufo/release_1/dow-uap-d8-mission-report-djibouti-2025.pdf", "contentLocation": {"@type": "Place", "name": "הים התיכון"}, "image": "https://pursue.co.il/data/previews/dow-uap-d8-mission-report-djibouti-2025/p001.jpg"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "הארכיון", "item": "https://pursue.co.il/"}, {"@type": "ListItem", "position": 2, "name": "מהדורה 01", "item": "https://pursue.co.il/archive.html#release_01"}, {"@type": "ListItem", "position": 3, "name": "DOW-UAP-D8, דו\"ח משימה, ג'יבוטי, 2025", "item": "https://pursue.co.il/doc/dow-uap-d8-mission-report-djibouti-2025.html"}]}</script>
   <script type="application/json" id="doc-data">{"id": "dow-uap-d8-mission-report-djibouti-2025", "title": "DOW-UAP-D8, Mission Report, Djibouti, 2025", "title_he": "DOW-UAP-D8, דו\"ח משימה, ג'יבוטי, 2025", "filename": "dow-uap-d8-mission-report-djibouti-2025.pdf", "agency": "Department of War", "agency_he": "משרד המלחמה", "type": "pdf", "source_url": "https://www.war.gov/medialink/ufo/release_1/dow-uap-d8-mission-report-djibouti-2025.pdf", "release_date": "8/5/26", "incident_date": "N/A", "incident_location": "Mediterranean Sea", "incident_location_he": "הים התיכון", "summary_en": "This document is a Mission Report (MISREP), a standardized reporting form the U.S. Military uses to record the circumstances surrounding its operations. U.S. military services often use MISREPs to report Unidentified Anomalous Phenomena (UAP) to AARO. The GENTEXT, or “general text” section of these reports often contains important qualitative, contextual information, distinguishing it from the more quantitative, or numerical, data found elsewhere in the report.A U.S. military operator reported observing two “white hot UAPs.” The reporter estimated the UAP’s speed as approximately 240 nautical miles per hour (276 mph).All descriptive and estimative language contained in this report reflects the reporter’s subjective interpretation at the time of the event. Such characterizations should not be interpreted as a conclusive indication of the presence or absence of any intrinsic object features or performance characteristics.\n  Redactions have been made to protect the identity of eyewitnesses, the location of government facilities, or potentially sensitive information about military sites not related to UAP. No redactions have been made to any files released under President Trump's directive concerning information about the nature or existence of any encounter reported as a UAP or related phenomena.", "summary_he": "מסמך זה הוא דו\"ח משימה (MISREP) - טופס דיווח סטנדרטי שבו עושה הצבא האמריקאי שימוש כדי לתעד את נסיבותיו של אירוע מבצעי. דו\"ח זה מתאר תצפית של תופעה אווירית חריגה (UAP) על ידי כוח של ארה\"ב או של בעל ברית. הוא כולל את פרטי האירוע - תאריך, שעה, מיקום, כוח מדווח, תיאור התופעה ופעולות שבוצעו - בהתאם להליכי הדיווח הסטנדרטיים. בוצעו השמטות כדי להגן על זהות עדי ראייה, מיקומי מתקנים ממשלתיים, או מידע פוטנציאלית רגיש על אתרים צבאיים שאינם קשורים ל-UAP. לא בוצעו השמטות בקבצים שפורסמו תחת הנחיית הנשיא טראמפ בנוגע למידע על טבעם או קיומם של מפגשים שדווחו כ-UAP או תופעות נלוות.", "size_bytes": null, "url_status": null, "_record_id": "record-075", "page_count": 7, "content_kinds": ["mixed", "typewritten"], "preview_pages": [], "text_preview_en": "GENTEXT/UAP\n\n¢ UAP Description (e.g., size, shape, color, markings, recognizable features): @@@GRB2= Ramee\nhoe AT | 653 Z, 1.4(a) | OBS 2X ROUND WHITE HOT UAPS\nDYNAMIC SOUTH AT APPROX 240NM/HOUR IVO 35SQT3423692957.\n\n¢ Gentext (UAP Event Description): G@@RBRROnS Sree) AT 1653Z,\n1.4(a) | OBS 2X UAPS DYNAMIC SOUTH AT APPROX 240NM/HOUR IVO 35SQT3423692957.", "text_preview_he": "GENTEXT/UAP - משרד המלחמה - D8 · ג'יבוטי, 2025\n\nתיאור ה-UAP (גודל, צורה, צבע, סימונים): \"ב-16:53Z, [המטוס] צפה ב-2 עצמים UAP עגולים לבנים-חמים נעים דינמית דרומה במהירות של כ-240 מייל-ימי לשעה בקרבת 35S QT 34236/92957.\"\n\nתיאור אירוע ה-UAP (Gentext): \"ב-16:53Z, [המטוס] צפה ב-2 UAPs נעים דינמית דרומה במהירות של כ-240 מייל-ימי לשעה בקרבת 35S QT 34236/92957.\"", "_extracted_at": "2026-05-12T17:31:02Z", "preview_pages_fallback": [{"page": 1, "kind": "mixed", "path": "data/previews/dow-uap-d8-mission-report-djibouti-2025/p001.jpg"}, {"page": 2, "kind": "mixed", "path": "data/previews/dow-uap-d8-mission-report-djibouti-2025/p002.jpg"}, {"page": 3, "kind": "mixed", "path": "data/previews/dow-uap-d8-mission-report-djibouti-2025/p003.jpg"}, {"page": 4, "kind": "mixed", "path": "data/previews/dow-uap-d8-mission-report-djibouti-2025/p004.jpg"}], "narrative_he": "ג'יבוטי, 2025 - דו\"ח משימה DOW UAP D8. הקטע המתועד הוא GENTEXT/UAP: \"ב-16:53Z, [המטוס] צפה ב-2 עצמים UAP עגולים לבנים-חמים נעים דינמית דרומה במהירות של כ-240 מייל-ימי לשעה בקרבת 35S QT 34236/92957\". זהו אחד הקבצים המעטים שמתעד מספר UAPs בו-זמנית עם חתימה תרמית בולטת. שאר הדו\"ח המבצעי מצונזר.", "text_he": "GENTEXT/UAP - משרד המלחמה - D8 · ג'יבוטי, 2025\n\nתיאור ה-UAP (גודל, צורה, צבע, סימונים): \"ב-16:53Z, [המטוס] צפה ב-2 עצמים UAP עגולים לבנים-חמים נעים דינמית דרומה במהירות של כ-240 מייל-ימי לשעה בקרבת 35S QT 34236/92957.\"\n\nתיאור אירוע ה-UAP (Gentext): \"ב-16:53Z, [המטוס] צפה ב-2 UAPs נעים דינמית דרומה במהירות של כ-240 מייל-ימי לשעה בקרבת 35S QT 34236/92957.\"", "release_no": "01", "release": "release_01", "text_en_path": "data/text/dow-uap-d8-mission-report-djibouti-2025.txt"}</script>
 </head>
 <body>
+  <a href="#top" class="skip-link">דלג לתוכן</a>
 
   <!-- כתב ויתור עליון -->
   <div class="top-banner" role="note">
@@ -91,7 +108,7 @@
 
           <!-- נגן וידאו / אודיו (לקבצי וידאו) -->
           <section id="media-player" class="media-player" hidden aria-label="נגן וידאו">
-            <video id="media-video" controls preload="metadata" playsinline crossorigin="anonymous"></video>
+            <video id="media-video" controls preload="none" playsinline crossorigin="anonymous"></video>
             <div class="media-info">
               <span id="media-duration" class="mono">-</span>
               <span id="media-source" class="media-source"></span>
@@ -226,6 +243,8 @@
           <li><a href="https://www.war.gov/UFO/" target="_blank" rel="noopener">מקור רשמי - war.gov/UFO</a></li>
           <li><a href="https://github.com/nadaval56/ufo" target="_blank" rel="noopener">GitHub - קוד הפרויקט</a></li>
           <li><a href="index.html#release">הארכיון</a></li>
+          <li><a href="privacy/">מדיניות פרטיות</a></li>
+          <li><a href="accessibility/">הצהרת נגישות</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -247,5 +266,12 @@
 
   <script src="assets/js/file-detail.js" defer></script>
   <script src="assets/js/brand-anim.js" defer></script>
+  <script>
+    window.PRIVACY_CONFIG = { appPrefixes: ['a11y:'], privacyUrl: '/privacy/' };
+    window.A11Y_CONFIG = { privacyUrl: '/privacy/', accessibilityUrl: '/accessibility/' };
+  </script>
+  <!-- privacy.js תמיד לפני a11y.js: a11y.js שואל אותו אם מותר לשמור -->
+  <script src="assets/js/privacy.js"></script>
+  <script src="assets/js/a11y.js"></script>
 </body>
 </html>
