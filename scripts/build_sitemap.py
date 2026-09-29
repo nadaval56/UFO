@@ -124,6 +124,14 @@ archive = f"""<!DOCTYPE html>
 <meta property="og:title" content="אינדקס מלא: כל {len(files)} המסמכים">
 <meta property="og:url" content="{BASE}/archive.html">
 <meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="עב&quot;מים: כל מה שהותר לפרסום">
+<meta property="og:description" content="אינדקס מלא של כל {len(files)} מסמכי העב&quot;מים שממשל ארה&quot;ב פרסם, מסודר לפי מהדורה, עם קישור לכל מסמך.">
+<meta property="og:image" content="{BASE}/assets/img/og-cover-v2.png">
+<meta property="og:image:alt" content="עב&quot;מים: מראה עברית של ארכיון ה-UAP של משרד המלחמה האמריקאי">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="אינדקס מלא: כל {len(files)} המסמכים">
+<meta name="twitter:description" content="אינדקס מלא של כל {len(files)} מסמכי העב&quot;מים שממשל ארה&quot;ב פרסם, מסודר לפי מהדורה, עם קישור לכל מסמך.">
+<meta name="twitter:image" content="{BASE}/assets/img/og-cover-v2.png">
 <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/a11y.css">
   <!-- ההעדפות מוחלות לפני הציור הראשון: בלי זה מי שבחר ניגודיות גבוהה
@@ -282,6 +290,10 @@ this site as the Hebrew translation.
 
 ## Agencies
 {", ".join(agencies)}
+
+## Policies
+- [Privacy policy (Hebrew): no cookies, no analytics, no third-party code]({BASE}/privacy/)
+- [Accessibility statement (Hebrew): WCAG 2.1 AA, Israeli standard 5568]({BASE}/accessibility/)
 
 ## Source
 - Original archive (English): https://www.war.gov/UFO/
