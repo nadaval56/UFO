@@ -30,15 +30,32 @@
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="alternate" type="application/rss+xml" title="עב&quot;מים: מסמכים חדשים" href="https://pursue.co.il/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/a11y.css">
+  <!-- ההעדפות מוחלות לפני הציור הראשון: בלי זה מי שבחר ניגודיות גבוהה
+       רואה את הדף נטען בצבעים הרגילים ואז מתהפך, בכל טעינה. -->
+  <script>
+    try {
+      var _p = localStorage.getItem('privacy:v1');
+      if (!_p || JSON.parse(_p).local !== false) {
+        var _r = document.documentElement, _a = localStorage.getItem('a11y:v1');
+        if (_a) {
+          _a = JSON.parse(_a);
+          if (_a.fs) _r.setAttribute('data-fs', _a.fs);
+          if (_a.mode) _r.classList.add('a11y-' + _a.mode);
+          ['links', 'readable', 'spacing', 'still', 'cursor', 'focus']
+            .forEach(function (k) { if (_a[k]) _r.classList.add('a11y-' + k); });
+        }
+      }
+    } catch (e) { /* מצב פרטי או אחסון חסום: הדף נטען כרגיל */ }
+  </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "NASA-UAP-D011, קטע שמע ממרקורי-אטלס 9, 15 במאי 1963", "alternateName": "NASA-UAP-D011, Mercury Atlas 9 Audio Excerpt, May 15, 1963", "description": "הקלטה NASA-UAP-D011 · NASA · קופר מתאר חלקיקים לבנים זעירים הנסחפים מן החללית עם הזריחה, מאי 1963.", "inLanguage": "he", "url": "https://pursue.co.il/doc/nasa-uap-d011.html", "identifier": "nasa-uap-d011", "license": "https://www.usa.gov/government-works", "isAccessibleForFree": true, "creditText": "NASA", "isPartOf": {"@type": "Collection", "name": "עב\"מים: כל מה שהותר לפרסום", "url": "https://pursue.co.il/"}, "publisher": {"@type": "Organization", "name": "U.S. Department of War"}, "sameAs": "https://www.war.gov/UFO/#NASA-UAP-D011-Mercury-Atlas-9-Audio-Excerpt-May-15-1963", "temporalCoverage": "5/15/63", "contentLocation": {"@type": "Place", "name": "מסלול נמוך סביב כדור הארץ"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "הארכיון", "item": "https://pursue.co.il/"}, {"@type": "ListItem", "position": 2, "name": "מהדורה 02", "item": "https://pursue.co.il/archive.html#release_02"}, {"@type": "ListItem", "position": 3, "name": "NASA-UAP-D011, קטע שמע ממרקורי-אטלס 9, 15 במאי 1963", "item": "https://pursue.co.il/doc/nasa-uap-d011.html"}]}</script>
   <script type="application/json" id="doc-data">{"id": "nasa-uap-d011", "title": "NASA-UAP-D011, Mercury Atlas 9 Audio Excerpt, May 15, 1963", "title_he": "NASA-UAP-D011, קטע שמע ממרקורי-אטלס 9, 15 במאי 1963", "filename": null, "agency": "NASA", "agency_he": "NASA", "type": "aud", "source_url": "https://www.war.gov/UFO/#NASA-UAP-D011-Mercury-Atlas-9-Audio-Excerpt-May-15-1963", "release_date": "22/5/26", "incident_date": "5/15/63", "incident_location": "Low Earth Orbit", "incident_location_he": "מסלול נמוך סביב כדור הארץ", "summary_en": "During the final and longest flight of Project Mercury, Mercury-Atlas 9 mission (MA-9) Faith 7 Pilot L. Gordon Cooper Jr. describes the brilliant blue of sunrise beneath the haze layer of the Earth’s atmosphere. As he approaches sunrise, he describes small, luminous, brilliant white particles drifting away from the spacecraft. Cooper describes observing “fireflies” after deploying beacons, which are spherical mission-related equipment with xenon strobe lights.", "summary_he": "במהלך הטיסה האחרונה והארוכה ביותר של פרויקט Mercury, מתאר טייס Faith 7 של משימת מרקורי-אטלס 9 (MA-9), ל. גורדון קופר ג'וניור, את הכחול הזוהר של הזריחה מתחת לשכבת האובך של האטמוספרה של כדור הארץ. ככל שהוא מתקרב אל הזריחה, הוא מתאר חלקיקים לבנים זעירים, זוהרים ובהירים, הנסחפים והולכים מן החללית. קופר מתאר תצפית ב\"גחליליות\" לאחר שפרס משואות - ציוד כדורי הקשור למשימה ובו נורות הבזק קסנון.", "size_bytes": null, "url_status": null, "_record_id": "record-206", "_url_is_record_page": true, "narrative_he": "קופר מתאר חלקיקים לבנים זעירים הנסחפים מן החללית עם הזריחה, מאי 1963.", "release_no": "02", "release": "release_02"}</script>
 </head>
 <body>
+  <a href="#top" class="skip-link">דלג לתוכן</a>
 
   <!-- כתב ויתור עליון -->
   <div class="top-banner" role="note">
@@ -91,7 +108,7 @@
 
           <!-- נגן וידאו / אודיו (לקבצי וידאו) -->
           <section id="media-player" class="media-player" hidden aria-label="נגן וידאו">
-            <video id="media-video" controls preload="metadata" playsinline crossorigin="anonymous"></video>
+            <video id="media-video" controls preload="none" playsinline crossorigin="anonymous"></video>
             <div class="media-info">
               <span id="media-duration" class="mono">-</span>
               <span id="media-source" class="media-source"></span>
@@ -225,6 +242,8 @@
           <li><a href="https://www.war.gov/UFO/" target="_blank" rel="noopener">מקור רשמי - war.gov/UFO</a></li>
           <li><a href="https://github.com/nadaval56/ufo" target="_blank" rel="noopener">GitHub - קוד הפרויקט</a></li>
           <li><a href="index.html#release">הארכיון</a></li>
+          <li><a href="privacy/">מדיניות פרטיות</a></li>
+          <li><a href="accessibility/">הצהרת נגישות</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -246,5 +265,12 @@
 
   <script src="assets/js/file-detail.js" defer></script>
   <script src="assets/js/brand-anim.js" defer></script>
+  <script>
+    window.PRIVACY_CONFIG = { appPrefixes: ['a11y:'], privacyUrl: '/privacy/' };
+    window.A11Y_CONFIG = { privacyUrl: '/privacy/', accessibilityUrl: '/accessibility/' };
+  </script>
+  <!-- privacy.js תמיד לפני a11y.js: a11y.js שואל אותו אם מותר לשמור -->
+  <script src="assets/js/privacy.js"></script>
+  <script src="assets/js/a11y.js"></script>
 </body>
 </html>

@@ -30,15 +30,32 @@
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="alternate" type="application/rss+xml" title="עב&quot;מים: מסמכים חדשים" href="https://pursue.co.il/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/a11y.css">
+  <!-- ההעדפות מוחלות לפני הציור הראשון: בלי זה מי שבחר ניגודיות גבוהה
+       רואה את הדף נטען בצבעים הרגילים ואז מתהפך, בכל טעינה. -->
+  <script>
+    try {
+      var _p = localStorage.getItem('privacy:v1');
+      if (!_p || JSON.parse(_p).local !== false) {
+        var _r = document.documentElement, _a = localStorage.getItem('a11y:v1');
+        if (_a) {
+          _a = JSON.parse(_a);
+          if (_a.fs) _r.setAttribute('data-fs', _a.fs);
+          if (_a.mode) _r.classList.add('a11y-' + _a.mode);
+          ['links', 'readable', 'spacing', 'still', 'cursor', 'focus']
+            .forEach(function (k) { if (_a[k]) _r.classList.add('a11y-' + k); });
+        }
+      }
+    } catch (e) { /* מצב פרטי או אחסון חסום: הדף נטען כרגיל */ }
+  </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "CIA-UAP-009, עצמים מעופפים לא מזוהים שנצפו מעל בודפשט", "alternateName": "CIA-UAP-009, Unknown Flying Objects Observed Over Budapest", "description": "מסמך CIA-UAP-009 · CIA · 1957, בודפשט, הונגריה - דו\"ח מידע של ה-CIA משנת 1957 בנוגע לתצפיות UFO מעל בודפשט. גרסה מצונזרת יותר של הדו\"ח הייתה זמינה באתר…", "inLanguage": "he", "url": "https://pursue.co.il/doc/cia-uap-009-unknown-flying_objects_oberved_over_budapest.html", "identifier": "cia-uap-009-unknown-flying_objects_oberved_over_budapest", "license": "https://www.usa.gov/government-works", "isAccessibleForFree": true, "creditText": "CIA", "isPartOf": {"@type": "Collection", "name": "עב\"מים: כל מה שהותר לפרסום", "url": "https://pursue.co.il/"}, "publisher": {"@type": "Organization", "name": "U.S. Department of War"}, "sameAs": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-009-UNKNOWN-FLYING_OBJECTS_OBERVED_OVER_BUDAPEST.pdf", "temporalCoverage": "1957", "contentLocation": {"@type": "Place", "name": "בודפשט, הונגריה"}, "image": "https://pursue.co.il/data/previews/cia-uap-009/p001.jpg"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "הארכיון", "item": "https://pursue.co.il/"}, {"@type": "ListItem", "position": 2, "name": "מהדורה 03", "item": "https://pursue.co.il/archive.html#release_03"}, {"@type": "ListItem", "position": 3, "name": "CIA-UAP-009, עצמים מעופפים לא מזוהים שנצפו מעל בודפשט", "item": "https://pursue.co.il/doc/cia-uap-009-unknown-flying_objects_oberved_over_budapest.html"}]}</script>
   <script type="application/json" id="doc-data">{"id": "cia-uap-009-unknown-flying_objects_oberved_over_budapest", "title": "CIA-UAP-009, Unknown Flying Objects Observed Over Budapest", "title_he": "CIA-UAP-009, עצמים מעופפים לא מזוהים שנצפו מעל בודפשט", "filename": "CIA-UAP-009-UNKNOWN-FLYING_OBJECTS_OBERVED_OVER_BUDAPEST.pdf", "agency": "CIA", "agency_he": "CIA", "type": "pdf", "source_url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-009-UNKNOWN-FLYING_OBJECTS_OBERVED_OVER_BUDAPEST.pdf", "release": "release_03", "release_no": "03", "release_date": "12/6/26", "incident_date": "1957", "incident_location": "Budapest, Hungary", "incident_location_he": "בודפשט, הונגריה", "summary_en": "This is a 1957 CIA Information Report regarding UFO sightings over Budapest. A more redacted version of this report has been available on CIA's public website.", "summary_he": null, "size_bytes": null, "url_status": null, "_record_id": "record-050", "narrative_he": "1957, בודפשט, הונגריה - דו\"ח מידע של ה-CIA משנת 1957 בנוגע לתצפיות UFO מעל בודפשט. גרסה מצונזרת יותר של הדו\"ח הייתה זמינה באתר הציבורי של ה-CIA.", "preview_pages": [{"page": 1, "kind": "clipping", "path": "data/previews/cia-uap-009/p001.jpg"}], "preview_pages_fallback": [], "page_count": 1, "content_kinds": ["clipping"]}</script>
 </head>
 <body>
+  <a href="#top" class="skip-link">דלג לתוכן</a>
 
   <!-- כתב ויתור עליון -->
   <div class="top-banner" role="note">
@@ -91,7 +108,7 @@
 
           <!-- נגן וידאו / אודיו (לקבצי וידאו) -->
           <section id="media-player" class="media-player" hidden aria-label="נגן וידאו">
-            <video id="media-video" controls preload="metadata" playsinline crossorigin="anonymous"></video>
+            <video id="media-video" controls preload="none" playsinline crossorigin="anonymous"></video>
             <div class="media-info">
               <span id="media-duration" class="mono">-</span>
               <span id="media-source" class="media-source"></span>
@@ -225,6 +242,8 @@
           <li><a href="https://www.war.gov/UFO/" target="_blank" rel="noopener">מקור רשמי - war.gov/UFO</a></li>
           <li><a href="https://github.com/nadaval56/ufo" target="_blank" rel="noopener">GitHub - קוד הפרויקט</a></li>
           <li><a href="index.html#release">הארכיון</a></li>
+          <li><a href="privacy/">מדיניות פרטיות</a></li>
+          <li><a href="accessibility/">הצהרת נגישות</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -246,5 +265,12 @@
 
   <script src="assets/js/file-detail.js" defer></script>
   <script src="assets/js/brand-anim.js" defer></script>
+  <script>
+    window.PRIVACY_CONFIG = { appPrefixes: ['a11y:'], privacyUrl: '/privacy/' };
+    window.A11Y_CONFIG = { privacyUrl: '/privacy/', accessibilityUrl: '/accessibility/' };
+  </script>
+  <!-- privacy.js תמיד לפני a11y.js: a11y.js שואל אותו אם מותר לשמור -->
+  <script src="assets/js/privacy.js"></script>
+  <script src="assets/js/a11y.js"></script>
 </body>
 </html>

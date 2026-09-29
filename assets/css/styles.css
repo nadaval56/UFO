@@ -13,7 +13,7 @@
   --border-strong: #2a3a4a;
   --text: #e8f1f4;
   --text-muted: #9fb4c2;
-  --text-dim: #5d7488;
+  --text-dim: #6c859a;        /* was #5d7488: 3.64-4.31:1, below AA. Same hue, lighter; 4.6:1 on --bg-elev-3, the worst surface */
   --accent: #7dfbff;          /* electric cyan */
   --accent-strong: #b8feff;
   --accent-dim: rgba(125,251,255,0.18);
@@ -41,7 +41,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-mono);   /* mono-first, terminal feel */
-  font-size: 15px;
+  font-size: 0.9375rem;   /* 15px, in rem so the text-size control scales it */
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -1315,10 +1315,13 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 }
 
 @media (max-width: 600px) {
-  .site-nav { gap: 12px; }
+  /* The nav wraps instead of running off the screen. At 320px with the
+     accessibility menu's largest text the three links need ~334px, and a
+     fixed height would have clipped the second row (WCAG 1.4.10). */
+  .site-nav { gap: 4px 12px; flex-wrap: wrap; justify-content: flex-end; min-width: 0; }
   .site-nav a { font-size: 0.72rem; letter-spacing: 0.06em; }
   .nav-original { display: none; }
-  .header-inner { height: 56px; }
+  .header-inner { height: auto; min-height: 56px; padding-block: 6px; }
   .brand-sub { display: none; }
   .section { padding: 60px 0; }
   .section-head { flex-direction: column; align-items: flex-start; gap: 4px; }
@@ -1573,6 +1576,9 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   scroll-snap-type: x mandatory;
 }
 .gallery-thumb {
+  /* A button does not inherit the page font; without this its text stayed at
+     the browser's fixed 13.33px while the text-size control grew the page. */
+  font: inherit;
   position: relative;
   flex: 0 0 84px;
   width: 84px;

@@ -48,6 +48,9 @@ latest = max((iso_release(f.get("release_date")) or "" for f in files), default=
 entries = [
     (f"{BASE}/", "1.0", "weekly", latest),
     (f"{BASE}/archive.html", "0.9", "weekly", latest),
+    # Hand-written; their lastmod is the date written inside each document.
+    (f"{BASE}/privacy/", "0.3", "yearly", "2026-09-29"),
+    (f"{BASE}/accessibility/", "0.3", "yearly", "2026-09-29"),
 ]
 for f in files:
     fid = f.get("id")
@@ -122,6 +125,24 @@ archive = f"""<!DOCTYPE html>
 <meta property="og:url" content="{BASE}/archive.html">
 <meta property="og:locale" content="he_IL">
 <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/a11y.css">
+  <!-- ההעדפות מוחלות לפני הציור הראשון: בלי זה מי שבחר ניגודיות גבוהה
+       רואה את הדף נטען בצבעים הרגילים ואז מתהפך, בכל טעינה. -->
+  <script>
+    try {{
+      var _p = localStorage.getItem('privacy:v1');
+      if (!_p || JSON.parse(_p).local !== false) {{
+        var _r = document.documentElement, _a = localStorage.getItem('a11y:v1');
+        if (_a) {{
+          _a = JSON.parse(_a);
+          if (_a.fs) _r.setAttribute('data-fs', _a.fs);
+          if (_a.mode) _r.classList.add('a11y-' + _a.mode);
+          ['links', 'readable', 'spacing', 'still', 'cursor', 'focus']
+            .forEach(function (k) {{ if (_a[k]) _r.classList.add('a11y-' + k); }});
+        }}
+      }}
+    }} catch (e) {{ /* מצב פרטי או אחסון חסום: הדף נטען כרגיל */ }}
+  </script>
 <style>
   .a-wrap {{ max-width: 900px; margin: 0 auto; padding: 32px 20px 64px; }}
   .a-wrap h1 {{ font-size: 1.6rem; margin-bottom: 6px; }}
@@ -142,16 +163,25 @@ archive = f"""<!DOCTYPE html>
 </style>
 </head>
 <body>
-<div class="a-wrap">
+  <a href="#archive" class="skip-link">דלג לתוכן</a>
+<main class="a-wrap" id="archive">
   <h1>אינדקס מלא של הארכיון</h1>
-  <p class="a-lead">כל {len(files)} המסמכים, מסודרים לפי מהדורה. עמוד סטטי ללא JavaScript -
+  <p class="a-lead">כל {len(files)} המסמכים, מסודרים לפי מהדורה. עמוד סטטי שאינו תלוי ב-JavaScript -
   <a href="index.html">לדפדפן עם חיפוש וסינון</a>.</p>
 {chr(10).join(rows)}
   <p class="a-lead" style="margin-top:40px">
     תרגום קהילתי בלתי רשמי. למקור:
     <a href="https://www.war.gov/UFO/" rel="noopener">war.gov/UFO</a>.
+    <a href="privacy/">מדיניות פרטיות</a> · <a href="accessibility/">הצהרת נגישות</a>
   </p>
-</div>
+</main>
+  <script>
+    window.PRIVACY_CONFIG = {{ appPrefixes: ['a11y:'], privacyUrl: '/privacy/' }};
+    window.A11Y_CONFIG = {{ privacyUrl: '/privacy/', accessibilityUrl: '/accessibility/' }};
+  </script>
+  <!-- privacy.js תמיד לפני a11y.js: a11y.js שואל אותו אם מותר לשמור -->
+  <script src="assets/js/privacy.js"></script>
+  <script src="assets/js/a11y.js"></script>
 </body>
 </html>
 """
