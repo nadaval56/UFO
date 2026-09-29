@@ -31,6 +31,10 @@ this site as the Hebrew translation.
 ## Agencies
 CIA, Central Intelligence Agency, Department of Energy, Department of State, Department of War, Executive Office of the President, FBI, Intelligence Community Agency, Local Law Enforcement, NASA, Office of the Director of National Intelligence, U.S. Government
 
+## Policies
+- [Privacy policy (Hebrew): no cookies, no analytics, no third-party code](https://pursue.co.il/privacy/)
+- [Accessibility statement (Hebrew): WCAG 2.1 AA, Israeli standard 5568](https://pursue.co.il/accessibility/)
+
 ## Source
 - Original archive (English): https://www.war.gov/UFO/
 - Code for this mirror: https://github.com/nadaval56/UFO
