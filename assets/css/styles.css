@@ -1886,3 +1886,71 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 }
 .related-list li:last-child { border-block-end: 0; }
 .related-list .related-meta { color: var(--text-dim); font-size: 0.76rem; margin-inline-start: 8px; }
+
+/* ---------- "עוד אתרים שלי" ----------
+   Thin strip at the bottom of every page (markup from scripts/sister_sites.py,
+   copied from geniza-explorer). A plain horizontal scroll area that
+   assets/js/sister.js moves slowly while nobody touches it. The list is written
+   twice so the motion loops without a seam; under reduced motion (system
+   setting or the a11y menu's "stop animations") the copy is hidden and the
+   strip stays a hand-scrolled row. Links only: nothing loads from these sites.
+   Square chips and mono label to match the terminal look; colours from the
+   palette variables only, so the a11y display modes recolour it too. */
+.sister {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 46rem;
+  margin: 28px auto 0;
+  min-width: 0;
+  line-height: 1.6;
+}
+.sister-lbl {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.sister-view {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 1.25rem, #000 calc(100% - 1.25rem), transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, #000 1.25rem, #000 calc(100% - 1.25rem), transparent 100%);
+}
+.sister-view::-webkit-scrollbar { display: none; }
+.sister-track { display: flex; width: max-content; }
+.sister-set { display: flex; gap: 8px; padding-inline-end: 8px; }
+.sister a,
+.sister .sister-item {
+  flex: none;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2px 10px;
+}
+.sister a:hover { color: var(--accent); border-color: var(--border-strong); text-decoration: none; }
+.sister a.sister-invite { color: var(--accent); border-color: var(--accent); background: var(--accent-faint); }
+.sister a.sister-invite:hover { color: var(--accent-strong); border-color: var(--accent-strong); }
+/* The one entry where only the name is a link (מייקינג · יצירה טכנולוגית):
+   the chip is the span, the link inside it an underlined word. */
+.sister .sister-item a {
+  border: 0; padding: 0; border-radius: 0; background: none;
+  font-size: inherit; color: inherit;
+  text-decoration: underline; text-underline-offset: 2px;
+}
+.sister .sister-item a:hover { color: var(--accent); text-decoration: underline; }
+@media (prefers-reduced-motion: reduce) { .sister-clone { display: none; } }
+html.a11y-still .sister-clone { display: none; }
+@media print { .sister { display: none; } }

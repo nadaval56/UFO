@@ -20,6 +20,7 @@ from datetime import date
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_static_pages import build as build_static_pages, doc_path  # noqa: E402
+from sister_sites import nav as sister_nav  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "data" / "manifest.json"
@@ -182,6 +183,7 @@ archive = f"""<!DOCTYPE html>
     <a href="https://www.war.gov/UFO/" rel="noopener">war.gov/UFO</a>.
     <a href="privacy/">מדיניות פרטיות</a> · <a href="accessibility/">הצהרת נגישות</a>
   </p>
+{sister_nav("", "  ")}
 </main>
   <script>
     window.PRIVACY_CONFIG = {{ appPrefixes: ['a11y:'], privacyUrl: '/privacy/' }};
