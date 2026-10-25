@@ -1855,7 +1855,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 /* ---------- Responsive ---------- */
 
 @media (max-width: 960px) {
-  .file-top-grid { grid-template-columns: 1fr; gap: 18px; }
+  .file-top-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
   .file-meta { position: static; }
   .file-title { font-size: 1.4rem; }
   .gallery-stage { min-height: 240px; }
