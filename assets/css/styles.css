@@ -1765,6 +1765,19 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 }
 .text-block-narrative .text-block-label { color: var(--accent-strong); }
 
+/* Extended summary (data/digest/*.md) - the longest Hebrew text on a
+   document page, so it gets real headings and lists. */
+.text-block-digest .text-block-label { font-size: 0.74rem; font-weight: 400; }
+.text-block-digest h3 {
+  margin: 22px 0 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+}
+.text-block-digest h3:first-child { margin-top: 0; }
+.text-block-digest ul { margin: 0 0 14px; padding-inline-start: 1.3em; }
+.text-block-digest li { margin: 0 0 6px; }
+
 /* English-source bundle — collapsible <details> that wraps the 3000-char
    excerpt and the full OCR scroll-pane. Default closed; visually subtle. */
 .text-block-collapsible {

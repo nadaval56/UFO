@@ -29,6 +29,7 @@ ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "data" / "manifest.json"
 TEMPLATE = ROOT / "file.html"
 OUT_DIR = ROOT / "doc"
+DIGEST_DIR = ROOT / "data" / "digest"
 BASE = "https://pursue.co.il"
 SITE = 'עב"מים'
 
@@ -55,6 +56,32 @@ def esc(v) -> str:
 def paragraphs(text: str) -> str:
     parts = [p.strip() for p in re.split(r"\n{2,}", str(text)) if p.strip()]
     return "".join(f"<p>{esc(p).replace(chr(10), '<br>')}</p>" for p in parts)
+
+
+def digest_html(text: str) -> str:
+    """Render a data/digest/*.md file: `### ` lines become <h3>, runs of `- `
+    lines become a <ul>, blank-line-separated blocks become <p>. Nothing else
+    of Markdown is supported, and everything is escaped."""
+    out = []
+    for block in re.split(r"\n{2,}", text.strip()):
+        lines = [ln.rstrip() for ln in block.strip().split("\n") if ln.strip()]
+        if not lines:
+            continue
+        if lines[0].startswith("### "):
+            out.append(f"<h3>{esc(lines[0][4:].strip())}</h3>")
+            lines = lines[1:]
+            if not lines:
+                continue
+        if all(ln.lstrip().startswith("- ") for ln in lines):
+            out.append("<ul>" + "".join(f"<li>{esc(ln.lstrip()[2:].strip())}</li>" for ln in lines) + "</ul>")
+        else:
+            out.append(f"<p>{'<br>'.join(esc(ln) for ln in lines)}</p>")
+    return "".join(out)
+
+
+def digest_for(record_id: str) -> str | None:
+    path = DIGEST_DIR / (page_name(record_id)[: -len(".html")] + ".md")
+    return path.read_text(encoding="utf-8") if path.exists() else None
 
 
 def fmt_bytes(n) -> str:
@@ -131,8 +158,12 @@ def meta_description(f: dict, title_he: str) -> str:
     specific Hebrew text, cut at a word boundary. summary_he opens with
     war.gov's boilerplate on hundreds of records (every INDOPACOM report, all
     37 DIRDs), so leading with it made the first ~155 characters - all Google
-    shows - identical across 317 pages. narrative_he is per-document."""
-    body = f.get("narrative_he") or f.get("summary_he") or title_he
+    shows - identical across 317 pages. narrative_he is per-document, and so
+    is the opening paragraph of an extended summary (data/digest/), which is
+    written to stand alone as a snippet."""
+    digest = digest_for(f["id"])
+    opening = digest.strip().split("\n\n", 1)[0] if digest else None
+    body = f.get("narrative_he") or opening or f.get("summary_he") or title_he
     code = DOC_CODE_RE.match(f.get("title") or "")
     head = " · ".join(x for x in (
         " ".join(x for x in (DESC_NOUN.get(f.get("type"), "פריט"), code and code.group(0)) if x),
@@ -271,6 +302,10 @@ def render(template: str, f: dict, files: list[dict] | None = None) -> str:
         if f.get("summary_en"):
             p.show("summary-en-wrap")
             p.inner("summary-en", esc(f["summary_en"]))
+    digest = digest_for(f["id"])
+    if digest:
+        p.show("digest-section")
+        p.inner("digest-body", digest_html(digest))
     he_text = f.get("text_he") or f.get("text_preview_he")
     if he_text:
         p.show("ocr-he-section")
