@@ -534,6 +534,19 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   width: 100%;
   min-width: 0;
 }
+/* Placeholder in the video slot of a release that has none (war.gov shows
+   "RELEASE NN - NO VIDEOS" the same way). Not a link, so no hover state. */
+.release-download-none {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  min-height: 100%;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text-dim);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+}
 /* .btn::before is the terminal-prompt chevron. In a column-flex button it
    claims a whole line of its own, so move it inline onto the label. */
 .release-downloads .btn::before { display: none; }
@@ -815,6 +828,21 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   cursor: pointer;
   border-radius: var(--radius);
   transition: color 0.15s, background 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+/* Wide screens: every release on one row, in equal columns (like the
+   download columns above). Below this width they wrap as before. */
+@media (min-width: 1240px) {
+  .release-tabs {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+  }
+  .release-tab {
+    justify-content: center;
+    padding: 12px 10px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
 }
 .release-tab:hover {
   color: var(--accent-strong);
