@@ -19,7 +19,7 @@ The scheduled prompt names a **mode**:
 
 ## 2. Run the agent tasks (in parallel)
 
-For each entry of `plan.json` `tasks`, write its JSON to `$WORK/cycle<N>/task<k>.json` and launch one `general-purpose` agent, all of them in a single message so they run concurrently:
+For each entry of `plan.json` `tasks`, write its JSON to `$WORK/cycle<N>/task<k>.json` and launch one `general-purpose` agent, all of them in a single message so they run concurrently (at most 20 agents can run at once: launch the first 20 and start the rest as earlier ones finish):
 - `kind: docs`: the task file holds `records` (each with `ocr_file` and `out_file`). Prompt: "Read `<repo>/scripts/digest/BRIEF.md` and follow it exactly. Your batch file: `<task file>`. Write the Hebrew yourself (do not call any API)."
 - `kind: part`: the task file holds one part (`record`, `part`, `of`, `part_file`, `notes_file`). Prompt: "Read `<repo>/scripts/digest/BRIEF.md`, then `<repo>/scripts/digest/PART_BRIEF.md`, and follow them. Your task file: `<task file>`. Write the Hebrew yourself (do not call any API)."
 
