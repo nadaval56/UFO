@@ -9,7 +9,13 @@
       "file_count": 28,
       "headline_he": "הפנטגון פרסם את המהדורה השביעית של קבצי PURSUE, ובהם דיווח של שלושה סוכנים פדרליים על עצם משולש שחור ליד מתקן מאובטח, דוח על פעילות חריגה ב-Skinwalker Ranch שביוטה, תצפיות היסטוריות משנות ה-40 וה-50, ומסמכים על התיאום בין נאס\"א למשרד ההגנה לגבי שברי כלי חלל חשודים.",
       "announcement_url": "https://www.war.gov/News/Releases/Release/Article/4632058/department-of-war-publishes-seventh-release-of-unidentified-anomalous-phenomena/",
-      "bundles": []
+      "bundles": [
+        {
+          "label_he": "חבילת מסמכים",
+          "filename": "documents_release_07_oct_23_2026.zip",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents_release_07_oct_23_2026.zip"
+        }
+      ]
     }
   ]
 }
