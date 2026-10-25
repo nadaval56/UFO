@@ -1,4 +1,15 @@
 {
   "_note": "Releases published on war.gov but not yet mirrored here. Hand-maintained: add an entry the day a tranche is announced, delete it once its files are merged into manifest.json. Drives the notice in the archive section - the site itself never invents this, so an empty list means 'we believe we are current'. `bundles` are the official download URLs read off war.gov; they let visitors get the originals even before we have mirrored the metadata.",
-  "pending": []
+  "pending": [
+    {
+      "no": "07",
+      "release": "release_07",
+      "date": "2026-10-23",
+      "date_he": "23 באוקטובר 2026",
+      "file_count": 28,
+      "headline_he": "הפנטגון פרסם את המהדורה השביעית של קבצי PURSUE, ובהם דיווח של שלושה סוכנים פדרליים על עצם משולש שחור ליד מתקן מאובטח, דוח על פעילות חריגה ב-Skinwalker Ranch שביוטה, תצפיות היסטוריות משנות ה-40 וה-50, ומסמכים על התיאום בין נאס\"א למשרד ההגנה לגבי שברי כלי חלל חשודים.",
+      "announcement_url": "https://www.war.gov/News/Releases/Release/Article/4632058/department-of-war-publishes-seventh-release-of-unidentified-anomalous-phenomena/",
+      "bundles": []
+    }
+  ]
 }
