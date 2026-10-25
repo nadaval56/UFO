@@ -361,7 +361,7 @@
       el.summarySection.hidden = true;
     }
 
-    // OCR - תרגום עברי (prefer full text_he; fall back to 3000-char text_preview_he)
+    // OCR - Hebrew: text_he (a condensed digest of the whole OCR, R01) or the 3000-char text_preview_he translation
     const heFull = f.text_he;
     const heExcerpt = f.text_preview_he;
     const heText = heFull || heExcerpt;
@@ -370,8 +370,8 @@
       el.ocrHeBody.innerHTML = paragraphsToHtml(heText);
       if (el.ocrHeByline) {
         el.ocrHeByline.textContent = heFull
-          ? "תרגום עברי מלא של ה-OCR."
-          : "תרגום עברי של ~3,000 התווים הראשונים מתוך ה-OCR (תרגום מלא בעבודה).";
+          ? "תקציר עברי מפורט של תוכן ה-OCR, לא תרגום מלא."
+          : "תרגום עברי של כ-3,000 התווים הראשונים מתוך ה-OCR.";
       }
     } else {
       el.ocrHeSection.hidden = true;
