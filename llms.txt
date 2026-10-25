@@ -2,7 +2,7 @@
 
 > An unofficial, community-made Hebrew translation of the U.S. Department of War's
 > PURSUE archive (Presidential Unsealing and Reporting System for UAP Encounters),
-> originally published at https://www.war.gov/UFO/. It mirrors all 450 declassified
+> originally published at https://www.war.gov/UFO/. It mirrors all 478 declassified
 > UAP/UFO files released so far, each with a Hebrew title, a faithful Hebrew translation
 > of war.gov's official description, and - for scanned documents - page previews and a
 > Hebrew translation of the OCR text. Source material is a U.S. government work in the
@@ -27,6 +27,7 @@ this site as the Hebrew translation.
 - Release 04 - 2026-07-10: 40 files - https://pursue.co.il/archive.html#release_04
 - Release 05 - 2026-08-07: 41 files - https://pursue.co.il/archive.html#release_05
 - Release 06 - 2026-09-18: 75 files - https://pursue.co.il/archive.html#release_06
+- Release 07 - 2026-10-23: 28 files - https://pursue.co.il/archive.html#release_07
 
 ## Agencies
 CIA, Central Intelligence Agency, Department of Energy, Department of State, Department of War, Executive Office of the President, FBI, Intelligence Community Agency, Local Law Enforcement, NASA, Office of the Director of National Intelligence, U.S. Government
