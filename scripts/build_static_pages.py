@@ -310,6 +310,13 @@ def render(template: str, f: dict, files: list[dict] | None = None) -> str:
     if he_text:
         p.show("ocr-he-section")
         p.inner("ocr-he-body", paragraphs(he_text))
+        # same wording as file-detail.js: text_he (R01) is a condensed digest,
+        # text_preview_he a translation of the first ~3,000 OCR characters
+        p.s = p.s.replace(
+            '<p class="text-block-byline">תרגום עברי של ה-OCR.</p>',
+            '<p class="text-block-byline">' + (
+                "תקציר עברי מפורט של תוכן ה-OCR, לא תרגום מלא." if f.get("text_he")
+                else "תרגום עברי של כ-3,000 התווים הראשונים מתוך ה-OCR.") + '</p>', 1)
     if f.get("text_preview_en") or f.get("text_en_path") or f.get("text_en"):
         p.show("ocr-en-wrap")
         if f.get("text_preview_en"):
