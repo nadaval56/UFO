@@ -3,8 +3,8 @@
 This is what a scheduled session does, start to finish, with no one watching. The repository owner approved the whole flow on 2026-10-25, **including merging each batch's PR into `main` yourself** once the checks below pass. Background and decisions: the 2026-10-25 entries in `CLAUDE.md`.
 
 The scheduled prompt names a **mode**:
-- `day`: one cycle with a budget of 850,000 OCR characters (about 20% of a 5-hour usage window, as measured on the pilot).
-- `night`: repeat cycles of 850,000 until it is 05:30 in Israel (`TZ=Asia/Jerusalem date +%H%M` is 0530 or later) or a cycle hits the usage limit.
+- `day`: one cycle with a budget of 1,700,000 OCR characters (the owner doubled it after the first run: 850,000 measured at ~12% of a 5-hour window).
+- `night`: repeat cycles of 1,700,000 until it is 05:30 in Israel (`TZ=Asia/Jerusalem date +%H%M` is 0530 or later) or a cycle hits the usage limit.
 
 ## 0. Setup
 
@@ -14,7 +14,7 @@ The scheduled prompt names a **mode**:
 
 ## 1. Plan
 
-`python3 scripts/digest/plan_batch.py --budget 850000 --work "$WORK/cycle<N>"` writes `plan.json`.
+`python3 scripts/digest/plan_batch.py --budget 1700000 --work "$WORK/cycle<N>"` writes `plan.json`.
 - If it prints that the queue is empty: the project is finished. Disable every scheduled task whose name starts with `PURSUE digest` (`update_trigger` with `enabled: false`), say so in your final message, and stop.
 
 ## 2. Run the agent tasks (in parallel)
