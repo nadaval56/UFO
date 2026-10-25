@@ -44,7 +44,10 @@ policies (what counts as an "interesting" preview; OCR every typewritten page).
 
 Release 07's file list only exists on the live page, so this comes first.
 
-1. Open <https://www.war.gov/UFO/> in your browser.
+If you have the Claude app's built-in browser, run steps 1-5 there yourself;
+otherwise walk me through them in my own browser and wait for the download.
+
+1. Open <https://www.war.gov/UFO/> in the browser.
 2. Set the table filters to `ALL AGENCIES`, **`RELEASE 07`**, `ALL TYPES`.
    An incremental scrape is enough: `merge_release.py` matches new rows against
    the existing manifest, so scraping only the new tranche merges identically to

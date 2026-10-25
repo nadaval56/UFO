@@ -36,16 +36,21 @@
 
 GitHub Pages יפרוס את הגרסה החדשה תוך 1-2 דקות.
 
-### מהדורה חדשה — התהליך המלא
+### מהדורה חדשה - התהליך המלא
 
 סריקה לבדה מביאה רק את הטבלה. מהדורה חדשה דורשת גם את חבילות ה-ZIP, תצוגות מקדימות, OCR
-וסרטוני DVIDS — וכל אלה חסומים מהסביבה הענן. התהליך המלא ארוז כהנחיה אחת להדבקה בסשן
-Claude Code **מקומי**:
+ולפעמים סרטוני DVIDS, וכל אלה חסומים מסביבת הענן. **התהליך המלא, שלב אחר שלב, מתואר ב-
+[`RELEASE_PROCESS.md`](./RELEASE_PROCESS.md).** בקצרה: הענן מסמן את המהדורה ב-`pending.json` וכותב
+הנחיה; את/ה קורא/ת מהדף את קישורי ההורדה; סשן Claude Code **מקומי** סורק (בדפדפן המובנה באפליקציה,
+או שמבקש ממך להדביק את הסקריפט בקונסול), מפיק תצוגות מקדימות ו-OCR ומחזיר zip אחד; הענן מתרגם,
+משלב ומפרסם.
 
+ההנחיות המקומיות, אחת לכל מהדורה (את החדשה מעתיקים מהאחרונה):
+
+- מהדורה 07: [`scripts/extract/LOCAL_TASK_R07.md`](./scripts/extract/LOCAL_TASK_R07.md)
+- מהדורה 06: [`scripts/extract/LOCAL_TASK_R06.md`](./scripts/extract/LOCAL_TASK_R06.md)
 - מהדורה 05: [`scripts/extract/LOCAL_TASK_R05.md`](./scripts/extract/LOCAL_TASK_R05.md)
-- מהדורות 03–04 (לדוגמה): [`scripts/extract/LOCAL_TASK_R03_R04.md`](./scripts/extract/LOCAL_TASK_R03_R04.md)
-
-מהסשן המקומי חוזר zip אחד; הסשן המרוחק מטמיע אותו ומתרגם.
+- מהדורות 03-04: [`scripts/extract/LOCAL_TASK_R03_R04.md`](./scripts/extract/LOCAL_TASK_R03_R04.md)
 
 **כל עוד מהדורה פורסמה וטרם שוקפה**, יש לרשום אותה ב-[`data/pending.json`](./data/pending.json).
 האתר מציג על סמך זה הודעה גלויה מעל לשוניות המהדורות, כדי שלא ייווצר רושם שהארכיון מלא.
@@ -81,7 +86,8 @@ python3 -m http.server 8000
 /
 ├── index.html                # האתר
 ├── archive.html              # אינדקס סטטי של כל המסמכים (נוצר, לא נערך ביד)
-├── CLAUDE.md                 # הנחיות פיתוח
+├── CLAUDE.md                 # הנחיות פיתוח + יומן חקירה
+├── RELEASE_PROCESS.md        # תהליך העבודה למהדורה חדשה
 ├── README.md
 ├── LICENSE
 ├── data/
