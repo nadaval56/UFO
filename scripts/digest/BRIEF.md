@@ -33,7 +33,8 @@ Scale with the document, and don't pad: every sentence should carry information.
 Never shorter than needed to cover what the document actually says.
 
 ## Rules
-- **Faithful.** Everything comes from the OCR or the official summary. If the OCR and the summary disagree, say so neutrally ("בדו"ח עצמו התאריך הוא..., ובתיאור הרשמי..."). Uncertain readings are marked: "(קריאה לא ודאית)". Never invent names, numbers or conclusions.
+- **Faithful.** Everything comes from the OCR or the official summary. Uncertain readings are marked: "(קריאה לא ודאית)". Never invent names, numbers or conclusions.
+- **The document wins.** The document is the primary source; war.gov's official summary was written later and sometimes carries copy-paste errors from a neighbouring record. When the summary disagrees with what the document clearly says, write the document's version in the body, and mention the summary's version once, briefly, under `### מה לא נמצא במסמך` (for example "בתיאור הרשמי באתר war.gov נכתב 480 מייל לשעה"). Only where the OCR is illegible on that point may you use the summary's figure, saying that it comes from the official description. Contradictions inside the document itself are stated neutrally and left unresolved.
 - **Neutral and serious.** Report what the document says ("לפי הדו"ח", "העד תיאר"), not whether UFOs are real. No hype, no exclamation marks, no rhetorical questions, no first person, no "מסמך מרתק".
 - **Do not repeat the official summary.** Build on it. One sentence of overlap in the opening is fine.
 - **Private individuals:** medical, financial, family or home-address details about a private person (a witness, a website owner, a resident) are described only in general terms ("המסמך כולל פרטים אישיים על בעל האתר"), never spelled out. This applies even when the document itself is unredacted.
