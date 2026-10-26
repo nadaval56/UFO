@@ -20,6 +20,7 @@ from datetime import date
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_static_pages import build as build_static_pages, doc_path  # noqa: E402
+from apply_corrections import apply as apply_corrections  # noqa: E402
 from sister_sites import nav as sister_nav  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -29,6 +30,7 @@ ARCHIVE = ROOT / "archive.html"
 BASE = "https://pursue.co.il"
 TODAY = date.today().isoformat()
 
+apply_corrections()
 build_static_pages()
 m = json.loads(MANIFEST.read_text(encoding="utf-8"))
 files = m.get("files", [])
