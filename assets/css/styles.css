@@ -1765,6 +1765,11 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 }
 .text-block-narrative .text-block-label { color: var(--accent-strong); }
 
+/* Mirror note (data/corrections.json): where we fixed or flagged an error
+   in the war.gov record. Palette variables only, so the a11y modes cover it. */
+.text-block-correction { border-inline-start: 3px solid var(--accent); }
+.text-block-correction .text-block-body { font-size: 0.94rem; }
+
 /* Extended summary (data/digest/*.md) - the longest Hebrew text on a
    document page, so it gets real headings and lists. */
 .text-block-digest .text-block-label { font-size: 0.74rem; font-weight: 400; }

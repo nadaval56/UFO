@@ -71,7 +71,8 @@ war.gov מוגן ב-Akamai ומחזיר 403 לכל IP של ענן, כך שאין
 4. **מתרגם** את הרשומות החדשות: `title_he`, `agency_he`, `incident_location_he`, `summary_he`,
    `narrative_he`, `text_preview_he`, לפי [`data/TRANSLATIONS.md`](./data/TRANSLATIONS.md). בלי מקף
    ארוך או בינוני. סוכנות חדשה מקבלת תווית עברית ב-`AGENCY_HE` שב-`scripts/apply_translations.py`.
-   שגיאות במקור מתורגמות כפי שהן ונרשמות ביומן; מראה לא מתקן את war.gov.
+   שגיאות במקור מתורגמות כפי שהן ונרשמות ביומן. טעות מטא-דאטה שאפשר להוכיח מתוקנת ב-`data/corrections.json`,
+   וטעות לא ודאית מקבלת שם הערה בלבד; בשני המקרים מוצגת "הערת המראה" בדף (ראו `data/TRANSLATIONS.md`).
 5. **מוסיף עמודת הורדה** ב-`index.html` (בתוך `#release-downloads`) עם הקישורים שאומתו, ומעדכן את
    המונה בכפתור `release-downloads-toggle-meta` (קבצים · מהדורות). מהדורה בלי וידאו מקבלת כפתור
    מסמכים בלבד.

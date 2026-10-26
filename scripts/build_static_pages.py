@@ -292,6 +292,9 @@ def render(template: str, f: dict, files: list[dict] | None = None) -> str:
         p.attr("gallery-image", "src", first["path"])
         p.attr("gallery-image", "alt", f"{title_he} - עמוד {first.get('page', 1)}")
 
+    if f.get("correction_he"):
+        p.show("correction-section")
+        p.inner("correction-body", paragraphs(f["correction_he"]))
     if f.get("narrative_he"):
         p.show("narrative-section")
         p.inner("narrative-body", paragraphs(f["narrative_he"]))
