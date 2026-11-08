@@ -59,6 +59,7 @@ SITES = [
     ("🌍", "https://quake.co.il/", "רעידת אדמה · רעידות היסטוריות", ""),
     ("📅", "https://heb-cal.co.il/", "לוח עברי", ""),
     ("🧠", "https://cranialnerves.co.il/", "עצבי הגולגולת · 12 זוגות העצבים", ""),
+    ("📖", "https://kal-vachomer.co.il/", "סגולת הבן איש חי לרפואה", ""),
 ]
 
 MARK = re.compile(r"([ \t]*)<!-- sister:start -->.*?<!-- sister:end -->", re.S)
