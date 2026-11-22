@@ -77,7 +77,8 @@ def body_html(text: str, by_id: dict) -> str:
             raise SystemExit(f"build_hubs: unknown id in [[...]]: {rid!r}")
         return f'<a href="{esc(doc_path(rid))}">{esc(doc_title(f))}</a>'
 
-    return re.sub(r"\[\[([^\]]+)\]\]", link, out)
+    # Lazy match + "not followed by ]" so ids that end in "]" (59_214434_sp_16_[7.18.1963]) work.
+    return re.sub(r"\[\[(.+?)\]\](?!\])", link, out)
 
 
 def item_html(f: dict, blurb: bool) -> str:
