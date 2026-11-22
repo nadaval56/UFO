@@ -340,10 +340,36 @@ def render(template: str, f: dict, files: list[dict] | None = None) -> str:
             f'// עוד מ{esc("מהדורה " + f["release_no"]) if f.get("release_no") else "הארכיון"}</p></header>\n'
             f'          <ul class="related-list">{items}</ul>\n        </section>\n\n        ')
         p.s = p.s.replace("<!-- footer פעולות -->", block + "<!-- footer פעולות -->", 1)
+    # Hub pages (build_hubs.py) this document belongs to: its topics and its
+    # release's explainer. Real links both ways help readers and crawlers.
+    hubs = list(HUB_TOPICS.get(f["id"], []))
+    if f.get("release_no") and (ROOT / "data" / "hubs" / "releases" / f"{f['release_no']}.json").exists():
+        hubs.append({"href": f"releases/{f['release_no']}.html", "title": f"מה יש במהדורה {f['release_no']}"})
+    if hubs:
+        items = "".join(f'<li><a href="{esc(h["href"])}">{esc(h["title"])}</a></li>' for h in hubs)
+        block = ('<section class="text-block" aria-label="מדריכים">\n'
+                 '          <header class="text-block-head"><p class="text-block-label mono">// מדריכים בנושא</p></header>\n'
+                 f'          <ul class="related-list">{items}</ul>\n        </section>\n\n        ')
+        p.s = p.s.replace("<!-- footer פעולות -->", block + "<!-- footer פעולות -->", 1)
     return p.s
 
 
+def _hub_topics() -> dict:
+    """record id -> topic pages it belongs to (data/hubs/topics/*.json)."""
+    out: dict = {}
+    for p in sorted((ROOT / "data" / "hubs" / "topics").glob("*.json")):
+        t = json.loads(p.read_text(encoding="utf-8"))
+        for rid in t["ids"]:
+            out.setdefault(rid, []).append({"href": f"topics/{t['slug']}.html", "title": t["h1"]})
+    return out
+
+
+HUB_TOPICS: dict = {}
+
+
 def build() -> int:
+    global HUB_TOPICS
+    HUB_TOPICS = _hub_topics()
     m = json.loads(MANIFEST.read_text(encoding="utf-8"))
     template = TEMPLATE.read_text(encoding="utf-8")
     if OUT_DIR.exists():
