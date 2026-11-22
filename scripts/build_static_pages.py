@@ -195,7 +195,10 @@ def render(template: str, f: dict, files: list[dict] | None = None) -> str:
     title_he = f.get("title_he") or f.get("title") or f.get("filename") or "מסמך"
     url = f"{BASE}/{doc_path(f['id'])}"
     desc = meta_description(f, title_he)
-    full_title = f"{title_he} | {SITE}"
+    # <title>/og:title lead with the descriptive seo_title_he (what the page is
+    # about, in words people search); the official code-first title_he stays
+    # the page's <h1> and JSON-LD name.
+    full_title = f"{f.get('seo_title_he') or title_he} | {SITE}"
 
     # ---- head ----
     # <base href="/"> lets the page live in doc/ while every relative asset,

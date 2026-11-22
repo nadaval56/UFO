@@ -35,6 +35,26 @@ build_static_pages()
 m = json.loads(MANIFEST.read_text(encoding="utf-8"))
 files = m.get("files", [])
 
+# ---------------------------------------------------------------------------
+# data/index.json: the slim list the homepage browser loads. The full manifest
+# is ~4 MB (OCR excerpts, English summaries, preview lists); the cards, filters
+# and search need only the fields below. Keep INDEX_FIELDS in step with what
+# assets/js/file-browser.js reads from a record.
+# ---------------------------------------------------------------------------
+INDEX = ROOT / "data" / "index.json"
+INDEX_FIELDS = (
+    "id", "title", "title_he", "filename", "agency", "agency_he", "type",
+    "source_url", "_url_is_record_page", "release", "release_no",
+    "release_date", "incident_date", "incident_date_display",
+    "incident_location", "incident_location_he", "summary_he", "narrative_he",
+)
+INDEX.write_text(json.dumps({
+    "total_files": m.get("total_files", len(files)),
+    "releases": m.get("releases", []),
+    "files": [{k: f[k] for k in INDEX_FIELDS if f.get(k) is not None} for f in files],
+}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+print(f"Wrote {INDEX} ({INDEX.stat().st_size // 1024} KB, {len(files)} records)")
+
 def iso_release(d):
     """release_date is Israeli D/M/YY ('18/9/26') -> '2026-09-18'."""
     try:

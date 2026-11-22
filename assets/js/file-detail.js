@@ -225,7 +225,7 @@
 
     // עדכון title של הדפדפן + canonical + OG/Twitter לכל קובץ
     const titleHe = f.title_he || f.title || f.filename || "מסמך";
-    document.title = `${titleHe} | עב"מים`;
+    document.title = `${f.seo_title_he || titleHe} | עב"מים`;
 
     const pageUrl = `https://pursue.co.il/${docPath(f.id)}`;
     // Static doc/ pages already carry the description build_static_pages.py
@@ -243,10 +243,10 @@
     // meta[name=description] drives the search snippet, and was the one tag
     // not being updated - all 375 pages shared the generic placeholder.
     setAttr('meta[name="description"]', "content", desc);
-    setAttr('meta[property="og:title"]', "content", `${titleHe} | עב"מים`);
+    setAttr('meta[property="og:title"]', "content", document.title);
     setAttr('meta[property="og:description"]', "content", desc);
     setAttr('meta[property="og:url"]', "content", pageUrl);
-    setAttr('meta[name="twitter:title"]', "content", `${titleHe} | עב"מים`);
+    setAttr('meta[name="twitter:title"]', "content", document.title);
     setAttr('meta[name="twitter:description"]', "content", desc);
 
     // Structured data, so the document can surface as more than a blue link.
