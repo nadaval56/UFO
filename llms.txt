@@ -22,7 +22,24 @@ this site as the Hebrew translation.
 
 ## Guides (Hebrew)
 - [All topic guides and release explainers](https://pursue.co.il/topics/)
+- [מהדורה 01 של קבצי העב"מים של הפנטגון: מה יש בה](https://pursue.co.il/releases/01.html)
+- [מהדורה 02 של קבצי העב"מים: עשרות סרטונים מהפנטגון](https://pursue.co.il/releases/02.html)
+- [מהדורה 03 של קבצי העב"מים של הפנטגון: מה יש בה](https://pursue.co.il/releases/03.html)
+- [מהדורה 04 של קבצי העב"מים: סרטונים, Pantex ולוס אלמוס](https://pursue.co.il/releases/04.html)
+- [מהדורה 05 של קבצי העב"מים של הפנטגון: מה יש בה](https://pursue.co.il/releases/05.html)
+- [מהדורה 06 של קבצי העב"מים: AAWSAP, טרמונטון ורופלט](https://pursue.co.il/releases/06.html)
+- [מהדורה 07 של קבצי העב"מים של הפנטגון: מה יש בה](https://pursue.co.il/releases/07.html)
+- [מה חדש במהדורה 08 של קבצי העב"מים של הפנטגון](https://pursue.co.il/releases/08.html)
+- [AAWSAP ו-BAASS: תוכנית העב"מים של ה-DIA, 2008-2010](https://pursue.co.il/topics/aawsap.html)
+- [פרויקט בלו בוק וקודמיו: חיל האוויר האמריקאי חוקר עב"מים](https://pursue.co.il/topics/blue-book.html)
+- [מסמכי ה-CIA על עב"מים: מ"הצלחות המעופפות" של 1952 ועד 2008](https://pursue.co.il/topics/cia.html)
+- [ה-FBI ו"הדיסקיות המעופפות": תיק 62-HQ-83894, 1947-1977](https://pursue.co.il/topics/fbi-flying-discs.html)
 - [אירוע מפרץ עומאן 2021: צוות AC-130J ו-25 "כדורים קרים"](https://pursue.co.il/topics/gulf-of-oman.html)
+- [עב"מים במזרח התיכון: דו"חות וסרטונים מעיראק, סוריה והמפרץ](https://pursue.co.il/topics/middle-east.html)
+- [נאס"א ואסטרונאוטים: מה ראו בחלל, ממרקורי ועד מעבורת החלל](https://pursue.co.il/topics/nasa.html)
+- [עב"מים מעל מתקני גרעין: מאוק רידג' ולוס אלמוס ועד פנטקס](https://pursue.co.il/topics/nuclear.html)
+- [עצמים משולשים: עדויות על כלי טיס בצורת משולש בארכיון](https://pursue.co.il/topics/triangles.html)
+- [סרטוני העב"מים הרשמיים של הפנטגון: כל הסרטונים וההקלטות](https://pursue.co.il/topics/videos.html)
 
 ## Releases
 - Release 01 - 2026-05-08: 158 files - https://pursue.co.il/archive.html#release_01
