@@ -9,7 +9,8 @@
 (function () {
   "use strict";
 
-  const MANIFEST_URL = "data/manifest.json";
+  // Slim index written by scripts/build_sitemap.py (data/manifest.json is ~4 MB).
+  const MANIFEST_URL = "data/index.json";
   const PENDING_URL = "data/pending.json";
   const PAGE_SIZE = 10;
 
@@ -523,7 +524,7 @@
         <div class="file-list-empty" style="margin:0">
           <p>טעינת המאניפסט נכשלה: ${escapeHtml(err.message)}</p>
           <p style="font-size:.85rem;color:var(--text-dim)">
-            ודא ש-<code class="mono">data/manifest.json</code> קיים. לקבלת קובץ אמיתי הרץ
+            ודא ש-<code class="mono">data/index.json</code> קיים. לקבלת קובץ אמיתי הרץ
             <code class="mono">python scripts/build_manifest.py</code>.
           </p>
         </div>`;

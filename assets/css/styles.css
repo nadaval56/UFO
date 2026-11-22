@@ -201,6 +201,8 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   margin: 0 0 14px;
   opacity: 0.8;
 }
+.hero-h1 { margin: 0; font: inherit; }
+.hero-h1 > span { display: block; }
 .hero-title {
   font-family: var(--font-mono);
   font-size: clamp(2rem, 5.5vw, 4rem);
