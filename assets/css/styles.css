@@ -839,7 +839,8 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   }
   .release-tab {
     justify-content: center;
-    padding: 12px 10px;
+    gap: 6px;
+    padding: 12px 6px;
     letter-spacing: 0.03em;
     white-space: nowrap;
   }
