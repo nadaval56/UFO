@@ -2003,3 +2003,9 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 @media (prefers-reduced-motion: reduce) { .sister-clone { display: none; } }
 html.a11y-still .sister-clone { display: none; }
 @media print { .sister { display: none; } }
+
+/* Hub pages (scripts/build_hubs.py): topics/, releases/ */
+.hub-list li { padding: 10px 0; }
+.hub-blurb { margin: 4px 0 0; color: var(--text-muted); font-family: var(--font-sans); font-size: 0.88rem; line-height: 1.6; }
+.hub-nav { font-family: var(--font-mono); font-size: 0.85rem; text-align: center; margin: 8px 0 24px; }
+.hub-page .text-block-body a { color: var(--accent); }

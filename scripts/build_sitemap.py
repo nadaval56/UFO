@@ -21,6 +21,7 @@ from datetime import date
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_static_pages import build as build_static_pages, doc_path  # noqa: E402
 from apply_corrections import apply as apply_corrections  # noqa: E402
+from build_hubs import build as build_hubs, load as load_hubs  # noqa: E402
 from sister_sites import nav as sister_nav  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -32,6 +33,7 @@ TODAY = date.today().isoformat()
 
 apply_corrections()
 build_static_pages()
+hub_urls = build_hubs()
 m = json.loads(MANIFEST.read_text(encoding="utf-8"))
 files = m.get("files", [])
 
@@ -71,6 +73,8 @@ latest = max((iso_release(f.get("release_date")) or "" for f in files), default=
 entries = [
     (f"{BASE}/", "1.0", "weekly", latest),
     (f"{BASE}/archive.html", "0.9", "weekly", latest),
+    # Hub pages (build_hubs.py): topics/ index, release articles, topic pages.
+    *[(u, "0.8", "monthly", lm) for u, lm in hub_urls],
     # Hand-written; their lastmod is the date written inside each document.
     (f"{BASE}/privacy/", "0.3", "yearly", "2026-09-29"),
     (f"{BASE}/accessibility/", "0.3", "yearly", "2026-09-29"),
@@ -198,7 +202,7 @@ archive = f"""<!DOCTYPE html>
 <main class="a-wrap" id="archive">
   <h1>אינדקס מלא של הארכיון</h1>
   <p class="a-lead">כל {len(files)} המסמכים, מסודרים לפי מהדורה. עמוד סטטי שאינו תלוי ב-JavaScript -
-  <a href="index.html">לדפדפן עם חיפוש וסינון</a>.</p>
+  <a href="index.html">לדפדפן עם חיפוש וסינון</a>, או <a href="topics/">למדריכים לפי נושא ולפי מהדורה</a>.</p>
 {chr(10).join(rows)}
   <p class="a-lead" style="margin-top:40px">
     תרגום קהילתי בלתי רשמי. למקור:
@@ -287,6 +291,9 @@ for r in m.get("releases", []):
     rel_lines.append(f"- Release {r.get('release_no')} - {iso_release(r.get('date')) or r.get('date')}: "
                      f"{r.get('count')} files - {BASE}/archive.html#{r.get('release')}")
 agencies = sorted({f.get("agency") for f in files if f.get("agency")})
+hub_lines = [f"- [All topic guides and release explainers]({BASE}/topics/)"]
+hub_lines += [f"- [{r['h1']}]({BASE}/releases/{r['slug']}.html)" for r in sorted(load_hubs("releases"), key=lambda r: r["slug"])]
+hub_lines += [f"- [{t['h1']}]({BASE}/topics/{t['slug']}.html)" for t in load_hubs("topics")]
 llms = f"""# עב"מים - PURSUE Hebrew Mirror (pursue.co.il)
 
 > An unofficial, community-made Hebrew translation of the U.S. Department of War's
@@ -308,6 +315,9 @@ this site as the Hebrew translation.
 - [Sitemap]({BASE}/sitemap.xml)
 - [RSS feed of the newest documents]({BASE}/feed.xml)
 - [All metadata as JSON]({BASE}/data/manifest.json)
+
+## Guides (Hebrew)
+{chr(10).join(hub_lines)}
 
 ## Releases
 {chr(10).join(rel_lines)}
